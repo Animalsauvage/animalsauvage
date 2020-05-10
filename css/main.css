@@ -321,7 +321,7 @@ strong {
 	display: block;
 }
 
-.content-extra {
+#extra + .content-extra {
 	visibility: hidden;
 	height: 0;
 	overflow: hidden;
@@ -329,7 +329,7 @@ strong {
 #extra:checked + .content-extra {
 	overflow: visible;
 	visibility: visible;
-	height: auto;
+	height: 100%;
 	padding-top: var(--taille3);
 }
 
