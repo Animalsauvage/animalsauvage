@@ -107,6 +107,23 @@ table {
 	--color3:#F5F6F7;
 }
 
+/*
+
+:root {
+    --scale: 1.618;
+    --size-zeta: 0.75rem;
+    --size-epsilon: calc(var(--scale) * var(--size-zeta));
+    --size-delta: calc(var(--scale) * var(--size-epsilon));
+    --size-beta: calc(var(--scale) * var(--size-delta));
+    --size-alpha: calc(var(--scale) * var(--size-beta));
+  --size-giga: calc(var(--scale) * var(--size-alpha));
+  
+  @media screen and (min-width: 40em) {
+    --size-zeta: 1rem;
+  }
+}
+*/
+
 /* General
 ****************************************/
 html {
@@ -190,6 +207,20 @@ strong {
 	font-weight: 700;
 }
 
+a {
+	color: var(--color1);
+	text-decoration: none;
+	-webkit-box-shadow: inset 0 -5px var(--color1);
+	box-shadow: inset 0 -5px var(--color1);
+	-webkit-transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+	transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+a:hover,
+a:focus {
+	-webkit-box-shadow: inset 0 calc(var(--taille3) * -1) 0 var(--color2);
+	box-shadow: inset 0 calc(var(--taille3) * -1) 0 var(--color2);
+}
+
 
 /* Welcome */
 .welcome-container {
@@ -247,6 +278,7 @@ strong {
 }
 .content-extra .highlight {
 	position: relative;
+	font-family: "PT Serif", Georgia, serif;
 	font-size: calc(var(--taille5) * 1.2);
 	font-weight: 700;
 	-webkit-column-break-after: always;
@@ -255,6 +287,11 @@ strong {
 .content-extra .full-largeur::first-letter,
 .content-extra .highlight::first-letter {
 	font-size: 130%;
+	padding: .5rem 1rem;
+	margin-top: -1.8rem;
+	margin-right: 1rem;
+	border: 5px solid var(--color1);
+	float: left;
 }
 
 .btn-ghost,
@@ -371,22 +408,6 @@ strong {
 	width: 100%;
 	padding-bottom: var(--taille3);
 }
-/*
-.cas::before {
-content: "";
-position: absolute;
-bottom: 0;
-left: 0;
-display: block;
-width: 10%;
-height: 2px;
-background-color: var(--color2);
-}
-.cas:last-child::before {
-width: 0;
-height: 0;
-}
-*/
 .cas-link {
 	position: relative;
 	top: 0;
@@ -434,6 +455,10 @@ height: 0;
 .cas .description {
 	max-width: 50rem;
 	font-size: var(--taille4);	
+	padding-bottom: var(--taille5);
+}
+.cas .date {
+	font-size: var(--taille5);	
 }
 
 
