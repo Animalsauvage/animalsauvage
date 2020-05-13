@@ -583,7 +583,7 @@ article img {
   transition: all 1000ms ease-out 600ms;
 }
 .info h3 {
-  color: #fcfff4;
+  color: #000;
   margin: 0 0 5px;
   font-weight: normal;
   font-size: 1.5em;
