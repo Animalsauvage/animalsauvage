@@ -332,9 +332,7 @@ blockquote p {
 		background-color: var(--color2);
 	}
 }
-.indentation {
-	text-indent: var(--xs);
-}
+
 
 /* Responsive typographie */
 @media screen and (max-width: 39.9375em) {
@@ -752,7 +750,13 @@ a {
 }
 
 .etudes-container .title {
+	position: relative;
+	font-family: "PT Serif", Georgia, serif;
+	font-size: var(--m);
+	line-height: 1.1;
+
 	padding-bottom: var(--m);
+	margin: 0;
 }
 
 .etudes-list {
@@ -770,6 +774,7 @@ a {
 	-ms-flex-pack: start;
 	justify-content: flex-start;
 	padding: 0;
+	max-width: 80%;
 }
 .cas {
 	position: relative;
@@ -802,6 +807,9 @@ a {
 
 /* Responsive Étude de cas */
 @media screen and (max-width: 68.6875em) {
+	.etudes-list {
+		max-width: 100%;
+	}
 	.cas-link {
 		max-width: 50rem;
 	}
