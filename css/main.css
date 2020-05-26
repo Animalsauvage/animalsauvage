@@ -336,6 +336,9 @@ blockquote p {
 
 /* Responsive typographie */
 @media screen and (max-width: 39.9375em) {
+	h1 {
+		font-size: calc(var(--l) - 1ex);
+	}
 	blockquote {
 		position: relative;
 		left:auto;
