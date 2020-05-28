@@ -85,8 +85,10 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
@@ -211,17 +213,25 @@ h3 {
 	font-size: var(--s);
 	font-weight: 700;
 	padding-bottom: var(--xs);
-	counter-reset: h3;
 }
 h3::before {     
 	content: counter(h2) "." counter(h3) " " ;     
 	counter-increment: h3; 
-} 
+}
+.chapitrage {
+	counter-reset: h4;
+}
+h4 {
+	max-width: calc(var(--xl) * 4);
+	font-size: var(--xs);
+	font-weight: 700;
+	margin-bottom: var(--xs);
+	padding-top: var(--xs);
+}
 h4::before {
 	content: counter(h2) "." counter(h3) "." counter(h4) " " ;     
 	counter-increment: h4; 	
 }
-h4,
 h5,
 h6,
 p,
@@ -230,10 +240,6 @@ ol {
 	font-size: var(--xs);
 	margin-bottom: var(--xs);
 	max-width: calc(var(--xl) * 4);
-}
-h4 {
-	font-weight: 700;
-	padding-top: var(--xs);
 }
 h5 {
 	font-size: calc(var(--xs) * .8);
@@ -1010,7 +1016,7 @@ input[name='panel']:checked ~ .accordion-content {
 	text-align: left;
 	transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
 }
-.info h3 {
+.info span {
 	color: #fcfff4;
 	margin: 0 0 5px;
 	font-weight: normal;
@@ -1198,6 +1204,7 @@ visibility: visible;
 @media screen and (min-width: 40em) and (max-width: 68.6875em) {}
 
 @media screen and (min-width: 68.75em) and (max-width: 87.5em) {}
+
 
 
 
