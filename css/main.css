@@ -232,6 +232,25 @@ h4::before {
 	content: counter(h2) "." counter(h3) "." counter(h4) " " ;     
 	counter-increment: h4; 	
 }
+h5 {
+	position: relative;
+	font-size: calc(var(--xs) * .8);
+	font-weight: 700;
+	text-transform: uppercase;
+	text-indent: var(--xs);
+	padding-top: var(--xs);
+}
+h5::before {
+	content: "";
+	position: relative;
+	top: -4px;
+	left: -6px;
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: var(--color1);	
+}
 h5,
 h6,
 p,
@@ -240,13 +259,6 @@ ol {
 	font-size: var(--xs);
 	margin-bottom: var(--xs);
 	max-width: calc(var(--xl) * 4);
-}
-h5 {
-	font-size: calc(var(--xs) * .8);
-	font-weight: 700;
-	text-transform: uppercase;
-	text-indent: var(--xs);
-	padding-top: var(--xs);
 }
 ul,
 ol {
@@ -891,6 +903,10 @@ a {
 	font-weight: 400;
 	cursor: auto;
 }
+.accordion p {
+	margin-left: auto;
+	margin-right: auto;
+}
 .accordion input[name="panel"] {
 	display: none;
 }
@@ -933,6 +949,7 @@ input[name='panel']:checked ~ .accordion-content {
 	visibility: visible;
 	overflow: visible;
 	height: auto;
+	padding: var(--s);
 }
 
 
