@@ -328,13 +328,19 @@ blockquote p {
 }
 .figure {
 	width: 100%;
+	max-width: calc(var(--xl) * 4);
 	text-align: center;
 	padding-bottom: var(--xs);
+}
+.figure.large,
+.accordion .figure {
+	max-width: 100%;
 }
 .picture {
 	display: block;
 	width: 100%;
 }
+.figure video,
 .figure img {
 	text-align: center;
 	letter-spacing: .5ex;
