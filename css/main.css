@@ -296,13 +296,13 @@ hr {
 	margin: var(--m) 0 0 0;
 	padding: 0 0 var(--m) 0;
 }
-blockquote {
+blockquote,
+.highlight-bloc {
 	position: relative;
 	left: var(--m);
 	margin: var(--m) 0;
 	padding: var(--xs) var(--s) var(--xs) var(--l);
 	max-width: calc(var(--xl) * 4.5);
-	background-color: var(--color2);
 	border-radius: 4px;
 	box-shadow:
 		0 1px 2px rgba(0, 0, 0, 0.028),
@@ -311,20 +311,39 @@ blockquote {
 		0 9px 12px rgba(0, 0, 0, 0.06),
 		0 16px 27px rgba(0, 0, 0, 0.072);
 }
-blockquote::before {
-	content: "“";
+blockquote {
+	background-color: var(--color2);
+}
+.highlight-bloc {
+	background-color: var(--color3);
+}
+blockquote::before,
+.highlight-bloc::before {
+	content: " ";
 	position: absolute;
-	top: 0;
 	left: calc(var(--s) - .2ex);
 	display: block;
 	width: 50px;
 	height: 50px;
-	font-size: var(--xl);
 	line-height: 2ex;
+}
+blockquote::before {
+	content: "“";
+	top: 0;
+	font-size: var(--xl);
+}
+.highlight-bloc::before {
+	content: "➜";	
+	top: var(--xs);
+	font-size: var(--s);
 }
 blockquote p {
 	font-family: "PT Serif", Georgia, serif;
 	font-weight: 700;
+}
+.highlight-bloc p {
+	font-family: "PT Serif", Georgia, serif;
+	font-weight: 400;
 }
 .figure {
 	width: 100%;
@@ -386,6 +405,7 @@ blockquote p {
 }
 .first-letter::first-letter {
 	float: left;
+	margin-left: calc(var(--xs) * -1 - 5px);
 	font-family: "PT Serif", Georgia, serif;
 	font-size: var(--m);
 	line-height: var(--m);
@@ -417,13 +437,15 @@ blockquote p {
 	h1 {
 		font-size: calc(var(--l) - 1ex);
 	}
-	blockquote {
+	blockquote,
+	.highlight-bloc {
 		position: relative;
 		left:auto;
 		width: 100%;
 	}
 
 	.first-letter::first-letter {
+		margin-left: 0;
 		padding: calc(var(--xs) - 8px) var(--xs);
 		border: 3px solid var(--color1);
 	}
@@ -494,9 +516,7 @@ a {
 }
 .link[target="_blank"]::after {
 	content: " ↗";
-	position: relative;
-	top: -1ex;
-	font-size: 1ex;
+	font-size: 1rem;
 	font-weight: 700;
 }
 
@@ -771,6 +791,19 @@ a {
 	margin-bottom: 0;
 }
 
+.liste-double {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 100%;
+}
+.liste-double > li {
+	width: 50%;
+	padding-right: var(--xs);
+}
 
 @media screen and (max-width: 39.9375em) {
 	.main-container {
@@ -789,6 +822,10 @@ a {
 	.article {
 		width: 100%;
 		padding: var(--s);
+	}
+	.liste-double > li {
+		width: 100%;
+		padding-right: 0;
 	}
 }
 
@@ -989,10 +1026,6 @@ visibility: visible;
 
 
 */
-
-
-
-
 
 
 
