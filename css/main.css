@@ -220,6 +220,7 @@ h3::before {
 }
 .chapitrage {
 	counter-reset: h4;
+	padding-top: var(--m);
 }
 h4 {
 	max-width: calc(var(--xl) * 4);
@@ -765,7 +766,7 @@ a {
 	top: 0;
 	left: 0;
 	padding: var(--m) var(--s) ;
-	min-width: 25%;
+	min-width: 33%;
 	font-size: var(--xs);
 }
 .nav .title {
@@ -779,7 +780,10 @@ a {
 .nav .list-item {
 	padding-bottom: var(--xs);
 }
-
+.nav .avatar {
+	width: 100%;
+	max-width: 100%;
+}
 
 .article {
 	padding: var(--m);
