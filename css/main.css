@@ -790,7 +790,7 @@ a {
 .article {
 	padding: var(--m);
 }
-.article .back-container {
+.back-container {
 	padding-bottom: var(--s);
 }
 .article-container ul p {
@@ -853,8 +853,26 @@ a {
 	.nav .avatar {
 		display: none;
 	}
-
 }
+
+
+.next-article {
+	padding: var(--l) var(--s) var(--l);
+}
+.next-article .link {
+	font-family: "PT Serif", Georgia, serif;
+	font-size: var(--l);
+	line-height: 1.1;
+	font-weight: 700;
+	overflow-wrap: break-word;
+}
+.next-article .subtitle {
+	display: block;
+	padding: 0 0 var(--s);
+	font-size: var(--xs);
+}
+
+
 
 
 
