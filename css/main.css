@@ -517,9 +517,10 @@ a {
 }
 .link[target="_blank"]::after {
 	content: " ↗";
+		font-family: "PT Serif", Georgia, serif;
+
 	font-size: 1rem;
 	font-weight: 700;
-	font-family: arial;
 }
 
 /* Responsive btn */
