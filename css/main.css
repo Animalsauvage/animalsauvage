@@ -519,6 +519,7 @@ a {
 	content: " ↗";
 	font-size: 1rem;
 	font-weight: 700;
+	font-family: arial;
 }
 
 /* Responsive btn */
@@ -574,13 +575,13 @@ a {
 }
 .logo-container {
 	width: 100%;
-	max-width: 5rem;
+	max-width: var(--xl);
 }
 
 /* Responsive header */
 @media screen and (max-width: 39.9375em) {
 	.logo-container {
-		max-width: 8rem;
+		max-width: var(--xl);
 	}
 }
 
@@ -823,6 +824,10 @@ a {
 	.nav .list {
 		margin-bottom: 0;
 	}
+	.nav .avatar {
+		display: none;
+	}
+
 	.article {
 		width: 100%;
 		padding: var(--s);
@@ -844,6 +849,10 @@ a {
 		width: 100%;
 		padding: var(--s) ;
 	}
+	.nav .avatar {
+		display: none;
+	}
+
 }
 
 
