@@ -297,6 +297,9 @@ hr {
 	margin: var(--m) 0 0 0;
 	padding: 0 0 var(--m) 0;
 }
+code {
+	font-family: monospace;
+}
 blockquote,
 .highlight-bloc {
 	position: relative;
