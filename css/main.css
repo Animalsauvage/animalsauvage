@@ -580,9 +580,10 @@ a {
 	background-color: var(--color3);
 	z-index: 2;
 }
-.logo-container {
+.logo-container,
+.header-content {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	min-height: 75vh;
@@ -596,6 +597,9 @@ a {
 	width: 100%;
 }
 
+.header-content {
+	
+}
 
 /* Main
 ****************************************/
@@ -606,7 +610,7 @@ a {
 	padding-bottom:var(--xs);
 	z-index: 2;
 }
-.main::before {
+.fleche::before {
 	content: "";
 	position: absolute;
 	bottom: -1.9vw;
