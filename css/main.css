@@ -160,6 +160,7 @@ img {
 h1,
 h2 {
 	font-family: "PT Serif", Georgia, serif;
+	width: 100%;
 }
 h3,
 h4,
@@ -218,6 +219,7 @@ h3 {
 h3::before {     
 	content: counter(h2) "." counter(h3) " " ;     
 	counter-increment: h3; 
+	width: 100%;
 }
 .chapitrage {
 	counter-reset: h4;
@@ -229,6 +231,7 @@ h4 {
 	font-weight: 700;
 	margin-bottom: var(--xs);
 	padding-top: var(--xs);
+	width: 100%;
 }
 h4::before {
 	content: counter(h2) "." counter(h3) "." counter(h4) " " ;     
@@ -261,6 +264,7 @@ ol {
 	font-size: var(--xs);
 	margin-bottom: var(--xs);
 	max-width: calc(var(--xl) * 4);
+	width: 100%;
 }
 ul,
 ol {
@@ -416,7 +420,7 @@ blockquote p {
 	margin-right: .5rem;
 	border: 5px solid var(--color3);
 	border-radius: 4px;
-	background-color: var(--color4);
+	background-color: #ececed;
 }
 /* Hack firefox */
 @-moz-document url-prefix() {
@@ -429,7 +433,7 @@ blockquote p {
 		margin-right: .5rem;
 		border: 5px solid var(--color3);
 		border-radius: 4px;
-		background-color: var(--color4);
+		background-color: #ececed;
 	}
 }
 
@@ -469,43 +473,35 @@ a {
 
 .btn-ghost {
 	position: relative;
-	top: 0;
-	left: 0;
 	display: inline-block;
 	font-size: var(--s);
 	font-weight: 700;
 	color: var(--color1);
 	text-decoration: none;
-	background-color: var(--color3);
 	padding: var(--xs) var(--s);
-	border: 5px solid var(--color1);
-	border-radius: calc(var(--xs) / 2);
 	cursor: pointer;
 	transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+	z-index: 2;
 }
 .btn-ghost::after {
 	content: "";
 	position: absolute;
-	top: -5px;
-	left: -5px;
+	top: 0;
+	left: 0;
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: 5px solid var(--color1);
-	border-radius: calc(var(--xs) / 2);
 	background-color: var(--color2);
 	transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
 	z-index: -1;
 }
 .btn-ghost:hover,
 .btn-ghost:focus {
-	top: 10px;
-	left: 10px;
+	color: #fff;
 }
 .btn-ghost:hover::after,
 .btn-ghost:focus::after {
-	top: -15px;
-	left: -15px;
+	filter: brightness(50%);
 }
 
 
@@ -525,6 +521,10 @@ a {
 	font-size: 1rem;
 	font-weight: 700;
 }
+.accueil.link {
+	font-size: var(--m);
+}
+
 
 /* Responsive btn */
 @media screen and (max-width: 39.9375em) {
@@ -700,11 +700,10 @@ a {
 	margin: 0 auto;	
 }
 .title-container .title,
-.title-container .subtitle {
+.title-container .breadcrumb {
 	color: var(--color1);
-	text-align: right;
 }
-.title-container .subtitle {
+.title-container .breadcrumb {
 	font-size: var(--xs);
 	padding-bottom: var(--s);
 	font-weight: 700;
@@ -757,7 +756,14 @@ a {
 	max-width: 38.125rem;
 }
 
-
+.middle-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: var(--l);
+}
 
 .liste-double {
 	display: flex;
