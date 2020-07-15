@@ -160,7 +160,8 @@ img {
 
 /* Titres */
 h1,
-h2 {
+h2,
+.like-h2 {
 	font-family: "PT Serif", Georgia, serif;
 	width: 100%;
 }
@@ -183,12 +184,16 @@ h1 {
 	padding-bottom: var(--m);
 	overflow-wrap: break-word;
 }
-h2 {
+h2,
+.like-h2 {
 	position: relative;
 	font-size: var(--m);
 	line-height: 1.2;
 	padding: var(--xs) 0;
 	margin: var(--m) 0 var(--s);
+}
+.like-h2 {	
+	font-weight: 700;
 }
 h2::before {     
 	content: counter(h2) ". ";     
@@ -256,7 +261,7 @@ h5::before {
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
-	background-color: var(--color1);	
+	background-color: var(--color3);	
 }
 h5,
 h6,
