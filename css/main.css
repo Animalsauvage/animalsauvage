@@ -194,8 +194,16 @@ h2,
 }
 .like-h2 {
 	font-weight: 700;
+	margin-top: 0;
+	padding-top: 0;
 	padding-bottom: var(--xs);
+	-webkit-background-clip : text;
+	color : transparent;
+	background-image: url(../image/photo-2.jpg);
 }
+
+
+
 h2::before {     
 	content: counter(h2) ". ";     
 	counter-increment: h2; 
@@ -515,7 +523,7 @@ a:focus {
 .header {
 	position: relative;
 	width: 100%;
-	background-color: var(--color3);
+	background: linear-gradient(0deg, var(--color3), var(--color5));
 	z-index: 2;
 }
 .header-container {
@@ -527,8 +535,6 @@ a:focus {
 	width: 100%;
 	max-width: 120rem;
 	margin: 0 auto;
-	/*	padding: var(--s);*/
-	background-color: var(--color3);
 	z-index: 2;
 }
 .logo-container {
@@ -617,7 +623,7 @@ a:focus {
 	position: sticky;
 	top: 0;
 	left: 0;
-	padding: var(--m) var(--s) ;
+	padding: var(--l) var(--s) var(--s);
 	min-width: 33%;
 	font-size: var(--xs);
 }
@@ -777,6 +783,8 @@ a:focus {
 	}
 	.nav .list {
 		margin-bottom: 0;
+		padding-bottom: 0;
+		max-width: 100%;
 	}
 	.nav .avatar {
 		display: none;
@@ -823,10 +831,14 @@ a:focus {
 		top: auto;
 		left: auto;
 		width: 100%;
-		padding: var(--s) ;
+		padding: var(--l) var(--l) 0;
 	}
 	.nav .avatar {
 		display: none;
+	}
+	.nav .list {
+		margin-bottom: 0;
+		max-width: 100%;
 	}
 	.content-extra .full-largeur {
 		max-width: 100%;
@@ -1066,9 +1078,9 @@ visibility: visible;
 
 
 .welcome-container .title {
-	background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+background: -webkit-linear-gradient(#eee, #333);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 */
