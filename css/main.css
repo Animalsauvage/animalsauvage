@@ -592,7 +592,7 @@ a:focus {
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 2vw 50vw 0 50vw;
+	border-width: 2vw 49vw 0 49vw;
 	border-color: var(--color3) transparent transparent transparent;
 }
 .edito.fleche::before {
