@@ -1080,6 +1080,46 @@ input[name='panel']:checked ~ .accordion-content {
 .col-second {
 	width: 100%;
 }
+.explication {
+	position: sticky;
+	top: 0;
+	left: 0;
+	padding: var(--m);
+}
+.explication .number {
+	position: relative;
+	top: -5px;
+	left: -5px;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	color: var(--color2);
+	color: #FFF;
+	font-size: calc(var(--xs) / 2);
+	font-weight: 700;
+	text-align: center;
+	line-height: 25px;
+	background-color: var(--color2);
+}
+
+.col-first,
+.figure.ajustement-echelle {
+	max-width: 375px;
+}
+
+@media screen and (max-width: 39.9375em) {
+	.double-colonne {
+		flex-direction: column;
+	}	
+	.explication {
+		position: relative;
+		top: auto;
+		left: auto;
+		padding: var(--xs) 0;
+	}
+}
+
 
 
 /*
