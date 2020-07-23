@@ -523,8 +523,10 @@ a:focus {
 .header {
 	position: relative;
 	width: 100%;
-	background: linear-gradient(0deg, var(--color3), var(--color5));
 	z-index: 2;
+}
+.accueil .header {
+	background: linear-gradient(0deg, var(--color3), var(--color5));
 }
 .header-container {
 	position: relative;
