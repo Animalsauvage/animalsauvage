@@ -505,10 +505,10 @@
 
 						<h3>Wireframes des pages de dons</h3>
 
-						<p>Pour permettre le contrôle de la saisie des champs côté serveur, je propose de placer chaque étape dans une page propre et d'éxécuter ce contrôle au clic sur le CTA (faisabilité à vérifier auprès des développeurs).</p>
-						
-						<p>Le rechargement de la page donnera aussi l'indication à l'utilisateur que le système a bienpris en compte ses choix.</p>
-					
+						<p>Pour éxécuter le contrôle de la saisie des champs côté serveur au clic sur le CTA, je propose de placer chaque étape dans une page unique et (faisabilité à vérifier auprès des développeurs).</p>
+
+						<p>Le rechargement de la page donnera aussi l'indication à l'utilisateur que le système a bien pris en compte ses choix avec des feedbacks associés.</p>
+
 						<h4 class="chapitrage-reset-beta">Page d'accueil</h4>
 
 						<div class="double-colonne">
@@ -524,14 +524,14 @@
 													 image/mobile-don-etape-1.png 375w,
 													 image/mobile-don-etape-1-hd.png 750w"
 											 src="image/mobile-don-etape-1.png"
-											 alt="Wireframe du Minimum Viable Product (MVP) d'une page de don">
+											 alt="Wireframe de la première étape d'une page de don">
 									</picture>
 
-									<figcaption class="legende">Wireframe du MVP d'une page de don</figcaption>
+									<figcaption class="legende">Wireframe de la première étape d'une page de don</figcaption>
 								</figure>
-								
+
 								<hr>
-								
+
 								<figure class="figure">
 									<picture class="picture">
 										<img
@@ -565,9 +565,48 @@
 							</div>
 						</div>
 
+						<h4>Défiscalisation</h4>
 
+						<p>Remarque&nbsp;: en déplaçant le calculateur de déduction fiscale sur cette seconde partie, je cherche à réduire la charge mentale de la première étape&nbsp;; où l'utilisateur se concentre sur le choix du don et j'essaie de rester cohérent en regroupant tous les éléments relatifs aux avantages fiscaux en un seul endroit.</p>
 
+						<p>Pour rappel ce calculateur est une incitation sous forme de récompense. Il est généralement placé à proximité du choix du montant du don.</p>
 
+						<p>Ce priver de cette incitation est une décision qu'il faudra tester auprès des utilisateurs (A/B Testing par exemple).</p>
+						
+						<p>En pensant à Thomas, qui n'a pas de besoin de défiscalisation, je rend cette étape facultative (un peu comme le mode invité de certain site e-commerce).</p>
+						
+						<p>Un utilisateur qui renseigne son adresse mail à cette étape, n'aura pas à la re-saisir au moment du paiement (suaf s'il souhaite la changer).</p>
+
+						<div class="double-colonne">
+							<div class="col-first">
+								<figure class="figure">
+									<picture class="picture">
+										<img
+											 sizes="
+													(min-width: 641px) 750px,
+													(max-width: 640px) 375px,
+													100vw"
+											 srcset="
+													 image/mobile-don-etape-2.png 375w,
+													 image/mobile-don-etape-2-hd.png 750w"
+											 src="image/mobile-don-etape-2.png"
+											 alt="Wireframe de la seconde étape d'une page de don">
+									</picture>
+
+									<figcaption class="legende">Wireframe de la seconde étape d'une page de don</figcaption>
+								</figure>
+							</div>
+
+							<div class="col-second explication">
+								<p><span class="number">1</span> Notification temporaire&nbsp;: feedback du système</p>
+								<p><span class="number">2</span> Possibilité de revenir à l'étape antérieure</p>
+								<p><span class="number">3</span> Possibilité de passer cette étape (sauf si la réglementation exige de récupérer les coordonnnées du donateur)</p>
+								<p><span class="number">4</span> Calculateur qui se met automatiquement à jour en fonction des choix de l'utilisateur</p>
+								<p><span class="number">5</span> Justification des informations demandées</p>
+								<p><span class="number">6</span> Notification RGPD (opt-in)</p>
+								<p><span class="number">7</span> CTA de confirmation</p>
+							</div>
+						</div>
 
 
 
