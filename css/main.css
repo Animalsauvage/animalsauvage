@@ -77,7 +77,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1.4;
-	counter-reset: h2 h3 h4;
 }
 ol, ul {
 	list-style: none;
@@ -158,7 +157,8 @@ img {
 	background-color: var(--color2);
 }
 
-/* Titres */
+
+/* Typographie */
 h1,
 h2,
 .like-h2 {
@@ -201,13 +201,6 @@ h2,
 	color : transparent;
 	background-image: url(../image/photo-2.jpg);
 }
-
-
-
-h2::before {     
-	content: counter(h2) ". ";     
-	counter-increment: h2; 
-} 
 h2::after {
 	content: "";
 	position: absolute;
@@ -230,28 +223,16 @@ h2:target::after {
 h3 {
 	font-size: var(--s);
 	font-weight: 700;
-	padding-bottom: var(--xs);
-}
-h3::before {     
-	content: counter(h2) "." counter(h3) " " ;     
-	counter-increment: h3; 
-	width: 100%;
-}
-.chapitrage {
-	counter-reset: h4;
 	padding-top: var(--m);
+	padding-bottom: var(--xs);
 }
 h4 {
 	max-width: calc(var(--xl) * 4);
 	font-size: var(--xs);
 	font-weight: 700;
 	margin-bottom: var(--xs);
-	padding-top: var(--xs);
+	padding-top: var(--s);
 	width: 100%;
-}
-h4::before {
-	content: counter(h2) "." counter(h3) "." counter(h4) " " ;     
-	counter-increment: h4; 	
 }
 h5 {
 	position: relative;
@@ -389,7 +370,7 @@ blockquote p {
 	width: 100%;
 	text-align: center;
 	letter-spacing: .5ex;
-	background-color: var(--color2);
+	background-color: var(--color4);
 	border-radius: 4px;
 	box-shadow:
 		0 1.1px 1.9px rgba(0, 0, 0, 0.028),
@@ -466,6 +447,10 @@ blockquote p {
 		padding: calc(var(--xs) - 8px) var(--xs);
 		border: 3px solid var(--color3);
 	}
+	p,
+	.figure {
+		max-width: 100%;
+	}
 	@-moz-document url-prefix() {
 		.first-letter::first-letter {			
 			padding: calc(var(--xs) - 1px) var(--xs);
@@ -473,6 +458,33 @@ blockquote p {
 	}
 
 }
+
+
+/* Chapitrage */
+body {
+	counter-reset: compteur-h2 compteur-h3 compteur-h4;
+}
+
+.chapitrage-reset-alpha {
+	counter-reset: compteur-h3;
+}
+.chapitrage-reset-beta {
+	counter-reset: compteur-h4;
+}
+h2::before {     
+	content: counter(compteur-h2) ". ";     
+	counter-increment: compteur-h2; 
+} 
+h3::before {     
+	content: counter(compteur-h2) "." counter(compteur-h3) " " ;     
+	counter-increment: compteur-h3; 
+	width: 100%;
+}
+h4::before {
+	content: counter(compteur-h2) "." counter(compteur-h3) "." counter(compteur-h4) " " ;     
+	counter-increment: compteur-h4; 	
+}
+
 
 /* Bouton et lien */
 a {
@@ -1057,8 +1069,17 @@ input[name='panel']:checked ~ .accordion-content {
 	}
 }
 
-
-
+.double-colonne {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.col-first,
+.col-second {
+	width: 100%;
+}
 
 
 /*
