@@ -463,13 +463,13 @@
 
 						<h2 id="prototypage">Prototypage d'une page de don</h2>
 
-						<p class="first-letter">Le <strong>prototypage</strong> est réalisé sous la forme de wireframe. L'idée est de réunir tous les éléments que nous avons précédemment identifiés pour tenter d'en définir une représenation visuelle. <br> L'usage sur smartphone étant toujours prédominant, j'ai choisi de les réaliser en «&nbsp;Mobile First&nbsp;».</p>
+						<p class="first-letter">Le <strong>prototypage</strong> est réalisé sous la forme de wireframe. L'idée est de réunir tous les éléments que nous avons précédemment identifiés pour tenter d'en définir une représentation visuelle. <br> Pour répondre à l'usage toujours grandissant sur smartphone, j'ai réalisé les wireframes en <strong>«&nbsp;Mobile First&nbsp;»</strong>.</p>
 
 						<h3 class="chapitrage-reset-alpha">Le Minimum Viable Product (MVP)</h3>
 
-						<p>Pour construire mon <abbr title="Minimum Viable Product">MVP</abbr>, je pose uniquement les éléments nécessaire au fonctionnement minimum attendu du service.</p>
+						<p>Pour construire mon <abbr title="Minimum Viable Product">MVP</abbr>, je pose uniquement les éléments nécessaire au fonctionnement minimum attendu du service. Je développe le reste des fonctionnalités à partir de cette base.</p>
 
-						<p>Cette version est présentée le plus tôt possible aux développeurs pour qu'ils puissent commencer à faire des tests concrets de leur côté aussi.</p>
+						<p>L'idéal serait de présenter cette version aux développeurs assez rapidement pour qu'ils puissent réaliser des tests concrets de leur côté aussi.</p>
 
 						<div class="double-colonne">
 							<div class="col-first">
@@ -495,7 +495,7 @@
 								<p><span class="number">1</span> Titre de la page</p>
 								<p><span class="number">2</span> Possibilité de renseigner un montant libre</p>
 								<p><span class="number">3</span> Avertissement sur les contraintes du système</p>
-								<p><span class="number">4</span> Ré-assurance</p>
+								<p><span class="number">4</span> Réassurance</p>
 								<p><span class="number">5</span> Contrôle de la saisie des champs en temps réel</p>
 								<p><span class="number">6</span> Aide sur le type de saisie attendu</p>
 								<p><span class="number">7</span> Justification de la demande</p>
@@ -505,9 +505,17 @@
 
 						<h3>Wireframes des pages de dons</h3>
 
-						<p>Pour éxécuter le contrôle de la saisie des champs côté serveur au clic sur le CTA, je propose de placer chaque étape dans une page unique et (faisabilité à vérifier auprès des développeurs).</p>
+						<p>Pour exécuter le contrôle de la saisie des champs côté serveur le plus tôt possible, je propose de placer chaque étape dans une page unique. Le contrôle s'effectue au clic sur le CTA (faisabilité à vérifier auprès des développeurs).</p>
 
 						<p>Le rechargement de la page donnera aussi l'indication à l'utilisateur que le système a bien pris en compte ses choix avec des feedbacks associés.</p>
+
+						<p>Il y a 3 étapes donc 3 pages :</p>
+
+						<ul class="liste-puce">
+							<li>La page d'accueil</li>
+							<li>La page concernant la défiscalisation</li>
+							<li>La page de paiement</li>
+						</ul>
 
 						<h4 class="chapitrage-reset-beta">Page d'accueil</h4>
 
@@ -527,7 +535,7 @@
 											 alt="Wireframe de la première étape d'une page de don">
 									</picture>
 
-									<figcaption class="legende">Wireframe de la première étape d'une page de don</figcaption>
+									<figcaption class="legende">Wireframe de la première étape d'une page de don : le choix du montant</figcaption>
 								</figure>
 
 								<hr>
@@ -556,26 +564,39 @@
 								<p><span class="number">3</span> Étape 1 du modèle mentale</p>
 								<p><span class="number">4</span> Switch don unique ou mensuel : voir le zoom</p>
 								<p><span class="number">5</span> Possibilité de mettre un montant libre</p>
-								<p><span class="number">6</span> Suggestion de montants pré-déterminés</p>
+								<p><span class="number">6</span> Suggestion de montants prédéterminés</p>
 								<p><span class="number">7</span> Pique + Mise à jour de la description des actions possible en fonction du montant choisi</p>
 								<p><span class="number">8</span> CTA dynamique</p>
-								<p><span class="number">9</span> Footer de ré-assurance</p>
+								<p><span class="number">9</span> Footer de réassurance</p>
 								<hr>
-								<p><span class="number">10</span> Zoom lorsque l'option du don mensuel a été activée : les intitulés sont mis à jour, un menu déroulant apparait pour choisir la récurrence du don et le CTA est mis à jour en fonction des choix de l'utilisateur</p>
+								<p><span class="number">10</span> Zoom lorsque l'option du don mensuel a été activée : les intitulés sont mis à jour, un menu déroulant apparaît pour choisir la récurrence du don et le CTA est mis à jour en fonction des choix de l'utilisateur</p>
+							</div>
+						</div>
+
+						<div class="accordion">
+							<div class="accordion-item">
+								<input type="checkbox" name="panel" id="panel-4">
+								<label for="panel-4">Version Desktop du wireframe de la page d'accueil</label>
+								<div class="accordion-content">
+
+									<figure class="figure">
+										<img src="image/desktop-don-etape-1.png"alt="Version Desktop du wireframe de la page d'accueil">
+
+										<figcaption class="legende">Version Desktop du wireframe de la page d'accueil</figcaption>
+									</figure>
+								</div>
 							</div>
 						</div>
 
 						<h4>Défiscalisation</h4>
 
-						<p>Remarque&nbsp;: en déplaçant le calculateur de déduction fiscale sur cette seconde partie, je cherche à réduire la charge mentale de la première étape&nbsp;; où l'utilisateur se concentre sur le choix du don et j'essaie de rester cohérent en regroupant tous les éléments relatifs aux avantages fiscaux en un seul endroit.</p>
+						<p><u>Remarque</u>&nbsp;: en déplaçant le calculateur de déduction fiscale dans cette seconde partie, je cherche à <strong>réduire la charge mentale et le bruit</strong> de la première étape -&nbsp;où l'utilisateur se concentre sur le choix du don&nbsp;- et j'essaie de <strong>rester cohérent</strong> en regroupant tous les éléments relatifs aux avantages fiscaux en un seul endroit.</p>
 
-						<p>Pour rappel ce calculateur est une incitation sous forme de récompense. Il est généralement placé à proximité du choix du montant du don.</p>
+						<p>Pour rappel ce calculateur est une incitation sous forme de récompense. Il est généralement placé à proximité du choix du montant du don. L'impact de cette décision sera à tester auprès des utilisateurs (A/B Testing par exemple).</p>
 
-						<p>Ce priver de cette incitation est une décision qu'il faudra tester auprès des utilisateurs (A/B Testing par exemple).</p>
-						
-						<p>En pensant à Thomas, qui n'a pas de besoin de défiscalisation, je rend cette étape facultative (un peu comme le mode invité de certain site e-commerce).</p>
-						
-						<p>Un utilisateur qui renseigne son adresse mail à cette étape, n'aura pas à la re-saisir au moment du paiement (suaf s'il souhaite la changer).</p>
+						<p>Cette étape est facultative pour satisfaire le besoin de Thomas, qui n'a pas de besoin de défiscalisation (un peu comme le mode invité de certain site e-commerce).</p>
+
+						<p>Un utilisateur qui renseigne son adresse mail à cette étape, n'aura pas à la re-saisir au moment du paiement (sauf s'il souhaite la changer).</p>
 
 						<div class="double-colonne">
 							<div class="col-first">
@@ -593,14 +614,14 @@
 											 alt="Wireframe de la seconde étape d'une page de don">
 									</picture>
 
-									<figcaption class="legende">Wireframe de la seconde étape d'une page de don</figcaption>
+									<figcaption class="legende">Wireframe de la page de défiscalisation</figcaption>
 								</figure>
 							</div>
 
 							<div class="col-second explication">
 								<p><span class="number">1</span> Notification temporaire&nbsp;: feedback du système</p>
 								<p><span class="number">2</span> Possibilité de revenir à l'étape antérieure</p>
-								<p><span class="number">3</span> Possibilité de passer cette étape (sauf si la réglementation exige de récupérer les coordonnnées du donateur)</p>
+								<p><span class="number">3</span> Possibilité de passer cette étape (sauf si la réglementation exige de récupérer les coordonnées du donateur)</p>
 								<p><span class="number">4</span> Calculateur qui se met automatiquement à jour en fonction des choix de l'utilisateur</p>
 								<p><span class="number">5</span> Justification des informations demandées</p>
 								<p><span class="number">6</span> Notification RGPD (opt-in)</p>
@@ -608,14 +629,87 @@
 							</div>
 						</div>
 
+						<div class="accordion">
+							<div class="accordion-item">
+								<input type="checkbox" name="panel" id="panel-5">
+								<label for="panel-5">Version Desktop du wireframe de la page de défiscalisation</label>
+								<div class="accordion-content">
 
+									<figure class="figure">
+										<img src="image/desktop-don-etape-2.png"alt="Version Desktop du wireframe de la page de défiscalisation">
+
+										<figcaption class="legende">Version Desktop du wireframe de la page de défiscalisation</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+
+						<h4>Paiement</h4>
+
+						<p>L'étape du paiement reste classique.</p>
+
+						<p>Je me suis limité aux étapes essentielles du parcours utilisateur. Les page récapitulative et de remerciement ne seront pas affichées. Il serait pourtant intéressant d'y mettre un module pour partager sa bonne action sur les réseaux sociaux.</p>
+
+
+						<div class="double-colonne">
+							<div class="col-first">
+								<figure class="figure">
+									<picture class="picture">
+										<img
+											 sizes="
+													(min-width: 641px) 750px,
+													(max-width: 640px) 375px,
+													100vw"
+											 srcset="
+													 image/mobile-don-etape-3.png 375w,
+													 image/mobile-don-etape-3-hd.png 750w"
+											 src="image/mobile-don-etape-3.png"
+											 alt="Wireframe de la troisième étape d'une page de don">
+									</picture>
+
+									<figcaption class="legende">Wireframe de l'étape de paiement</figcaption>
+								</figure>
+							</div>
+
+							<div class="col-second explication">
+								<p><span class="number">1</span> Notification temporaire : feedback du système</p>
+								<p><span class="number">2</span> Possibilité de revenir à l'étape antérieure</p>
+								<p><span class="number">3</span> Récapitulatif clair de la commande et du statut de la défiscalisation</p>
+								<p><span class="number">4</span> Possibilité de faire une demande de défiscalisation si l'utilisateur change d'avis</p>
+								<p><span class="number">5</span> Différents moyens de paiement avec l'encart de paiement par carte déployé</p>
+								<p><span class="number">6</span> Justification des informations demandées. Champ pré-rempli si la demande de défiscalisation a été faite.</p>
+								<p><span class="number">7</span> Proposition d'abonnement à la newsletter</p>
+								<p><span class="number">8</span> CTA final avec intitulé dynamique</p>
+								<p><span class="number">9</span> Zone de réassurance</p>
+							</div>
+						</div>
+
+						<div class="accordion">
+							<div class="accordion-item">
+								<input type="checkbox" name="panel" id="panel-6">
+								<label for="panel-6">Version Desktop du wireframe de la page de paiement</label>
+								<div class="accordion-content">
+
+									<figure class="figure">
+										<img src="image/desktop-don-etape-3.png"alt="Version Desktop du wireframe de la page de paiement">
+
+										<figcaption class="legende">Version Desktop du wireframe de la page de paiement</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+
+
+						<h3>Conclusion</h3>
+						
+						<p>Voilà, l'exercice de style est terminé. Il ne reste plus qu'a tester tout cela pour vérifier l'utilisabilité de la solution, mettre une couche UI pour rendre cela plus esthétique et réveiller la dimension émotionnelle et constater (ou pas) si les dons sont plus fréquents et plus importants qu'avec une autre façon de présenter une demande de don.</p>
 
 					</div>
 				</article>
 			</div>
 
 			<aside class="etudes-container">
-				<div class="title">Autre études de cas</div>
+				<div class="title">Lecture suivante&nbsp;...</div>
 
 				<ul class="etudes-list">
 					<li class="cas">

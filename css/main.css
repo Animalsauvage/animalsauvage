@@ -937,7 +937,7 @@ a:focus {
 	display: block;
 	max-width: 90rem;
 	position: relative;
-	font-size: var(--m);
+	font-size: var(--s);
 	line-height: 1.2;
 	padding: var(--xs) 0;
 	margin: var(--m) 0 var(--s);
@@ -1075,6 +1075,7 @@ input[name='panel']:checked ~ .accordion-content {
 	flex-direction: row;
 	align-items: flex-start;
 	justify-content: flex-start;
+	padding-bottom: var(--m);
 }
 .col-first,
 .col-second {
