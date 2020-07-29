@@ -561,10 +561,15 @@ a:focus {
 	overflow: hidden;
 	height: 15vw;
 }
+.accueil .header-container {
+	align-items: center;
+}
 .accueil .logo-container {
+	width: 100%;
+	max-width: 65vw;
 	height: auto;
-	min-height: 75vh;
-	padding: var(--m) var(--l);
+	min-height: 65vh;
+	padding: var(--l) var(--l) var(--s);
 }
 .logo {
 	position: relative;
