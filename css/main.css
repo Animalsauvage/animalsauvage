@@ -535,6 +535,7 @@ a:focus {
 .header {
 	position: relative;
 	width: 100%;
+	background-color: var(--color3);
 	z-index: 2;
 }
 .accueil .header {
@@ -551,6 +552,8 @@ a:focus {
 	margin: 0 auto;
 	z-index: 2;
 }
+
+/* Logo */
 .logo-container {
 	display: flex;
 	flex-direction: column;
@@ -582,8 +585,9 @@ a:focus {
 /* 768 px*/
 @media screen and (max-width: 48em) {
 	.accueil .logo-container {
+		max-width: 100vw;
 		min-height: auto;
-		padding: var(--xl) var(--xs);
+		padding: var(--l) var(--xs);
 	}
 	.logo-container {
 		height: 40vw;
@@ -909,14 +913,85 @@ a:focus {
 	width: 100%;
 	padding: var(--xl) var(--xs);
 	background: var(--color2);
-	z-index: -1;
+}
+.footer::after {
+	content: "menu →";
+	position: absolute;
+	bottom: var(--l);
+	right: 0;
+	display: block;
+	font-size: var(--xs);
+	font-weight: 400;
+	color: var(--color4);
+	opacity: .5;
+	transform: rotate(-90deg) translateX(100%);
 }
 .footer .contact {
 	font-family: "PT Serif", Georgia, serif;
 	font-weight: 700;
 	font-size: var(--s);
 	text-align: center;
+	padding-top: var(--l);
 }
+
+/* Nav */
+.menu-content {
+	width: 100%;
+}
+.menu-content .menu-list {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: space-around;
+	width: 100%;
+	max-width: 100%;
+}
+.menu-item-link {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.menu-item .title {
+	font-family: "PT Serif", Georgia, serif;
+	font-size: var(--m);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.menu-item .title.link {
+	color: var(--color1);
+	box-shadow: inset 0 -2px var(--color1);
+	transition: box-shadow 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+.menu-item .title.link:hover,
+.menu-item .title.link:focus {
+	box-shadow: inset 0 -1.1ex 0 var(--color3);
+}
+.menu-item .subtitle {
+	font-size: var(--xs);
+	padding-top: var(--xs);
+}
+
+@media screen and (max-width: 63.9375em) {
+	.footer {
+		padding: var(--m) var(--xs);
+	}
+	.menu-content .menu-list {
+		flex-direction: column;
+		align-items: center;
+	}
+	.menu-item {
+		padding-bottom: var(--s);
+	}
+	.menu-item-link {
+		align-items: center;
+	}
+	.footer .contact {
+		padding-top: 0;
+	}
+}
+
 
 
 
