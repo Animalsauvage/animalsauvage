@@ -462,7 +462,7 @@ blockquote p {
 
 /* Chapitrage */
 body {
-	counter-reset: compteur-h2 compteur-h3 compteur-h4;
+	counter-reset: compteur-h2 compteur-h3 compteur-h4 compteur-menu;
 }
 
 .chapitrage-reset-alpha {
@@ -947,6 +947,16 @@ a:focus {
 	width: 100%;
 	max-width: 100%;
 }
+.menu-item {
+	position: relative;
+}
+.menu-item:before {
+	content: counter(compteur-menu) ". ";
+	counter-increment: compteur-menu;
+	position: absolute;
+	top: 0;
+	left: calc(var(--s) * -1);
+}
 .menu-item-link {
 	display: flex;
 	flex-direction: column;
@@ -977,6 +987,10 @@ a:focus {
 	.footer {
 		padding: var(--m) var(--xs);
 	}
+	.footer::after {
+		content: " ";
+		display: none;
+	}
 	.menu-content .menu-list {
 		flex-direction: column;
 		align-items: center;
@@ -986,6 +1000,12 @@ a:focus {
 	}
 	.menu-item-link {
 		align-items: center;
+	}
+	.menu-item .title {
+		font-size: var(--s);
+	}
+	.menu-item .subtitle {
+		padding-top: calc(var(--xs) / 2);
 	}
 	.footer .contact {
 		padding-top: 0;
