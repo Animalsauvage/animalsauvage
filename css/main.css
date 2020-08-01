@@ -923,7 +923,7 @@ a:focus {
 	font-size: var(--xs);
 	font-weight: 400;
 	color: var(--color4);
-	opacity: .5;
+	opacity: .25;
 	transform: rotate(-90deg) translateX(100%);
 }
 .footer .contact {
@@ -1011,12 +1011,16 @@ a:focus {
 		padding-top: calc(var(--xs) / 2);
 	}
 	.footer .contact {
-		padding-top: 0;
+		padding-top: var(--xs);
 	}
 }
 
 
-
+/* Page liste
+****************************************/
+.page-liste .illustration-container {
+	padding-bottom: var(--l);
+}
 
 /* Étude de cas
 ****************************************/
