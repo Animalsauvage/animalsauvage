@@ -199,7 +199,7 @@ h2,
 	padding-bottom: var(--xs);
 	-webkit-background-clip : text;
 	color : transparent;
-	background-image: url(../image/photo-2.jpg);
+	background-image: url(../images/photo-2.jpg);
 }
 h2::after {
 	content: "";
