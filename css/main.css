@@ -566,12 +566,12 @@ a:focus {
 	font-family: "PT Serif", Georgia, serif;
 	font-size: 1rem;
 	font-weight: 700;
-	transform: rotate(-45deg);
+	transform: rotate(-45deg) translateX(0);
 	transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .link[target="_blank"]:hover::after,
 .link[target="_blank"]:focus::after {
-	transform: rotate(-90deg);
+	transform: rotate(-90deg) translateX(1ex);
 }
 .accueil .link {
 	color: var(--color1);
