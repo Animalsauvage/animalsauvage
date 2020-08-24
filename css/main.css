@@ -1,10 +1,10 @@
 /*
-      :::    :::  :::    :::   ::::::::    :::::::: 
-     :+:    :+:  :+:    :+:  :+:    :+:  :+:    :+: 
-    +:+    +:+  +:+    +:+  +:+         +:+    +:+  
-   +#++:++#+   #+#    #+#  :#:         +#+    +:+   
-  +#+    +#+  +#+    +#+  +#+   +#+#  +#+    +#+    
- #+#    #+#  #+#    #+#  #+#    #+#  #+#    #+#     
+:::    :::  :::    :::   ::::::::    :::::::: 
+:+:    :+:  :+:    :+:  :+:    :+:  :+:    :+: 
++:+    +:+  +:+    +:+  +:+         +:+    +:+  
++#++:++#+   #+#    #+#  :#:         +#+    +:+   
++#+    +#+  +#+    +#+  +#+   +#+#  +#+    +#+    
+#+#    #+#  #+#    #+#  #+#    #+#  #+#    #+#     
 ###    ###  ##########   ########    ########       
 */
 
@@ -435,6 +435,48 @@ blockquote p {
 	background-color: #ececed;
 }
 
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted var(--color5);
+	cursor: help;
+}
+
+.tooltip .tooltip-content {
+	display: block;
+	width: auto;
+	visibility: hidden;
+	font-size: calc(var(--xs) / 2);
+	line-height: var(--xs);
+	color: var(--color4);
+	border-radius: 4px;
+	padding: 0 calc(var(--xs) / 2);
+	text-align: center;
+	background-color: var(--color2);
+	box-shadow: 0 1.1px 1.9px rgba(0, 0, 0, 0.028),
+		0 2.7px 3.9px rgba(0, 0, 0, 0.04),
+		0 5px 6.7px rgba(0, 0, 0, 0.05),
+		0 8.9px 12.4px rgba(0, 0, 0, 0.06),
+		0 16.7px 27.2px rgba(0, 0, 0, 0.072),
+		0 40px 80px rgba(0, 0, 0, 0.1);
+
+	/* Position the tooltip */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*
+	top: calc(var(--xs) * -1);
+	left: 0;
+	*/
+	z-index: 1;
+}
+
+.tooltip:hover .tooltip-content,
+.tooltip:focus .tooltip-content {
+	visibility: visible;
+}
+
 /* Hack firefox */
 @-moz-document url-prefix() {
 	.first-letter::first-letter {		
@@ -518,10 +560,18 @@ a:focus {
 	box-shadow: inset 0 -1.1ex 0 var(--color1);
 }
 .link[target="_blank"]::after {
-	content: " ↗";
+	content: " →";
+	position: relative;
+	display: inline-block;
 	font-family: "PT Serif", Georgia, serif;
 	font-size: 1rem;
 	font-weight: 700;
+	transform: rotate(-45deg);
+	transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+.link[target="_blank"]:hover::after,
+.link[target="_blank"]:focus::after {
+	transform: rotate(-90deg);
 }
 .accueil .link {
 	color: var(--color1);
@@ -927,6 +977,7 @@ a:focus {
 	width: 100%;
 	padding: var(--xl) var(--xs);
 	background: var(--color2);
+	z-index: 1;
 }
 .footer::after {
 	content: "menu →";
