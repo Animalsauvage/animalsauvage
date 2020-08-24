@@ -624,9 +624,9 @@ a:focus {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	padding: var(--s) var(--s);
+	padding: var(--l) var(--s) var(--s);
 	overflow: hidden;
-	height: 15vw;
+	height: 25vw;
 }
 .accueil .header-container {
 	align-items: center;
@@ -654,7 +654,7 @@ a:focus {
 		padding: var(--xl) var(--xs) var(--xs);
 	}
 	.logo-container {
-		height: 40vw;
+		height: 50vw;
 	}
 }
 
