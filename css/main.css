@@ -999,7 +999,7 @@ a:focus {
 	z-index: 10;
 }
 .header label::before {
-	content: "?";
+	content: "≈";
 	display: block;
 	width: var(--xs);
 	height: var(--xs);
