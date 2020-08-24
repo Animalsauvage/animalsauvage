@@ -651,7 +651,7 @@ a:focus {
 	.accueil .logo-container {
 		max-width: 100vw;
 		min-height: auto;
-		padding: var(--l) var(--xs);
+		padding: var(--xl) var(--xs) var(--xs);
 	}
 	.logo-container {
 		height: 40vw;
