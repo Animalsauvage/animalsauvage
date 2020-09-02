@@ -686,6 +686,7 @@ a:focus {
 }
 .accueil .welcome-container .title {
 	font-size: var(--m);
+	line-height: 1.4;
 }
 .edito .welcome-container {
 	padding: var(--m) 0 0 0;
@@ -942,6 +943,7 @@ a:focus {
 	}
 	.accueil .welcome-container .title {
 		font-size: var(--s);
+		line-height: 1.4;
 	}
 }
 
