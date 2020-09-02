@@ -690,6 +690,9 @@ a:focus {
 	padding: var(--m) var(--l) var(--l);
 	background-color: var(--color3);
 }
+.accueil .welcome-container .title {
+	font-size: var(--m);
+}
 .edito .welcome-container {
 	padding: var(--m) 0 0 0;
 }
@@ -942,6 +945,9 @@ a:focus {
 	}
 	.welcome-container .title {
 		font-size: var(--m);
+	}
+	.accueil .welcome-container .title {
+		font-size: var(--s);
 	}
 }
 
