@@ -596,9 +596,6 @@ a:focus {
 	background-color: var(--color3);
 	z-index: 3;
 }
-.accueil .header {
-	background: linear-gradient(0deg, var(--color3), var(--color5));
-}
 .header-container {
 	position: relative;
 	display: flex;
@@ -613,43 +610,13 @@ a:focus {
 
 /* Logo */
 .logo-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	padding: var(--l) var(--s) var(--s);
-	overflow: hidden;
-	height: 25vw;
-}
-.accueil .header-container {
-	align-items: center;
-}
-.accueil .logo-container {
-	width: 100%;
-	max-width: 65vw;
-	height: auto;
-	min-height: 65vh;
-	padding: var(--l) var(--l) var(--s);
+	display: block;
+	padding: var(--xs);
 }
 .logo {
 	position: relative;
 	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-
-/* 768 px*/
-@media screen and (max-width: 48em) {
-	.accueil .logo-container {
-		max-width: 100vw;
-		min-height: auto;
-		padding: var(--xl) var(--xs) var(--xs);
-	}
-	.logo-container {
-		height: 50vw;
-	}
+	width: var(--xs);
 }
 
 
@@ -753,7 +720,6 @@ a:focus {
 .title-container .breadcrumb {
 	font-size: var(--xs);
 	padding-bottom: var(--s);
-	font-weight: 700;
 }
 .title-container .breadcrumb .link {
 	color: var(--color1);
@@ -941,10 +907,6 @@ a:focus {
 	.welcome-container .title {
 		font-size: var(--m);
 	}
-	.accueil .welcome-container .title {
-		font-size: var(--s);
-		line-height: 1.4;
-	}
 }
 
 .next-article {
@@ -993,14 +955,15 @@ a:focus {
 .header input[name="menu"] {
 	display: none;
 }
-.header label {
+.header .icon-menu {
 	position: absolute;
-	top: var(--xs);
-	right: var(--xs);
+	top: 0;
+	right: 0;
+	padding: var(--xs);
 	cursor: pointer;
 	z-index: 10;
 }
-.header label::before {
+.header .icon-menu::before {
 	content: "≈";
 	display: block;
 	width: var(--xs);
@@ -1015,11 +978,11 @@ a:focus {
 	border-radius: 50%;
 	transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
 }
-.header label:hover::before,
-.header label:focus::before {
+.header .icon-menu:hover::before,
+.header .icon-menu:focus::before {
 	opacity: 1;
 }
-.header input:checked + label::before {
+.header input:checked + .icon-menu::before {
 	content: "×";
 	opacity: 1;
 }
