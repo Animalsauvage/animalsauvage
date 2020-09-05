@@ -592,7 +592,7 @@ a:focus {
 .logo {
 	position: relative;
 	display: block;
-	width: var(--xs);
+	width: var(--s);
 }
 
 
@@ -603,6 +603,9 @@ a:focus {
 .accueil .welcome-container {
 	background-color: var(--color4);
 }
+.accueil .header .icon-menu::before {
+    background-color: var(--color5);
+}
 .accueil .welcome-container .title {
 	font-size: var(--m);
 	line-height: 1.4;
@@ -612,12 +615,15 @@ a:focus {
 .accueil .custom.link {
 	font-size: var(--s);
 }
-
 .accueil .fleche::before {
 	border-color: var(--color4) transparent transparent transparent;
 }
 
-
+@media screen and (max-width: 39.9375em) {	
+	.accueil .welcome-container .title {
+		font-size: calc(var(--m) * .95);
+	}
+}
 
 /* Main
 ****************************************/
@@ -902,10 +908,6 @@ a:focus {
 	.welcome-container .title {
 		font-size: var(--m);
 	}
-	.accueil .welcome-container .title {
-		line-height: 1.4;
-		font-weight: 400;
-	}
 }
 
 .next-article {
@@ -965,10 +967,10 @@ a:focus {
 .header .icon-menu::before {
 	content: "≈";
 	display: block;
-	width: var(--xs);
-	height: var(--xs);
-	font-size: calc(var(--xs) * .5);
-	line-height: var(--xs);
+	width: var(--s);
+	height: var(--s);
+	font-size: var(--xs);
+	line-height: var(--s);
 	font-weight: 700;
 	color: var(--color2);
 	opacity: .35;
