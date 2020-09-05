@@ -579,14 +579,13 @@ a:focus {
 	align-items: flex-start;
 	justify-content: flex-start;
 	width: 100%;
-	padding: 0 var(--xs);
 	z-index: 2;
 }
 
 /* Logo */
 .logo-container {
 	display: block;
-	padding: var(--xs);
+	padding: var(--xs) var(--xs) var(--xs) var(--s);
 }
 .logo {
 	position: relative;
@@ -969,8 +968,8 @@ a:focus {
 .header .icon-menu {
 	position: absolute;
 	top: 0;
-	right: var(--xs);
-	padding: var(--xs);
+	right: 0;
+	padding: var(--xs) var(--s) var(--xs) var(--xs);
 	cursor: pointer;
 	z-index: 10;
 }
