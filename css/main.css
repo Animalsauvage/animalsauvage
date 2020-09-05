@@ -907,6 +907,10 @@ a:focus {
 	.welcome-container .title {
 		font-size: var(--m);
 	}
+	.accueil .welcome-container .title {
+		line-height: 1.2;
+		font-weight: 400;
+	}
 }
 
 .next-article {
