@@ -603,9 +603,6 @@ a:focus {
 .accueil .welcome-container {
 	background-color: var(--color4);
 }
-.accueil .header .icon-menu::before {
-    background-color: var(--color5);
-}
 .accueil .welcome-container .title {
 	font-size: var(--m);
 	line-height: 1.4;
@@ -621,7 +618,7 @@ a:focus {
 
 @media screen and (max-width: 39.9375em) {	
 	.accueil .welcome-container .title {
-		font-size: calc(var(--m) * .95);
+		font-size: calc(var(--m) * .9);
 	}
 }
 
@@ -657,7 +654,7 @@ a:focus {
 	background-color: var(--color3);
 }
 .edito .welcome-container {
-	padding: var(--m) 0 0 0;
+	padding: var(--s) 0 0 0;
 }
 .main-container {
 	position: relative;
@@ -719,6 +716,8 @@ a:focus {
 	color: var(--color1);
 }
 .title-container .breadcrumb {
+	display: block;
+	width: 100%;
 	font-size: var(--xs);
 	padding-bottom: var(--s);
 }
@@ -966,26 +965,42 @@ a:focus {
 }
 .header .icon-menu::before {
 	content: "≈";
-	display: block;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 	width: var(--s);
 	height: var(--s);
 	font-size: var(--xs);
-	line-height: var(--s);
 	font-weight: 700;
-	color: var(--color2);
-	opacity: .35;
+	color: var(--color3);
 	background-color: var(--color1);
-	text-align: center;
+	border: 1px solid var(--color1);
 	border-radius: 50%;
-	transition: all 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+	transition: all .4s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .header .icon-menu:hover::before,
 .header .icon-menu:focus::before {
-	opacity: 1;
+	color: var(--color1);
+	background-color: var(--color3);
 }
 .header input:checked + .icon-menu::before {
 	content: "×";
-	opacity: 1;
+	color: var(--color2);
+}
+.accueil .header .icon-menu::before {
+	color: var(--color5);
+}
+.accueil .header .icon-menu:hover::before,
+.accueil .header .icon-menu:focus::before {
+	color: var(--color5);
+	background-color: var(--color4);
+}
+.header input:checked + .icon-menu:hover::before,
+.header input:checked + .icon-menu:focus::before {
+	color: var(--color1);
+	background-color: var(--color2);
+	
 }
 .menu-content {
 	position: relative;
