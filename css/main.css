@@ -206,7 +206,8 @@ h2,
 	padding-bottom: var(--xs);
 	-webkit-background-clip : text;
 	color : transparent;
-	background-image: url(../images/photo-2.jpg);
+	background-size: cover;
+	background-position: center center;
 }
 h2::after {
 	content: "";
