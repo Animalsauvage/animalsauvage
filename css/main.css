@@ -431,7 +431,6 @@ blockquote p {
 	border-radius: 4px;
 	background-color: #ececed;
 }
-
 .tooltip {
 	position: relative;
 	display: inline-block;
@@ -593,6 +592,7 @@ a:focus {
 	display: block;
 	width: var(--s);
 }
+
 
 
 /* Accueil
