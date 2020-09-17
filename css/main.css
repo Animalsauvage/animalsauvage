@@ -609,7 +609,7 @@ a:focus {
 	justify-content: center;
 	min-height: calc(100vh - 94px); /*94px = hauteur du header*/
 	width: 100%;
-	max-width: 90rem;
+	max-width: 88rem;
 	margin: 0 auto;
 }
 .accueil .welcome-container .title {
