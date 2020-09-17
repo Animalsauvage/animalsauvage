@@ -607,9 +607,9 @@ a:focus {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	min-height: 85vh;
+	min-height: calc(100vh - 94px); /*94px = hauteur du header*/
 	width: 100%;
-	max-width: 120rem;
+	max-width: 90rem;
 	margin: 0 auto;
 }
 .accueil .welcome-container .title {
