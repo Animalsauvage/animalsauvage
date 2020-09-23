@@ -290,6 +290,10 @@ ol {
 	top: 0;
 	left: 1ex;
 }
+.liste-puce span {
+	display: inline-block;
+	padding-bottom: 1ex;
+}
 .liste-retrait {
 	padding-left: var(--xs);
 }
