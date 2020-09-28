@@ -144,7 +144,7 @@ html {
 	font-size: 1em;
 	line-height: 1.4;
 	font-weight: 400;
-	color: var(--color1);
+	color: var(--color5);
 	-ms-text-size-adjust:100%;
 	-webkit-text-size-adjust:100%;
 	-webkit-font-smoothing: antialiased;
@@ -1127,6 +1127,7 @@ a:focus {
 	font-family: "PT Serif", Georgia, serif;
 	font-weight: 700;
 	font-size: var(--s);
+	color: var(--color1);
 	text-align: center;
 }
 
@@ -1231,6 +1232,7 @@ a:focus {
 	top: 0;
 	left: calc(var(--s) * -.8);
 	font-size: calc(var(--xs) / 1.5);
+	color: var(--color1);
 }
 .menu-item-link {
 	display: flex;
