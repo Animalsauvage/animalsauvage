@@ -668,7 +668,7 @@ a:focus {
 	background-color: var(--color3);
 }
 .edito .welcome-container {
-	padding: var(--s) 0 0 0;
+	padding: 0;
 }
 .main-container {
 	position: relative;
@@ -717,6 +717,7 @@ a:focus {
 	padding: 0 var(--l);
 }
 .title-container {
+	padding-top: var(--s);
 	background-color: var(--color3);
 	z-index: 5;
 }
@@ -1030,7 +1031,7 @@ a:focus {
 		padding-right: 0;
 	}
 	.title-container {
-		padding: 0 var(--s);
+		padding: var(--s) var(--s) 0;
 	}
 	.illustration-container::before {
 		height: 30vh;
