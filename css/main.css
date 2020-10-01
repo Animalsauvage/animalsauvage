@@ -746,6 +746,9 @@ a:focus {
 .title-container .breadcrumb .link:focus {
 	box-shadow: inset 0 -1.1ex 0 var(--color2);
 }
+.illustration-container {
+	min-height: 300px;
+}
 .illustration-container .photo {
 	position: relative;
 	z-index: 4;
