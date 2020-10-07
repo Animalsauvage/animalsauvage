@@ -1526,7 +1526,9 @@ input[name='panel']:checked ~ .accordion-content {
 	}
 }
 
-
+#cloudDrizzle {
+	max-width: 200px;
+}
 
 /*
 
