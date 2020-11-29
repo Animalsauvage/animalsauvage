@@ -1239,8 +1239,7 @@ a:focus {
 	transition: box-shadow 0.4s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .menu-item .title.link:hover,
-.menu-item .title.link:focus,
-.menu-item .title.link.actif {
+.menu-item .title.link:focus {
 	box-shadow: inset 0 -1.1ex 0 var(--color4);
 }
 .menu-item .subtitle {
