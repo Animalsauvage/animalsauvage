@@ -642,7 +642,7 @@ a:focus {
 .main {
     position: relative;
     background-color: var(--color3);
-    z-index: 2;
+    z-index: 4;
 }
 .main.edito {
     color: var(--color3);
@@ -652,11 +652,12 @@ a:focus {
     content: "";
     position: absolute;
     bottom: -1.9vw;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 2vw 49vw 0 49vw;
+    border-width: 2vw 46vw 0 46vw;
     border-color: var(--color3) transparent transparent transparent;
 }
 .edito.fleche::before {
@@ -1107,7 +1108,7 @@ a:focus {
     width: 100%;
     padding: var(--xl) var(--xs);
     background: var(--color2);
-    z-index: -1;
+    z-index: 1;
 }
 .footer .contact {
     font-family: "PT Serif", Georgia, serif;
@@ -1115,6 +1116,21 @@ a:focus {
     font-size: var(--s);
     color: var(--color4);
     text-align: center;
+}
+.ml-container {
+    position: absolute;
+    bottom: var(--xs);
+    right: var(--xs);
+}
+.ml-container .link {
+    color: var(--color4);
+    font-size: 0.5rem;
+    box-shadow: 0 0;
+    transition: color 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+.ml-container .link:hover,
+.ml-container .link:focus {
+    color: var(--color1);
 }
 
 
