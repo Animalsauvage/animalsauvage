@@ -1430,9 +1430,17 @@ a:focus {
     cursor: auto;
     border: 2px solid var(--color5);
 }
+.accordion-block {
+    width: 100%;
+    max-width: calc(var(--xl) * 4);
+    margin: 0 auto;
+}
 .accordion p {
     margin-left: auto;
     margin-right: auto;
+}
+.accordion .link {
+    font-size: var(--xs);
 }
 .accordion input[name="panel"] {
     display: none;
