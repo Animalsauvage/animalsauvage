@@ -515,10 +515,13 @@ body {
     counter-reset: compteur-h2 compteur-h3 compteur-h4 compteur-menu;
 }
 
-.chapitrage-reset-alpha {
+.chapitrage-reset-h2 {
+    counter-reset: compteur-h2;
+}
+.chapitrage-reset-h3 {
     counter-reset: compteur-h3;
 }
-.chapitrage-reset-beta {
+.chapitrage-reset-h4 {
     counter-reset: compteur-h4;
 }
 h2::before {     
@@ -1272,10 +1275,14 @@ svg[class*="blob-"] {
     right: var(--xs);
 }
 .ml-container .link {
+    padding: 0 .5rem;
     color: var(--color4);
     font-size: 0.5rem;
     box-shadow: 0 0;
     transition: color 0.4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+.ml-container .link:last-child {
+    padding-right: 0;
 }
 .ml-container .link:hover,
 .ml-container .link:focus {
