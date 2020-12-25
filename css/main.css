@@ -1373,7 +1373,7 @@ svg[class*="blob-"] {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 2vw 49vw 0 49vw;
+    border-width: 2vw 46vw 0 46vw;
     border-color: var(--color2) transparent transparent transparent;
 }
 .menu-content .menu-list {
