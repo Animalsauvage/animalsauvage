@@ -1566,6 +1566,9 @@ svg[class*="blob-"] {
 .accordion .link {
     font-size: var(--xs);
 }
+.accordion .legende .link {
+    font-size: inherit;
+}
 .accordion input[name="panel"] {
     display: none;
 }
