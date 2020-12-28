@@ -1223,6 +1223,9 @@ svg[class*="blob-"] {
     .welcome-container {
         padding: var(--s) var(--s) var(--m);
     }
+    .sd .welcome-container {
+        padding: 0;
+    }
     .welcome-container .title {
         font-size: var(--m);
     }
