@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1920 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-170.973,-122.645)">
+        <g transform="matrix(2.15135e-16,-3.51342,2.86388,1.75362e-16,-4687.08,15818.6)">
+            <rect x="4160.03" y="1696.32" width="307.392" height="670.419" style="fill:rgb(32,72,128);"/>
+        </g>
+        <g transform="matrix(4.01325,0,0,3.98571,156.969,130.311)">
+            <path d="M310.535,41.512L361.367,197.068L259.704,197.068L310.535,41.512Z" style="fill:rgb(148,199,191);"/>
+        </g>
+        <g transform="matrix(7.95462,0,0,4.00952,-553.048,121.28)">
+            <path d="M179.018,137.295L220.284,198.15L137.753,198.15L179.018,137.295Z" style="fill:rgb(255,223,136);"/>
+        </g>
+        <g transform="matrix(1,0,0,1,1114.33,762.298)">
+            <text x="136.275px" y="259.81px" style="font-family:'PTSans-CaptionBold', 'PT Sans Caption', sans-serif;font-weight:700;font-size:36px;fill:rgb(244,244,245);">T<tspan x="154.347px 168.963px " y="259.81px 259.81px ">ri</tspan>angle d&apos;<tspan x="318.399px 340.575px " y="259.81px 259.81px ">or</tspan> aigu</text>
+        </g>
+        <g transform="matrix(1,0,0,1,570.577,762.298)">
+            <text x="136.275px" y="259.81px" style="font-family:'PTSans-CaptionBold', 'PT Sans Caption', sans-serif;font-weight:700;font-size:36px;fill:rgb(244,244,245);">T<tspan x="154.347px 168.963px " y="259.81px 259.81px ">ri</tspan>angle d&apos;<tspan x="318.399px 340.575px " y="259.81px 259.81px ">or</tspan> obtus</text>
+        </g>
+    </g>
+</svg>
