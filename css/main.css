@@ -480,9 +480,6 @@ blockquote p {
 
 /* Responsive typographie */
 @media screen and (max-width: 39.9375em) {
-    h1 {
-        font-size: var(--m);
-    }
     blockquote,
     .highlight-bloc {
         position: relative;
@@ -1224,7 +1221,6 @@ svg[class*="blob-"] {
         padding: 0;
     }
     .welcome-container .title {
-        font-size: var(--m);
         -webkit-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
@@ -1485,7 +1481,6 @@ svg[class*="blob-"] {
     display: block;
     max-width: 90rem;
     position: relative;
-    font-size: var(--s);
     line-height: 1.2;
     padding: var(--xs) 0;
     margin: var(--m) 0 var(--s);
@@ -1514,9 +1509,6 @@ svg[class*="blob-"] {
 @media screen and (max-width: 39.9375em) {
     .etudes-container {
         padding: 0 var(--s);
-    }	
-    .etudes-container .title {
-        font-size: var(--s);
     }
     .cas-link {
         font-size: var(--s);
