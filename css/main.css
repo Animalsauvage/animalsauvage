@@ -605,11 +605,10 @@ a:focus {
 
 /* Accueil
 ****************************************/
-.accueil .header,
-.accueil .main,
-.accueil .welcome-container {
+.accueil .header {
     background-color: var(--color4);
 }
+
 .accueil .welcome-container {
     display: flex;
     flex-direction: column;
@@ -645,12 +644,11 @@ a:focus {
 ****************************************/
 .main {
     position: relative;
-    background-color: var(--color3);
+    background-color: var(--color4);
     z-index: 4;
 }
 .main.edito {
     color: var(--color3);
-    background-color: var(--color4);
 }
 .fleche::before {
     content: "";
@@ -670,7 +668,6 @@ a:focus {
 .welcome-container {
     width: 100%;
     padding: var(--m) var(--l) var(--l);
-    background-color: var(--color3);
 }
 .edito .welcome-container {
     padding: 0;
