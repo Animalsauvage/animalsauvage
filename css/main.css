@@ -480,6 +480,9 @@ blockquote p {
 
 /* Responsive typographie */
 @media screen and (max-width: 39.9375em) {
+    h1 {
+        font-size: var(--m);
+    }
     blockquote,
     .highlight-bloc {
         position: relative;
@@ -1220,7 +1223,7 @@ svg[class*="blob-"] {
     .sd .welcome-container {
         padding: 0;
     }
-    .welcome-container .title {
+    .welcome-container .title .hyphens {
         -webkit-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
