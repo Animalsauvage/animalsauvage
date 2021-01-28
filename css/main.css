@@ -635,7 +635,7 @@ a:focus {
 
 @media screen and (max-width: 39.9375em) {	
     .accueil .welcome-container .title {
-        font-size: calc(var(--m) * .9);
+        font-size: calc(var(--m) * .87);
     }
 }
 
