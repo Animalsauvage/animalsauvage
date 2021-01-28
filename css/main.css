@@ -1461,7 +1461,11 @@ svg[class*="blob-"] {
         line-height: var(--s);
     }
 }
-
+@media screen and (max-width: 39.9375em) {
+    .header {
+        min-height: 62px;
+    }
+}
 
 /* Page liste
 ****************************************/
