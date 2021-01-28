@@ -634,6 +634,9 @@ a:focus {
 }
 
 @media screen and (max-width: 39.9375em) {	
+    .accueil .welcome-container {
+        min-height: calc(100vh - 62px); /*62px = hauteur du header*/
+    }
     .accueil .welcome-container .title {
         font-size: calc(var(--m) * .87);
     }
