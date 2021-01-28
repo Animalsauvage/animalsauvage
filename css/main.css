@@ -1287,6 +1287,14 @@ svg[class*="blob-"] {
 .ml-container .link:focus {
     color: var(--color1);
 }
+.ml-container .link[target="_blank"]::after {
+    font-size: .5rem;
+}
+@media screen and (max-width: 39.9375em) {
+    .ml-container {
+        right: auto;
+    }
+}
 
 
 /* Nav */
