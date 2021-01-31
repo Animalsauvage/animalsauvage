@@ -1745,6 +1745,14 @@ shape-margin: 20px;
 float: left;
 
 
+
+#cookie-consent-modal.active {
+    opacity: 1;
+    background: rgba(0,0,0,.2);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+}
+
 */
 
 
