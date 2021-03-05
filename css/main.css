@@ -1747,11 +1747,22 @@ float: left;
 
 
 #cookie-consent-modal.active {
-    opacity: 1;
-    background: rgba(0,0,0,.2);
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px);
+opacity: 1;
+background: rgba(0,0,0,.2);
+-webkit-backdrop-filter: blur(1px);
+backdrop-filter: blur(1px);
 }
+
+html { bug avec les scroll to
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 
 */
 
