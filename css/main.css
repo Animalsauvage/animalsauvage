@@ -481,11 +481,6 @@ blockquote p {
 
 /* Responsive typographie */
 @media screen and (max-width: 39.9375em) {
-/*
-    h1 {
-        font-size: var(--m);
-    }
-*/
     blockquote,
     .highlight-bloc {
         position: relative;
