@@ -118,7 +118,7 @@ table {
     --color1:#ffdf88;
     --color2:#204880;
     --color3:#2F3932;
-    --color4:#F4F4F5;
+    --color4:#f6f6eb;
     --color5:#17100F;
 }
 
@@ -186,6 +186,7 @@ li {
 
 h1 {
     font-size: var(--l);
+    font-size: clamp(var(--s), 6vw + 1rem, var(--l));
     line-height: 1.2;
     font-weight: 700;
     padding-bottom: var(--m);
@@ -433,7 +434,7 @@ blockquote p {
     margin-right: .5rem;
     border: 5px solid var(--color5);
     border-radius: 4px;
-    background-color: #ececed;
+    background-color: var(--color4);
 }
 .tooltip {
     position: relative;
@@ -480,9 +481,11 @@ blockquote p {
 
 /* Responsive typographie */
 @media screen and (max-width: 39.9375em) {
+/*
     h1 {
         font-size: var(--m);
     }
+*/
     blockquote,
     .highlight-bloc {
         position: relative;
@@ -620,7 +623,7 @@ a:focus {
     margin: 0 auto;
 }
 .accueil .welcome-container .title {
-    font-size: var(--m);
+    font-size: clamp(calc(var(--m) * .87), 4vw + 1rem, var(--m));
     line-height: 1.4;
     font-weight: 700;
     color: var(--color5);
@@ -637,9 +640,11 @@ a:focus {
     .accueil .welcome-container {
         min-height: calc(100vh - 62px); /*62px = hauteur du header*/
     }
+/*
     .accueil .welcome-container .title {
         font-size: calc(var(--m) * .87);
     }
+*/
 }
 
 
@@ -744,8 +749,8 @@ a:focus {
     padding-bottom: var(--s);
 }
 .title-container .breadcrumb .link {
-    color: var(--color1);
-    box-shadow: inset 0 -2px var(--color1);
+    color: var(--color4);
+    box-shadow: inset 0 -2px var(--color4);
 }
 .title-container .breadcrumb .link:hover,
 .title-container .breadcrumb .link:focus {
@@ -1562,6 +1567,7 @@ svg[class*="blob-"] {
     font-weight: 400;
     cursor: auto;
     border: 2px solid var(--color5);
+    border-radius: 6px;
 }
 .accordion-block {
     width: 100%;
