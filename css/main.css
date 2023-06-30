@@ -384,6 +384,10 @@ header nav menu .link:focus {
 }
 
 @media screen and (max-width: 39.9375em) {
+    .welcome {
+        background-size: auto;
+    }
+
     .welcome .title {
         line-height: .8;
     }
