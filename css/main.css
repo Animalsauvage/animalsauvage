@@ -242,7 +242,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0 var(--dim2) var(--dim8);
+    padding: 0 var(--dim2) var(--dim7);
 }
 
 .btn {
@@ -390,7 +390,7 @@ header nav menu .link:focus {
     position: relative;
     top: 50%;
     display: inline-grid;
-    grid-template-columns: minmax(0,1fr);
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto;
     height: 1.4em;
     width: 1.4em;
@@ -405,6 +405,7 @@ header nav menu .link:focus {
     opacity: 0;
     transition: opacity 333ms ease-in-out;
 }
+
 .img-wrapper .image svg {
     width: 100%;
 }
@@ -416,31 +417,34 @@ header nav menu .link:focus {
 
 /* Animation pour passer à l'image suivante */
 @keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 1;
-  }
-  66% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Appliquer l'animation aux images */
 .link-wrapper:hover .image:nth-child(1) {
-  animation: fade 1s infinite;
+    animation: fade 1s infinite;
 }
 
 .link-wrapper:hover .image:nth-child(2) {
-  animation: fade 1s infinite 333ms;
+    animation: fade 1s infinite 333ms;
 }
 
 .link-wrapper:hover .image:nth-child(3) {
-  animation: fade 1s infinite 666ms;
+    animation: fade 1s infinite 666ms;
 }
 
 .description-block .presentation {
@@ -496,23 +500,26 @@ header nav menu .link:focus {
     padding: 0 var(--dim4);
 }
 
-@media screen and (max-width: 39.9375em) {
-    .slider-container {
-        padding: 0 var(--dim2);
-    }
-}
-
-
 .slider {
     position: relative;
     overflow: hidden;
     width: 100%;
     max-width: 100%;
-    height: 80vh;
+    height: 50vh;
     text-align: center;
     background-color: #fff;
     border-radius: var(--dim5);
     padding: 0 var(--dim4) var(--dim4);
+}
+
+@media screen and (max-width: 39.9375em) {
+    .slider-container {
+        padding: 0 var(--dim2);
+    }
+
+    .slider {
+        height: 80vh;
+    }
 }
 
 .slides {
@@ -554,7 +561,7 @@ header nav menu .link:focus {
     display: inline;
     width: 100%;
     max-width: 981px;
-    font-size: clamp(1rem, 2vw, 2.125rem);
+    font-size: clamp(1.3rem, 2vw, 2.125rem);
     font-weight: 600;
     text-align: center;
     color: var(--color4);
@@ -569,7 +576,7 @@ header nav menu .link:focus {
     display: inline;
     margin: 0 0 0 var(--dim2);
     font-weight: 600;
-    font-size: clamp(1rem, 2vw, 2.125rem);
+    font-size: clamp(1.3rem, 2vw, 2.125rem);
     color: var(--color2);
     text-decoration: none;
     border-bottom: 0 solid var(--color1);
@@ -633,4 +640,3 @@ header nav menu .link:focus {
     background-color: var(--color2);
     height: 50%;
 }
-
