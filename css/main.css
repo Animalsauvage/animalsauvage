@@ -373,7 +373,7 @@ header nav menu .link:focus {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    font-size: clamp(2rem, 4vw, 3.4375rem);
+    font-size: clamp(1.8rem, 4vw, 3.4375rem);
     font-weight: 700;
     color: var(--text);
     padding-bottom: var(--dim5);
