@@ -164,7 +164,6 @@ table {
     /* text */
     --text: #17100F;
 
-
     /* 8 */
     --dim1: .5rem;
     /* 13 */
@@ -251,7 +250,7 @@ main {
     padding: var(--dim2) var(--dim4);
     border: 1px solid var(--color2);
     font-size: var(--dim3);
-    font-variation-settings: 'wght'680;
+    font-variation-settings: 'wght'400;
     color: var(--color2);
     text-align: center;
     text-decoration: none;
@@ -269,10 +268,11 @@ main {
     }
 }
 
+
 /* Header */
 
 header {
-    padding: var(--dim7) 0 var(--dim4);
+    padding: var(--dim6) 0 var(--dim4);
 }
 
 header nav.container {
@@ -280,12 +280,22 @@ header nav.container {
 }
 
 header nav menu {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
     width: 100%;
     max-width: 1189px;
+}
+
+header nav menu::before {
+    content: "→ ";
+    display: block;
+    font-weight: 600;
+    font-size: var(--dim3);
+    color: var(--color2);
+    padding-right: .2em;
 }
 
 header nav menu li:not(:last-child)::after {
@@ -306,8 +316,6 @@ header nav menu .link:hover,
 header nav menu .link:focus {
     border-bottom: 2px solid var(--color2);
 }
-
-
 
 
 /* Accueil */
@@ -333,6 +341,7 @@ header nav menu .link:focus {
 }
 
 .welcome {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -340,11 +349,31 @@ header nav menu .link:focus {
     width: 100%;
     text-align: center;
     padding: var(--dim9) var(--dim2) var(--dim7);
-    background-color: var(--color2);
     background-image: url(../images/loup.png);
+    background-color: var(--color2);
     background-position: center center;
     background-size: cover;
     background-blend-mode: multiply;
+    border-bottom-left-radius: 55em 3em;
+    border-bottom-right-radius: 55em 3em;
+    box-shadow: 0 1px 1px hsl(215deg 60% 31% / 0.075),
+        0 2px 2px hsl(215deg 60% 31% / 0.075),
+        0 4px 4px hsl(215deg 60% 31% / 0.075),
+        0 8px 8px hsl(215deg 60% 31% / 0.075),
+        0 16px 16px hsl(215deg 60% 31% / 0.075);
+    animation: welcome-anim 1000ms cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes welcome-anim {
+    from {
+        top: calc(var(--dim2) * -1);
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
 .welcome .title {
@@ -353,10 +382,10 @@ header nav menu .link:focus {
     color: var(--color1);
     font-variation-settings: 'wght'680;
     transform: scale(0.94);
-    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation: welcome-title-anim 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
-@keyframes scale {
+@keyframes welcome-title-anim {
     100% {
         transform: scale(1);
     }
@@ -453,7 +482,7 @@ header nav menu .link:focus {
 }
 
 /* Animation pour passer à l'image suivante */
-@keyframes fade {
+@keyframes fade-anim {
     0% {
         opacity: 0;
     }
@@ -473,15 +502,15 @@ header nav menu .link:focus {
 
 /* Appliquer l'animation aux images */
 .link-wrapper:hover .image:nth-child(1) {
-    animation: fade 1s infinite;
+    animation: fade-anim 1s infinite;
 }
 
 .link-wrapper:hover .image:nth-child(2) {
-    animation: fade 1s infinite 333ms;
+    animation: fade-anim 1s infinite 333ms;
 }
 
 .link-wrapper:hover .image:nth-child(3) {
-    animation: fade 1s infinite 666ms;
+    animation: fade-anim 1s infinite 666ms;
 }
 
 .description-block .presentation {
@@ -541,7 +570,7 @@ header nav menu .link:focus {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 100%;
+    max-width: 1189px;
     height: 70vh;
     text-align: center;
     background-color: #fff;
