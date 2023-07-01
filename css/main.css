@@ -263,6 +263,10 @@ main {
 }
 
 @media screen and (max-width: 39.9375em) {
+    .container {
+        padding: 0 var(--dim2) var(--dim6);
+    }
+
     .btn {
         width: 100%;
     }
@@ -317,6 +321,11 @@ header nav menu .link:focus {
     border-bottom: 2px solid var(--color2);
 }
 
+@media screen and (max-width: 39.9375em) {
+    header {
+        padding: var(--dim4) 0;
+    }
+}
 
 /* Accueil */
 .accueil {
@@ -348,14 +357,22 @@ header nav menu .link:focus {
     justify-content: center;
     width: 100%;
     text-align: center;
-    padding: var(--dim9) var(--dim2) var(--dim7);
-    background-image: url(../images/loup.png);
-    background-color: var(--color2);
+    padding: var(--dim9) var(--dim2) var(--dim9);
+    background-color: var(--color3);
+    background-image:
+        url(../images/loup.png),
+        radial-gradient(at 24% 34%, hsla(131, 64%, 78%, 1) 0px, transparent 50%),
+        radial-gradient(at 93% 11%, hsla(148, 91%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 10%, hsla(291, 95%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 5%, hsla(35, 73%, 65%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 74%, hsla(354, 68%, 79%, 1) 0px, transparent 50%),
+        radial-gradient(at 98% 95%, hsla(97, 69%, 72%, 1) 0px, transparent 50%),
+        radial-gradient(at 48% 70%, hsla(122, 70%, 73%, 1) 0px, transparent 50%);
     background-position: center center;
     background-size: cover;
-    background-blend-mode: multiply;
-    border-bottom-left-radius: 55em 3em;
-    border-bottom-right-radius: 55em 3em;
+    background-blend-mode: darken;
+    border-bottom-left-radius: 55em 1em;
+    border-bottom-right-radius: 55em 1em;
     box-shadow: 0 1px 1px hsl(215deg 60% 31% / 0.075),
         0 2px 2px hsl(215deg 60% 31% / 0.075),
         0 4px 4px hsl(215deg 60% 31% / 0.075),
@@ -381,6 +398,8 @@ header nav menu .link:focus {
     line-height: .8;
     color: var(--color1);
     font-variation-settings: 'wght'680;
+
+
     transform: scale(0.94);
     animation: welcome-title-anim 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
@@ -415,6 +434,7 @@ header nav menu .link:focus {
 @media screen and (max-width: 39.9375em) {
     .welcome {
         background-size: auto;
+        padding: var(--dim9) var(--dim2) var(--dim6);
     }
 
     .welcome .title {
@@ -422,7 +442,7 @@ header nav menu .link:focus {
     }
 }
 
-.description-block {
+.accueil .description-block {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -432,7 +452,7 @@ header nav menu .link:focus {
     padding-top: var(--dim5);
 }
 
-.description-block .title {
+.accueil .description-block .title {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -513,7 +533,7 @@ header nav menu .link:focus {
     animation: fade-anim 1s infinite 666ms;
 }
 
-.description-block .presentation {
+.accueil .description-block .presentation {
     position: relative;
     display: block;
     font-size: clamp(1rem, 2.5vw, 2.125rem);
@@ -522,19 +542,19 @@ header nav menu .link:focus {
     padding-bottom: var(--dim5);
 }
 
-.description-block .link {
+.accueil .description-block .link {
     color: var(--color2);
     text-decoration: none;
     box-shadow: inset 0 0 var(--color3);
     transition: box-shadow .4s cubic-bezier(.87, 0, .13, 1)
 }
 
-.description-block .link:hover,
-.description-block .link:focus {
+.accueil .description-block .link:hover,
+.accueil .description-block .link:focus {
     box-shadow: inset 0 -1.1ex 0 var(--color3);
 }
 
-.description-block .cta-block {
+.accueil .description-block .cta-block {
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -549,13 +569,23 @@ header nav menu .link:focus {
 }
 
 @media screen and (max-width: 39.9375em) {
-    .description-block .cta-block {
+    .accueil .description-block,
+    .accueil .description-block .title,
+    .accueil .description-block .presentation {
+        padding-bottom: var(--dim4);
+    }
+
+    .accueil .description-block .cta-block {
         flex-direction: column-reverse;
     }
 
-    .description-block .cta-block .btn {
+    .accueil .description-block .cta-block .btn {
         margin-right: 0;
         margin-top: var(--dim5);
+    }
+
+    .accueil .description-block .cta-block .contact {
+        font-size: 1rem;
     }
 }
 
@@ -613,7 +643,8 @@ header nav menu .link:focus {
 
 .slide {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     flex-shrink: 0;
     width: 100%;
@@ -652,57 +683,4 @@ header nav menu .link:focus {
 .link-next:hover,
 .link-next:focus {
     border-bottom: 2px solid var(--color2);
-}
-
-.slider-nav-fix {
-    position: absolute;
-    left: 0;
-    bottom: calc(var(--dim4) + var(--dim1) + 50px);
-    padding: 0 var(--dim4);
-}
-
-.slider-nav-fix .slider-navlink {
-    background-color: var(--color2);
-    transition: all .4s cubic-bezier(.87, 0, .13, 1)
-}
-
-.slider-nav {
-    position: absolute;
-    left: 0;
-    bottom: 50px;
-}
-
-.slider-nav-fix,
-.slider-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: var(--dim4);
-    width: 100%;
-    height: var(--dim4);
-}
-
-.slider-navlink {
-    display: inline-block;
-    height: var(--dim1);
-    width: var(--dim3);
-    border-radius: var(--dim3);
-    background-color: transparent;
-    transition: all .4s cubic-bezier(.87, 0, .13, 1)
-}
-
-#slide-1:target .slider-navlink:nth-child(1),
-#slide-2:target .slider-navlink:nth-child(2),
-#slide-3:target .slider-navlink:nth-child(3) {
-    background-color: var(--color2);
-    height: 100%;
-    transition-delay: 700ms;
-    transition-property: all;
-}
-
-.slider-nav-fix .slider-navlink:hover,
-.slider-nav-fix .slider-navlink:focus {
-    background-color: var(--color2);
-    height: 50%;
 }
