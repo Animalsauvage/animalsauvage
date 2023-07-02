@@ -124,7 +124,7 @@ section {
 }
 
 body {
-    line-height: 1.4;
+    line-height: 1.2;
 }
 
 ol,
@@ -168,6 +168,8 @@ table {
     --dim1: .5rem;
     /* 13 */
     --dim2: .8125rem;
+    /* 16 */
+    --base: 1rem;
     /* 21 */
     --dim3: 1.3125rem;
     /* 34 */
@@ -241,6 +243,7 @@ img {
     display: inline-block;
     padding: var(--dim2) var(--dim4);
     border: 1px solid var(--color2);
+    border-radius: var(--dim1);
     font-size: var(--dim3);
     font-variation-settings: 'wght'400;
     color: var(--color2);
@@ -260,6 +263,7 @@ img {
     }
 
     .btn {
+        font-size: var(--base);
         width: 100%;
     }
 }
@@ -331,8 +335,10 @@ img {
     align-items: baseline;
     justify-content: space-around;
     padding: var(--dim6) var(--dim2);
-    background-color: var(--color2);
     color: var(--color1);
+    background-color: var(--color2);
+    background: url(../images/blob-scene.svg) center bottom no-repeat;
+    background-size: cover;
 }
 
 .footer .contact {
@@ -364,8 +370,10 @@ img {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: var(--dim6) var(--dim2);
+        padding: var(--dim6) var(--dim2) var(--dim7);
         gap: var(--dim3);
+        background: url(../images/blob-scene.svg) 0 0 no-repeat;
+        background-size: cover;
     }
 
     .footer .contact {
@@ -650,6 +658,23 @@ img {
 
 
 /* Section slider page d'accueil */
+.slider-container {
+    background-color: var(--color3);
+    background-image:
+        url(../images/loup.png),
+        radial-gradient(at 24% 34%, hsla(131, 64%, 78%, 1) 0px, transparent 50%),
+        radial-gradient(at 93% 11%, hsla(148, 91%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 10%, hsla(291, 95%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 5%, hsla(35, 73%, 65%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 74%, hsla(354, 68%, 79%, 1) 0px, transparent 50%),
+        radial-gradient(at 98% 95%, hsla(97, 69%, 72%, 1) 0px, transparent 50%),
+        radial-gradient(at 48% 70%, hsla(122, 70%, 73%, 1) 0px, transparent 50%);
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: darken;
+    padding: var(--dim7) var(--dim2);
+    margin-bottom: var(--dim7);
+}
 
 .slider {
     position: relative;
@@ -671,7 +696,7 @@ img {
 
 @media screen and (max-width: 39.9375em) {
     .slider-container {
-        padding: 0 var(--dim2) var(--dim6);
+        padding: var(--dim6) var(--dim2);
     }
 
     .slider {
@@ -798,7 +823,7 @@ img {
 
     #slide-2 {
         animation: none;
-        background-position: 25% 15%, 86% 22%, 10% 78%, 60% 85%, 100% 79%;
+        background-position: 25% 15%, 86% 20%, 10% 80%, 60% 85%, 100% 81%;
     }
 
     #slide-3 {
@@ -813,7 +838,7 @@ img {
     font-size: clamp(1.3rem, 2vw, 2.125rem);
     color: var(--color2);
     text-decoration: none;
-    border-bottom: 0 solid var(--color1);
+    border-bottom: 2px solid transparent;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
@@ -823,6 +848,7 @@ img {
 }
 
 
+/* Section réalisation */
 
 .realisation-block {
     display: block;
@@ -837,6 +863,105 @@ img {
     padding-bottom: var(--dim5);
 }
 
+.realisation-list {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: calc(var(--dim2) * 2);
+}
+
+.realisation-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: calc(50% - var(--dim2));
+    min-height: 50vh;
+    border-radius: var(--dim5);
+    padding: var(--dim4);
+    font-size: var(--dim2);
+    color: var(--color1);
+    text-decoration: none;
+    background-color: var(--color3);
+    background-image: url(../images/lionnes.png), radial-gradient(at 24% 34%, hsla(131, 64%, 78%, 1) 0px, transparent 50%), radial-gradient(at 93% 11%, hsla(148, 91%, 74%, 1) 0px, transparent 50%), radial-gradient(at 80% 10%, hsla(291, 95%, 67%, 1) 0px, transparent 50%), radial-gradient(at 0% 5%, hsla(35, 73%, 65%, 1) 0px, transparent 50%), radial-gradient(at 80% 74%, hsla(354, 68%, 79%, 1) 0px, transparent 50%), radial-gradient(at 98% 95%, hsla(97, 69%, 72%, 1) 0px, transparent 50%), radial-gradient(at 48% 70%, hsla(122, 70%, 73%, 1) 0px, transparent 50%);
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: darken;
+    box-shadow:
+        0 1px 1px hsl(60deg 38% 84% / 0.075),
+        0 2px 2px hsl(60deg 38% 84% / 0.075),
+        0 4px 4px hsl(60deg 38% 84% / 0.075),
+        0 8px 8px hsl(60deg 38% 84% / 0.075),
+        0 16px 16px hsl(60deg 38% 84% / 0.075);
+}
+
+.description-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 70%;
+    padding: var(--dim4);
+    border-radius: var(--dim4);
+    border: 1px solid rgba(246, 246, 235, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+
+}
+
+.realisation-item:first-child {
+    width: 100%;
+}
+
+.realisation-item:first-child .description-item {
+    width: 45%;
+}
+
+.realisation-block .description-item .title {
+    font-size: clamp(1.6rem, 2vw, 3.4375rem);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color1);
+    padding-bottom: var(--dim2);
+}
+
+.realisation-block .description-item .description {
+    display: block;
+    font-size: var(--base);
+    padding-bottom: var(--dim2);
+}
+
+.realisation-block .description-item .link {
+    font-size: var(--base);
+}
+
+.realisation-block .cta-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: var(--dim4);
+}
+
+@media screen and (max-width: 39.9375em) {
+    .realisation-list {
+        flex-direction: column;
+    }
+
+    .realisation-item {
+        min-height: 65vh;
+    }
+
+    .realisation-item,
+    .description-item,
+    .realisation-item:first-child .description-item {
+        width: 100%;
+        padding: var(--dim3);
+    }
 
 
 
@@ -845,30 +970,4 @@ img {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
