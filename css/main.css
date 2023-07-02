@@ -671,7 +671,7 @@ img {
 
 @media screen and (max-width: 39.9375em) {
     .slider-container {
-        padding: 0 var(--dim2);
+        padding: 0 var(--dim2) var(--dim6);
     }
 
     .slider {
@@ -798,7 +798,7 @@ img {
 
     #slide-2 {
         animation: none;
-        background-position: 25% 15%, 86% 22%, 10% 78%, 60% 85%, 100% 79%%;
+        background-position: 25% 15%, 86% 22%, 10% 78%, 60% 85%, 100% 79%;
     }
 
     #slide-3 {
@@ -821,3 +821,54 @@ img {
 .link-next:focus {
     border-bottom: 2px solid var(--color2);
 }
+
+
+
+.realisation-block {
+    display: block;
+    width: 100%;
+    max-width: 1189px;
+}
+
+.realisation-block .title {
+    font-size: clamp(1.6rem, 4vw, 3.4375rem);
+    font-weight: 700;
+    color: var(--text);
+    padding-bottom: var(--dim5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
