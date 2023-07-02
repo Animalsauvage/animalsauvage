@@ -661,7 +661,7 @@ img {
 .slider-container {
     background-color: var(--color3);
     background-image:
-        url(../images/loup.png),
+        url(../images/fougeres.png),
         radial-gradient(at 24% 34%, hsla(131, 64%, 78%, 1) 0px, transparent 50%),
         radial-gradient(at 93% 11%, hsla(148, 91%, 74%, 1) 0px, transparent 50%),
         radial-gradient(at 80% 10%, hsla(291, 95%, 67%, 1) 0px, transparent 50%),
