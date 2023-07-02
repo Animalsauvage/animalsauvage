@@ -220,15 +220,7 @@ img {
 
 /* Général */
 
-header,
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
+.main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -274,16 +266,19 @@ main {
 
 
 /* Header */
-
-header {
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: var(--dim6) 0 var(--dim4);
 }
 
-header nav.container {
+.header .nav.container {
     padding: 0 var(--dim2);
 }
 
-header nav menu {
+.header .nav .menu {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -293,7 +288,7 @@ header nav menu {
     max-width: 1189px;
 }
 
-header nav menu::before {
+.header .nav .menu::before {
     content: "→ ";
     display: block;
     font-weight: 600;
@@ -302,12 +297,12 @@ header nav menu::before {
     padding-right: .2em;
 }
 
-header nav menu li:not(:last-child)::after {
+.header .nav .menu li:not(:last-child)::after {
     content: ',';
     padding-right: .4rem;
 }
 
-header nav menu .link {
+.header .nav .menu .link {
     font-weight: 600;
     font-size: var(--dim3);
     color: var(--color2);
@@ -316,16 +311,76 @@ header nav menu .link {
     transition: all .28s cubic-bezier(.87, 0, .13, 1)
 }
 
-header nav menu .link:hover,
-header nav menu .link:focus {
+.header .nav .menu .link:hover,
+.header .nav .menu .link:focus {
     border-bottom: 2px solid var(--color2);
 }
 
 @media screen and (max-width: 39.9375em) {
-    header {
+    .header {
         padding: var(--dim4) 0;
     }
 }
+
+
+/* Footer */
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    padding: var(--dim6) var(--dim2);
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+.footer .contact {
+    order: 1;
+}
+
+.footer .logo {
+    order: 2;
+}
+
+.footer .mentions {
+    order: 3;
+}
+
+.mentions {
+    color: var(--color1);
+    text-decoration: none;
+    border-bottom: 0 solid var(--color2);
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
+}
+
+.mentions:hover,
+.mentions:focus {
+    border-bottom: 2px solid var(--color1);
+}
+
+@media screen and (max-width: 39.9375em) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--dim6) var(--dim2);
+        gap: var(--dim3);
+    }
+
+    .footer .contact {
+        order: 2;
+    }
+
+    .footer .logo {
+        order: 1;
+    }
+
+    .footer .mentions {
+        order: 3;
+    }
+}
+
 
 /* Accueil */
 .accueil {
@@ -337,15 +392,15 @@ header nav menu .link:focus {
     order: 1;
 }
 
-.accueil header {
+.accueil .header {
     order: 2;
 }
 
-.accueil main {
+.accueil .main {
     order: 3;
 }
 
-.accueil footer {
+.accueil .footer {
     order: 4;
 }
 
@@ -385,11 +440,13 @@ header nav menu .link:focus {
     from {
         top: calc(var(--dim2) * -1);
         opacity: 0;
+        filter: blur(8px);
     }
 
     to {
         top: 0;
         opacity: 1;
+        filter: blur(0);
     }
 }
 
@@ -569,6 +626,7 @@ header nav menu .link:focus {
 }
 
 @media screen and (max-width: 39.9375em) {
+
     .accueil .description-block,
     .accueil .description-block .title,
     .accueil .description-block .presentation {
@@ -592,9 +650,6 @@ header nav menu .link:focus {
 
 
 /* Section slider page d'accueil */
-.slider-container {
-    padding: 0 var(--dim4);
-}
 
 .slider {
     position: relative;
@@ -606,6 +661,12 @@ header nav menu .link:focus {
     background-color: #fff;
     border-radius: var(--dim5);
     padding: 0 var(--dim4) var(--dim4);
+    box-shadow:
+        0 1px 1px hsl(60deg 38% 84% / 0.075),
+        0 2px 2px hsl(60deg 38% 84% / 0.075),
+        0 4px 4px hsl(60deg 38% 84% / 0.075),
+        0 8px 8px hsl(60deg 38% 84% / 0.075),
+        0 16px 16px hsl(60deg 38% 84% / 0.075);
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -615,6 +676,7 @@ header nav menu .link:focus {
 
     .slider {
         height: 90vh;
+        padding: var(--dim3);
     }
 }
 
@@ -642,6 +704,7 @@ header nav menu .link:focus {
 }
 
 .slide {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -662,11 +725,85 @@ header nav menu .link:focus {
     font-weight: 600;
     text-align: center;
     color: var(--color4);
+    padding: var(--dim4);
 }
 
 .slide-text em {
     color: var(--text);
     font-variation-settings: 'wght'450;
+}
+
+#slide-1 {
+    background-image:
+        url(../images/1f3d4.svg),
+        url(../images/1f40d.svg),
+        url(../images/1f9ac.svg),
+        url(../images/1f988.svg);
+    background-position: 20% 12%, 25% 28%, 80% 68%, 70% 78%;
+    background-repeat: no-repeat;
+    background-size: 3em;
+}
+
+#slide-2 {
+    background-image:
+        url(../images/1f4ad.svg),
+        url(../images/1f331.svg),
+        url(../images/1f41b.svg),
+        url(../images/1f32a.svg),
+        url(../images/1f480.svg);
+    background-position: 15% 12%, 25% 25%, 65% 70%, 90% 75%, 76% 79%;
+    background-repeat: no-repeat;
+    background-size: 3em;
+    animation: 5s ease-in-out reverse infinite floating;
+}
+
+@keyframes floating {
+    0% {
+        background-position: 15% 12%, 25% 25%, 65% 70%, 70% 75%, 76% 79%;
+    }
+
+    25% {
+        background-position: 15% 12%, 25% 25%, 62% 70%, 75% 88%, 76% 79%;
+    }
+
+    50% {
+        background-position: 15% 12%, 25% 25%, 62% 70%, 91% 78%, 76% 79%;
+    }
+
+    75% {
+        background-position: 15% 12%, 25% 25%, 62% 70%, 75% 68%, 76% 79%;
+    }
+
+    100% {
+        background-position: 15% 12%, 25% 25%, 65% 70%, 70% 75%, 76% 79%;
+    }
+}
+
+#slide-3 {
+    background-image:
+        url(../images/1f9a5.svg),
+        url(../images/1f99a.svg),
+        url(../images/1f38d.svg),
+        url(../images/1f9a6.svg),
+        url(../images/1f304.svg);
+    background-position: 40% 15%, 55% 26%, 30% 68%, 50% 78%, 80% 72%;
+    background-repeat: no-repeat;
+    background-size: 3em;
+}
+
+@media screen and (max-width: 39.9375em) {
+    #slide-1 {
+        background-position: 17% 14%, 80% 22%, 20% 85%, 70% 76%;
+    }
+
+    #slide-2 {
+        animation: none;
+        background-position: 25% 15%, 86% 22%, 10% 78%, 60% 85%, 100% 79%%;
+    }
+
+    #slide-3 {
+        background-position: 8% 10%, 89% 18%, 0% 74%, 50% 81%, 100% 41%;
+    }
 }
 
 .link-next {
