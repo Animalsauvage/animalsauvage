@@ -338,7 +338,8 @@ img {
     color: var(--color1);
     background-color: var(--color2);
     background: url(../images/blob-scene.svg) center bottom no-repeat;
-    background-size: cover;
+    background: var(--color2) url(../images/my-durves-vector.svg) center center no-repeat;
+    background-size: contain;
 }
 
 .footer .contact {
@@ -662,16 +663,16 @@ img {
     background-color: var(--color3);
     background-image:
         url(../images/fougeres.png),
-        radial-gradient(at 24% 34%, hsla(131, 64%, 78%, 1) 0px, transparent 50%),
-        radial-gradient(at 93% 11%, hsla(148, 91%, 74%, 1) 0px, transparent 50%),
-        radial-gradient(at 80% 10%, hsla(291, 95%, 67%, 1) 0px, transparent 50%),
-        radial-gradient(at 0% 5%, hsla(35, 73%, 65%, 1) 0px, transparent 50%),
-        radial-gradient(at 80% 74%, hsla(354, 68%, 79%, 1) 0px, transparent 50%),
-        radial-gradient(at 98% 95%, hsla(97, 69%, 72%, 1) 0px, transparent 50%),
-        radial-gradient(at 48% 70%, hsla(122, 70%, 73%, 1) 0px, transparent 50%);
+        radial-gradient(at 91% 67%, hsl(82deg 61.71% 50.25%) 0px, transparent 50%),
+        radial-gradient(at 78% 21%, hsl(143deg 46.44% 39.17%) 0px, transparent 50%),
+        radial-gradient(at 34% 77%, hsla(345, 92%, 71%, 1) 0px, transparent 50%),
+        radial-gradient(at 1% 90%, hsl(24deg 34.52% 28.44%) 0px, transparent 50%),
+        radial-gradient(at 35% 44%, hsl(324deg 20.6% 47.89%) 0px, transparent 50%),
+        radial-gradient(at 93% 33%, hsl(176deg 24.08% 23.36%) 0px, transparent 50%),
+        radial-gradient(at 52% 45%, hsl(129.58deg 70.01% 41.77%) 0px, transparent 50%);
     background-position: center center;
     background-size: cover;
-    background-blend-mode: darken;
+    background-blend-mode: hard-light;
     padding: var(--dim7) var(--dim2);
     margin-bottom: var(--dim7);
 }
@@ -683,7 +684,8 @@ img {
     max-width: 1189px;
     height: 70vh;
     text-align: center;
-    background-color: #fff;
+    background-color: rgb(255 255 255 / 85%);
+    backdrop-filter: blur(4px);
     border-radius: var(--dim5);
     padding: 0 var(--dim4) var(--dim4);
     box-shadow:
@@ -885,10 +887,8 @@ img {
     color: var(--color1);
     text-decoration: none;
     background-color: var(--color3);
-    background-image: url(../images/lionnes.png), radial-gradient(at 24% 34%, hsla(131, 64%, 78%, 1) 0px, transparent 50%), radial-gradient(at 93% 11%, hsla(148, 91%, 74%, 1) 0px, transparent 50%), radial-gradient(at 80% 10%, hsla(291, 95%, 67%, 1) 0px, transparent 50%), radial-gradient(at 0% 5%, hsla(35, 73%, 65%, 1) 0px, transparent 50%), radial-gradient(at 80% 74%, hsla(354, 68%, 79%, 1) 0px, transparent 50%), radial-gradient(at 98% 95%, hsla(97, 69%, 72%, 1) 0px, transparent 50%), radial-gradient(at 48% 70%, hsla(122, 70%, 73%, 1) 0px, transparent 50%);
     background-position: center center;
     background-size: cover;
-    background-blend-mode: darken;
     box-shadow:
         0 1px 1px hsl(60deg 38% 84% / 0.075),
         0 2px 2px hsl(60deg 38% 84% / 0.075),
@@ -902,18 +902,49 @@ img {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
     width: 70%;
     padding: var(--dim4);
     border-radius: var(--dim4);
     border: 1px solid rgba(246, 246, 235, 0.4);
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(2px);
-
+    background-color: rgb(255 255 255 / 85%);
+    backdrop-filter: blur(4px);
 }
 
 .realisation-item:first-child {
     width: 100%;
+    background-image: url(../images/lionnes.png),
+        radial-gradient(at 85% 21%, hsl(0 76% 53% / 1) 0px, transparent 50%),
+        radial-gradient(at 82% 56%, hsl(324.91deg 61.68% 39.43%) 0px, transparent 50%),
+        radial-gradient(at 44% 83%, hsl(109.52deg 70.2% 40.61%) 0px, transparent 50%),
+        radial-gradient(at 66% 68%, hsl(141.34deg 48.49% 51.98%) 0px, transparent 50%),
+        radial-gradient(at 44% 44%, hsl(118.52deg 69.84% 45.61%) 0px, transparent 50%),
+        radial-gradient(at 22% 82%, hsl(341deg 61.8% 49.64%) 0px, transparent 50%),
+        radial-gradient(at 89% 28%, hsl(135deg 72.79% 48.08%) 0px, transparent 50%);
+    background-blend-mode: hard-light;
+}
+
+.realisation-item:nth-child(2) {
+    background-image: url(../images/tigre.png),
+        radial-gradient(at 85% 21%, hsl(104.04deg 52.67% 50.96%) 0px, transparent 50%),
+        radial-gradient(at 82% 56%, hsl(42.08deg 75.87% 38.74%) 0px, transparent 50%),
+        radial-gradient(at 44% 83%, hsl(109.52deg 28.01% 23.93%) 0px, transparent 50%),
+        radial-gradient(at 66% 68%, hsl(141.34deg 47.81% 58.4%) 0px, transparent 50%),
+        radial-gradient(at 44% 44%, hsl(118.52deg 69.84% 45.61%) 0px, transparent 50%),
+        radial-gradient(at 22% 82%, hsl(341deg 64.02% 41.45%) 0px, transparent 50%),
+        radial-gradient(at 89% 28%, hsl(261.53deg 48.05% 24.95%) 0px, transparent 50%);
+    background-blend-mode: hard-light;
+}
+
+.realisation-item:nth-child(3) {
+    background-image: url(../images/leopard.png),
+        radial-gradient(at 34% 45%, hsla(153, 66%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 33% 56%, hsl(0deg 64.09% 61.55%) 0px, transparent 50%),
+        radial-gradient(at 29% 80%, hsl(34.38deg 62.28% 41.27%) 0px, transparent 50%),
+        radial-gradient(at 2% 44%, hsla(336, 89%, 61%, 1) 0px, transparent 50%),
+        radial-gradient(at 62% 42%, hsla(21, 68%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 21% 59%, hsla(256, 69%, 63%, 1) 0px, transparent 50%),
+        radial-gradient(at 81% 78%, hsla(32, 93%, 73%, 1) 0px, transparent 50%);
+    background-blend-mode: darken;
 }
 
 .realisation-item:first-child .description-item {
@@ -924,18 +955,29 @@ img {
     font-size: clamp(1.6rem, 2vw, 3.4375rem);
     font-weight: 600;
     line-height: 1;
-    color: var(--color1);
+    color: var(--text);
     padding-bottom: var(--dim2);
 }
 
 .realisation-block .description-item .description {
     display: block;
+    color: var(--color4);
     font-size: var(--base);
     padding-bottom: var(--dim2);
 }
 
 .realisation-block .description-item .link {
     font-size: var(--base);
+    font-weight: 600;
+    color: var(--color2);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
+}
+
+.realisation-block .description-item .link:hover,
+.realisation-block .description-item .link:focus {
+    border-bottom: 2px solid var(--color2);
 }
 
 .realisation-block .cta-container {
