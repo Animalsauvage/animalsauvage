@@ -219,11 +219,7 @@ img {
 }
 
 
-
-
-
-/* Layout
-****************************************/
+/* Général */
 
 .main {
     display: flex;
@@ -232,8 +228,7 @@ img {
     align-items: center;
 }
 
-/* largeur 100% */
-.section {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,45 +237,6 @@ img {
     padding: 0 var(--dim2) var(--dim7);
 }
 
-/* permet de centrer le contenu dans une colonne */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 1189px;
-    padding-top: var(--dim5);
-}
-
-/* permet de contenir plusieurs contenus dans une même section et de spécifier une classe ;
-ne sert donc pas à grand chose si peu de contenu */
-.container-block {
-    position: relative;
-}
-
-
-@media screen and (max-width: 39.9375em) {
-    .section {
-        padding: 0 var(--dim2) var(--dim6);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Général
-****************************************/
 .btn {
     position: relative;
     display: inline-block;
@@ -301,50 +257,15 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 @media screen and (max-width: 39.9375em) {
+    .container {
+        padding: 0 var(--dim2) var(--dim6);
+    }
 
     .btn {
         font-size: var(--base);
         width: 100%;
     }
 }
-
-
-
-/* Layout de la page d'accueil
-****************************************/
-
-.accueil {
-    display: flex;
-    flex-direction: column;
-}
-
-.accueil .welcome {
-    order: 1;
-}
-
-.accueil .header {
-    order: 2;
-}
-
-.accueil .main {
-    order: 3;
-}
-
-.accueil .footer {
-    order: 4;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Header */
@@ -474,10 +395,27 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 
+/* Accueil */
+.accueil {
+    display: flex;
+    flex-direction: column;
+}
 
+.accueil .welcome {
+    order: 1;
+}
 
-/* Section de bienvenue
-****************************************/
+.accueil .header {
+    order: 2;
+}
+
+.accueil .main {
+    order: 3;
+}
+
+.accueil .footer {
+    order: 4;
+}
 
 .welcome {
     position: relative;
@@ -525,7 +463,7 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 }
 
-.welcome-title {
+.welcome .title {
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -540,16 +478,17 @@ ne sert donc pas à grand chose si peu de contenu */
     animation: welcome-title-anim 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
-.welcome-title .a {
+.welcome .title .a {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: flex-start;
 }
 
-.welcome-title .a img {
+.welcome .title .a img {
     width: clamp(1.8rem, 4vw, 5rem);
 }
+
 
 @keyframes welcome-title-anim {
     100% {
@@ -557,17 +496,17 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 }
 
-.welcome-title span {
+.welcome .title span {
     display: inline-block;
     opacity: 0;
     filter: blur(4px);
 }
 
-.welcome-title span:nth-child(1) {
+.welcome .title span:nth-child(1) {
     animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.welcome-title span:nth-child(2) {
+.welcome .title span:nth-child(2) {
     animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
@@ -584,25 +523,21 @@ ne sert donc pas à grand chose si peu de contenu */
         padding: var(--dim9) var(--dim2) var(--dim6);
     }
 
-    .welcome-title {
+    .welcome .title {
         line-height: .8;
         gap: 0;
-        grid-column-gap: var(--dim2);
     }
 }
 
-/* Fin section de bienvenue */
-
-
-
-
-
-
-
-
-
-
-
+.accueil .container-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1189px;
+    padding-top: var(--dim5);
+}
 
 .accueil .container-block .super-title {
     position: relative;
