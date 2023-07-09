@@ -16,7 +16,49 @@
     font-style: normal;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126License: none (public domain)*/
+
+/* Variables
+****************************************/
+:root {
+    /* beige */
+    --color1: #F6F6EB;
+    /* bleu */
+    --color2: #204880;
+    /* jaune */
+    --color3: #ffdf88;
+    /* maron */
+    --color4: #724F4A;
+    /* noir text */
+    --color5: #17100F;
+
+    /* 8 */
+    --dim1: .5rem;
+    /* 13 */
+    --dim2: .8125rem;
+    /* 16 */
+    --base: 1rem;
+    /* 21 */
+    --dim3: 1.3125rem;
+    /* 34 */
+    --dim4: 2.125rem;
+    /* 55 */
+    --dim5: 3.4375rem;
+    /* 89 */
+    --dim6: 5.5625rem;
+    /* 144 */
+    --dim7: 9rem;
+    /* 233 */
+    --dim8: 14.5625rem;
+    /* 377 */
+    --dim9: 23.5625rem;
+    /* 610 */
+    --dim10: 38.125rem;
+}
+
+
+/* Reset
+http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126License: none (public domain)
+****************************************/
 html,
 body,
 div,
@@ -150,43 +192,6 @@ table {
     border-spacing: 0;
 }
 
-/* Variables
-****************************************/
-:root {
-    /* beige */
-    --color1: #F6F6EB;
-    /* bleu */
-    --color2: #204880;
-    /* jaune */
-    --color3: #ffdf88;
-    /* maron */
-    --color4: #724F4A;
-    /* noir text */
-    --color5: #17100F;
-
-    /* 8 */
-    --dim1: .5rem;
-    /* 13 */
-    --dim2: .8125rem;
-    /* 16 */
-    --base: 1rem;
-    /* 21 */
-    --dim3: 1.3125rem;
-    /* 34 */
-    --dim4: 2.125rem;
-    /* 55 */
-    --dim5: 3.4375rem;
-    /* 89 */
-    --dim6: 5.5625rem;
-    /* 144 */
-    --dim7: 9rem;
-    /* 233 */
-    --dim8: 14.5625rem;
-    /* 377 */
-    --dim9: 23.5625rem;
-    /* 610 */
-    --dim10: 38.125rem;
-}
 
 
 
@@ -214,10 +219,9 @@ img {
 }
 
 ::selection {
-    color: #fff;
-    background-color: var(--color2);
+    color: var(--color-5);
+    background-color: var(--color3);
 }
-
 
 
 
@@ -233,6 +237,7 @@ img {
 }
 
 /* largeur 100% */
+.header,
 .section {
     display: flex;
     flex-direction: column;
@@ -242,6 +247,7 @@ img {
     padding: 0 var(--dim2) var(--dim7);
 }
 
+
 /* permet de centrer le contenu dans une colonne */
 .container {
     display: flex;
@@ -250,7 +256,6 @@ img {
     justify-content: flex-start;
     width: 100%;
     max-width: 1189px;
-    padding-top: var(--dim5);
 }
 
 /* permet de contenir plusieurs contenus dans une même section et de spécifier une classe ;
@@ -269,47 +274,6 @@ ne sert donc pas à grand chose si peu de contenu */
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* Général
-****************************************/
-.btn {
-    position: relative;
-    display: inline-block;
-    padding: var(--dim2) var(--dim4);
-    border: 1px solid var(--color2);
-    border-radius: var(--dim1);
-    font-size: var(--dim3);
-    font-variation-settings: 'wght'400;
-    color: var(--color2);
-    text-align: center;
-    text-decoration: none;
-    transition: all .4s cubic-bezier(.87, 0, .13, 1)
-}
-
-.btn:hover,
-.btn:focus {
-    background-color: var(--color3);
-}
-
-@media screen and (max-width: 39.9375em) {
-
-    .btn {
-        font-size: var(--base);
-        width: 100%;
-    }
-}
-
-
-
 /* Layout de la page d'accueil
 ****************************************/
 
@@ -318,7 +282,7 @@ ne sert donc pas à grand chose si peu de contenu */
     flex-direction: column;
 }
 
-.accueil .welcome {
+.accueil .hero {
     order: 1;
 }
 
@@ -337,30 +301,77 @@ ne sert donc pas à grand chose si peu de contenu */
 
 
 
+/* Général
+****************************************/
+.link {
+    display: inline;
+    font-weight: 600;
+    font-size: var(--dim3);
+    color: var(--color2);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all .28s cubic-bezier(.87, 0, .13, 1)
+}
+
+.link:hover,
+.link:focus {
+    border-bottom: 2px solid var(--color2);
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    min-width: 200px;
+    font-size: var(--dim3);
+    font-weight: 600;
+    color: var(--color2);
+    text-align: center;
+    text-decoration: none;
+    padding: var(--dim2) var(--dim4);
+    border: 1px solid var(--color2);
+    border-radius: var(--dim1);
+    transition: all .4s cubic-bezier(.87, 0, .13, 1)
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--color3);
+}
+
+@media screen and (max-width: 39.9375em) {
+    .btn {
+        font-size: var(--base);
+        width: 100%;
+    }
+}
+
+/* Typographie */
+.title-n1 {
+    font-size: clamp(3.4375rem, 8vw, 9rem);
+    font-weight: 700;
+}
+
+.title-n2 {
+    font-size: clamp(2rem, 4vw, 3.4375rem);
+    font-weight: 600;
+}
+
+.title-n3 {
+    font-size: clamp(1.6rem, 2vw, 3.4375rem);
+    font-weight: 600;
+}
 
 
 
 
+/* Header
+****************************************/
 
-
-
-
-
-
-/* Header */
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: var(--dim6) 0 var(--dim4);
+    padding: var(--dim6) var(--dim2);
 }
 
-.header .nav.container {
-    padding: 0 var(--dim2);
-}
-
-.header .nav .menu {
+.menu {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -370,7 +381,7 @@ ne sert donc pas à grand chose si peu de contenu */
     max-width: 1189px;
 }
 
-.header .nav .menu::before {
+.menu::before {
     content: "→ ";
     display: block;
     font-weight: 600;
@@ -379,33 +390,23 @@ ne sert donc pas à grand chose si peu de contenu */
     padding-right: .2em;
 }
 
-.header .nav .menu li:not(:last-child)::after {
+.menu li:not(:last-child)::after {
     content: ',';
     padding-right: .4rem;
 }
 
-.header .nav .menu .link {
-    font-weight: 600;
-    font-size: var(--dim3);
-    color: var(--color2);
-    text-decoration: none;
-    border-bottom: 0 solid var(--color1);
-    transition: all .28s cubic-bezier(.87, 0, .13, 1)
-}
-
-.header .nav .menu .link:hover,
-.header .nav .menu .link:focus {
-    border-bottom: 2px solid var(--color2);
-}
-
 @media screen and (max-width: 39.9375em) {
     .header {
-        padding: var(--dim4) 0;
+        padding: var(--dim4) var(--dim2) var(--dim6);
     }
 }
 
 
-/* Footer */
+
+
+/* Footer
+****************************************/
+
 .footer {
     position: relative;
     display: flex;
@@ -414,40 +415,35 @@ ne sert donc pas à grand chose si peu de contenu */
     justify-content: space-around;
     padding: var(--dim6) var(--dim2);
     color: var(--color1);
-    background-color: var(--color5);
     border-top-left-radius: 55em 1em;
     border-top-right-radius: 55em 1em;
     box-shadow:
         0 -1px 1px hsl(0deg 0% 0% / 0.075),
         0 -2px 2px hsl(0deg 0% 0% / 0.075),
         0 -4px 4px hsl(0deg 0% 0% / 0.075);
-    background-color: #204880;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpath fill='%23284584' d='M486 705.8c-109.3-21.8-223.4-32.2-335.3-19.4C99.5 692.1 49 703 0 719.8V800h843.8c-115.9-33.2-230.8-68.1-347.6-92.2C492.8 707.1 489.4 706.5 486 705.8z'/%3E%3Cpath fill='%23314287' d='M1600 0H0v719.8c49-16.8 99.5-27.8 150.7-33.5c111.9-12.7 226-2.4 335.3 19.4c3.4 0.7 6.8 1.4 10.2 2c116.8 24 231.7 59 347.6 92.2H1600V0z'/%3E%3Cpath fill='%233a428a' d='M478.4 581c3.2 0.8 6.4 1.7 9.5 2.5c196.2 52.5 388.7 133.5 593.5 176.6c174.2 36.6 349.5 29.2 518.6-10.2V0H0v574.9c52.3-17.6 106.5-27.7 161.1-30.9C268.4 537.4 375.7 554.2 478.4 581z'/%3E%3Cpath fill='%2346458b' d='M0 0v429.4c55.6-18.4 113.5-27.3 171.4-27.7c102.8-0.8 203.2 22.7 299.3 54.5c3 1 5.9 2 8.9 3c183.6 62 365.7 146.1 562.4 192.1c186.7 43.7 376.3 34.4 557.9-12.6V0H0z'/%3E%3Cpath fill='%2357508C' d='M181.8 259.4c98.2 6 191.9 35.2 281.3 72.1c2.8 1.1 5.5 2.3 8.3 3.4c171 71.6 342.7 158.5 531.3 207.7c198.8 51.8 403.4 40.8 597.3-14.8V0H0v283.2C59 263.6 120.6 255.7 181.8 259.4z'/%3E%3Cpath fill='%2360518d' d='M1600 0H0v136.3c62.3-20.9 127.7-27.5 192.2-19.2c93.6 12.1 180.5 47.7 263.3 89.6c2.6 1.3 5.1 2.6 7.7 3.9c158.4 81.1 319.7 170.9 500.3 223.2c210.5 61 430.8 49 636.6-16.6V0z'/%3E%3Cpath fill='%2368538e' d='M454.9 86.3C600.7 177 751.6 269.3 924.1 325c208.6 67.4 431.3 60.8 637.9-5.3c12.8-4.1 25.4-8.4 38.1-12.9V0H288.1c56 21.3 108.7 50.6 159.7 82C450.2 83.4 452.5 84.9 454.9 86.3z'/%3E%3Cpath fill='%23715490' d='M1600 0H498c118.1 85.8 243.5 164.5 386.8 216.2c191.8 69.2 400 74.7 595 21.1c40.8-11.2 81.1-25.2 120.3-41.7V0z'/%3E%3Cpath fill='%237a5691' d='M1397.5 154.8c47.2-10.6 93.6-25.3 138.6-43.8c21.7-8.9 43-18.8 63.9-29.5V0H643.4c62.9 41.7 129.7 78.2 202.1 107.4C1020.4 178.1 1214.2 196.1 1397.5 154.8z'/%3E%3Cpath fill='%23825792' d='M1315.3 72.4c75.3-12.6 148.9-37.1 216.8-72.4h-723C966.8 71 1144.7 101 1315.3 72.4z'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: cover;
-    background-position: center center
+    background: var(--color5) url(../images/nnnoise.svg);
 }
 
-.footer .contact {
-    order: 1;
-}
-
-.footer .logo {
+.footer .item-1 {
     order: 2;
 }
 
-.footer .mentions {
+.footer .item-2 {
+    order: 1;
+}
+
+.footer .item-3 {
     order: 3;
 }
 
-.mentions {
+.footer .link {
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--color1);
-    text-decoration: none;
-    border-bottom: 0 solid var(--color2);
-    transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.mentions:hover,
-.mentions:focus {
+.footer .link:hover,
+.footer .link:focus {
     border-bottom: 2px solid var(--color1);
 }
 
@@ -457,18 +453,18 @@ ne sert donc pas à grand chose si peu de contenu */
         align-items: center;
         justify-content: center;
         padding: var(--dim6) var(--dim2) var(--dim7);
-        gap: var(--dim3);
+        gap: var(--dim4);
     }
 
-    .footer .contact {
-        order: 2;
-    }
-
-    .footer .logo {
+    .footer .item-1 {
         order: 1;
     }
 
-    .footer .mentions {
+    .footer .item-2 {
+        order: 2;
+    }
+
+    .footer .item-3 {
         order: 3;
     }
 }
@@ -479,7 +475,7 @@ ne sert donc pas à grand chose si peu de contenu */
 /* Section de bienvenue
 ****************************************/
 
-.welcome {
+.hero {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -508,10 +504,10 @@ ne sert donc pas à grand chose si peu de contenu */
         0 4px 4px hsl(215deg 60% 31% / 0.075),
         0 8px 8px hsl(215deg 60% 31% / 0.075),
         0 16px 16px hsl(215deg 60% 31% / 0.075);
-    animation: welcome-anim 1000ms cubic-bezier(0.5, 1, 0.89, 1);
+    animation: hero-anim 1000ms cubic-bezier(0.5, 1, 0.89, 1);
 }
 
-@keyframes welcome-anim {
+@keyframes hero-anim {
     from {
         top: calc(var(--dim2) * -1);
         opacity: 0;
@@ -525,7 +521,7 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 }
 
-.welcome-title {
+.hero-title {
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -537,37 +533,37 @@ ne sert donc pas à grand chose si peu de contenu */
     color: var(--color1);
     font-variation-settings: 'wght'480;
     transform: scale(0.94);
-    animation: welcome-title-anim 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation: hero-title-anim 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
-.welcome-title .a {
+.hero-title .a {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: flex-start;
 }
 
-.welcome-title .a img {
+.hero-title .a img {
     width: clamp(1.8rem, 4vw, 5rem);
 }
 
-@keyframes welcome-title-anim {
+@keyframes hero-title-anim {
     100% {
         transform: scale(1);
     }
 }
 
-.welcome-title span {
+.hero-title span {
     display: inline-block;
     opacity: 0;
     filter: blur(4px);
 }
 
-.welcome-title span:nth-child(1) {
+.hero-title span:nth-child(1) {
     animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-.welcome-title span:nth-child(2) {
+.hero-title span:nth-child(2) {
     animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
@@ -579,32 +575,25 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 @media screen and (max-width: 39.9375em) {
-    .welcome {
+    .hero {
         background-size: auto;
         padding: var(--dim9) var(--dim2) var(--dim6);
     }
 
-    .welcome-title {
+    .hero-title {
         line-height: .8;
         gap: 0;
         grid-column-gap: var(--dim2);
     }
 }
 
-/* Fin section de bienvenue */
 
 
 
+/* Section welcome
+****************************************/
 
-
-
-
-
-
-
-
-
-.accueil .container-block .super-title {
+.titre-principal {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -672,7 +661,6 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 }
 
-/* Appliquer l'animation aux images */
 .link-wrapper:hover .image:nth-child(1),
 .link-wrapper:focus .image:nth-child(1) {
     animation: fade-anim 1s infinite;
@@ -688,67 +676,75 @@ ne sert donc pas à grand chose si peu de contenu */
     animation: fade-anim 1s infinite 666ms;
 }
 
-.accueil .container-block .presentation {
-    position: relative;
-    display: block;
-    font-size: clamp(1rem, 2.5vw, 2.125rem);
+.welcome .link {
+    font-size: clamp(1.6rem, 4vw, 3.4375rem);
     font-weight: 700;
-    color: var(--color5);
-    padding-bottom: var(--dim5);
-}
-
-.accueil .container-block .link {
     color: var(--color2);
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.accueil .container-block .link:hover,
-.accueil .container-block .link:focus {
+.welcome .link:hover,
+.welcome .link:focus {
     border-bottom: 2px solid var(--color2);
 }
 
-.accueil .container-block .cta-block {
+.welcome .presentation {
+    position: relative;
+    display: block;
+    max-width: 90%;
+    font-size: clamp(1rem, 2.5vw, 2.125rem);
+    font-weight: 700;
+    color: var(--color5);
+    padding-bottom: var(--dim5);
+}
+
+.welcome .cta-block {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: flex-start;
     width: 100%;
     font-size: var(--dim3);
-    font-weight: 700;
+    font-weight: 600;
 }
 
-.container-block .cta-block .btn {
+.welcome .btn {
     margin-right: var(--dim5);
 }
 
 @media screen and (max-width: 39.9375em) {
-
-    .accueil .container-block,
-    .accueil .container-block .super-title,
-    .accueil .container-block .presentation {
+    .titre-principal {
         padding-bottom: var(--dim4);
     }
 
-    .accueil .container-block .cta-block {
+    .welcome .presentation {
+        max-width: 100%;
+        padding-bottom: var(--dim4);
+    }
+
+    .welcome .cta-block {
         flex-direction: column-reverse;
     }
 
-    .accueil .container-block .cta-block .btn {
+    .welcome .btn {
         margin-right: 0;
-        margin-top: var(--dim5);
     }
 
-    .accueil .container-block .cta-block .contact {
+    .welcome .contact {
         font-size: 1rem;
+        margin-bottom: var(--dim4);
     }
 }
 
 
 
-/* Section slider page d'accueil */
-.slider-container {
+
+/* Section carrousel
+****************************************/
+
+.carrousel {
     background-color: var(--color3);
     background-image:
         url(../images/fougeres.png),
@@ -786,7 +782,7 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 @media screen and (max-width: 39.9375em) {
-    .slider-container {
+    .carrousel {
         padding: var(--dim6) var(--dim2);
     }
 
@@ -922,42 +918,29 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 }
 
-.link-next {
-    display: inline;
-    margin: 0 0 0 var(--dim2);
-    font-weight: 600;
-    font-size: clamp(1.3rem, 2vw, 2.125rem);
-    color: var(--color2);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: all .28s cubic-bezier(.87, 0, .13, 1);
-}
-
-.link-next:hover,
-.link-next:focus {
-    border-bottom: 2px solid var(--color2);
-}
 
 
-/* Section réalisation */
 
-.container-block {
-    display: block;
-    width: 100%;
-    max-width: 1189px;
-}
 
-.realisation .container-block .title {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-start;
-    width: 100%;
-    font-size: clamp(1.6rem, 4vw, 3.4375rem);
-    font-weight: 700;
-    color: var(--color5);
-    padding-bottom: var(--dim5);
-}
+/* Section Services
+****************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section Réalisations
+****************************************/
 
 .container-list {
     display: grid;
@@ -965,31 +948,38 @@ ne sert donc pas à grand chose si peu de contenu */
     grid-template-rows: 1fr 1fr 1fr;
     gap: calc(var(--dim2) * 2) calc(var(--dim2) * 2);
     grid-template-areas:
-        "grid-title grid-box1 grid-box1 grid-box1"
-        "grid-box2 grid-box2 grid-box3 grid-box3"
-        "grid-box4 grid-box4 grid-box3 grid-box3";
+        "grid-1 grid-2 grid-2 grid-2"
+        "grid-3 grid-3 grid-4 grid-4"
+        "grid-5 grid-5 grid-4 grid-4";
 }
 
-.grid-title {
-    grid-area: grid-title;
+.grid-1 {
+    grid-area: grid-1;
 }
 
-.grid-box1 {
-    grid-area: grid-box1;
+.grid-2 {
+    grid-area: grid-2;
 }
 
-.grid-box2 {
-    grid-area: grid-box2;
+.grid-3 {
+    grid-area: grid-3;
 }
 
-.grid-box3 {
-    grid-area: grid-box3;
+.grid-4 {
+    grid-area: grid-4;
 }
 
-.grid-box4 {
-    grid-area: grid-box4;
+.grid-5 {
+    grid-area: grid-5;
 }
 
+.realisations .title-n2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
 
 .list-item {
     position: relative;
@@ -1002,8 +992,7 @@ ne sert donc pas à grand chose si peu de contenu */
     min-height: 50vh;
     border-radius: var(--dim5);
     padding: var(--dim4);
-    font-size: var(--dim2);
-    color: var(--color1);
+    color: var(--color5);
     text-decoration: none;
     background-color: var(--color3);
     background-position: center center;
@@ -1027,31 +1016,6 @@ ne sert donc pas à grand chose si peu de contenu */
 .list-item:hover::after,
 .list-item:focus::after {
     opacity: .65;
-}
-
-.description-item {
-    position: relative;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 70%;
-    padding: var(--dim4);
-    border-radius: var(--dim4);
-    border: 1px solid rgba(246, 246, 235, 0.4);
-    background-color: rgb(255 255 255 / 85%);
-    backdrop-filter: blur(4px);
-    filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 0%));
-    z-index: 2;
-    transition: all .28s cubic-bezier(.87, 0, .13, 1);
-}
-
-.list-item:hover .description-item,
-.list-item:focus .description-item {
-    top: -2px;
-    background-color: var(--color1);
-    filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 55%));
 }
 
 .list-item:nth-child(2) {
@@ -1104,40 +1068,40 @@ ne sert donc pas à grand chose si peu de contenu */
     background-color: #dc5e5e;
 }
 
-.list-item:first-child .description-item {
-    width: 45%;
-}
-
-.container-block .description-item .title {
-    font-size: clamp(1.6rem, 2vw, 3.4375rem);
-    font-weight: 600;
-    line-height: 1;
-    color: var(--color5);
-    padding-bottom: var(--dim2);
-}
-
-.container-block .description-item .description {
-    display: block;
-    color: var(--color4);
-    font-size: var(--base);
-    padding-bottom: var(--dim2);
-}
-
-.container-block .description-item .link {
-    font-size: var(--base);
-    font-weight: 600;
-    color: var(--color2);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
+.content-item {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--dim4);
+    border-radius: var(--dim4);
+    border: 1px solid rgba(246, 246, 235, 0.4);
+    background-color: rgb(255 255 255 / 85%);
+    backdrop-filter: blur(4px);
+    filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 0%));
+    z-index: 2;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.container-block .description-item .link:hover,
-.container-block .description-item .link:focus {
-    border-bottom: 2px solid var(--color2);
+.list-item:hover .content-item,
+.list-item:focus .content-item {
+    top: -2px;
+    background-color: var(--color1);
+    filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 55%));
 }
 
-.container-block .info-container {
+.content-item .title-n3,
+.content-item .description {
+    padding-bottom: var(--dim2);
+}
+
+.content-item .link {
+    font-size: var(--base);
+}
+
+.realisations .info-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1146,27 +1110,27 @@ ne sert donc pas à grand chose si peu de contenu */
     padding: var(--dim4);
 }
 
-.container-block .info-container p {
+.realisations .info-container p {
     position: relative;
     display: block;
     font-size: clamp(1rem, 2.5vw, 2.125rem);
     font-weight: 700;
-    color: var(--color5);
     padding-bottom: var(--dim5);
 }
 
-@media screen and (max-width: 39.9375em) {
+
+@media screen and (max-width: 48em) {
     .container-list {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr 1fr 1fr auto;
+        grid-template-rows: auto auto 1fr 1fr 1fr;
         gap: var(--dim4);
         grid-template-areas:
-            "grid-title"
-            "grid-box1"
-            "grid-box2"
-            "grid-box3"
-            "grid-box4";
+            "grid-1"
+            "grid-5"
+            "grid-2"
+            "grid-3"
+            "grid-4";
     }
 
     .list-item {
@@ -1174,7 +1138,7 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
     .list-item,
-    .description-item {
+    .content-item {
         width: 100%;
         padding: var(--dim3);
     }
@@ -1182,16 +1146,12 @@ ne sert donc pas à grand chose si peu de contenu */
     .list-item:nth-child(3) {
         align-items: flex-end;
     }
-
-    .container-block .info-container {
-        justify-content: flex-start;
-    }
-
-    .realisation .container-block h2.title {
-        padding: 0 var(--dim2);
-    }
-
-    .container-block .info-container {
+    
+    .realisations .info-container {
         padding: 0;
+    }
+    
+    .realisations .info-container p {
+        padding-bottom: var(--dim4);
     }
 }
