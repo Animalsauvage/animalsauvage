@@ -474,7 +474,7 @@ img {
     font-size: clamp(3.4375rem, 8vw, 9rem);
     line-height: .8;
     color: var(--color1);
-    font-variation-settings: 'wght'680;
+    font-variation-settings: 'wght'480;
     transform: scale(0.94);
     animation: welcome-title-anim 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
@@ -485,7 +485,7 @@ img {
     justify-content: flex-start;
 }
 .welcome .title .a img {
-    width: clamp(3rem, 4vw, 9rem);
+    width: clamp(1.8rem, 4vw, 5rem);
 }
 
 
@@ -524,6 +524,7 @@ img {
 
     .welcome .title {
         line-height: .8;
+        gap: 0;
     }
 }
 
