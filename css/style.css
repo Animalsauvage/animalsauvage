@@ -524,27 +524,12 @@ ne sert donc pas à grand chose si peu de contenu */
 .hero-title {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: var(--dim4);
-    font-size: clamp(3.4375rem, 8vw, 9rem);
-    line-height: .8;
-    color: var(--color1);
-    font-variation-settings: 'wght'480;
     transform: scale(0.94);
     animation: hero-title-anim 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-}
-
-.hero-title .a {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: flex-start;
-}
-
-.hero-title .a img {
-    width: clamp(1.8rem, 4vw, 5rem);
 }
 
 @keyframes hero-title-anim {
@@ -554,9 +539,15 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .hero-title span {
-    display: inline-block;
+    display: block;
     opacity: 0;
     filter: blur(4px);
+    width: clamp(250px, 30vw, 558px);
+}
+
+.hero-title .animal {
+    width: calc(clamp(250px, 30vw, 558px) * .8);
+
 }
 
 .hero-title span:nth-child(1) {
@@ -581,9 +572,8 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
     .hero-title {
-        line-height: .8;
+        flex-direction: column;
         gap: 0;
-        grid-column-gap: var(--dim2);
     }
 }
 
