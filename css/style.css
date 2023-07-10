@@ -547,7 +547,6 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .hero-title .animal {
     width: calc(clamp(250px, 30vw, 558px) * .8);
-
 }
 
 .hero-title span:nth-child(1) {
@@ -911,11 +910,8 @@ ne sert donc pas à grand chose si peu de contenu */
 
 
 
-
 /* Section Services
 ****************************************/
-
-.services {}
 
 .services .title-block {
     display: flex;
@@ -927,8 +923,6 @@ ne sert donc pas à grand chose si peu de contenu */
     border-radius: var(--dim3);
     gap: calc(var(--dim2) * 2);
 }
-
-.services .title-n2 {}
 
 .services .container-block {
     display: flex;
@@ -1017,54 +1011,6 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
