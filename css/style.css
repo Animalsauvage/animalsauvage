@@ -14,6 +14,7 @@
     src: url('../font/SpaceGrotesk[wght].woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: optional;
 }
 
 
@@ -216,6 +217,7 @@ img {
     -ms-interpolation-mode: bicubic;
     display: inline-block;
     vertical-align: middle;
+    background: var(--color1);
 }
 
 ::selection {
@@ -955,6 +957,7 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: stretch;
     justify-content: flex-start;
     width: 100%;
+    min-height: 122px;
 }
 
 .services .content-item .title-n3,
@@ -975,6 +978,35 @@ ne sert donc pas à grand chose si peu de contenu */
     padding: var(--dim3) var(--dim4);
     font-size: var(--base);
 }
+
+.services .illustration {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.services .illu-1 {
+    background-color: #F49082;
+    background-image: url(../images/arc1.svg);
+}
+
+.services .illu-2 {
+    background-color: #FEA97E;
+    background-image: url(../images/arc2.svg);
+}
+
+.services .illu-3 {
+    background-color: #FFC37F;
+    background-image: url(../images/arc3.svg);
+}
+
+.services .illu-4 {
+    background-color: #FFDF88;
+    background-image: url(../images/arc4.svg);
+}
+
+
+
+
 
 @media screen and (max-width: 39.9375em) {
     .services .container-block .title-block {
@@ -1009,7 +1041,6 @@ ne sert donc pas à grand chose si peu de contenu */
         flex-direction: row;
         align-items: center;
     }
-
 }
 
 
