@@ -217,7 +217,6 @@ img {
     -ms-interpolation-mode: bicubic;
     display: inline-block;
     vertical-align: middle;
-    background: var(--color1);
 }
 
 ::selection {
@@ -957,7 +956,6 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: stretch;
     justify-content: flex-start;
     width: 100%;
-    min-height: 122px;
 }
 
 .services .content-item .title-n3,
