@@ -1002,7 +1002,18 @@ ne sert donc pas à grand chose si peu de contenu */
     background-image: url(../images/arc4.svg);
 }
 
+.services .content-item .intro {
+    display: block;
+    padding-bottom: var(--dim1);
+}
+.services .content-item .liste li {
+    position: relative;
+    line-height: 1.4;
+}
 
+.services .content-item .liste li::before {
+    content: "— "
+}
 
 
 
