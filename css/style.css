@@ -1107,7 +1107,6 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .services .top-block .illustration {
-    aspect-ratio: 1 / 1;
     width: max(50%, 155px);
 }
 
