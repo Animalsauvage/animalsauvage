@@ -539,11 +539,7 @@ ne sert donc pas à grand chose si peu de contenu */
     color: var(--color1);
     border-top-left-radius: 55em 1em;
     border-top-right-radius: 55em 1em;
-    box-shadow:
-        0 -1px 1px hsl(0deg 0% 0% / 0.075),
-        0 -2px 2px hsl(0deg 0% 0% / 0.075),
-        0 -4px 4px hsl(0deg 0% 0% / 0.075);
-    background: var(--color5) url(../images/nnnoise.svg);
+    background: var(--color10) url(../images/nnnoise.svg);
 }
 
 .footer .item-1 {
@@ -868,6 +864,7 @@ ne sert donc pas à grand chose si peu de contenu */
     background-position: center center;
     background-size: cover;
     background-blend-mode: hard-light;
+    background-attachment: fixed;
     padding: var(--dim7) var(--dim2);
     margin-bottom: var(--dim7);
 }
@@ -1129,16 +1126,19 @@ ne sert donc pas à grand chose si peu de contenu */
 .services .illu-4 {
     background-color: #FFDF88;
 }
+
 .services .illu-4 svg {
-  animation: rotate 2s infinite;
+    animation: rotate 2s infinite;
 }
+
 @keyframes rotate {
-  0% {
-    transform: rotate(-45deg)
-  }
-  100% {
-    transform: rotate(45deg)
-  }
+    0% {
+        transform: rotate(-45deg)
+    }
+
+    100% {
+        transform: rotate(45deg)
+    }
 }
 
 
@@ -1203,6 +1203,8 @@ ne sert donc pas à grand chose si peu de contenu */
     background-color: var(--color5);
     padding: var(--dim7) var(--dim2);
     margin-bottom: var(--dim7);
+    background: var(--color5) url(../images/nnnoise.svg);
+
 }
 
 .realisations .container-grid {
@@ -1408,11 +1410,15 @@ ne sert donc pas à grand chose si peu de contenu */
     position: relative;
     display: block;
     font-size: clamp(1rem, 2.5vw, 2.125rem);
-    font-weight: 700;
+    font-variation-settings: 'wght'580, 'CASL'0.8, 'slnt'-10;
 }
 
 
 @media screen and (max-width: 39.9375em) {
+    .realisations {
+        padding: var(--dim6) var(--dim2);
+        margin-bottom: var(--dim6);
+    }
 
     .realisations .content-item .title-n3,
     .realisations .content-item .description,
