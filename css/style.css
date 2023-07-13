@@ -369,19 +369,36 @@ ne sert donc pas à grand chose si peu de contenu */
 /* Général
 ****************************************/
 .link {
+    position: relative;
     display: inline;
     font-weight: 600;
     font-size: var(--dim3);
+    line-height: 1.2;
     color: var(--base);
     text-decoration: none;
     border-bottom: 2px solid transparent;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 2px;
     transition: all .28s cubic-bezier(.87, 0, .13, 1)
 }
 
-.link.actif,
-.link:hover,
-.link:focus {
+.link.actif {
     border-bottom: 2px solid var(--base);
+}
+
+.link:hover::before,
+.link:focus::before {
+    width: 100%;
 }
 
 .btn {
@@ -398,6 +415,7 @@ ne sert donc pas à grand chose si peu de contenu */
     border-radius: var(--dim3);
     background-color: var(--base);
     z-index: 1;
+    transition: all .4s cubic-bezier(.87, 0, .13, 1);
 }
 
 .btn::before,
@@ -420,6 +438,11 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .btn::after {
     transition-delay: 250ms;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--color8);
 }
 
 .btn:hover::before,
@@ -884,6 +907,7 @@ ne sert donc pas à grand chose si peu de contenu */
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     height: 100%;
+    gap: var(--dim2);
 }
 
 .slides::-webkit-scrollbar {
@@ -904,18 +928,22 @@ ne sert donc pas à grand chose si peu de contenu */
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
     width: 100%;
-    height: calc(100% - var(--dim2));
+    height: calc(100% - var(--dim3));
     background-color: var(--color1);
     border-radius: var(--dim4);
-    margin: 0 var(--dim2);
-    filter: drop-shadow(4px 4px 6px hsl(0deg 0% 0% / 15%));
+    padding: var(--dim3) var(--dim2) var(--dim2);
     scroll-snap-align: center;
     transform-origin: center center;
     transform: scale(1);
+    box-shadow:
+        0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075),
+        0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075);
 }
 
 .slide-text {
@@ -992,17 +1020,21 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 @media screen and (max-width: 39.9375em) {
+    .slide-text {
+        padding: var(--dim2);
+    }
+
     #slide-1 {
         background-position: 17% 14%, 80% 22%, 20% 85%, 70% 76%;
     }
 
     #slide-2 {
         animation: none;
-        background-position: 25% 15%, 86% 20%, 10% 80%, 60% 85%, 100% 81%;
+        background-position: 25% 9%, 86% 15%, 10% 82%, 60% 87%, 94% 82%;
     }
 
     #slide-3 {
-        background-position: 8% 10%, 89% 18%, 0% 74%, 50% 81%, 100% 41%;
+        background-position: 14% 7%, 89% 13%, 4% 84%, 50% 81%, 94% 85%;
     }
 }
 
