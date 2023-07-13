@@ -75,7 +75,7 @@ font-variation-settings: 'wght' 375, 'MONO' 0.28;
 
     --base: #657558;
     --text: #11150E;
-    
+
     /* Violet */
     --second1: #A55493;
     /* Turquoise */
@@ -93,7 +93,7 @@ font-variation-settings: 'wght' 375, 'MONO' 0.28;
     --color8: #56644B;
     --color9: #45503C;
     --color10: #333B2C;
-    
+
 
     /* Espacement */
     /* 8 */
@@ -399,6 +399,7 @@ ne sert donc pas à grand chose si peu de contenu */
     background-color: var(--base);
     z-index: 1;
 }
+
 .btn::before,
 .btn::after {
     content: "";
@@ -412,17 +413,21 @@ ne sert donc pas à grand chose si peu de contenu */
     transition: all .4s cubic-bezier(.87, 0, .13, 1);
     z-index: -1;
 }
+
 .btn::before {
     transition-delay: 50ms;
 }
+
 .btn::after {
     transition-delay: 250ms;
 }
+
 .btn:hover::before,
 .btn:focus::before {
     width: 100%;
     background-color: var(--second1);
 }
+
 .btn:hover::after,
 .btn:focus::after {
     width: 100%;
@@ -472,6 +477,7 @@ ne sert donc pas à grand chose si peu de contenu */
     max-width: 1189px;
     color: var(--base);
 }
+
 .menu::before {
     content: "→ ";
     display: block;
@@ -878,20 +884,23 @@ ne sert donc pas à grand chose si peu de contenu */
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     height: 100%;
+    background-color: var(--color1);
+    border-radius: var(--dim4);
+    filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 55%));
 }
 
 .slides::-webkit-scrollbar {
-    height: var(--dim1);
+    height: var(--dim2);
 }
 
 .slides::-webkit-scrollbar-track {
     background: var(--color1);
-    border-radius: 5px;
+    border-radius: var(--dim1);
 }
 
 .slides::-webkit-scrollbar-thumb {
     background: var(--color3);
-    border-radius: 5px;
+    border-radius: var(--dim1);
 }
 
 .slide {
