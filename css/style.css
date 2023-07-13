@@ -10,52 +10,52 @@
 
 
 @font-face {
-  font-family: 'RecVar';
-  font-style: oblique 0deg 15deg;
-  font-weight: 300 1000;
-  font-display: swap;
-  src: url('../fonts/Recursive_VF_1.085--subset_range_english_basic.woff2') format('woff2');
-  unicode-range: U+0020-007F,U+00A9,U+2190-2193,U+2018,U+2019,U+201C,U+201D,U+2022;
+    font-family: 'RecVar';
+    font-style: oblique 0deg 15deg;
+    font-weight: 300 1000;
+    font-display: swap;
+    src: url('../fonts/Recursive_VF_1.085--subset_range_english_basic.woff2') format('woff2');
+    unicode-range: U+0020-007F, U+00A9, U+2190-2193, U+2018, U+2019, U+201C, U+201D, U+2022;
 }
 
 /* unicode latin-1 letters, basic european diacritics */
 @font-face {
-  font-family: 'RecVar';
-  font-style: oblique 0deg 15deg;
-  font-weight: 300 1000;
-  font-display: swap;
-  src: url('../fonts/Recursive_VF_1.085--subset_range_latin_1.woff2') format('woff2');
-  unicode-range: U+00C0-00FF;
+    font-family: 'RecVar';
+    font-style: oblique 0deg 15deg;
+    font-weight: 300 1000;
+    font-display: swap;
+    src: url('../fonts/Recursive_VF_1.085--subset_range_latin_1.woff2') format('woff2');
+    unicode-range: U+00C0-00FF;
 }
 
 /* unicode latin-1, punc/symbols & arrows (↔ ↕ ↖ ↗ ↘ ↙) */
 @font-face {
-  font-family: 'RecVar';
-  font-style: oblique 0deg 15deg;
-  font-weight: 300 1000;
-  font-display: swap;
-  src: url('../fonts/Recursive_VF_1.085--subset_range_latin_1_punc.woff2') format('woff2');
-  unicode-range: U+00A0-00A8,U+00AA-00BF,U+2194-2199;
+    font-family: 'RecVar';
+    font-style: oblique 0deg 15deg;
+    font-weight: 300 1000;
+    font-display: swap;
+    src: url('../fonts/Recursive_VF_1.085--subset_range_latin_1_punc.woff2') format('woff2');
+    unicode-range: U+00A0-00A8, U+00AA-00BF, U+2194-2199;
 }
 
 /* unicode latin A extended */
 @font-face {
-  font-family: 'RecVar';
-  font-style: oblique 0deg 15deg;
-  font-weight: 300 1000;
-  font-display: swap;
-  src: url('../fonts/Recursive_VF_1.085--subset_range_latin_ext.woff2') format('woff2');
-  unicode-range: U+0100-017F;
+    font-family: 'RecVar';
+    font-style: oblique 0deg 15deg;
+    font-weight: 300 1000;
+    font-display: swap;
+    src: url('../fonts/Recursive_VF_1.085--subset_range_latin_ext.woff2') format('woff2');
+    unicode-range: U+0100-017F;
 }
 
 /* remaining Unicodes */
 @font-face {
-  font-family: 'RecVar';
-  font-style: oblique 0deg 15deg;
-  font-weight: 300 1000;
-  font-display: swap;
-  src: url('../fonts/Recursive_VF_1.085--subset_range_remaining.woff2') format('woff2');
-  unicode-range: U+2007,U+2008,U+2009,U+200A,U+200B,U+D,U+2010,U+2012,U+2013,U+2014,U+2015,U+201A,U+201E,U+2020,U+2021,U+2026,U+2030,U+2032,U+2033,U+2039,U+203A,U+203E,U+2044,U+2052,U+2070,U+2074,U+2075,U+2076,U+2077,U+2078,U+2079,U+207B,U+2080,U+2081,U+2082,U+2083,U+2084,U+2085,U+2086,U+2087,U+2088,U+2089,U+20A1,U+20A6,U+20A8,U+20A9,U+20AA,U+20AC,U+20AD,U+20B1,U+20B2,U+20B4,U+20B5,U+20B8,U+20B9,U+20BA,U+20BC,U+20BD,U+20BF,U+F8FF,U+2113,U+2116,U+2122,U+2126,U+212E,U+E132,U+E133,U+2153,U+2154,U+215B,U+215C,U+215D,U+215E,U+18F,U+192,U+19D,U+1C4,U+1C5,U+1C6,U+1C7,U+1C8,U+1C9,U+1CA,U+1CB,U+1CC,U+1E6,U+1E7,U+1EA,U+1EB,U+1F1,U+1F2,U+1F3,U+1FA,U+1FB,U+1FC,U+1FD,U+1FE,U+1FF,U+200,U+201,U+202,U+203,U+204,U+205,U+206,U+207,U+208,U+209,U+20A,U+20B,U+20C,U+20D,U+20E,U+20F,U+210,U+211,U+212,U+213,U+214,U+215,U+216,U+217,U+218,U+219,U+21A,U+21B,U+2215,U+2219,U+221E,U+221A,U+22A,U+22B,U+22C,U+22D,U+222B,U+230,U+231,U+232,U+233,U+2236,U+237,U+2248,U+259,U+2260,U+2261,U+2264,U+2265,U+272,U+2B9,U+2BA,U+2BB,U+2BC,U+2BE,U+2BF,U+2C6,U+2C7,U+2C8,U+2C9,U+2CA,U+2CB,U+2D8,U+2D9,U+2DA,U+2DB,U+2DC,U+2DD,U+300,U+301,U+FB02,U+FB03,U+302,U+303,U+304,U+FB01,U+306,U+307,U+308,U+309,U+30A,U+30B,U+30C,U+30F,U+311,U+312,U+315,U+31B,U+2202,U+323,U+324,U+325,U+326,U+327,U+328,U+329,U+2205,U+32E,U+2206,U+331,U+335,U+220F,U+2211,U+2212,U+391,U+392,U+393,U+394,U+398,U+39B,U+39C,U+39D,U+3A0,U+3A6,U+3B1,U+3B2,U+3B3,U+3B4,U+3B8,U+3BB,U+3BC,U+3BD,U+3C0,U+3C6,U+25A0,U+25A1,U+25B2,U+25B3,U+25B6,U+25B7,U+25BC,U+25BD,U+25C0,U+25C1,U+25C6,U+25C7,U+25CA,U+1E08,U+1E09,U+1E0C,U+1E0D,U+1E0E,U+1E0F,U+2610,U+2611,U+1E14,U+1E15,U+1E16,U+1E17,U+1E1C,U+1E1D,U+1E20,U+1E21,U+1E24,U+1E25,U+1E2A,U+1E2B,U+1E2E,U+1E2F,U+1E36,U+1E37,U+1E3A,U+1E3B,U+E3F,U+1E42,U+1E43,U+1E44,U+1E45,U+1E46,U+1E47,U+1E48,U+1E49,U+1E4C,U+1E4D,U+1E4E,U+1E4F,U+1E50,U+1E51,U+1E52,U+1E53,U+1E5A,U+1E5B,U+1E5E,U+1E5F,U+1E60,U+2661,U+1E61,U+1E62,U+1E63,U+1E64,U+1E65,U+1E66,U+1E67,U+1E68,U+1E69,U+2665,U+1E6C,U+1E6D,U+1E6E,U+1E6F,U+1E78,U+1E79,U+1E7A,U+1E7B,U+1E80,U+1E81,U+1E82,U+1E83,U+1E84,U+1E85,U+1E8E,U+1E8F,U+1E92,U+1E93,U+1E97,U+1E9E,U+2713,U+27E8,U+27E9;
+    font-family: 'RecVar';
+    font-style: oblique 0deg 15deg;
+    font-weight: 300 1000;
+    font-display: swap;
+    src: url('../fonts/Recursive_VF_1.085--subset_range_remaining.woff2') format('woff2');
+    unicode-range: U+2007, U+2008, U+2009, U+200A, U+200B, U+D, U+2010, U+2012, U+2013, U+2014, U+2015, U+201A, U+201E, U+2020, U+2021, U+2026, U+2030, U+2032, U+2033, U+2039, U+203A, U+203E, U+2044, U+2052, U+2070, U+2074, U+2075, U+2076, U+2077, U+2078, U+2079, U+207B, U+2080, U+2081, U+2082, U+2083, U+2084, U+2085, U+2086, U+2087, U+2088, U+2089, U+20A1, U+20A6, U+20A8, U+20A9, U+20AA, U+20AC, U+20AD, U+20B1, U+20B2, U+20B4, U+20B5, U+20B8, U+20B9, U+20BA, U+20BC, U+20BD, U+20BF, U+F8FF, U+2113, U+2116, U+2122, U+2126, U+212E, U+E132, U+E133, U+2153, U+2154, U+215B, U+215C, U+215D, U+215E, U+18F, U+192, U+19D, U+1C4, U+1C5, U+1C6, U+1C7, U+1C8, U+1C9, U+1CA, U+1CB, U+1CC, U+1E6, U+1E7, U+1EA, U+1EB, U+1F1, U+1F2, U+1F3, U+1FA, U+1FB, U+1FC, U+1FD, U+1FE, U+1FF, U+200, U+201, U+202, U+203, U+204, U+205, U+206, U+207, U+208, U+209, U+20A, U+20B, U+20C, U+20D, U+20E, U+20F, U+210, U+211, U+212, U+213, U+214, U+215, U+216, U+217, U+218, U+219, U+21A, U+21B, U+2215, U+2219, U+221E, U+221A, U+22A, U+22B, U+22C, U+22D, U+222B, U+230, U+231, U+232, U+233, U+2236, U+237, U+2248, U+259, U+2260, U+2261, U+2264, U+2265, U+272, U+2B9, U+2BA, U+2BB, U+2BC, U+2BE, U+2BF, U+2C6, U+2C7, U+2C8, U+2C9, U+2CA, U+2CB, U+2D8, U+2D9, U+2DA, U+2DB, U+2DC, U+2DD, U+300, U+301, U+FB02, U+FB03, U+302, U+303, U+304, U+FB01, U+306, U+307, U+308, U+309, U+30A, U+30B, U+30C, U+30F, U+311, U+312, U+315, U+31B, U+2202, U+323, U+324, U+325, U+326, U+327, U+328, U+329, U+2205, U+32E, U+2206, U+331, U+335, U+220F, U+2211, U+2212, U+391, U+392, U+393, U+394, U+398, U+39B, U+39C, U+39D, U+3A0, U+3A6, U+3B1, U+3B2, U+3B3, U+3B4, U+3B8, U+3BB, U+3BC, U+3BD, U+3C0, U+3C6, U+25A0, U+25A1, U+25B2, U+25B3, U+25B6, U+25B7, U+25BC, U+25BD, U+25C0, U+25C1, U+25C6, U+25C7, U+25CA, U+1E08, U+1E09, U+1E0C, U+1E0D, U+1E0E, U+1E0F, U+2610, U+2611, U+1E14, U+1E15, U+1E16, U+1E17, U+1E1C, U+1E1D, U+1E20, U+1E21, U+1E24, U+1E25, U+1E2A, U+1E2B, U+1E2E, U+1E2F, U+1E36, U+1E37, U+1E3A, U+1E3B, U+E3F, U+1E42, U+1E43, U+1E44, U+1E45, U+1E46, U+1E47, U+1E48, U+1E49, U+1E4C, U+1E4D, U+1E4E, U+1E4F, U+1E50, U+1E51, U+1E52, U+1E53, U+1E5A, U+1E5B, U+1E5E, U+1E5F, U+1E60, U+2661, U+1E61, U+1E62, U+1E63, U+1E64, U+1E65, U+1E66, U+1E67, U+1E68, U+1E69, U+2665, U+1E6C, U+1E6D, U+1E6E, U+1E6F, U+1E78, U+1E79, U+1E7A, U+1E7B, U+1E80, U+1E81, U+1E82, U+1E83, U+1E84, U+1E85, U+1E8E, U+1E8F, U+1E92, U+1E93, U+1E97, U+1E9E, U+2713, U+27E8, U+27E9;
 }
 
 /*
@@ -72,23 +72,36 @@ font-variation-settings: 'wght' 375, 'MONO' 0.28;
 /* Variables
 ****************************************/
 :root {
-    /* beige */
-    --color1: #F6F6EB;
-    /* bleu */
-    --color2: #204880;
-    /* jaune */
-    --color3: #ffdf88;
-    /* maron */
-    --color4: #724F4A;
-    /* noir text */
-    --color5: #17100F;
 
+    --base: #657558;
+    --text: #11150E;
+    
+    /* Violet */
+    --second1: #A55493;
+    /* Turquoise */
+    --second2: #0A97B8;
+    /* Rose */
+    --second3: #F49082;
+
+    --color1: #F9FAF9;
+    --color2: #ECEEEB;
+    --color3: #D1D6CE;
+    --color4: #B8BFB2;
+    --color5: #9EA896;
+    --color6: #828F77;
+    --color7: #667659;
+    --color8: #56644B;
+    --color9: #45503C;
+    --color10: #333B2C;
+    
+
+    /* Espacement */
     /* 8 */
     --dim1: .5rem;
     /* 13 */
     --dim2: .8125rem;
     /* 16 */
-    --base: 1rem;
+    --regular: 1rem;
     /* 21 */
     --dim3: 1.3125rem;
     /* 34 */
@@ -254,7 +267,7 @@ html {
     font-size: 1em;
     line-height: 1;
     font-weight: 400;
-    color: var(--color5);
+    color: var(--text);
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -359,40 +372,66 @@ ne sert donc pas à grand chose si peu de contenu */
     display: inline;
     font-weight: 600;
     font-size: var(--dim3);
-    color: var(--color2);
+    color: var(--base);
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: all .28s cubic-bezier(.87, 0, .13, 1)
 }
 
+.link.actif,
 .link:hover,
 .link:focus {
-    border-bottom: 2px solid var(--color2);
+    border-bottom: 2px solid var(--base);
 }
 
 .btn {
     position: relative;
+    overflow: hidden;
     display: inline-block;
     min-width: 200px;
     font-size: var(--dim3);
-    font-weight: 600;
-    color: var(--color2);
+    font-weight: 400;
+    color: var(--color1);
     text-align: center;
     text-decoration: none;
     padding: var(--dim2) var(--dim4);
-    border: 2px solid var(--color2);
-    border-radius: var(--dim1);
-    transition: all .4s cubic-bezier(.87, 0, .13, 1)
+    border-radius: var(--dim3);
+    background-color: var(--base);
+    z-index: 1;
 }
-
-.btn:hover,
-.btn:focus {
-    background-color: var(--color3);
+.btn::before,
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--dim4);
+    height: 100%;
+    background-color: transparent;
+    border-radius: var(--dim3);
+    transition: all .4s cubic-bezier(.87, 0, .13, 1);
+    z-index: -1;
+}
+.btn::before {
+    transition-delay: 50ms;
+}
+.btn::after {
+    transition-delay: 250ms;
+}
+.btn:hover::before,
+.btn:focus::before {
+    width: 100%;
+    background-color: var(--second1);
+}
+.btn:hover::after,
+.btn:focus::after {
+    width: 100%;
+    background-color: var(--color10);
 }
 
 @media screen and (max-width: 39.9375em) {
     .btn {
-        font-size: var(--base);
+        font-size: var(--regular);
         width: 100%;
     }
 }
@@ -431,14 +470,14 @@ ne sert donc pas à grand chose si peu de contenu */
     list-style: none;
     width: 100%;
     max-width: 1189px;
+    color: var(--base);
 }
-
 .menu::before {
     content: "→ ";
     display: block;
     font-weight: 600;
     font-size: var(--dim3);
-    color: var(--color2);
+    color: var(--base);
     padding-right: .2em;
 }
 
@@ -643,7 +682,7 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: center;
     font-size: clamp(1.6rem, 4vw, 3.4375rem);
     font-weight: 700;
-    color: var(--color5);
+    color: var(--text);
     padding-bottom: var(--dim5);
 }
 
@@ -720,7 +759,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .welcome .link {
     font-size: clamp(1.6rem, 4vw, 3.4375rem);
     font-weight: 700;
-    color: var(--color2);
+    color: var(--base);
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
@@ -728,7 +767,7 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .welcome .link:hover,
 .welcome .link:focus {
-    border-bottom: 2px solid var(--color2);
+    border-bottom: 2px solid var(--base);
 }
 
 .welcome .presentation {
@@ -736,8 +775,8 @@ ne sert donc pas à grand chose si peu de contenu */
     display: block;
     max-width: 90%;
     font-size: clamp(1rem, 2.5vw, 2.125rem);
-    font-weight: 700;
-    color: var(--color5);
+    font-weight: 400;
+    color: var(--text);
     padding-bottom: var(--dim5);
 }
 
@@ -748,7 +787,6 @@ ne sert donc pas à grand chose si peu de contenu */
     justify-content: flex-start;
     width: 100%;
     font-size: var(--dim3);
-    font-weight: 600;
 }
 
 .welcome .btn {
@@ -875,14 +913,14 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
     max-width: 981px;
     font-size: clamp(1.3rem, 2vw, 2.125rem);
-    font-variation-settings: 'wght' 580, 'CASL' 0.8, 'slnt' -10;
+    font-variation-settings: 'wght'580, 'CASL'0.8, 'slnt'-10;
     text-align: center;
     color: var(--color4);
     padding: var(--dim4);
 }
 
 .slide-text em {
-    color: var(--color5);
+    color: var(--text);
 }
 
 #slide-1 {
@@ -996,7 +1034,7 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     justify-content: flex-start;
     width: calc(50% - var(--dim2));
-    border: 2px solid var(--color5);
+    border: 2px solid var(--text);
     background-color: #fff;
 }
 
@@ -1012,19 +1050,19 @@ ne sert donc pas à grand chose si peu de contenu */
 .services .content-item .illustration {
     display: block;
     width: 100%;
-    border-bottom: 2px solid var(--color5);
+    border-bottom: 2px solid var(--text);
 }
 
 .services .content-item .title-n3 {
     padding: var(--dim3) var(--dim4);
-    border-right: 2px solid var(--color5);
+    border-right: 2px solid var(--text);
 }
 
 .services .content-item .bottom-block {
     display: block;
     width: 100%;
     padding: var(--dim3) var(--dim4);
-    font-size: var(--base);
+    font-size: var(--regular);
 }
 
 .services .illustration {
@@ -1032,6 +1070,7 @@ ne sert donc pas à grand chose si peu de contenu */
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 .services .illu-1 {
     background-color: #F49082;
     background-image: url(../images/arc1.svg);
@@ -1056,6 +1095,7 @@ ne sert donc pas à grand chose si peu de contenu */
     display: block;
     padding-bottom: var(--dim1);
 }
+
 .services .content-item .liste li {
     position: relative;
     line-height: 1.4;
@@ -1154,7 +1194,7 @@ ne sert donc pas à grand chose si peu de contenu */
     justify-content: flex-start;
     border-radius: var(--dim5);
     padding: var(--dim4);
-    color: var(--color5);
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -1185,7 +1225,7 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     justify-content: flex-start;
     border-radius: var(--dim4);
-    border: 2px solid var(--color5);
+    border: 2px solid var(--text);
     background-color: rgb(255 255 255 / 85%);
     backdrop-filter: blur(4px);
     filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 0%));
@@ -1213,11 +1253,11 @@ ne sert donc pas à grand chose si peu de contenu */
     display: block;
     width: 100%;
     padding: var(--dim3) var(--dim4);
-    border-bottom: 2px solid var(--color5);
+    border-bottom: 2px solid var(--text);
 }
 
 .realisations .content-item .title-n3 {
-    border-right: 2px solid var(--color5);
+    border-right: 2px solid var(--text);
 }
 
 .realisations .content-item .link-block {
@@ -1227,7 +1267,7 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .realisations .content-item .link {
-    font-size: var(--base);
+    font-size: var(--regular);
 }
 
 .realisations .title-block {
