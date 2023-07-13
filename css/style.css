@@ -473,11 +473,13 @@ ne sert donc pas à grand chose si peu de contenu */
 .title-n2 {
     font-size: clamp(2rem, 4vw, 3.4375rem);
     font-weight: 600;
+    color: var(--color10);
 }
 
 .title-n3 {
     font-size: clamp(1.6rem, 2vw, 3.4375rem);
     font-weight: 600;
+    color: var(--color9);
 }
 
 
@@ -953,7 +955,7 @@ ne sert donc pas à grand chose si peu de contenu */
     font-size: clamp(1.3rem, 2vw, 2.125rem);
     font-variation-settings: 'wght'580, 'CASL'0.8, 'slnt'-10;
     text-align: center;
-    color: var(--color4);
+    color: var(--color7);
     padding: var(--dim4);
 }
 
@@ -1076,8 +1078,8 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     justify-content: flex-start;
     width: calc(50% - var(--dim2));
-    border: 2px solid var(--text);
-    background-color: #fff;
+    border: 2px solid var(--color8);
+    background-color: var(--color2);
 }
 
 .services .content-item .top-block {
@@ -1090,14 +1092,14 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .services .content-item .title-n3,
 .services .content-item .illustration {
-    display: block;
+    display: flex;
     width: 100%;
-    border-bottom: 2px solid var(--text);
+    border-bottom: 2px solid var(--color8);
 }
 
 .services .content-item .title-n3 {
     padding: var(--dim3) var(--dim4);
-    border-right: 2px solid var(--text);
+    border-right: 2px solid var(--color8);
 }
 
 .services .content-item .bottom-block {
@@ -1107,31 +1109,38 @@ ne sert donc pas à grand chose si peu de contenu */
     font-size: var(--regular);
 }
 
-.services .illustration {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
+.services .top-block .illustration {
+    aspect-ratio: 1 / 1;
+    width: max(50%, 155px);
 }
 
 .services .illu-1 {
     background-color: #F49082;
-    background-image: url(../images/arc1.svg);
 }
 
 .services .illu-2 {
     background-color: #FEA97E;
-    background-image: url(../images/arc2.svg);
 }
 
 .services .illu-3 {
     background-color: #FFC37F;
-    background-image: url(../images/arc3.svg);
 }
 
 .services .illu-4 {
     background-color: #FFDF88;
-    background-image: url(../images/arc4.svg);
 }
+.services .illu-4 svg {
+  animation: rotate 2s infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-45deg)
+  }
+  100% {
+    transform: rotate(45deg)
+  }
+}
+
 
 .services .content-item .intro {
     display: block;
@@ -1191,7 +1200,7 @@ ne sert donc pas à grand chose si peu de contenu */
 ****************************************/
 
 .realisations {
-    background-color: var(--color3);
+    background-color: var(--color5);
     padding: var(--dim7) var(--dim2);
     margin-bottom: var(--dim7);
 }
@@ -1267,9 +1276,8 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     justify-content: flex-start;
     border-radius: var(--dim4);
-    border: 2px solid var(--text);
-    background-color: rgb(255 255 255 / 85%);
-    backdrop-filter: blur(4px);
+    border: 2px solid var(--color8);
+    background-color: var(--color2);
     filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 0%));
     z-index: 2;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
@@ -1278,7 +1286,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .realisations .grid-item:hover .content-item,
 .realisations .grid-item:focus .content-item {
     top: -2px;
-    background-color: var(--color1);
+    background-color: var(--color3);
     filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 55%));
 }
 
@@ -1295,11 +1303,11 @@ ne sert donc pas à grand chose si peu de contenu */
     display: block;
     width: 100%;
     padding: var(--dim3) var(--dim4);
-    border-bottom: 2px solid var(--text);
+    border-bottom: 2px solid var(--color8);
 }
 
 .realisations .content-item .title-n3 {
-    border-right: 2px solid var(--text);
+    border-right: 2px solid var(--color8);
 }
 
 .realisations .content-item .link-block {
@@ -1319,7 +1327,7 @@ ne sert donc pas à grand chose si peu de contenu */
     justify-content: space-between;
     gap: calc(var(--dim2) * 2);
     width: 100%;
-    background-color: var(--color1);
+    background-color: var(--color2);
     border-radius: var(--dim3);
     padding: var(--dim3);
 }
