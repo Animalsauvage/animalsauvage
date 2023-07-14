@@ -1115,6 +1115,9 @@ ne sert donc pas à grand chose si peu de contenu */
     overflow: hidden;
     width: max(50%, 155px);
 }
+.services .illustration svg {
+    width: 100%;
+}
 
 .services .illu-1 {
     background-color: #F49082;
