@@ -1523,6 +1523,7 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .article-list-container .title-n2 {
+    color: var(--text);
     padding-bottom: var(--dim4);
 }
 
@@ -1534,13 +1535,17 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
     gap: var(--dim6);
     border-left: 2px solid var(--color8);
-    padding: var(--dim5);
+    padding: var(--dim5) 0 var(--dim5) var(--dim5);
     margin-bottom: var(--dim4);
 }
 
 .article-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: var(--dim5);
     text-decoration: none;
-    color: var(--text);
 }
 
 .list-container .content-container {
@@ -1548,19 +1553,39 @@ ne sert donc pas à grand chose si peu de contenu */
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    max-width: 60%;
     gap: var(--dim2);
 }
 
+.list-container .image-container {
+    display: block;
+    width: var(--dim6);
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
+    background-size: cover;
+}
+.article-link .image-container.illu-as {
+    background-position: center center;
+    background-image: url(../images/schema-logo.svg);
+}
+.article-link .image-container.illu-mailo {
+    background-position: center center;
+    background-image: url(../images/mailo-redesign-creation-compte-01.png);
+}
+
 .list-container .categorie {
-    font-size: var(--dim4);
+    font-size: var(--dim3);
     font-weight: 500;
     color: var(--color7);
+    text-decoration: none;
 }
 
 .list-container .titre {
+    position: relative;
     font-size: var(--dim5);
-    font-weight: 700;
-    color: var(--second2);
+    font-weight: 500;
+    color: var(--base);
+    text-decoration: underline;
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .list-container .date {
@@ -1568,3 +1593,60 @@ ne sert donc pas à grand chose si peu de contenu */
     font-weight: 400;
     color: var(--color7);
 }
+
+
+.article-link:hover .titre,
+.article-link:focus .titre {
+    color: var(--color10);
+}
+
+
+.article-link:hover .image-container,
+.article-link:focus .image-container {
+    width: var(--dim10);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
