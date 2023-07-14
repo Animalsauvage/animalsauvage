@@ -891,6 +891,7 @@ ne sert donc pas à grand chose si peu de contenu */
 @media screen and (max-width: 39.9375em) {
     .carrousel {
         padding: var(--dim6) var(--dim2);
+        background-attachment: scroll;
     }
 
     .slider {
@@ -1019,6 +1020,10 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 @media screen and (max-width: 39.9375em) {
+    .slide {
+        height: 100%;
+    }
+
     .slide-text {
         padding: var(--dim2);
     }
@@ -1107,6 +1112,7 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .services .top-block .illustration {
+    overflow: hidden;
     width: max(50%, 155px);
 }
 
