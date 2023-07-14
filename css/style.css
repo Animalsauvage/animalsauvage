@@ -1115,6 +1115,7 @@ ne sert donc pas à grand chose si peu de contenu */
     overflow: hidden;
     width: max(50%, 155px);
 }
+
 .services .illustration svg {
     width: 100%;
 }
@@ -1502,4 +1503,68 @@ ne sert donc pas à grand chose si peu de contenu */
     .realisations .grid-4 .content-item .title-n3 {
         border-right: 0;
     }
+}
+
+
+
+
+/* Section Articles
+****************************************/
+
+.articles {}
+
+.article-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: calc((100% - 1189px) / 2);
+}
+
+.article-list-container .title-n2 {
+    padding-bottom: var(--dim4);
+}
+
+.article-list-container .list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: var(--dim6);
+    border-left: 2px solid var(--color8);
+    padding: var(--dim5);
+    margin-bottom: var(--dim4);
+}
+
+.article-link {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.list-container .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--dim2);
+}
+
+.list-container .categorie {
+    font-size: var(--dim4);
+    font-weight: 500;
+    color: var(--color7);
+}
+
+.list-container .titre {
+    font-size: var(--dim5);
+    font-weight: 700;
+    color: var(--second2);
+}
+
+.list-container .date {
+    font-size: var(--dim3);
+    font-weight: 400;
+    color: var(--color7);
 }
