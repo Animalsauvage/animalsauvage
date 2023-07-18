@@ -1643,14 +1643,11 @@ ne sert donc pas à grand chose si peu de contenu */
 /* Section Contact
 ****************************************/
 
-.contact {
-/*
-    padding: var(--dim7) var(--dim2);
-    margin-bottom: -50px;
-    background: var(--second3) url(../images/nnnoise.svg);
-    color: var(--color1);
-*/
+
+.contact .container-block {
+    margin-bottom: var(--dim6);
 }
+/*
 
 .contact .container-block p {
     position: relative;
@@ -1661,30 +1658,60 @@ ne sert donc pas à grand chose si peu de contenu */
     padding-bottom: var(--dim2);
 }
 
-.shape {
-    float: left;
-    width: 10vw;
-    height: 10vw;
-    margin: var(--dim4);
-    background: var(--base);
-    clip-path: circle(50%);
-    shape-outside: circle(50%);
-    shape-margin: var(--dim2);
+*/
+
+
+
+
+
+
+
+.infiniteTextScrolling_wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+.infiniteTextScrolling_scrollingLeft {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: infiniteTextScrolling_scrollingLeft 35s linear infinite;
+    
+}
+.infiniteTextScrolling_scrollingRight {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: infiniteTextScrolling_scrollingRight 85s linear infinite;
+    
+}
+.infiniteTextScrolling_scrollingRight p,
+.infiniteTextScrolling_scrollingLeft p {
+    display: inline-block;
+    font-size: 3rem;
+}
+
+
+@keyframes infiniteTextScrolling_scrollingLeft {
+    0% {
+        transform: translateZ(0)
+    }
+
+    to {
+        transform: translate3d(-50%,0,0)
+    }
 }
 
 
 
+@keyframes infiniteTextScrolling_scrollingRight {
+    0% {
+        transform: translate3d(-50%,0,0)
+    }
 
-
-
-
-
-
-
-
-
-
-
+    to {
+        transform: translateZ(0)
+    }
+}
 
 
 
