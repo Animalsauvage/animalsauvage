@@ -1647,75 +1647,65 @@ ne sert donc pas à grand chose si peu de contenu */
 .contact .container-block {
     margin-bottom: var(--dim6);
 }
-/*
-
-.contact .container-block p {
-    position: relative;
-    display: block;
-    width: 100%;
-    font-size: clamp(1.3rem, 1vw, 2.125rem);
-    font-variation-settings: 'wght'480, 'CASL'0.8, 'slnt'-10;
-    padding-bottom: var(--dim2);
-}
-
-*/
 
 
 
 
-
-
-
-.infiniteTextScrolling_wrapper {
+.anim-text-container {
+    overflow: hidden;
     max-width: 100%;
-    overflow: hidden;
+    padding: var(--dim4) 0;
+    background-color: var(--second1);
 }
-.infiniteTextScrolling_scrollingLeft {
+
+.anim-text-block {
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
-    animation: infiniteTextScrolling_scrollingLeft 35s linear infinite;
-    
 }
-.infiniteTextScrolling_scrollingRight {
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: infiniteTextScrolling_scrollingRight 85s linear infinite;
-    
-}
-.infiniteTextScrolling_scrollingRight p,
-.infiniteTextScrolling_scrollingLeft p {
+
+.anim-text-block span {
     display: inline-block;
     font-size: 3rem;
+    color: var(--color2);
 }
 
+.anim-left {
+    animation: anim-left 45s linear infinite;
+}
 
-@keyframes infiniteTextScrolling_scrollingLeft {
+.anim-right {
+    animation: anim-right 65s linear infinite;
+}
+
+.anim-left-alt {
+    animation: anim-left 35s linear infinite;
+}
+
+.anim-right-alt {
+    animation: anim-right 75s linear infinite;
+}
+
+.anim-left-alt2 {
+    animation: anim-left 40s linear infinite;
+}
+
+@keyframes anim-left {
     0% {
-        transform: translateZ(0)
+        transform: translate3d(0, 0, 0);
     }
 
-    to {
-        transform: translate3d(-50%,0,0)
+    100% {
+        transform: translate3d(-50%, 0, 0);
     }
 }
 
-
-
-@keyframes infiniteTextScrolling_scrollingRight {
+@keyframes anim-right {
     0% {
-        transform: translate3d(-50%,0,0)
+        transform: translate3d(-50%, 0, 0);
     }
 
-    to {
-        transform: translateZ(0)
+    100% {
+        transform: translate3d(0, 0, 0);
     }
 }
-
-
-
-
-
-
-wx
