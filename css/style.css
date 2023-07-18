@@ -539,7 +539,7 @@ ne sert donc pas à grand chose si peu de contenu */
     color: var(--color1);
     border-top-left-radius: 55em 1em;
     border-top-right-radius: 55em 1em;
-    background: var(--color10) url(../images/nnnoise.svg);
+    background-color: var(--color10);
 }
 
 .footer .item-1 {
@@ -1630,7 +1630,6 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 @media screen and (max-width: 64em) {
-
     .articles .container-block {
         flex-direction: column;
         width: 100%;
@@ -1642,13 +1641,27 @@ ne sert donc pas à grand chose si peu de contenu */
 
 /* Section Contact
 ****************************************/
-
-
-.contact .container-block {
-    margin-bottom: var(--dim6);
+.contact {
+    padding: 0;
 }
 
-
+.contact-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: var(--dim9) var(--dim2) var(--dim9);
+    margin-bottom: -20px;
+    font-size: var(--dim4);
+    color: var(--color2);
+    background-color: var(--color3);
+    background-image: url(../images/montagne.png),
+        linear-gradient(0deg, rgba(51,59,44,1) 0%, rgba(69,80,60,1) 35%, rgba(165,84,147,1) 100%);
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: darken;
+}
 
 
 .anim-text-container {
@@ -1708,4 +1721,15 @@ ne sert donc pas à grand chose si peu de contenu */
     100% {
         transform: translate3d(0, 0, 0);
     }
+}
+
+@media screen and (max-width: 40em) {
+    .anim-text-block span {
+        font-size: 2rem;
+    }
+    .contact-block {
+    padding: var(--dim8) var(--dim2);
+    font-size: var(--dim3);
+       
+}
 }
