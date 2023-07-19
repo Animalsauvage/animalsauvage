@@ -1558,6 +1558,14 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
 }
 
+.articles .next {
+    display: block;
+    width: 100%;
+    font-size: var(--regular);
+    font-weight: 600;
+    padding: var(--dim6) var(--dim4) 0;
+}
+
 .article-link {
     display: flex;
     flex-direction: column;
