@@ -1610,6 +1610,14 @@ ne sert donc pas à grand chose si peu de contenu */
         gap: calc(var(--dim2) * 2);
         width: 100%;
     }
+
+    .list-container .title-n3 {
+        font-size: var(--dim3);
+    }
+
+    .list-container .categorie {
+        font-size: var(--regular);
+    }
 }
 
 @media screen and (min-width: 40em) and (max-width: 64em) {
@@ -1657,7 +1665,7 @@ ne sert donc pas à grand chose si peu de contenu */
     color: var(--color2);
     background-color: var(--color3);
     background-image: url(../images/montagne.png),
-        linear-gradient(0deg, rgba(51,59,44,1) 0%, rgba(69,80,60,1) 35%, rgba(165,84,147,1) 100%);
+        linear-gradient(0deg, rgba(51, 59, 44, 1) 0%, rgba(69, 80, 60, 1) 35%, rgba(165, 84, 147, 1) 100%);
     background-position: center center;
     background-size: cover;
     background-blend-mode: darken;
@@ -1727,9 +1735,10 @@ ne sert donc pas à grand chose si peu de contenu */
     .anim-text-block span {
         font-size: 2rem;
     }
+
     .contact-block {
-    padding: var(--dim8) var(--dim2);
-    font-size: var(--dim3);
-       
-}
+        padding: var(--dim8) var(--dim2);
+        font-size: var(--dim3);
+
+    }
 }
