@@ -1650,14 +1650,6 @@ ne sert donc pas à grand chose si peu de contenu */
         justify-content: space-between;
         width: 100%;
     }
-
-    .list-container .content-block {
-        padding: var(--dim3) var(--dim3) 0 var(--dim3);
-    }
-
-    .list-container .link-block {
-        padding: 0 var(--dim3) var(--dim3);
-    }
 }
 
 @media screen and (max-width: 64em) {
@@ -1801,10 +1793,16 @@ ne sert donc pas à grand chose si peu de contenu */
     color: var(--color7);
 }
 
+.template .welcome .titre-principal {
+    font-size: var(--dim5);
+    text-wrap: balance;
+}
+
 .template .welcome .presentation {
     width: 100%;
     padding-left: 30%;
     padding-bottom: 0;
+    font-size: var(--dim4);
 }
 
 .template .top-container {
@@ -1819,6 +1817,19 @@ ne sert donc pas à grand chose si peu de contenu */
     background-image: url(../images/montagne.png), linear-gradient(0deg, rgba(51, 59, 44, 1) 0%, rgba(69, 80, 60, 1) 35%, rgb(249 250 249) 100%);
 }
 
+@media screen and (max-width: 63.9375em) {
+    .template .welcome .presentation {
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .template .container-block {
+        padding: 0 var(--dim5);
+    }
+}
+
+
 
 
 /* Page articles
@@ -1828,6 +1839,8 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: center;
     width: 100%;
 }
+
+
 
 
 /* Page d'un article
@@ -1877,7 +1890,6 @@ ne sert donc pas à grand chose si peu de contenu */
 .nav-article .link {
     font-size: var(--regular);
 }
-
 
 body {
     counter-reset: compteur-h2 compteur-h3 compteur-h4 compteur-menu
@@ -1946,6 +1958,7 @@ body {
 .article h2 {
     position: relative;
     font-size: var(--dim5);
+    font-weight: 600;
     line-height: 1.2;
     padding: var(--dim2) 0;
     margin: var(--dim5) 0 var(--dim3);
@@ -1983,6 +1996,49 @@ body {
     background-color: var(--color2);
 }
 
+.article blockquote {
+    position: relative;
+    margin: var(--dim4) 0;
+    padding: var(--dim4) var(--dim5) var(--dim4) var(--dim6);
+    background-color: var(--color3);
+    border-radius: var(--dim1);
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, .028),
+        0 3px 4px rgba(0, 0, 0, .04),
+        0 5px 7px rgba(0, 0, 0, .05),
+        0 9px 12px rgba(0, 0, 0, .06),
+        0 16px 27px rgba(0, 0, 0, .072);
+}
+
+.article blockquote::before {
+    content: " ";
+    position: absolute;
+    left: calc(var(--dim3) - .2ex);
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 2ex;
+}
+
+.article blockquote::before {
+    content: "« ";
+    top: var(--dim2);
+    left: var(--dim4);
+    font-size: var(--dim5);
+    font-variation-settings: 'wght'680, 'CASL'0.8;
+    color: var(--color6);
+}
+
+.article blockquote p {
+    color: var(--color9);
+    line-height: 1.5;
+    font-variation-settings: 'wght'680, 'CASL'0.8, 'slnt'-10;
+}
+
+.article strong {
+    font-weight: 700;
+}
+
 .article .link {
     font-weight: 400;
 }
@@ -1996,6 +2052,11 @@ body {
     width: 100%;
     text-align: center;
     padding: var(--dim4) 0;
+}
+
+.article .figure .legende {
+    font-size: var(--regular);
+    color: var(--color8);
 }
 
 .article .figure .video,
@@ -2028,7 +2089,87 @@ body {
 }
 
 
+@media screen and (max-width: 39.9375em) {
+    .template .welcome {
+        margin-bottom: var(--dim5);
+    }
 
+    .template .section {
+        padding: 0 var(--dim2) var(--dim5);
+    }
+
+    .template .welcome .titre-principal {
+        font-size: var(--dim4);
+    }
+
+    .template .welcome .presentation {
+        font-size: var(--dim3);
+    }
+
+    .nav-article {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 0 var(--dim4) var(--dim5);
+        width: 100%;
+    }
+
+    .article {
+        padding: 0;
+        width: 100%;
+    }
+
+    .article p,
+    .article .link,
+    .article .liste-puce li {
+        font-size: var(--regular);
+    }
+
+    .article blockquote {
+        padding: var(--dim6) var(--dim3) var(--dim4) var(--dim4);
+    }
+
+    .article .first-letter::first-letter {
+        font-size: var(--dim4);
+        margin-left: 0;
+        padding: var(--dim2) var(--dim3);
+        line-height: 1;
+    }
+
+    .article h2 {
+        font-size: var(--dim4);
+    }
+
+    .article h3 {
+        font-size: var(--dim3);
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+    .nav-article {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 0 var(--dim5) var(--dim6);
+        width: 100%;
+    }
+
+    .article {
+        padding: 0 var(--dim4);
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 64em) and (max-width: 87.5em) {}
+
+@media screen and (max-width: 63.9375em) {
+    .main-article-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 
 
