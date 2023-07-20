@@ -2248,6 +2248,14 @@ body {
         height: var(--dim5);
     }
 
+    .article h4 {
+        font-size: var(--dim3);
+    }
+
+    .article h5 {
+        font-size: var(--regular)
+    }
+
     .article .double-colonne {
         flex-direction: column;
     }
@@ -2278,16 +2286,16 @@ body {
 }
 
 @media screen and (max-width: 63.9375em) {
-.main-article-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: var(--dim3) 0;
-    grid-auto-flow: column;
-    grid-template-areas:
-        "nav-article-container"
-        "article";
-}
+    .main-article-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: var(--dim3) 0;
+        grid-auto-flow: column;
+        grid-template-areas:
+            "nav-article-container"
+            "article";
+    }
 
 }
 
@@ -2405,7 +2413,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
 @media screen and (max-width: 39.9375em) {
     .accordion label {
-        font-size: var(--dim3);
+        font-size: var(--regular);
     }
 
     .accordion label::after {
