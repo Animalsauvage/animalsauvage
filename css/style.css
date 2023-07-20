@@ -8,13 +8,30 @@
 ###    ###  ##########   ########    ########       
 */
 
+/*@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');*/
 
+
+/* Importation de la police variable */
+@font-face {
+    font-family: 'Recursive';
+    /* Remplacez 'NomDeLaPolice' par le nom que vous souhaitez donner à votre police */
+    src: url('chemin/vers/NomDeLaPolice.woff2') format('woff2'),
+        url('chemin/vers/NomDeLaPolice-variable.woff2') format('woff2-variations'),
+        url('chemin/vers/NomDeLaPolice.woff') format('woff');
+    /* Assurez-vous d'inclure tous les formats que vous avez convertis */
+    font-weight: 400;
+    /* Poids de la police normal (facultatif, peut varier selon la police) */
+    font-style: normal;
+    /* Style normal (facultatif, peut varier selon la police) */
+}
+
+/* The bare minimum English subset, plus copyright & arrows (← ↑ → ↓) & quotes (“ ” ‘ ’) & bullet (•) */
 @font-face {
     font-family: 'RecVar';
     font-style: oblique 0deg 15deg;
     font-weight: 300 1000;
     font-display: swap;
-    src: url('../fonts/Recursive_VF_1.085--subset_range_english_basic.woff2') format('woff2');
+    src: url('./fonts/Recursive_VF_1.085--subset_range_english_basic.woff2') format('woff2');
     unicode-range: U+0020-007F, U+00A9, U+2190-2193, U+2018, U+2019, U+201C, U+201D, U+2022;
 }
 
@@ -24,7 +41,7 @@
     font-style: oblique 0deg 15deg;
     font-weight: 300 1000;
     font-display: swap;
-    src: url('../fonts/Recursive_VF_1.085--subset_range_latin_1.woff2') format('woff2');
+    src: url('./fonts/Recursive_VF_1.085--subset_range_latin_1.woff2') format('woff2');
     unicode-range: U+00C0-00FF;
 }
 
@@ -34,7 +51,7 @@
     font-style: oblique 0deg 15deg;
     font-weight: 300 1000;
     font-display: swap;
-    src: url('../fonts/Recursive_VF_1.085--subset_range_latin_1_punc.woff2') format('woff2');
+    src: url('./fonts/Recursive_VF_1.085--subset_range_latin_1_punc.woff2') format('woff2');
     unicode-range: U+00A0-00A8, U+00AA-00BF, U+2194-2199;
 }
 
@@ -44,8 +61,18 @@
     font-style: oblique 0deg 15deg;
     font-weight: 300 1000;
     font-display: swap;
-    src: url('../fonts/Recursive_VF_1.085--subset_range_latin_ext.woff2') format('woff2');
+    src: url('./fonts/Recursive_VF_1.085--subset_range_latin_ext.woff2') format('woff2');
     unicode-range: U+0100-017F;
+}
+
+/* unicodes for vietnamese */
+@font-face {
+    font-family: 'RecVar';
+    font-style: oblique 0deg 15deg;
+    font-weight: 300 1000;
+    font-display: swap;
+    src: url('./fonts/Recursive_VF_1.085--subset_range_vietnamese.woff2') format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 
 /* remaining Unicodes */
@@ -54,12 +81,12 @@
     font-style: oblique 0deg 15deg;
     font-weight: 300 1000;
     font-display: swap;
-    src: url('../fonts/Recursive_VF_1.085--subset_range_remaining.woff2') format('woff2');
+    src: url('./fonts/Recursive_VF_1.085--subset_range_remaining.woff2') format('woff2');
     unicode-range: U+2007, U+2008, U+2009, U+200A, U+200B, U+D, U+2010, U+2012, U+2013, U+2014, U+2015, U+201A, U+201E, U+2020, U+2021, U+2026, U+2030, U+2032, U+2033, U+2039, U+203A, U+203E, U+2044, U+2052, U+2070, U+2074, U+2075, U+2076, U+2077, U+2078, U+2079, U+207B, U+2080, U+2081, U+2082, U+2083, U+2084, U+2085, U+2086, U+2087, U+2088, U+2089, U+20A1, U+20A6, U+20A8, U+20A9, U+20AA, U+20AC, U+20AD, U+20B1, U+20B2, U+20B4, U+20B5, U+20B8, U+20B9, U+20BA, U+20BC, U+20BD, U+20BF, U+F8FF, U+2113, U+2116, U+2122, U+2126, U+212E, U+E132, U+E133, U+2153, U+2154, U+215B, U+215C, U+215D, U+215E, U+18F, U+192, U+19D, U+1C4, U+1C5, U+1C6, U+1C7, U+1C8, U+1C9, U+1CA, U+1CB, U+1CC, U+1E6, U+1E7, U+1EA, U+1EB, U+1F1, U+1F2, U+1F3, U+1FA, U+1FB, U+1FC, U+1FD, U+1FE, U+1FF, U+200, U+201, U+202, U+203, U+204, U+205, U+206, U+207, U+208, U+209, U+20A, U+20B, U+20C, U+20D, U+20E, U+20F, U+210, U+211, U+212, U+213, U+214, U+215, U+216, U+217, U+218, U+219, U+21A, U+21B, U+2215, U+2219, U+221E, U+221A, U+22A, U+22B, U+22C, U+22D, U+222B, U+230, U+231, U+232, U+233, U+2236, U+237, U+2248, U+259, U+2260, U+2261, U+2264, U+2265, U+272, U+2B9, U+2BA, U+2BB, U+2BC, U+2BE, U+2BF, U+2C6, U+2C7, U+2C8, U+2C9, U+2CA, U+2CB, U+2D8, U+2D9, U+2DA, U+2DB, U+2DC, U+2DD, U+300, U+301, U+FB02, U+FB03, U+302, U+303, U+304, U+FB01, U+306, U+307, U+308, U+309, U+30A, U+30B, U+30C, U+30F, U+311, U+312, U+315, U+31B, U+2202, U+323, U+324, U+325, U+326, U+327, U+328, U+329, U+2205, U+32E, U+2206, U+331, U+335, U+220F, U+2211, U+2212, U+391, U+392, U+393, U+394, U+398, U+39B, U+39C, U+39D, U+3A0, U+3A6, U+3B1, U+3B2, U+3B3, U+3B4, U+3B8, U+3BB, U+3BC, U+3BD, U+3C0, U+3C6, U+25A0, U+25A1, U+25B2, U+25B3, U+25B6, U+25B7, U+25BC, U+25BD, U+25C0, U+25C1, U+25C6, U+25C7, U+25CA, U+1E08, U+1E09, U+1E0C, U+1E0D, U+1E0E, U+1E0F, U+2610, U+2611, U+1E14, U+1E15, U+1E16, U+1E17, U+1E1C, U+1E1D, U+1E20, U+1E21, U+1E24, U+1E25, U+1E2A, U+1E2B, U+1E2E, U+1E2F, U+1E36, U+1E37, U+1E3A, U+1E3B, U+E3F, U+1E42, U+1E43, U+1E44, U+1E45, U+1E46, U+1E47, U+1E48, U+1E49, U+1E4C, U+1E4D, U+1E4E, U+1E4F, U+1E50, U+1E51, U+1E52, U+1E53, U+1E5A, U+1E5B, U+1E5E, U+1E5F, U+1E60, U+2661, U+1E61, U+1E62, U+1E63, U+1E64, U+1E65, U+1E66, U+1E67, U+1E68, U+1E69, U+2665, U+1E6C, U+1E6D, U+1E6E, U+1E6F, U+1E78, U+1E79, U+1E7A, U+1E7B, U+1E80, U+1E81, U+1E82, U+1E83, U+1E84, U+1E85, U+1E8E, U+1E8F, U+1E92, U+1E93, U+1E97, U+1E9E, U+2713, U+27E8, U+27E9;
 }
 
 /*
-font-variation-settings: 'wght' 375, 'MONO' 0.28;
+font-variation-settings: "wght" 375, "MONO" 0.28;
   CASL : 0 --> 1
   CRSV : 1 (c'est 1 pour l'avoir en cursive ou 0 (ou ne pas mettre) pour l'avoir en Roman)
   MONO : 0 --> 1 ex 0.28
@@ -77,11 +104,11 @@ font-variation-settings: 'wght' 375, 'MONO' 0.28;
     --text: #11150E;
 
     /* Violet */
-    --second1: #A55493;
+    --dim3econd1: #A55493;
     /* Turquoise */
-    --second2: #0A97B8;
+    --dim3econd2: #0A97B8;
     /* Rose */
-    --second3: #F49082;
+    --dim3econd3: #F49082;
 
     --color1: #F9FAF9;
     --color2: #ECEEEB;
@@ -248,7 +275,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 
@@ -263,7 +290,7 @@ table {
 /* General
 ****************************************/
 html {
-    font-family: 'RecVar', Arial, sans-serif;
+    font-family: "RecVar", Arial, sans-serif;
     font-size: 1em;
     line-height: 1;
     font-weight: 400;
@@ -383,7 +410,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .link:hover,
 .link:focus {
     color: var(--color10);
-    box-shadow: inset 0 -1.1ex 0 var(--second3);
+    box-shadow: inset 0 -1.1ex 0 var(--dim3econd3);
 }
 
 
@@ -450,7 +477,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .btn:hover::before,
 .btn:focus::before {
     width: 100%;
-    background-color: var(--second1);
+    background-color: var(--dim3econd1);
 }
 
 .btn:hover::after,
@@ -530,7 +557,7 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .menu li:not(:last-child)::after {
-    content: ',';
+    content: ",";
     padding-right: .4rem;
 }
 
@@ -967,7 +994,7 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
     max-width: 981px;
     font-size: clamp(1.3rem, 2vw, 2.125rem);
-    font-variation-settings: 'wght'580, 'CASL'0.8, 'slnt'-10;
+    font-variation-settings: "wght"580, "CASL"0.8, "slnt"-10;
     text-align: center;
     color: var(--color7);
     padding: var(--dim4);
@@ -1434,7 +1461,7 @@ ne sert donc pas à grand chose si peu de contenu */
     position: relative;
     display: block;
     font-size: clamp(1rem, 2.5vw, 2.125rem);
-    font-variation-settings: 'wght'580, 'CASL'0.8, 'slnt'-10;
+    font-variation-settings: "wght"580, "CASL"0.8, "slnt"-10;
 }
 
 
@@ -1574,6 +1601,8 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
     text-decoration: none;
     border-radius: var(--dim4);
+    border: 2px solid var(--color8);
+    background-color: var(--color2);
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
@@ -1699,7 +1728,7 @@ ne sert donc pas à grand chose si peu de contenu */
     overflow: hidden;
     max-width: 100%;
     padding: var(--dim4) 0;
-    background-color: var(--second1);
+    background-color: var(--dim3econd1);
 }
 
 .anim-text-block {
@@ -1947,7 +1976,7 @@ body {
     height: 0;
     border-radius: 50%;
     transform: translateX(-80%);
-    background-color: var(--second2);
+    background-color: var(--dim3econd2);
     transition: all .4s cubic-bezier(.87, 0, .13, 1);
     transition-delay: .3s;
     z-index: -1;
@@ -1975,7 +2004,7 @@ body {
 .article h3 {
     position: relative;
     font-size: var(--dim4);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.2;
     padding-top: var(--dim4);
     padding-bottom: var(--dim2);
@@ -2033,14 +2062,14 @@ body {
     top: var(--dim2);
     left: var(--dim4);
     font-size: var(--dim5);
-    font-variation-settings: 'wght'680, 'CASL'0.8;
+    font-variation-settings: "wght"680, "CASL"0.8;
     color: var(--color6);
 }
 
 .article blockquote p {
     color: var(--color9);
     line-height: 1.5;
-    font-variation-settings: 'wght'680, 'CASL'0.8, 'slnt'-10;
+    font-variation-settings: "wght"680, "CASL"0.8, "slnt"-10;
 }
 
 .article strong {
@@ -2084,6 +2113,10 @@ body {
     margin-bottom: var(--dim2);
 }
 
+.article .figure .link {
+    font-size: var(--regular);
+}
+
 .article .video {
     width: 100%;
 }
@@ -2103,7 +2136,7 @@ body {
     }
 
     .template .section {
-        padding: 0 var(--dim2) var(--dim5);
+        padding: 0 var(--dim3) var(--dim5);
     }
 
     .template .welcome .titre-principal {
@@ -2170,8 +2203,6 @@ body {
     }
 }
 
-@media screen and (min-width: 64em) and (max-width: 87.5em) {}
-
 @media screen and (max-width: 63.9375em) {
     .main-article-container {
         flex-direction: column;
@@ -2181,9 +2212,129 @@ body {
 
 
 
+/* Accordion
+****************************************/
+.accordion {
+    padding: var(--dim4) 0;
+}
+
+.accordion-item {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: var(--dim4);
+    padding: 0;
+    font-weight: 400;
+    cursor: auto;
+    border: 2px solid var(--color8);
+    border-radius: var(--dim1);
+}
+
+.accordion-block {
+    width: 100%;
+    max-width: calc(var(--xl) * 4);
+    margin: 0 auto;
+}
+
+.accordion p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion .link {
+    font-size: var(--dim4);
+}
+
+.accordion .legende .link {
+    font-size: inherit;
+}
+
+.accordion input[name="panel"] {
+    display: none;
+}
+
+.accordion label {
+    position: relative;
+    display: block;
+    font-size: var(--dim3);
+    font-weight: 500;
+    padding: var(--dim3) var(--dim6) var(--dim3) var(--dim3);
+    cursor: pointer;
+    background-color: var(--color2);
+    transition: all .4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.accordion label:hover,
+.accordion label:focus {
+    background-color: var(--color3);
+    color: var(--color10);
+
+}
+
+.accordion input:checked + label:hover,
+.accordion input:checked + label:focus {
+    color: var(--color10);
+}
+
+.accordion label:hover .label-title::before,
+.accordion label:focus .label-title::before,
+.accordion input:checked + label:hover .label-title::before,
+.accordion input:checked + label:focus .label-title::before {
+    background-color: var(--color2);
+}
+
+.accordion label::after {
+    content: "↓";
+    position: absolute;
+    top: 50%;
+    right: var(--dim4);
+    width: var(--dim4);
+    height: var(--dim4);
+    border-radius: 50%;
+    font-size: var(--dim3);
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.accordion input:checked + label {
+    color: var(--color10);
+    font-weight: 500;
+    background-color: var(--color3);
+}
+
+.accordion input:checked + label::after {
+    content: "↑";
+    background-color: var(--color1);
+}
+
+.accordion .accordion-content {
+    position: relative;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    padding: 0 var(--dim3);
+}
+
+input[name="panel"]:checked ~ .accordion-content {
+    visibility: visible;
+    overflow: visible;
+    height: auto;
+    padding: var(--dim3);
+}
 
 
+@media screen and (max-width: 39.9375em) {
+    .accordion label {
+        font-size: var(--dim3);
+    }
 
+    .accordion label::after {
+        right: var(--dim2);
+    }
+
+    .accordion label {
+        padding: var(--dim3) var(--dim5) var(--dim3) var(--dim3);
+    }
+}
 
 
 
