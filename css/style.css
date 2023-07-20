@@ -8,8 +8,6 @@
 ###    ###  ##########   ########    ########       
 */
 
-/*@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');*/
-
 
 
 /* The bare minimum English subset, plus copyright & arrows (← ↑ → ↓) & quotes (“ ” ‘ ’) & bullet (•) */
@@ -28,7 +26,7 @@
     font-style: oblique 0deg 15deg;
     font-weight: 300 1000;
     font-display: swap;
-    src: url('./fonts/Recursive_VF_1.085--subset_range_latin_1.woff2') format('woff2');
+    src: url('../fonts/Recursive_VF_1.085--subset_range_latin_1.woff2') format('woff2');
     unicode-range: U+00C0-00FF;
 }
 
@@ -91,11 +89,11 @@ font-variation-settings: "wght" 375, "MONO" 0.28;
     --text: #11150E;
 
     /* Violet */
-    --dim3econd1: #A55493;
+    --second1: #A55493;
     /* Turquoise */
-    --dim3econd2: #0A97B8;
+    --second2: #0A97B8;
     /* Rose */
-    --dim3econd3: #F49082;
+    --second3: #F49082;
 
     --color1: #F9FAF9;
     --color2: #ECEEEB;
@@ -302,7 +300,9 @@ img {
     background-color: var(--color3);
 }
 
-
+.hyphens {
+    hyphens: auto;
+}
 
 
 /* Layout
@@ -397,7 +397,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .link:hover,
 .link:focus {
     color: var(--color10);
-    box-shadow: inset 0 -1.1ex 0 var(--dim3econd3);
+    box-shadow: inset 0 -1.1ex 0 var(--second3);
 }
 
 
@@ -464,7 +464,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .btn:hover::before,
 .btn:focus::before {
     width: 100%;
-    background-color: var(--dim3econd1);
+    background-color: var(--second1);
 }
 
 .btn:hover::after,
@@ -1105,12 +1105,14 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .services .content-item {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     width: calc(50% - var(--dim2));
     border: 2px solid var(--color8);
+    border-radius: var(--dim1);
     background-color: var(--color2);
 }
 
@@ -1552,10 +1554,12 @@ ne sert donc pas à grand chose si peu de contenu */
 .articles .title-block {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: var(--dim3) 0;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: var(--dim3);
     width: min(400px, 80%, 48em);
+    background-color: var(--color3);
+    border-radius: var(--dim3);
     gap: calc(var(--dim2) * 2);
 }
 
@@ -1623,6 +1627,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .list-container .title-n3 {
     display: block;
     width: 100%;
+    text-wrap: balance;
 }
 
 .list-container .date {
@@ -1704,7 +1709,9 @@ ne sert donc pas à grand chose si peu de contenu */
     color: var(--color2);
     background-color: var(--color3);
     background-image: url(../images/montagne.png),
-        linear-gradient(0deg, rgba(51, 59, 44, 1) 0%, rgba(69, 80, 60, 1) 35%, rgba(165, 84, 147, 1) 100%);
+        linear-gradient(0deg, rgba(51, 59, 44, 1) 0%,
+            rgba(69, 80, 60, 1) 35%,
+            rgba(236, 238, 235, 1) 100%);
     background-position: center center;
     background-size: cover;
     background-blend-mode: darken;
@@ -1715,7 +1722,7 @@ ne sert donc pas à grand chose si peu de contenu */
     overflow: hidden;
     max-width: 100%;
     padding: var(--dim4) 0;
-    background-color: var(--dim3econd1);
+    background-color: var(--color2);
 }
 
 .anim-text-block {
@@ -1727,7 +1734,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .anim-text-block span {
     display: inline-block;
     font-size: 3rem;
-    color: var(--color2);
+    color: var(--color7);
 }
 
 .anim-left {
@@ -1869,18 +1876,25 @@ ne sert donc pas à grand chose si peu de contenu */
 
 /* Page d'un article
 ****************************************/
-.articles {}
 
 .main-article-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 1fr;
+    gap: 0 var(--dim3);
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nav-article-container article";
 }
 
 .article {
+    grid-area: article;
     padding-top: var(--dim4);
-    width: 70%;
+}
+
+.nav-article-container {
+    position: relative;
+    grid-area: nav-article-container;
 }
 
 .nav-article {
@@ -1888,7 +1902,6 @@ ne sert donc pas à grand chose si peu de contenu */
     top: 0;
     left: 0;
     padding: var(--dim4);
-    width: 30%;
 }
 
 .nav-article .title {
@@ -1947,12 +1960,6 @@ body {
     counter-increment: compteur-h4
 }
 
-
-.article h2:target:after {
-    width: var(--l);
-    height: var(--l);
-}
-
 .article h2::after {
     content: "";
     position: absolute;
@@ -1963,7 +1970,7 @@ body {
     height: 0;
     border-radius: 50%;
     transform: translateX(-80%);
-    background-color: var(--dim3econd2);
+    background-color: var(--second2);
     transition: all .4s cubic-bezier(.87, 0, .13, 1);
     transition-delay: .3s;
     z-index: -1;
@@ -1978,7 +1985,6 @@ body {
     color: var(--color1);
 }
 
-
 .article h2 {
     position: relative;
     font-size: var(--dim5);
@@ -1986,6 +1992,7 @@ body {
     line-height: 1.2;
     padding: var(--dim2) 0;
     margin: var(--dim5) 0 var(--dim3);
+    text-wrap: balance;
 }
 
 .article h3 {
@@ -1995,8 +2002,24 @@ body {
     line-height: 1.2;
     padding-top: var(--dim4);
     padding-bottom: var(--dim2);
+    text-wrap: balance;
 }
 
+.article h4 {
+    font-size: calc(var(--dim4));
+    font-weight: 400;
+    margin-bottom: var(--dim3);
+    padding-top: var(--dim3);
+}
+
+.article h5 {
+    position: relative;
+    font-size: var(--dim3);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: var(--dim3);
+    margin-bottom: var(--dim3);
+}
 
 .article p,
 .article .liste-puce li {
@@ -2009,8 +2032,8 @@ body {
 
 .article .first-letter::first-letter {
     float: left;
-    margin-left: calc(var(--dim4) * -1 - 2px);
-    font-size: var(--dim5);
+    margin-left: calc(var(--dim3) * -1 - 2px);
+    font-size: var(--dim4);
     line-height: 1.2;
     font-weight: 700;
     padding: var(--dim3) var(--dim4);
@@ -2022,7 +2045,7 @@ body {
 
 .article blockquote {
     position: relative;
-    margin: var(--dim4) 0;
+    margin: var(--dim4) 0 var(--dim5);
     padding: var(--dim4) var(--dim5) var(--dim4) var(--dim6);
     background-color: var(--color3);
     border-radius: var(--dim1);
@@ -2078,6 +2101,11 @@ body {
     padding: var(--dim4) 0;
 }
 
+.article .figure .picture {
+    display: block;
+    width: 100%;
+}
+
 .article .figure .legende {
     font-size: var(--regular);
     color: var(--color8);
@@ -2106,6 +2134,44 @@ body {
 
 .article .video {
     width: 100%;
+}
+
+.article .double-colonne {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: var(--m);
+}
+
+.article .col-first,
+.article .col-second {
+    width: 100%;
+}
+
+.article .explication {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: var(--dim6) var(--dim4) var(--dim4);
+}
+
+.article .explication .number {
+    position: relative;
+    top: -5px;
+    left: -5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: var(--color1);
+    color: #fff;
+    font-size: calc(var(--dim3)/2);
+    font-weight: 700;
+    text-align: center;
+    line-height: 25px;
+    background-color: #204880;
 }
 
 .article hr {
@@ -2172,6 +2238,26 @@ body {
         font-size: var(--dim3);
         font-weight: 700;
     }
+
+    .article h2::after {
+        left: calc(var(--dim4) - var(--dim1));
+    }
+
+    .article h2:target::after {
+        width: var(--dim5);
+        height: var(--dim5);
+    }
+
+    .article .double-colonne {
+        flex-direction: column;
+    }
+
+    .article .explication {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: var(--dim4);
+    }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -2185,16 +2271,24 @@ body {
     }
 
     .article {
-        padding: 0 var(--dim4);
+        padding: 0 var(--dim5);
         width: 100%;
     }
+
 }
 
 @media screen and (max-width: 63.9375em) {
-    .main-article-container {
-        flex-direction: column;
-        align-items: center;
-    }
+.main-article-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--dim3) 0;
+    grid-auto-flow: column;
+    grid-template-areas:
+        "nav-article-container"
+        "article";
+}
+
 }
 
 
