@@ -300,6 +300,10 @@ img {
     background-color: var(--color3);
 }
 
+a {
+    text-decoration: none;
+}
+
 .hyphens {
     hyphens: auto;
 }
@@ -527,6 +531,7 @@ ne sert donc pas à grand chose si peu de contenu */
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
     width: 100%;
@@ -534,18 +539,13 @@ ne sert donc pas à grand chose si peu de contenu */
     color: var(--base);
 }
 
-.menu::before {
-    content: " ";
-    display: block;
-    width: 34px;
-    height: 34px;
-    background: url(../images/as-color.svg) center center no-repeat;
-    margin-right: var(--dim2);
-}
-
 .menu li:not(:last-child)::after {
     content: ",";
     padding-right: .4rem;
+}
+
+.menu .link {
+    text-transform: uppercase;
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -1287,7 +1287,6 @@ ne sert donc pas à grand chose si peu de contenu */
     justify-content: flex-start;
     border-radius: var(--dim5);
     padding: var(--dim4);
-    color: var(--text);
     text-decoration: none;
 }
 
@@ -1305,8 +1304,8 @@ ne sert donc pas à grand chose si peu de contenu */
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.realisations .grid-item:hover::after,
-.realisations .grid-item:focus::after {
+.realisations .realisation-item:hover::after,
+.realisations .realisation-item:focus::after {
     opacity: 1;
 }
 
@@ -1320,13 +1319,14 @@ ne sert donc pas à grand chose si peu de contenu */
     border-radius: var(--dim4);
     border: 2px solid var(--color8);
     background-color: var(--color2);
+    color: var(--text);
     filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 0%));
     z-index: 2;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.realisations .grid-item:hover .content-item,
-.realisations .grid-item:focus .content-item {
+.realisations .realisation-item:hover .content-item,
+.realisations .realisation-item:focus .content-item {
     top: -2px;
     background-color: var(--color3);
     filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 55%));
@@ -1466,16 +1466,12 @@ ne sert donc pas à grand chose si peu de contenu */
         padding: var(--dim2) var(--dim3);
     }
 
-    .realisations .grid-2 .content-block,
-    .realisations .grid-3 .content-block,
-    .realisations .grid-4 .content-block {
+    .realisations .content-block {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .realisations .grid-2 .content-item .title-n3,
-    .realisations .grid-3 .content-item .title-n3,
-    .realisations .grid-4 .content-item .title-n3 {
+    .realisations .content-item .title-n3 {
         border-right: 0;
     }
 
@@ -1801,6 +1797,11 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .template .section {
     padding: 0 var(--dim2) var(--dim6);
+}
+
+
+.template .container-block {
+    width: 100%;
 }
 
 .template .section.contact {
@@ -2269,7 +2270,6 @@ body {
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-
     .nav-article {
         position: relative;
         top: auto;
@@ -2299,10 +2299,7 @@ body {
 
 }
 
-
-
-/* Accordion
-****************************************/
+/* Accordion */
 .accordion {
     padding: var(--dim4) 0;
 }
@@ -2410,7 +2407,6 @@ input[name="panel"]:checked ~ .accordion-content {
     padding: var(--dim3);
 }
 
-
 @media screen and (max-width: 39.9375em) {
     .accordion label {
         font-size: var(--regular);
@@ -2428,6 +2424,38 @@ input[name="panel"]:checked ~ .accordion-content {
 
 
 
+/* Page réalisations
+****************************************/
+.template .realisations {
+    padding: 0 var(--dim2) var(--dim6);
+    margin-bottom: 0;
+    background: unset;
+}
+
+.realisations .list-container-realisation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    gap: var(--dim4);
+}
+
+
+.realisation-container {
+    width: 100%;
+}
+
+.realisations .realisation-item:hover .content-item,
+.realisations .realisation-item:focus .content-item {
+    top: 0;
+    background-color: var(--color3);
+    filter: unset;
+}
+
+
+/* Page d'une réalisation
+****************************************/
 
 
 
