@@ -591,11 +591,6 @@ ne sert donc pas à grand chose si peu de contenu */
     color: var(--color1);
 }
 
-.footer .link:hover,
-.footer .link:focus {
-    border-bottom: 2px solid var(--color1);
-}
-
 @media screen and (max-width: 39.9375em) {
     .footer {
         flex-direction: column;
@@ -1243,7 +1238,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .realisations {
     padding: var(--dim7) var(--dim2);
     margin-bottom: var(--dim7);
-    background: var(--color5) url(../images/nnnoise.svg);
+    background: var(--color3) url(../images/nnnoise.svg);
 
 }
 
@@ -1599,8 +1594,9 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     justify-content: flex-start;
     gap: var(--dim2);
-    padding: var(--dim3) var(--dim4) 0 var(--dim4);
+    padding: var(--dim3) var(--dim4);
     width: 100%;
+    border-bottom: 2px solid var(--color8);
 }
 
 .list-container .link-block {
@@ -1795,8 +1791,12 @@ ne sert donc pas à grand chose si peu de contenu */
     background-color: var(--color2);
 }
 
+.template .header {
+    padding: var(--dim6) var(--dim2) var(--dim4);
+}
+
 .template .section {
-    padding: 0 var(--dim2) var(--dim6);
+    padding: var(--dim5) var(--dim2) var(--dim6);
 }
 
 
@@ -1868,8 +1868,6 @@ ne sert donc pas à grand chose si peu de contenu */
 ****************************************/
 .template .articles .container-block {
     flex-direction: column;
-    align-items: center;
-    width: 100%;
 }
 
 
@@ -2441,16 +2439,21 @@ input[name="panel"]:checked ~ .accordion-content {
     gap: var(--dim4);
 }
 
-
-.realisation-container {
-    width: 100%;
+.list-container-realisation li:nth-child(even) {
+    align-self: flex-end;
 }
 
-.realisations .realisation-item:hover .content-item,
-.realisations .realisation-item:focus .content-item {
+.template .realisations .realisation-item:hover .content-item,
+.template .realisations .realisation-item:focus .content-item {
     top: 0;
     background-color: var(--color3);
     filter: unset;
+}
+
+@media screen and (max-width: 40em) {
+    .realisation-container {
+        width: 100%;
+    }
 }
 
 
