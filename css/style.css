@@ -327,7 +327,7 @@ a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0 var(--dim2) var(--dim7);
+    padding: 0 var(--dim3) var(--dim7);
 }
 
 
@@ -523,7 +523,7 @@ ne sert donc pas à grand chose si peu de contenu */
 ****************************************/
 
 .header {
-    padding: var(--dim6) var(--dim2);
+    padding: var(--dim6) var(--dim3);
 }
 
 .menu {
@@ -1652,7 +1652,7 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
     .list-container .content-block {
-        padding: var(--dim3) var(--dim3) 0 var(--dim3);
+        padding: var(--dim3);
     }
 
     .list-container .link-block {
@@ -1721,6 +1721,7 @@ ne sert donc pas à grand chose si peu de contenu */
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
+    padding: var(--dim2) 0;
 }
 
 .anim-text-block span {
@@ -1792,13 +1793,12 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .template .header {
-    padding: var(--dim6) var(--dim2) var(--dim4);
+    padding: var(--dim6) var(--dim3) var(--dim4);
 }
 
 .template .section {
-    padding: var(--dim5) var(--dim2) var(--dim6);
+    padding: var(--dim5) var(--dim3) var(--dim6);
 }
-
 
 .template .container-block {
     width: 100%;
@@ -2424,37 +2424,69 @@ input[name="panel"]:checked ~ .accordion-content {
 
 /* Page réalisations
 ****************************************/
+
+.template.realisations-page .welcome {
+    margin-bottom: 0;
+}
+
 .template .realisations {
-    padding: 0 var(--dim2) var(--dim6);
+    overflow: hidden;
+    padding: var(--dim6) var(--dim2);
     margin-bottom: 0;
     background: unset;
 }
 
-.realisations .list-container-realisation {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+.realisations-listing li {
+    opacity: .6;
+}
+.realisations-listing li:hover,
+.realisations-listing li:focus {
+    opacity: 1;
+}
+
+.realisations-listing li a {
+    position: relative;
+    display: block;
     width: 100%;
-    gap: var(--dim4);
+    color: var(--second1);
+    font-size: clamp(2rem, 6vw, var(--dim6));
+    font-weight: 600;
+    line-height: 1;
+    padding: var(--dim3) 0;
+    transition: all .4s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
-.list-container-realisation li:nth-child(even) {
-    align-self: flex-end;
+.realisations-listing li a img {
+    position: absolute;
+    left: 50%;
+    display: block;
+    pointer-events: none;
+    max-width: 800px;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-10%, -55%);
+    transition: .7s ease-in-out;
 }
 
-.template .realisations .realisation-item:hover .content-item,
-.template .realisations .realisation-item:focus .content-item {
-    top: 0;
-    background-color: var(--color3);
-    filter: unset;
+.realisations-listing li a:hover,
+.realisations-listing li a:focus {
+    color: var(--second3);
+    padding: var(--dim6) 0;
 }
 
-@media screen and (max-width: 40em) {
-    .realisation-container {
-        width: 100%;
-    }
+.realisations-listing li a:hover img,
+.realisations-listing li a:focus img {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -55%);
+
 }
+
+
+
+
+
 
 
 /* Page d'une réalisation
