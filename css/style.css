@@ -498,7 +498,7 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .title-n3 {
-    font-size: clamp(1.6rem, 3vw, 3.4375rem);
+    font-size: var(--dim4);
     font-weight: 600;
     color: var(--color9);
 }
@@ -1282,11 +1282,11 @@ ne sert donc pas à grand chose si peu de contenu */
 .realisations .container-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1.5fr;
     gap: calc(var(--dim2) * 2);
     grid-template-areas:
-        "grid-1 grid-2 grid-2 grid-2"
-        "grid-3 grid-3 grid-4 grid-4"
+        "grid-1 grid-1 grid-1 grid-1"
+        "grid-2 grid-2 grid-2 grid-2"
         "grid-3 grid-3 grid-4 grid-4";
 }
 
@@ -1409,8 +1409,8 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .realisations .title-block {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     gap: calc(var(--dim2) * 2);
     width: 100%;
@@ -1445,7 +1445,7 @@ ne sert donc pas à grand chose si peu de contenu */
         radial-gradient(at 22% 82%, hsl(341deg 61.8% 49.64%) 0px, transparent 50%),
         radial-gradient(at 89% 28%, hsl(135deg 72.79% 48.08%) 0px, transparent 50%);
     background-blend-mode: hard-light;
-    background-position: center 200%;
+    background-position: center bottom;
 }
 
 .realisations .grid-item:nth-child(2)::after {
@@ -1453,7 +1453,7 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .realisations .grid-item:nth-child(3) {
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: flex-end;
     background-image: url(../images/tigre.png),
         radial-gradient(at 85% 21%, hsl(104.04deg 52.67% 50.96%) 0px, transparent 50%),
@@ -1663,7 +1663,6 @@ ne sert donc pas à grand chose si peu de contenu */
 .list-container .title-n3 {
     display: block;
     width: 100%;
-    font-size: clamp(1.6rem, 3vw, 3.4375rem);
     color: var(--second2);
     text-wrap: balance;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
@@ -1933,6 +1932,9 @@ ne sert donc pas à grand chose si peu de contenu */
     flex-direction: column;
 }
 
+.template .articles .list-container .title-n3 {
+    font-size: clamp(1.6rem, 3vw, 3.4375rem);
+}
 
 
 
