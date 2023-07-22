@@ -1113,13 +1113,10 @@ ne sert donc pas à grand chose si peu de contenu */
 .services .title-block {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    padding: var(--dim3);
-    /* background-color: var(--color3); */
-    border: 2px solid var(--second3);
-    border-radius: var(--dim3);
-    gap: calc(var(--dim2) * 2);
+    padding: 0 var(--dim1);
+    gap: var(--dim2);
 }
 
 .services .title-block .title-n2 {
@@ -1243,7 +1240,7 @@ ne sert donc pas à grand chose si peu de contenu */
     .services .container-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas:
             "grid-1"
             "grid-2"
@@ -1275,7 +1272,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .realisations {
     padding: var(--dim7) var(--dim2);
     margin-bottom: var(--dim7);
-    background: var(--color5) url(../images/nnnoise.svg);
+    background: var(--color8) url(../images/nnnoise.svg);
 
 }
 
@@ -1306,14 +1303,13 @@ ne sert donc pas à grand chose si peu de contenu */
     grid-area: grid-4;
 }
 
-
 .realisations .grid-item {
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: flex-start;
+    justify-content: center;
     border-radius: var(--dim5);
     padding: var(--dim4);
     text-decoration: none;
@@ -1348,13 +1344,14 @@ ne sert donc pas à grand chose si peu de contenu */
     border: 2px solid var(--second1);
     background-color: var(--color1);
     color: var(--text);
+    backdrop-filter: blur(4px);
     z-index: 2;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .realisations .realisation-item:hover .content-item,
 .realisations .realisation-item:focus .content-item {
-    background-color: var(--second1);
+    background-color: rgb(165 84 147 / 25%);
 }
 
 .realisations .content-block {
@@ -1397,30 +1394,21 @@ ne sert donc pas à grand chose si peu de contenu */
 .realisation-item:focus .content-item .description,
 .realisation-item:hover .content-item .link,
 .realisation-item:focus .content-item .link {
-    color: var(--color3);
-}
-
-.realisation-item:hover .content-item .description,
-.realisation-item:focus .content-item .description,
-.realisation-item:hover .content-item .link,
-.realisation-item:focus .content-item .link {
     color: var(--color1);
 }
 
 .realisations .title-block {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    gap: calc(var(--dim2) * 2);
+    gap: var(--dim2);
     width: 100%;
-    background-color: var(--color1);
-    border-radius: var(--dim3);
-    padding: var(--dim3);
+    padding: 0 var(--dim2);
 }
 
 .realisations .title-block .title-n2 {
-    color: var(--second1);
+    color: var(--color1);
 }
 
 .realisations .grid-item {
@@ -1592,7 +1580,7 @@ ne sert donc pas à grand chose si peu de contenu */
     /*    background-color: var(--second2);*/
     border: 2px solid var(--second2);
     border-radius: var(--dim3);
-    gap: calc(var(--dim2) * 2);
+    gap: var(--dim2);
 }
 
 .articles .list-container {
@@ -1680,12 +1668,8 @@ ne sert donc pas à grand chose si peu de contenu */
     background-color: var(--second2);
 }
 
-
 .article-link:hover .title-n3,
-.article-link:focus .title-n3 {
-    color: var(--color3);
-}
-
+.article-link:focus .title-n3,
 .article-link:hover .link-block .link,
 .article-link:focus .link-block .link,
 .article-link:hover .categorie,
@@ -1699,10 +1683,9 @@ ne sert donc pas à grand chose si peu de contenu */
     .articles .title-block {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .articles .title-block {
         width: 100%;
+        border: 0;
+        padding: 0 var(--dim2);
     }
 
     .list-container .title-n3 {
