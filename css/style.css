@@ -285,6 +285,7 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: var(--color1);
+
 }
 
 img {
@@ -346,7 +347,6 @@ ne sert donc pas à grand chose si peu de contenu */
 .container-block {
     position: relative;
 }
-
 
 @media screen and (max-width: 39.9375em) {
     .section {
@@ -410,7 +410,7 @@ ne sert donc pas à grand chose si peu de contenu */
     position: relative;
     display: inline-block;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
     transform: rotate(-45deg) translateX(0);
     transition: all .4s cubic-bezier(.87, 0, .13, 1)
 }
@@ -492,13 +492,13 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .title-n2 {
-    font-size: clamp(2rem, 4vw, 3.4375rem);
-    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 5.5625rem);
+    font-weight: 700;
     color: var(--color10);
 }
 
 .title-n3 {
-    font-size: clamp(1.6rem, 2vw, 3.4375rem);
+    font-size: clamp(1.6rem, 3vw, 3.4375rem);
     font-weight: 600;
     color: var(--color9);
 }
@@ -587,9 +587,15 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .footer .link {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--color1);
 }
+
+.footer .link[target=_blank]:after {
+    font-weight: 300;
+}
+
+
 
 @media screen and (max-width: 39.9375em) {
     .footer {
@@ -1238,7 +1244,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .realisations {
     padding: var(--dim7) var(--dim2);
     margin-bottom: var(--dim7);
-    background: var(--color3) url(../images/nnnoise.svg);
+    background: var(--color5) url(../images/nnnoise.svg);
 
 }
 
@@ -1250,7 +1256,7 @@ ne sert donc pas à grand chose si peu de contenu */
     grid-template-areas:
         "grid-1 grid-2 grid-2 grid-2"
         "grid-3 grid-3 grid-4 grid-4"
-        "grid-5 grid-5 grid-4 grid-4";
+        "grid-3 grid-3 grid-4 grid-4";
 }
 
 .realisations .grid-1 {
@@ -1269,9 +1275,6 @@ ne sert donc pas à grand chose si peu de contenu */
     grid-area: grid-4;
 }
 
-.realisations .grid-5 {
-    grid-area: grid-5;
-}
 
 .realisations .grid-item {
     position: relative;
@@ -1306,25 +1309,21 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .realisations .content-item {
     position: relative;
-    top: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     border-radius: var(--dim4);
-    border: 2px solid var(--color8);
-    background-color: var(--color2);
+    border: 2px solid var(--second1);
+    background-color: var(--color1);
     color: var(--text);
-    filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 0%));
     z-index: 2;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .realisations .realisation-item:hover .content-item,
 .realisations .realisation-item:focus .content-item {
-    top: -2px;
-    background-color: var(--color3);
-    filter: drop-shadow(8px 8px 16px hsl(0deg 0% 0% / 55%));
+    background-color: var(--second1);
 }
 
 .realisations .content-block {
@@ -1339,12 +1338,14 @@ ne sert donc pas à grand chose si peu de contenu */
 .realisations .content-item .description {
     display: block;
     width: 100%;
+    color: var(--second1);
     padding: var(--dim3) var(--dim4);
-    border-bottom: 2px solid var(--color8);
+    border-bottom: 2px solid var(--second1);
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .realisations .content-item .title-n3 {
-    border-right: 2px solid var(--color8);
+    border-right: 2px solid var(--second1);
 }
 
 .realisations .content-item .link-block {
@@ -1354,7 +1355,25 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .realisations .content-item .link {
+    color: var(--second1);
     font-size: var(--regular);
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
+}
+
+.realisation-item:hover .content-item .title-n3,
+.realisation-item:focus .content-item .title-n3,
+.realisation-item:hover .content-item .description,
+.realisation-item:focus .content-item .description,
+.realisation-item:hover .content-item .link,
+.realisation-item:focus .content-item .link {
+    color: var(--color3);
+}
+
+.realisation-item:hover .content-item .description,
+.realisation-item:focus .content-item .description,
+.realisation-item:hover .content-item .link,
+.realisation-item:focus .content-item .link {
+    color: var(--color1);
 }
 
 .realisations .title-block {
@@ -1364,9 +1383,13 @@ ne sert donc pas à grand chose si peu de contenu */
     justify-content: space-between;
     gap: calc(var(--dim2) * 2);
     width: 100%;
-    background-color: var(--color2);
+    background-color: var(--color1);
     border-radius: var(--dim3);
     padding: var(--dim3);
+}
+
+.realisations .title-block .title-n2 {
+    color: var(--second1);
 }
 
 .realisations .grid-item {
@@ -1432,23 +1455,6 @@ ne sert donc pas à grand chose si peu de contenu */
     background-color: #dc5e5e;
 }
 
-.realisations .info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    padding: var(--dim4);
-}
-
-.realisations .info-container p {
-    position: relative;
-    display: block;
-    font-size: clamp(1rem, 2.5vw, 2.125rem);
-    font-variation-settings: "wght"580, "CASL"0.8, "slnt"-10;
-}
-
-
 @media screen and (max-width: 39.9375em) {
     .realisations {
         padding: var(--dim6) var(--dim2);
@@ -1480,10 +1486,9 @@ ne sert donc pas à grand chose si peu de contenu */
     .realisations .container-grid {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto 1fr 1fr 1fr;
+        grid-template-rows: auto auto 1fr 1fr;
         grid-template-areas:
             "grid-1"
-            "grid-5"
             "grid-2"
             "grid-3"
             "grid-4";
@@ -1542,6 +1547,10 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
 }
 
+.articles .title-n2 {
+    color: var(--second2);
+}
+
 .articles .title-block {
     display: flex;
     flex-direction: column;
@@ -1549,7 +1558,8 @@ ne sert donc pas à grand chose si peu de contenu */
     justify-content: space-between;
     padding: var(--dim3);
     width: min(400px, 80%, 48em);
-    background-color: var(--color3);
+    /*    background-color: var(--second2);*/
+    border: 2px solid var(--second2);
     border-radius: var(--dim3);
     gap: calc(var(--dim2) * 2);
 }
@@ -1583,8 +1593,8 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
     text-decoration: none;
     border-radius: var(--dim4);
-    border: 2px solid var(--color8);
-    background-color: var(--color2);
+    border: 2px solid var(--second2);
+    background-color: var(--color1);
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
@@ -1596,7 +1606,7 @@ ne sert donc pas à grand chose si peu de contenu */
     gap: var(--dim2);
     padding: var(--dim3) var(--dim4);
     width: 100%;
-    border-bottom: 2px solid var(--color8);
+    border-bottom: 2px solid var(--second2);
 }
 
 .list-container .link-block {
@@ -1607,30 +1617,52 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .list-container .link-block .link {
     font-size: var(--regular);
+    color: var(--second2);
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .list-container .categorie {
     font-size: var(--dim3);
     font-weight: 700;
     line-height: 1.2;
-    color: var(--color7);
+    color: var(--second2);
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .list-container .title-n3 {
     display: block;
     width: 100%;
+    font-size: clamp(1.6rem, 3vw, 3.4375rem);
+    color: var(--second2);
     text-wrap: balance;
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .list-container .date {
     font-size: var(--dim2);
     font-weight: 400;
-    color: var(--color7);
+    color: var(--second2);
+    transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .article-link:hover,
 .article-link:focus {
-    background-color: var(--color3);
+    background-color: var(--second2);
+}
+
+
+.article-link:hover .title-n3,
+.article-link:focus .title-n3 {
+    color: var(--color3);
+}
+
+.article-link:hover .link-block .link,
+.article-link:focus .link-block .link,
+.article-link:hover .categorie,
+.article-link:focus .categorie,
+.article-link:hover .date,
+.article-link:focus .date {
+    color: var(--color1);
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -1842,7 +1874,7 @@ ne sert donc pas à grand chose si peu de contenu */
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 var(--dim2) var(--dim6);
+    padding: 0 var(--dim2);
 }
 
 .template .contact-block {
@@ -1869,6 +1901,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .template .articles .container-block {
     flex-direction: column;
 }
+
 
 
 
@@ -2439,6 +2472,7 @@ input[name="panel"]:checked ~ .accordion-content {
 .realisations-listing li {
     opacity: .6;
 }
+
 .realisations-listing li:hover,
 .realisations-listing li:focus {
     opacity: 1;
@@ -2452,7 +2486,7 @@ input[name="panel"]:checked ~ .accordion-content {
     font-size: clamp(2rem, 6vw, var(--dim6));
     font-weight: 600;
     line-height: 1;
-    padding: var(--dim3) 0;
+    padding: var(--dim4) 0;
     transition: all .4s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
