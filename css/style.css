@@ -1621,7 +1621,6 @@ ne sert donc pas à grand chose si peu de contenu */
     justify-content: space-between;
     padding: var(--dim3);
     width: min(400px, 80%, 48em);
-    /*    background-color: var(--second2);*/
     border: 2px solid var(--second2);
     border-radius: var(--dim3);
     gap: var(--dim2);
@@ -2460,6 +2459,7 @@ ne sert donc pas à grand chose si peu de contenu */
     right: var(--dim4);
     width: var(--dim4);
     height: var(--dim4);
+    line-height: var(--dim4);
     border-radius: 50%;
     font-size: var(--dim3);
     text-align: center;
@@ -2591,7 +2591,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
 
 
-/* Page expertise
+/* Page expertises
 ****************************************/
 
 .template.expertises-page .welcome {
@@ -2602,12 +2602,134 @@ input[name="panel"]:checked ~ .accordion-content {
     width: 100%;
 }
 
+.expertises-listing {
+    width: 100%;
+}
+
+.expertises-listing .accordeon {
+    width: 100%;
+    border-bottom: 2px solid var(--color3);
+}
+
+.expertises-listing .expertise-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--second1);
+    font-size: clamp(2rem, 6vw, var(--dim6));
+    font-weight: 600;
+    line-height: 1;
+    padding: var(--dim4) 0;
+    transition: all .4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.expertises-listing .expertise-link:hover,
+.expertises-listing .expertise-link:focus {
+    color: var(--second3);
+}
+
+.expertises-listing .expertise-link .image-block {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    filter: blur(20px);
+    width: 0;
+    transition: all .4s cubic-bezier(0.87, 0, 0.13, 1);
+    pointer-events: none;
+}
+
+.expertises-listing .expertise-link:hover .image-block,
+.expertises-listing .expertise-link:focus .image-block {
+    filter: blur(0);
+    width: clamp(2rem, 8vw, 8rem);
+}
+
+.expertises-listing .expertise-link .first {
+    order: 1;
+}
+
+.expertises-listing .expertise-link .last {
+    order: 3;
+}
+
+.expertises-listing .expertise-link .image-block {
+    order: 2;
+    margin: 0 var(--dim1);
+}
 
 
+/* Accordion */
 
+.accordeon-item {
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+}
 
+.accordeon-block {
+    width: 100%;
+    max-width: calc(var(--xl) * 4);
+    margin: 0 auto;
+}
 
+.accordeon p {
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.accordeon .link {
+    font-size: var(--dim4);
+}
+
+.accordeon .legende .link {
+    font-size: inherit;
+}
+
+.accordeon input[name="panel"] {
+    display: none;
+}
+
+.accordeon label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    transition: all .4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.accordeon input:checked + label:hover,
+.accordeon input:checked + label:focus {
+    color: var(--color10);
+}
+
+.accordeon input:checked + label .expertise-link {
+    color: var(--second3);   
+}
+    
+.accordeon input:checked + label .image-block {
+    background-color: var(--color2);
+    filter: blur(0);
+    width: clamp(2rem, 8vw, 8rem);
+}
+
+.accordeon .accordeon-content {
+    position: relative;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    padding: 0 var(--dim3);
+}
+
+input[name="panel"]:checked ~ .accordeon-content {
+    visibility: visible;
+    overflow: visible;
+    height: auto;
+    padding: var(--dim3);
+}
 
 
 
