@@ -1233,7 +1233,15 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
     .expertises .top-block .illustration {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+    }
+
+    .expertises .illustration svg {
+        width: 50%;
     }
 
     .expertises .content-item .title-n3 {
@@ -1282,14 +1290,14 @@ ne sert donc pas à grand chose si peu de contenu */
 /* Section idées
 ****************************************/
 
-.realisations {
+.idees {
     padding: var(--dim7) var(--dim2);
     margin-bottom: var(--dim7);
     background: var(--color8) url(../images/nnnoise.svg);
 
 }
 
-.realisations .container-grid {
+.idees .container-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto 1fr 1.5fr;
@@ -1300,23 +1308,23 @@ ne sert donc pas à grand chose si peu de contenu */
         "grid-3 grid-3 grid-4 grid-4";
 }
 
-.realisations .grid-1 {
+.idees .grid-1 {
     grid-area: grid-1;
 }
 
-.realisations .grid-2 {
+.idees .grid-2 {
     grid-area: grid-2;
 }
 
-.realisations .grid-3 {
+.idees .grid-3 {
     grid-area: grid-3;
 }
 
-.realisations .grid-4 {
+.idees .grid-4 {
     grid-area: grid-4;
 }
 
-.realisations .grid-item {
+.idees .grid-item {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -1328,7 +1336,7 @@ ne sert donc pas à grand chose si peu de contenu */
     text-decoration: none;
 }
 
-.realisations .grid-item::after {
+.idees .grid-item::after {
     content: "";
     position: absolute;
     top: 0;
@@ -1342,12 +1350,12 @@ ne sert donc pas à grand chose si peu de contenu */
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.realisations .realisation-item:hover::after,
-.realisations .realisation-item:focus::after {
+.idees .idee-item:hover::after,
+.idees .idee-item:focus::after {
     opacity: 1;
 }
 
-.realisations .content-item {
+.idees .content-item {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1362,12 +1370,12 @@ ne sert donc pas à grand chose si peu de contenu */
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.realisations .realisation-item:hover .content-item,
-.realisations .realisation-item:focus .content-item {
+.idees .idee-item:hover .content-item,
+.idees .idee-item:focus .content-item {
     background-color: rgb(165 84 147 / 25%);
 }
 
-.realisations .content-block {
+.idees .content-block {
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -1375,8 +1383,8 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
 }
 
-.realisations .content-item .title-n3,
-.realisations .content-item .description {
+.idees .content-item .title-n3,
+.idees .content-item .description {
     display: block;
     width: 100%;
     color: var(--second1);
@@ -1385,32 +1393,32 @@ ne sert donc pas à grand chose si peu de contenu */
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.realisations .content-item .title-n3 {
+.idees .content-item .title-n3 {
     border-right: 2px solid var(--second1);
 }
 
-.realisations .content-item .link-block {
+.idees .content-item .link-block {
     display: block;
     width: 100%;
     padding: var(--dim3) var(--dim4);
 }
 
-.realisations .content-item .link {
+.idees .content-item .link {
     color: var(--second1);
     font-size: var(--regular);
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.realisation-item:hover .content-item .title-n3,
-.realisation-item:focus .content-item .title-n3,
-.realisation-item:hover .content-item .description,
-.realisation-item:focus .content-item .description,
-.realisation-item:hover .content-item .link,
-.realisation-item:focus .content-item .link {
+.idee-item:hover .content-item .title-n3,
+.idee-item:focus .content-item .title-n3,
+.idee-item:hover .content-item .description,
+.idee-item:focus .content-item .description,
+.idee-item:hover .content-item .link,
+.idee-item:focus .content-item .link {
     color: var(--color1);
 }
 
-.realisations .title-block {
+.idees .title-block {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -1420,23 +1428,23 @@ ne sert donc pas à grand chose si peu de contenu */
     padding: 0 var(--dim2);
 }
 
-.realisations .title-block .title-n2 {
+.idees .title-block .title-n2 {
     color: var(--color1);
 }
 
-.realisations .grid-item {
+.idees .grid-item {
     width: 100%;
     min-height: 50vh;
     background-position: center center;
     background-size: cover;
 }
 
-.realisations .grid-item:hover::after,
-.realisations .grid-item:focus::after {
+.idees .grid-item:hover::after,
+.idees .grid-item:focus::after {
     opacity: .65;
 }
 
-.realisations .grid-item:nth-child(2) {
+.idees .grid-item:nth-child(2) {
     background-image: url(../images/lionnes.png),
         radial-gradient(at 85% 21%, hsl(227.36deg 76% 53%) 0px, transparent 50%),
         radial-gradient(at 82% 56%, hsl(324.91deg 61.68% 39.43%) 0px, transparent 50%),
@@ -1449,11 +1457,11 @@ ne sert donc pas à grand chose si peu de contenu */
     background-position: center bottom;
 }
 
-.realisations .grid-item:nth-child(2)::after {
+.idees .grid-item:nth-child(2)::after {
     background-color: #cd3062;
 }
 
-.realisations .grid-item:nth-child(3) {
+.idees .grid-item:nth-child(3) {
     align-items: flex-end;
     justify-content: flex-end;
     background-image: url(../images/tigre.png),
@@ -1467,11 +1475,11 @@ ne sert donc pas à grand chose si peu de contenu */
     background-blend-mode: hard-light;
 }
 
-.realisations .grid-item:nth-child(3)::after {
+.idees .grid-item:nth-child(3)::after {
     background-color: #62c886;
 }
 
-.realisations .grid-item:nth-child(4) {
+.idees .grid-item:nth-child(4) {
     background-image: url(../images/leopard.png),
         radial-gradient(at 34% 45%, hsla(153, 66%, 67%, 1) 0px, transparent 50%),
         radial-gradient(at 33% 56%, hsl(0deg 64.09% 61.55%) 0px, transparent 50%),
@@ -1483,44 +1491,44 @@ ne sert donc pas à grand chose si peu de contenu */
     background-blend-mode: darken;
 }
 
-.realisations .grid-item:nth-child(4)::after {
+.idees .grid-item:nth-child(4)::after {
     background-color: #dc5e5e;
 }
 
 @media screen and (max-width: 39.9375em) {
-    .realisations {
+    .idees {
         padding: var(--dim6) var(--dim2);
         margin-bottom: var(--dim6);
     }
 
-    .realisations .content-item .title-n3,
-    .realisations .content-item .link-block {
+    .idees .content-item .title-n3,
+    .idees .content-item .link-block {
         padding: var(--dim3);
     }
 
-    .realisations .content-item .description {
+    .idees .content-item .description {
         padding: var(--dim2) var(--dim3) var(--dim3);
     }
 
-    .realisations .content-block {
+    .idees .content-block {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .realisations .content-item .title-n3 {
+    .idees .content-item .title-n3 {
         border-right: 0;
         border: 0;
         padding-bottom: 0;
     }
 
-    .realisations .container-grid .title-block {
+    .idees .container-grid .title-block {
         flex-direction: column;
         align-items: flex-start;
     }
 }
 
 @media screen and (max-width: 48em) {
-    .realisations .container-grid {
+    .idees .container-grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto 1fr 1fr;
@@ -1531,25 +1539,25 @@ ne sert donc pas à grand chose si peu de contenu */
             "grid-4";
     }
 
-    .realisations .grid-item,
-    .realisations .content-item {
+    .idees .grid-item,
+    .idees .content-item {
         width: 100%;
     }
 
-    .realisations .grid-item {
+    .idees .grid-item {
         min-height: 90vh;
         padding: var(--dim2);
     }
 
-    .realisations .grid-item:nth-child(3) {
+    .idees .grid-item:nth-child(3) {
         align-items: flex-end;
     }
 
-    .realisations .info-container {
+    .idees .info-container {
         padding: 0;
     }
 
-    .realisations .title-block {
+    .idees .title-block {
         flex-direction: row;
         align-items: center;
     }
@@ -1557,14 +1565,14 @@ ne sert donc pas à grand chose si peu de contenu */
 
 @media screen and (min-width: 48.0625em) and (max-width: 64em) {
 
-    .realisations .grid-3 .content-block,
-    .realisations .grid-4 .content-block {
+    .idees .grid-3 .content-block,
+    .idees .grid-4 .content-block {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .realisations .grid-3 .content-item .title-n3,
-    .realisations .grid-4 .content-item .title-n3 {
+    .idees .grid-3 .content-item .title-n3,
+    .idees .grid-4 .content-item .title-n3 {
         border-right: 0;
     }
 }
@@ -2492,28 +2500,28 @@ input[name="panel"]:checked ~ .accordion-content {
 /* Page idées
 ****************************************/
 
-.template.realisations-page .welcome {
+.template.idees-page .welcome {
     margin-bottom: 0;
 }
 
-.template .realisations {
+.template .idees {
     overflow: hidden;
     padding: var(--dim6) var(--dim2);
     margin-bottom: 0;
     background: unset;
 }
 
-.realisations-listing li {
+.idees-listing li {
     opacity: .6;
     border-bottom: 2px solid var(--color3);
 }
 
-.realisations-listing li:hover,
-.realisations-listing li:focus {
+.idees-listing li:hover,
+.idees-listing li:focus {
     opacity: 1;
 }
 
-.realisations-listing li a {
+.idees-listing li a {
     position: relative;
     display: block;
     width: 100%;
@@ -2525,7 +2533,7 @@ input[name="panel"]:checked ~ .accordion-content {
     transition: all .4s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
-.realisations-listing li a img {
+.idees-listing li a img {
     position: absolute;
     left: 50%;
     display: block;
@@ -2538,14 +2546,14 @@ input[name="panel"]:checked ~ .accordion-content {
     transition: .7s ease-in-out;
 }
 
-.realisations-listing li a:hover,
-.realisations-listing li a:focus {
+.idees-listing li a:hover,
+.idees-listing li a:focus {
     color: var(--second3);
     padding: var(--dim6) 0;
 }
 
-.realisations-listing li a:hover img,
-.realisations-listing li a:focus img {
+.idees-listing li a:hover img,
+.idees-listing li a:focus img {
     opacity: 1;
     visibility: visible;
     transform: translate(0, -55%);
