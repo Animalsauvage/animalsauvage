@@ -1115,7 +1115,7 @@ ne sert donc pas à grand chose si peu de contenu */
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 0 var(--dim1);
+    padding: 0 var(--dim2);
     gap: var(--dim2);
 }
 
@@ -1226,6 +1226,20 @@ ne sert donc pas à grand chose si peu de contenu */
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .services .content-item .top-block {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .services .top-block .illustration {
+        width: 100%;
+    }
+
+    .services .content-item .title-n3 {
+        border-right: 0;
+    }
+
 }
 
 @media screen and (max-width: 48em) {
@@ -1249,7 +1263,6 @@ ne sert donc pas à grand chose si peu de contenu */
             "grid-5";
     }
 }
-
 
 @media screen and (max-width: 64em) {
     .services .container-block {
@@ -1481,9 +1494,12 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
     .realisations .content-item .title-n3,
-    .realisations .content-item .description,
     .realisations .content-item .link-block {
         padding: var(--dim3);
+    }
+
+    .realisations .content-item .description {
+        padding: var(--dim2) var(--dim3) var(--dim3);
     }
 
     .realisations .content-block {
@@ -1493,6 +1509,8 @@ ne sert donc pas à grand chose si peu de contenu */
 
     .realisations .content-item .title-n3 {
         border-right: 0;
+        border: 0;
+        padding-bottom: 0;
     }
 
     .realisations .container-grid .title-block {
@@ -1519,8 +1537,8 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
     .realisations .grid-item {
-        min-height: 65vh;
-        padding: var(--dim3);
+        min-height: 90vh;
+        padding: var(--dim2);
     }
 
     .realisations .grid-item:nth-child(3) {
