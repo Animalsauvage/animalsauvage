@@ -2667,22 +2667,22 @@ input[name="panel"]:checked ~ .accordion-content {
     margin: 0 var(--dim1);
 }
 
+
+.accordeon .article h3::before {
+    display: none;
+}
+
 /* Accordion */
 .accordeon-item {
     overflow: hidden;
     width: 100%;
-    cursor: pointer;
+    cursor: auto;
 }
 
 .accordeon-block {
     width: 100%;
     max-width: calc(var(--xl) * 4);
     margin: 0 auto;
-}
-
-.accordeon p {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .accordeon .link {
@@ -2730,7 +2730,13 @@ input[name="panel"]:checked ~ .accordeon-content {
     visibility: visible;
     overflow: visible;
     height: auto;
-    padding: var(--dim3);
+    padding: 0 var(--dim6) var(--dim6);
+}
+
+.expertises-page .intro {
+    width: 100%;
+    max-width: 60%;
+    font-size: var(--dim3);
 }
 
 
