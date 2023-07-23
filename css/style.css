@@ -351,7 +351,7 @@ ne sert donc pas à grand chose si peu de contenu */
 
 @media screen and (max-width: 39.9375em) {
     .section {
-        padding: 0 var(--dim2) var(--dim6);
+        padding: 0 var(--dim3) var(--dim6);
     }
 }
 
@@ -871,11 +871,25 @@ ne sert donc pas à grand chose si peu de contenu */
 
 @media screen and (max-width: 39.9375em) {
     .titre-principal {
+        font-size: var(--dim4);
         padding-bottom: var(--dim4);
+    }
+
+    .titre-principal span:nth-child(2) {
+        padding: 0 .2em 0 20vw;
+    }
+
+    .titre-principal span:nth-child(4) {
+        padding: 0 .2em 0 10vw;
+    }
+
+    .welcome .titre-principal .link {
+        font-size: var(--dim4);
     }
 
     .welcome .presentation {
         max-width: 100%;
+        font-size: var(--dim3);
         padding-bottom: var(--dim4);
     }
 
@@ -888,7 +902,7 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
     .welcome .contact {
-        font-size: 1rem;
+        font-size: var(--dim3);
         margin-bottom: var(--dim4);
     }
 }
@@ -1948,6 +1962,11 @@ ne sert donc pas à grand chose si peu de contenu */
 @media screen and (max-width: 39.9375em) {
     .template .container-block.intro {
         max-width: 100%;
+        padding: var(--dim4) 0;
+    }
+
+    .template .container-block.intro p {
+        font-size: var(--regular);
     }
 }
 
@@ -1955,14 +1974,14 @@ ne sert donc pas à grand chose si peu de contenu */
     .template .welcome .presentation {
         padding-left: 0;
     }
+}
 
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .template .container-block.intro {
         max-width: 100%;
         padding: var(--dim4) var(--dim5);
     }
-}
 
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .template .container-block {
         padding: 0 var(--dim5);
     }
@@ -2305,8 +2324,12 @@ ne sert donc pas à grand chose si peu de contenu */
         position: relative;
         top: auto;
         left: auto;
-        padding: 0 var(--dim4) var(--dim5);
+        padding: 0 var(--dim4) var(--dim3);
         width: 100%;
+    }
+
+    .nav-article .list-item .link {
+        font-size: var(--regular);
     }
 
     .article {
