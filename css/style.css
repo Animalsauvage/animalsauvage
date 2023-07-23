@@ -244,6 +244,7 @@ section {
 
 body {
     line-height: 1.2;
+    counter-reset: compteur-h2 compteur-h3 compteur-h4 compteur-menu
 }
 
 ol,
@@ -546,6 +547,23 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .menu .link {
     text-transform: uppercase;
+}
+
+.menu .link.actif::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    transform: rotate(-2deg);
+    border-top: 2px solid var(--base);
+    border-bottom: 2px solid var(--base);
+}
+
+.menu .link.actif-n1 {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -1631,6 +1649,7 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .article-link {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1640,6 +1659,7 @@ ne sert donc pas à grand chose si peu de contenu */
     border-radius: var(--dim4);
     border: 2px solid var(--second2);
     background-color: var(--color1);
+    backdrop-filter: blur(4px);
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
@@ -1998,14 +2018,6 @@ ne sert donc pas à grand chose si peu de contenu */
     font-size: var(--dim3);
 }
 
-.nav-article .link {
-    font-size: var(--regular);
-}
-
-body {
-    counter-reset: compteur-h2 compteur-h3 compteur-h4 compteur-menu
-}
-
 .chapitrage-reset-h2 {
     counter-reset: compteur-h2
 }
@@ -2251,7 +2263,7 @@ body {
 .article hr {
     width: var(--dim8);
     border: 0;
-    border-top: 2px solid var(--color8);
+    border-top: 2px solid var(--second3);
     margin: var(--dim4) 0 0 0;
     padding: 0 0 var(--dim4) 0;
 }
@@ -2582,6 +2594,9 @@ input[name="panel"]:checked ~ .accordion-content {
 /* Page expertise
 ****************************************/
 
+.template.expertises-page .welcome {
+    margin-bottom: 0;
+}
 
 .video video {
     width: 100%;
