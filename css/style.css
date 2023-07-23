@@ -1622,7 +1622,7 @@ ne sert donc pas à grand chose si peu de contenu */
     padding: var(--dim3);
     width: min(400px, 80%, 48em);
     border: 2px solid var(--second2);
-    border-radius: var(--dim3);
+    border-radius: var(--dim2);
     gap: var(--dim2);
 }
 
@@ -1632,7 +1632,7 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-    gap: var(--dim4);
+    gap: calc(var(--dim2) * 2);
 }
 
 .histoires .list-container .article-container {
@@ -1655,7 +1655,7 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     width: 100%;
     text-decoration: none;
-    border-radius: var(--dim4);
+    border-radius: var(--dim2);
     border: 2px solid var(--second2);
     background-color: var(--color1);
     backdrop-filter: blur(4px);
@@ -1939,9 +1939,26 @@ ne sert donc pas à grand chose si peu de contenu */
     background-image: url(../images/montagne.png), linear-gradient(0deg, rgba(51, 59, 44, 1) 0%, rgba(69, 80, 60, 1) 35%, rgb(249 250 249) 100%);
 }
 
+.template .container-block.intro {
+    width: 100%;
+    max-width: 60%;
+    font-size: var(--dim3);
+}
+
+@media screen and (max-width: 39.9375em) {
+    .template .container-block.intro {
+        max-width: 100%;
+    }
+}
+
 @media screen and (max-width: 63.9375em) {
     .template .welcome .presentation {
         padding-left: 0;
+    }
+
+    .template .container-block.intro {
+        max-width: 100%;
+        padding: var(--dim4) var(--dim5);
     }
 }
 
@@ -2267,7 +2284,6 @@ ne sert donc pas à grand chose si peu de contenu */
     padding: 0 0 var(--dim4) 0;
 }
 
-
 @media screen and (max-width: 39.9375em) {
     .template .welcome {
         margin-bottom: var(--dim5);
@@ -2518,7 +2534,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
 .template .idees {
     overflow: hidden;
-    padding: var(--dim6) var(--dim2);
+    padding: 0 var(--dim3) var(--dim6);
     margin-bottom: 0;
     background: unset;
 }
@@ -2737,10 +2753,24 @@ input[name="panel"]:checked ~ .accordeon-content {
     padding: 0 var(--dim6) var(--dim6);
 }
 
-.expertises-page .intro {
-    width: 100%;
-    max-width: 60%;
-    font-size: var(--dim3);
+
+.template.expertises-page .container-block.article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.expertises-page .container-block .item-2 {
+    align-self: center;
+}
+
+.expertises-page .container-block .item-3 {
+    align-self: flex-end;
+}
+
+.expertises-page .container-block .item-4 {
+    align-self: center;
 }
 
 .article .shape {
@@ -2755,17 +2785,43 @@ input[name="panel"]:checked ~ .accordeon-content {
     shape-outside: circle(40%);
 }
 
+.expertises-page .cta-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--dim4);
+    padding: var(--dim6) 0;
+}
 
 
+@media screen and (max-width: 39.9375em) {
+    .expertises-listing .expertise-link {
+        justify-content: flex-start;
+    }
+
+    .expertises-listing .accordeon:first-child .expertise-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .expertises-listing .expertise-link .first {
+        margin-right: 0.6rem;
+    }
+
+    .expertises-listing .expertise-link .image-block {
+        display: none;
+    }
+
+    .expertises-page .cta-container {
+        flex-direction: column;
+        gap: var(--dim3);
+    }
+}
 
 @media screen and (max-width: 87.5em) {
     .video {
         height: auto;
-    }
-
-    .expertises-page .intro {
-        max-width: 100%;
-        padding: var(--dim4) 0;
     }
 
     .article .shape {
