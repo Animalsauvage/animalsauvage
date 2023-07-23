@@ -2739,6 +2739,20 @@ input[name="panel"]:checked ~ .accordeon-content {
     font-size: var(--dim3);
 }
 
+.article .shape {
+    float: left;
+    width: var(--dim8);
+    height: var(--dim8);
+    margin: var(--dim4);
+    background: var(--color10) url(../images/avatar.webp) no-repeat center center;
+    background-size: contain;
+    shape-margin: var(--dim4);
+    clip-path: circle(50%);
+    shape-outside: circle(40%);
+}
+
+
+
 
 @media screen and (max-width: 87.5em) {
     .video {
