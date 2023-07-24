@@ -1665,7 +1665,7 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
     font-size: var(--regular);
     font-weight: 600;
-    padding: var(--dim6) var(--dim4) 0;
+    padding: var(--dim6) 0 0;
 }
 
 .article-link {
@@ -2618,7 +2618,7 @@ input[name="panel"]:checked ~ .accordion-content {
     padding: 0 var(--dim3);
 }
 
-.video {
+.expertises .video {
     overflow: hidden;
     width: 100%;
     height: 90vh;
