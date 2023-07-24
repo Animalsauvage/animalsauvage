@@ -556,10 +556,10 @@ ne sert donc pas à grand chose si peu de contenu */
     left: 0;
     display: block;
     width: 100%;
-    height: 2px;
+    height: 1px;
     transform: rotate(-2deg);
-    border-top: 2px solid var(--base);
-    border-bottom: 2px solid var(--base);
+    border-top: 2px solid var(--second1);
+    border-bottom: 2px solid var(--second1);
 }
 
 .menu .link.actif-n1 {
@@ -757,10 +757,10 @@ ne sert donc pas à grand chose si peu de contenu */
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    font-size: clamp(1.6rem, 4vw, 3.4375rem);
+    font-size: clamp(1.6rem, 5vw, 5.5625rem);
     font-weight: 700;
     color: var(--text);
-    padding-bottom: var(--dim5);
+    padding-bottom: var(--dim6);
 }
 
 .link-wrapper {
@@ -834,7 +834,7 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .welcome .link {
-    font-size: clamp(1.6rem, 4vw, 3.4375rem);
+    font-size: clamp(1.6rem, 5vw, 5.5625rem);
     font-weight: 700;
     color: var(--base);
     text-decoration: none;
@@ -1628,26 +1628,22 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .histoires .container-block {
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: flex-start;
     gap: calc(var(--dim2) * 2);
     width: 100%;
 }
 
-.histoires .title-n2 {
-    color: var(--second2);
-}
-
 .histoires .title-block {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-end;
     justify-content: space-between;
     padding: var(--dim3);
     width: min(400px, 80%, 48em);
-    border: 2px solid var(--second2);
-    border-radius: var(--dim2);
+    border: 2px solid var(--color8);
+    border-radius: var(--dim1);
     gap: var(--dim2);
 }
 
@@ -1657,7 +1653,7 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-    gap: calc(var(--dim2) * 2);
+    gap: var(--dim6);
 }
 
 .histoires .list-container .article-container {
@@ -1680,11 +1676,6 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     width: 100%;
     text-decoration: none;
-    border-radius: var(--dim2);
-    border: 2px solid var(--second2);
-    background-color: var(--color1);
-    backdrop-filter: blur(4px);
-    transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .list-container .content-block {
@@ -1693,61 +1684,43 @@ ne sert donc pas à grand chose si peu de contenu */
     align-items: flex-start;
     justify-content: flex-start;
     gap: var(--dim2);
-    padding: var(--dim3) var(--dim4);
+    padding-bottom: var(--dim4);
     width: 100%;
-    border-bottom: 2px solid var(--second2);
 }
 
 .list-container .link-block {
     display: flex;
-    padding: var(--dim3) var(--dim4);
     width: 100%;
-}
-
-.list-container .link-block .link {
-    font-size: var(--regular);
-    color: var(--second2);
-    transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .list-container .categorie {
     font-size: var(--dim3);
     font-weight: 700;
     line-height: 1.2;
-    color: var(--second2);
-    transition: all .28s cubic-bezier(.87, 0, .13, 1);
-}
-
-.list-container .title-n3 {
-    display: block;
-    width: 100%;
-    color: var(--second2);
-    text-wrap: balance;
-    transition: all .28s cubic-bezier(.87, 0, .13, 1);
+    color: var(--color10);
 }
 
 .list-container .date {
     font-size: var(--dim2);
     font-weight: 400;
-    color: var(--second2);
+    color: var(--color8);
+}
+
+.list-container .title-n3 {
+    display: block;
+    width: 100%;
+    font-size: var(--dim5);
+    color: var(--second1);
+    text-wrap: balance;
+    text-decoration: underline;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
-.article-link:hover,
-.article-link:focus {
-    background-color: var(--second2);
+.article-link:hover .title-n3,
+.article-link:focus .title-n3 {
+    color: var(--second3);
 }
 
-.article-link:hover .title-n3,
-.article-link:focus .title-n3,
-.article-link:hover .link-block .link,
-.article-link:focus .link-block .link,
-.article-link:hover .categorie,
-.article-link:focus .categorie,
-.article-link:hover .date,
-.article-link:focus .date {
-    color: var(--color1);
-}
 
 @media screen and (max-width: 39.9375em) {
     .histoires .title-block {
@@ -1755,24 +1728,17 @@ ne sert donc pas à grand chose si peu de contenu */
         align-items: flex-start;
         width: 100%;
         border: 0;
-        padding: 0 var(--dim2);
+        padding: 0 0 var(--dim6);
     }
 
     .list-container .title-n3 {
-        font-size: var(--dim3);
+        font-size: var(--dim4);
     }
 
     .list-container .categorie {
         font-size: var(--regular);
     }
 
-    .list-container .content-block {
-        padding: var(--dim3);
-    }
-
-    .list-container .link-block {
-        padding: var(--dim3);
-    }
 }
 
 @media screen and (min-width: 40em) and (max-width: 64em) {
