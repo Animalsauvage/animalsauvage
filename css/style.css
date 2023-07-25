@@ -945,7 +945,6 @@ ne sert donc pas à grand chose si peu de contenu */
 
 @media screen and (max-width: 39.9375em) {
     .carrousel {
-        padding: var(--dim6) var(--dim2);
         background-attachment: scroll;
     }
 
@@ -1018,7 +1017,7 @@ ne sert donc pas à grand chose si peu de contenu */
 
 @media screen and (max-width: 39.9375em) {
     .slide {
-        height: 100%;
+        margin: 0;
     }
 
     .slide-text {
@@ -1196,17 +1195,16 @@ ne sert donc pas à grand chose si peu de contenu */
             "grid-9";
     }
 
-    .expertises .illustration svg {
-        width: 50%;
-    }
-
     .expertises .content-item .content {
         padding: var(--dim4) var(--dim3);
     }
 }
 
-@media screen and (max-width: 48em) {}
-
+@media screen and (max-width: 64em) {
+    .expertises .illustration svg {
+        width: 50%;
+    }
+}
 
 @media screen and (min-width: 40em) and (max-width: 64em) {
     .expertises .container-grid {
