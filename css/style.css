@@ -399,6 +399,7 @@ ne sert donc pas à grand chose si peu de contenu */
     box-shadow: inset 0 -2px transparent;
 }
 
+.menu .link.actif,
 .link:hover,
 .link:focus {
     color: var(--color10);
@@ -549,19 +550,6 @@ ne sert donc pas à grand chose si peu de contenu */
     text-transform: uppercase;
 }
 
-.menu .link.actif::before {
-    content: "";
-    position: absolute;
-    top: 40%;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 1px;
-    transform: rotate(-2deg);
-    border-top: 2px solid var(--second1);
-    border-bottom: 2px solid var(--second1);
-}
-
 .menu .link.actif-n1 {
     text-decoration: underline;
 }
@@ -591,6 +579,7 @@ ne sert donc pas à grand chose si peu de contenu */
     background-color: var(--color10);
 }
 
+/*
 .footer .item-1 {
     order: 2;
 }
@@ -602,6 +591,7 @@ ne sert donc pas à grand chose si peu de contenu */
 .footer .item-3 {
     order: 3;
 }
+*/
 
 .footer .link {
     font-size: 1rem;
@@ -2280,6 +2270,18 @@ ne sert donc pas à grand chose si peu de contenu */
     padding: 0 0 var(--dim4) 0;
 }
 
+.article .shape {
+    float: left;
+    width: var(--dim8);
+    height: var(--dim8);
+    margin: var(--dim4);
+    background: var(--color10) url(../images/avatar.webp) no-repeat center center;
+    background-size: contain;
+    shape-margin: var(--dim3);
+    clip-path: circle(50%);
+    shape-outside: circle(40%);
+}
+
 @media screen and (max-width: 39.9375em) {
     .template .welcome {
         margin-bottom: var(--dim5);
@@ -2614,10 +2616,6 @@ input[name="panel"]:checked ~ .accordion-content {
     margin-bottom: 0;
 }
 
-.template.expertises-page .expertises {
-    padding: 0 var(--dim3);
-}
-
 .expertises-page .video-section {
     overflow: hidden;
     width: 100%;
@@ -2639,9 +2637,10 @@ input[name="panel"]:checked ~ .accordion-content {
 }
 
 .expertises-listing .expertise-link {
+    position: relative;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 100%;
     color: var(--second1);
@@ -2650,6 +2649,16 @@ input[name="panel"]:checked ~ .accordion-content {
     line-height: 1;
     padding: var(--dim3) var(--dim2);
     transition: all .4s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.expertises-listing .expertise-link::after {
+    content: "→";
+    position: absolute;
+    right: 1vw;
+    display: block;
+    font-size: clamp(2rem, 6vw, var(--dim4));
+    font-weight: 300;
+    transform: rotate(90deg) translateX(0);
 }
 
 .expertises-listing .expertise-link:hover {
@@ -2761,56 +2770,16 @@ input[name="panel"]:checked ~ .accordeon-content {
     padding: 0 var(--dim6) var(--dim6);
 }
 
-
-.template.expertises-page .container-block.article {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.expertises-page .container-block .item-2 {
-    align-self: center;
-}
-
-.expertises-page .container-block .item-3 {
-    align-self: flex-end;
-}
-
-.expertises-page .container-block .item-4 {
-    align-self: center;
-}
-
-.article .shape {
-    float: left;
-    width: var(--dim8);
-    height: var(--dim8);
-    margin: var(--dim4);
-    background: var(--color10) url(../images/avatar.webp) no-repeat center center;
-    background-size: contain;
-    shape-margin: var(--dim3);
-    clip-path: circle(50%);
-    shape-outside: circle(40%);
-}
-
-.expertises-page .cta-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: var(--dim4);
-    padding: var(--dim6) 0;
-}
-
-
 @media screen and (max-width: 39.9375em) {
     .expertises-listing .expertise-link {
         justify-content: flex-start;
     }
-
+    
+    /* ajustement particulier car titre sur 2 lignes */
     .expertises-listing .accordeon:first-child .expertise-link {
         flex-direction: column;
         align-items: flex-start;
+        justify-content: center;
     }
 
     .expertises-listing .expertise-link .first {
