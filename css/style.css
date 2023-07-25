@@ -1041,7 +1041,7 @@ ne sert donc pas à grand chose si peu de contenu */
         "grid-2 grid-3 .     "
         ".      grid-4 grid-5"
         ".      grid-7 grid-6"
-        "grid-9 grid-8 .     ";
+        "grid-9 grid-8 grid-6";
 }
 
 .expertises .grid-1 {
@@ -1523,22 +1523,10 @@ ne sert donc pas à grand chose si peu de contenu */
 .histoires .container-block {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: flex-start;
-    gap: calc(var(--dim2) * 2);
+    gap: var(--dim6);
     width: 100%;
-}
-
-.histoires .title-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: var(--dim3);
-    width: min(400px, 80%, 48em);
-    border: 2px solid var(--color8);
-    border-radius: var(--dim1);
-    gap: var(--dim2);
 }
 
 .histoires .list-container {
@@ -1618,11 +1606,8 @@ ne sert donc pas à grand chose si peu de contenu */
 
 @media screen and (max-width: 39.9375em) {
     .histoires .title-block {
-        flex-direction: column;
-        align-items: flex-start;
         width: 100%;
         border: 0;
-        padding: 0 0 var(--dim6);
     }
 
     .list-container .title-n3 {
@@ -2224,9 +2209,11 @@ ne sert donc pas à grand chose si peu de contenu */
     .article .link,
     .article .liste-puce li {
         font-size: var(--regular);
+        line-height: 1.6;
     }
 
     .article blockquote {
+        line-height: 1.6;
         padding: var(--dim6) var(--dim3) var(--dim4) var(--dim4);
     }
 
@@ -2234,7 +2221,7 @@ ne sert donc pas à grand chose si peu de contenu */
         font-size: var(--dim4);
         margin-left: 0;
         padding: var(--dim2) var(--dim3);
-        line-height: 1;
+        line-height: 1.2;
     }
 
     .article h2 {
