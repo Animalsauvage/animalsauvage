@@ -930,7 +930,6 @@ ne sert donc pas à grand chose si peu de contenu */
     background-blend-mode: hard-light;
     background-attachment: fixed;
     padding: 0;
-    margin-bottom: var(--dim7);
 }
 
 .slider {
@@ -958,7 +957,7 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .slides {
     position: relative;
-    display: flex;    
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
@@ -1035,13 +1034,15 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .expertises .container-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr;
-    gap: calc(var(--dim2) * 2);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: var(--dim4);
     grid-template-areas:
-        "grid-1 grid-1 grid-1 grid-1"
-        "grid-2 grid-2 grid-3 grid-3"
-        "grid-4 grid-4 grid-5 grid-5";
+        "grid-1 grid-1 grid-1"
+        "grid-2 grid-3 .     "
+        ".      grid-4 grid-5"
+        ".      grid-7 grid-6"
+        "grid-9 grid-8 .     ";
 }
 
 .expertises .grid-1 {
@@ -1064,17 +1065,34 @@ ne sert donc pas à grand chose si peu de contenu */
     grid-area: grid-5;
 }
 
+.expertises .grid-6 {
+    grid-area: grid-6;
+}
+
+.expertises .grid-7 {
+    grid-area: grid-7;
+}
+
+.expertises .grid-8 {
+    grid-area: grid-8;
+}
+
+.expertises .grid-9 {
+    grid-area: grid-9;
+}
+
+
+.expertises .title-n2 {
+    font-size: clamp(2rem, 3vw, 5.5625rem);
+    font-weight: 700;
+    color: var(--color10);
+}
+
 .expertises .title-block {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 0 var(--dim2);
-    gap: var(--dim2);
-}
-
-.expertises .title-block .title-n2 {
-    color: var(--second3);
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .expertises .container-block {
@@ -1084,46 +1102,37 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .expertises .content-item {
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.expertises .content-item .content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    border: 2px solid var(--second3);
-    border-radius: var(--dim1);
-    background-color: var(--color1);
-}
-
-.expertises .content-item .top-block {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-.expertises .content-item .title-n3,
-.expertises .content-item .illustration {
-    display: flex;
-    width: 100%;
-    border-bottom: 2px solid var(--second3);
-}
-
-.expertises .content-item .title-n3 {
+    justify-content: center;
+    gap: var(--dim2);
+    height: 100%;
     padding: var(--dim3) var(--dim4);
-    border-right: 2px solid var(--second3);
+    background-color: var(--color2);
+    border-radius: var(--dim2);
 }
 
-.expertises .content-item .bottom-block {
-    display: block;
-    width: 100%;
-    padding: var(--dim3) var(--dim4);
-    font-size: var(--regular);
+.expertises .content-item .content .link {
+    padding-top: var(--dim2);
 }
 
-.expertises .top-block .illustration {
+.expertises .illustration {
     overflow: hidden;
-    width: max(50%, 155px);
+    /* évite à l'animation de la dernière illustration de sortir de la boite */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-radius: var(--dim1);
 }
 
 .expertises .illustration svg {
@@ -1160,12 +1169,6 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 }
 
-
-.expertises .content-item .intro {
-    display: block;
-    padding-bottom: var(--dim1);
-}
-
 .expertises .content-item .liste li {
     position: relative;
     line-height: 1.4;
@@ -1176,65 +1179,47 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 @media screen and (max-width: 39.9375em) {
-    .expertises .container-grid .title-block {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .expertises .content-item .top-block {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .expertises .top-block .illustration {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+    .expertises .container-grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: var(--dim2);
+        grid-template-areas:
+            "grid-1"
+            "grid-2"
+            "grid-3"
+            "grid-4"
+            "grid-5"
+            "grid-6"
+            "grid-7"
+            "grid-8"
+            "grid-9";
     }
 
     .expertises .illustration svg {
         width: 50%;
     }
 
-    .expertises .content-item .title-n3 {
-        border-right: 0;
+    .expertises .content-item .content {
+        padding: var(--dim4) var(--dim3);
     }
-
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 48em) {}
 
-    .expertises .content-item {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 100%;
-    }
 
+@media screen and (min-width: 40em) and (max-width: 64em) {
     .expertises .container-grid {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: var(--dim2);
         grid-template-areas:
-            "grid-1"
-            "grid-2"
-            "grid-3"
-            "grid-4"
-            "grid-5";
-    }
-}
-
-@media screen and (max-width: 64em) {
-    .expertises .container-block {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .expertises .title-block {
-        flex-direction: row;
-        align-items: center;
+            "grid-1 grid-1 grid-1"
+            "grid-2 grid-3 grid-3"
+            "grid-4 grid-5 grid-5"
+            "grid-7 grid-7 grid-6"
+            "grid-9 grid-9 grid-8";
     }
 }
 
