@@ -929,7 +929,7 @@ ne sert donc pas à grand chose si peu de contenu */
     background-size: cover;
     background-blend-mode: hard-light;
     background-attachment: fixed;
-    padding: var(--dim7) var(--dim2);
+    padding: 0;
     margin-bottom: var(--dim7);
 }
 
@@ -937,19 +937,11 @@ ne sert donc pas à grand chose si peu de contenu */
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 1189px;
-    height: 70vh;
+    min-height: 70vh;
     text-align: center;
-    background-color: rgb(255 255 255 / 85%);
-    backdrop-filter: blur(4px);
-    border-radius: var(--dim5);
-    padding: var(--dim4);
-    box-shadow:
-        0 1px 1px hsl(60deg 38% 84% / 0.075),
-        0 2px 2px hsl(60deg 38% 84% / 0.075),
-        0 4px 4px hsl(60deg 38% 84% / 0.075),
-        0 8px 8px hsl(60deg 38% 84% / 0.075),
-        0 16px 16px hsl(60deg 38% 84% / 0.075);
+    background-color: rgb(86 100 75 / 45%);
+    backdrop-filter: blur(6px);
+    padding: var(--dim8) var(--dim6);
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -966,11 +958,14 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .slides {
     position: relative;
-    display: flex;
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    height: 100%;
     gap: var(--dim2);
 }
 
@@ -979,12 +974,12 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .slides::-webkit-scrollbar-track {
-    background: var(--color1);
+    background: rgba(249, 250, 249, 0.5);
     border-radius: var(--dim1);
 }
 
 .slides::-webkit-scrollbar-thumb {
-    background: var(--color3);
+    background: rgba(209, 214, 206, 0.8);
     border-radius: var(--dim1);
 }
 
@@ -992,22 +987,19 @@ ne sert donc pas à grand chose si peu de contenu */
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-shrink: 0;
     width: 100%;
     height: calc(100% - var(--dim3));
     background-color: var(--color1);
     border-radius: var(--dim4);
-    padding: var(--dim3) var(--dim2) var(--dim2);
+    margin: var(--dim3) 0;
+    padding: var(--dim4);
+    scroll-margin-top: 2em;
     scroll-snap-align: center;
     transform-origin: center center;
     transform: scale(1);
-    box-shadow:
-        0 1px 1px hsl(0deg 0% 0% / 0.075),
-        0 2px 2px hsl(0deg 0% 0% / 0.075),
-        0 4px 4px hsl(0deg 0% 0% / 0.075),
-        0 8px 8px hsl(0deg 0% 0% / 0.075);
 }
 
 .slide-text {
@@ -1018,69 +1010,11 @@ ne sert donc pas à grand chose si peu de contenu */
     font-variation-settings: "wght"580, "CASL"0.8, "slnt"-10;
     text-align: center;
     color: var(--color7);
-    padding: var(--dim4);
+    padding: var(--dim6) var(--dim4);
 }
 
 .slide-text em {
     color: var(--text);
-}
-
-#slide-1 {
-    background-image:
-        url(../images/1f3d4.svg),
-        url(../images/1f40d.svg),
-        url(../images/1f9ac.svg),
-        url(../images/1f988.svg);
-    background-position: 20% 12%, 25% 28%, 80% 68%, 70% 78%;
-    background-repeat: no-repeat;
-    background-size: 3em;
-}
-
-#slide-2 {
-    background-image:
-        url(../images/1f4ad.svg),
-        url(../images/1f331.svg),
-        url(../images/1f41b.svg),
-        url(../images/1f32a.svg),
-        url(../images/1f480.svg);
-    background-position: 15% 12%, 25% 25%, 65% 70%, 90% 75%, 76% 79%;
-    background-repeat: no-repeat;
-    background-size: 3em;
-    animation: 5s ease-in-out reverse infinite floating;
-}
-
-@keyframes floating {
-    0% {
-        background-position: 15% 12%, 25% 25%, 65% 70%, 70% 75%, 76% 79%;
-    }
-
-    25% {
-        background-position: 15% 12%, 25% 25%, 62% 70%, 75% 88%, 76% 79%;
-    }
-
-    50% {
-        background-position: 15% 12%, 25% 25%, 62% 70%, 91% 78%, 76% 79%;
-    }
-
-    75% {
-        background-position: 15% 12%, 25% 25%, 62% 70%, 75% 68%, 76% 79%;
-    }
-
-    100% {
-        background-position: 15% 12%, 25% 25%, 65% 70%, 70% 75%, 76% 79%;
-    }
-}
-
-#slide-3 {
-    background-image:
-        url(../images/1f9a5.svg),
-        url(../images/1f99a.svg),
-        url(../images/1f38d.svg),
-        url(../images/1f9a6.svg),
-        url(../images/1f304.svg);
-    background-position: 40% 15%, 55% 26%, 30% 68%, 50% 78%, 80% 72%;
-    background-repeat: no-repeat;
-    background-size: 3em;
 }
 
 @media screen and (max-width: 39.9375em) {
@@ -1090,19 +1024,6 @@ ne sert donc pas à grand chose si peu de contenu */
 
     .slide-text {
         padding: var(--dim2);
-    }
-
-    #slide-1 {
-        background-position: 17% 14%, 80% 22%, 20% 85%, 70% 76%;
-    }
-
-    #slide-2 {
-        animation: none;
-        background-position: 25% 9%, 86% 15%, 10% 82%, 60% 87%, 94% 82%;
-    }
-
-    #slide-3 {
-        background-position: 14% 7%, 89% 13%, 4% 84%, 50% 81%, 94% 85%;
     }
 }
 
@@ -1802,23 +1723,23 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .anim-left {
-    animation: anim-left 45s linear infinite;
+    animation: anim-left 120s linear infinite;
 }
 
 .anim-right {
-    animation: anim-right 65s linear infinite;
+    animation: anim-right 165s linear infinite;
 }
 
 .anim-left-alt {
-    animation: anim-left 35s linear infinite;
+    animation: anim-left 200s linear infinite;
 }
 
 .anim-right-alt {
-    animation: anim-right 75s linear infinite;
+    animation: anim-right 185s linear infinite;
 }
 
 .anim-left-alt2 {
-    animation: anim-left 40s linear infinite;
+    animation: anim-left 90s linear infinite;
 }
 
 @keyframes anim-left {
@@ -2774,7 +2695,7 @@ input[name="panel"]:checked ~ .accordeon-content {
     .expertises-listing .expertise-link {
         justify-content: flex-start;
     }
-    
+
     /* ajustement particulier car titre sur 2 lignes */
     .expertises-listing .accordeon:first-child .expertise-link {
         flex-direction: column;
