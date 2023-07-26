@@ -533,7 +533,10 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .logo {
     position: absolute;
+    box-sizing: content-box;
     top: calc(var(--dim5)* -1);
+    border-right: var(--dim7) solid var(--color2);
+    border-bottom: var(--dim3) solid var(--color2);
     left: 0;
 }
 
@@ -1015,7 +1018,7 @@ ne sert donc pas à grand chose si peu de contenu */
     position: relative;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
     height: 100%;
     overflow-x: scroll;
@@ -1042,11 +1045,10 @@ ne sert donc pas à grand chose si peu de contenu */
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
     width: 100%;
-    height: calc(100% - var(--dim3));
     background-color: var(--color1);
     border-radius: var(--dim4);
     margin: var(--dim3) 0;
