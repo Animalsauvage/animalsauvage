@@ -382,7 +382,9 @@ ne sert donc pas à grand chose si peu de contenu */
     order: 4;
 }
 
-
+.accueil .logo {
+    display: none;
+}
 
 
 /* Général
@@ -581,8 +583,6 @@ ne sert donc pas à grand chose si peu de contenu */
     justify-content: space-around;
     padding: var(--dim6) var(--dim2);
     color: var(--color1);
-    border-top-left-radius: 55em 1em;
-    border-top-right-radius: 55em 1em;
     background-color: var(--color10);
 }
 
@@ -761,6 +761,33 @@ ne sert donc pas à grand chose si peu de contenu */
 /* Section welcome
 ****************************************/
 
+.accueil .welcome {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: var(--dim8);
+}
+
+.accueil .welcome .illustration-main {
+    position: relative;
+    background-color: var(--color4);
+    border-radius: var(--dim1);
+    box-shadow:
+        0 1.1px 1.9px rgba(0, 0, 0, .028),
+        0 2.7px 3.9px rgba(0, 0, 0, .04),
+        0 5px 6.7px rgba(0, 0, 0, .05),
+        0 8.9px 12.4px rgba(0, 0, 0, .06),
+        0 16.7px 27.2px rgba(0, 0, 0, .072),
+        0 40px 80px rgba(0, 0, 0, .1);
+    transform: translateX(20%);
+    transform: translateY(30%);
+    z-index: -1;
+}
+
+.tp-block {
+    margin-bottom: -20%;
+    /* Permet de combler un peu le vide due à l'anaimation de l'image qui remonte */
+}
+
 .titre-principal {
     position: relative;
     display: flex;
@@ -768,10 +795,12 @@ ne sert donc pas à grand chose si peu de contenu */
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
+    max-width: 70%;
     font-size: clamp(1.6rem, 5vw, 5.5625rem);
     font-weight: 700;
     color: var(--text);
     padding-bottom: var(--dim6);
+    z-index: 2;
 }
 
 .link-wrapper {
@@ -881,9 +910,15 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 @media screen and (max-width: 39.9375em) {
+
+    .accueil .welcome {
+        padding-bottom: var(--dim6);
+    }
+
     .titre-principal {
         font-size: var(--dim4);
         padding-bottom: var(--dim4);
+        max-width: 100%;
     }
 
     .titre-principal span:nth-child(2) {
@@ -923,6 +958,7 @@ ne sert donc pas à grand chose si peu de contenu */
     .titre-principal,
     .welcome .titre-principal .link {
         font-size: var(--dim5);
+        max-width: 80%;
     }
 
     .welcome .container-block {
@@ -1540,6 +1576,9 @@ ne sert donc pas à grand chose si peu de contenu */
 
 /* Section histoires
 ****************************************/
+.accueil .histoires {
+    background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 30%);
+}
 
 .template .section.histoires {
     padding-bottom: var(--dim8);
@@ -1696,8 +1735,9 @@ ne sert donc pas à grand chose si peu de contenu */
 .anim-text-container {
     overflow: hidden;
     max-width: 100%;
-    padding: var(--dim4) 0;
+    padding: 0 0 var(--dim7);
     background-color: var(--color2);
+    background: linear-gradient(0deg, rgb(208 214 206) 0%, rgb(237 240 237) 100%);
 }
 
 .anim-text-block {

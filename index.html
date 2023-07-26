@@ -34,7 +34,7 @@
     <main class="main">
         <section class="section welcome">
             <div class="container">
-                <div class="container-block">
+                <div class="container-block tp-block">
                     <h1 class="titre-principal">
                         <span>UX Designer</span>
                         <span class="link-wrapper">
@@ -68,6 +68,9 @@
                         </span>
                         <span>d’interfaces.</span>
                     </h1>
+
+                    <img class="illustration-main scrolling-image" src="images/wireframe.png" alt="Exemple de wireframe d'une fiche produit">
+
                 </div>
             </div>
 
@@ -348,19 +351,28 @@
     </div>
 
     <script>
-        window.addEventListener('scroll', function() {
-            var div = document.getElementById('hero-anim');
+        // Facteur multiplicatif pour régler la puissance de la translation
+        const scrollFactor = 0.2; // Vous pouvez ajuster cette valeur selon votre préférence
 
-            // Calculer l'opacité en fonction de la position de défilement
+        // Sélectionner l'élément image
+        const image = document.querySelector('.scrolling-image');
+
+        // Fonction pour gérer l'événement de défilement
+        function handleScroll() {
+            // Gérer l'animation d'opacité pour la div
+            var div = document.getElementById('hero-anim');
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             var opacity = 1 - (scrollTop / window.innerHeight);
-
-            // Limiter l'opacité entre 0 et 1
             opacity = Math.max(0, Math.min(1, opacity));
-
-            // Appliquer l'opacité à la div
             div.style.opacity = opacity.toString();
-        });
+
+            // Gérer la translation verticale de l'image
+            const translateY = -scrollTop * scrollFactor;
+            image.style.transform = `translate(20%, ${translateY}px)`;
+        }
+
+        // Écouter l'événement de défilement (scroll) et appeler la fonction handleScroll
+        window.addEventListener('scroll', handleScroll);
 
     </script>
 </body>
