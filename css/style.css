@@ -525,7 +525,14 @@ ne sert donc pas à grand chose si peu de contenu */
 ****************************************/
 
 .header {
+    position: relative;
     padding: var(--dim6) var(--dim3);
+}
+
+.logo {
+    position: absolute;
+    top: calc(var(--dim5)* -1);
+    left: 0;
 }
 
 .menu {
@@ -579,9 +586,8 @@ ne sert donc pas à grand chose si peu de contenu */
     background-color: var(--color10);
 }
 
-/*
 .footer .item-1 {
-    order: 2;
+    order: 3;
 }
 
 .footer .item-2 {
@@ -589,9 +595,16 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .footer .item-3 {
-    order: 3;
+    order: 2;
 }
-*/
+
+.footer .item-4 {
+    order: 4;
+}
+
+.footer .item-5 {
+    order: 5;
+}
 
 .footer .link {
     font-size: 1rem;
@@ -619,11 +632,19 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
     .footer .item-2 {
-        order: 2;
+        order: 3;
     }
 
     .footer .item-3 {
-        order: 3;
+        order: 4;
+    }
+
+    .footer .item-4 {
+        order: 2;
+    }
+
+    .footer .item-5 {
+        order: 5;
     }
 }
 
@@ -1520,6 +1541,10 @@ ne sert donc pas à grand chose si peu de contenu */
 /* Section histoires
 ****************************************/
 
+.template .section.histoires {
+    padding-bottom: var(--dim8);
+}
+
 .histoires .container-block {
     display: flex;
     flex-direction: column;
@@ -1570,11 +1595,6 @@ ne sert donc pas à grand chose si peu de contenu */
     width: 100%;
 }
 
-.list-container .link-block {
-    display: flex;
-    width: 100%;
-}
-
 .list-container .categorie {
     font-size: var(--dim3);
     font-weight: 700;
@@ -1603,8 +1623,11 @@ ne sert donc pas à grand chose si peu de contenu */
     color: var(--second3);
 }
 
-
 @media screen and (max-width: 39.9375em) {
+    .template .section.histoires {
+        padding-bottom: var(--dim6);
+    }
+
     .histoires .title-block {
         width: 100%;
         border: 0;
