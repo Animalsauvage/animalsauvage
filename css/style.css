@@ -944,7 +944,8 @@ ne sert donc pas à grand chose si peu de contenu */
     }
 
     .accueil .welcome .illustration-main {
-        top: 100px; /* Ajustement par rapport à l'illustration */
+        top: 100px;
+        /* Ajustement par rapport à l'illustration */
     }
 
     .welcome .cta-block {
@@ -1292,10 +1293,17 @@ ne sert donc pas à grand chose si peu de contenu */
 ****************************************/
 
 .idees {
-    padding: var(--dim7) var(--dim2);
+    padding: var(--dim7) var(--dim5);
     margin-bottom: var(--dim7);
     background: var(--color8) url(../images/nnnoise.svg);
+}
 
+.idees .container {
+    background: rgba(255, 255, 255, 5%);
+    padding: var(--dim5);
+    border-radius: var(--dim6);
+    max-width: 100%;
+    backdrop-filter: blur(6px);
 }
 
 .idees .container-grid {
@@ -1455,7 +1463,7 @@ ne sert donc pas à grand chose si peu de contenu */
         radial-gradient(at 22% 82%, hsl(341deg 61.8% 49.64%) 0px, transparent 50%),
         radial-gradient(at 89% 28%, hsl(135deg 72.79% 48.08%) 0px, transparent 50%);
     background-blend-mode: hard-light;
-    background-position: center bottom;
+    background-position: center center;
 }
 
 .idees .grid-item:nth-child(2)::after {
@@ -1529,6 +1537,13 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 @media screen and (max-width: 48em) {
+    .idees .container {
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        backdrop-filter: blur(0);
+    }
+
     .idees .container-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -1543,6 +1558,7 @@ ne sert donc pas à grand chose si peu de contenu */
     .idees .grid-item,
     .idees .content-item {
         width: 100%;
+        border-radius: var(--dim4);
     }
 
     .idees .grid-item {
@@ -1584,7 +1600,7 @@ ne sert donc pas à grand chose si peu de contenu */
 /* Section histoires
 ****************************************/
 .accueil .histoires {
-    background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 30%);
+    background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
 }
 
 .template .section.histoires {
