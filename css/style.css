@@ -242,8 +242,24 @@ section {
     display: block;
 }
 
+
+/* General
+****************************************/
+
+html {
+    font-family: "RecVar", Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--text);
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color1);
+}
+
 body {
-    line-height: 1.2;
     counter-reset: compteur-h2 compteur-h3 compteur-h4 compteur-menu
 }
 
@@ -270,25 +286,6 @@ table {
     border-spacing: 0;
 }
 
-
-
-
-/* General
-****************************************/
-html {
-    font-family: "RecVar", Arial, sans-serif;
-    font-size: 1em;
-    line-height: 1;
-    font-weight: 400;
-    color: var(--text);
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: var(--color1);
-
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -309,6 +306,8 @@ a {
 .hyphens {
     hyphens: auto;
 }
+
+
 
 
 /* Layout
@@ -514,12 +513,27 @@ ne sert donc pas à grand chose si peu de contenu */
 }
 
 .liste-puce li:before {
+    content: " ";
+    position: absolute;
+    top: 6px;
+    left: 1ex;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/puce.svg) center center no-repeat;
+}
+
+.liste-puce li ul li:before {
     content: "— ";
     position: absolute;
     top: 0;
     left: 1ex;
+    background: none;
 }
 
+strong {
+    font-weight: 600;
+}
 
 
 
@@ -1235,7 +1249,6 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .expertises .content-item .liste li {
     position: relative;
-    line-height: 1.4;
 }
 
 .expertises .content-item .liste li::before {
@@ -2087,10 +2100,13 @@ ne sert donc pas à grand chose si peu de contenu */
 .article p,
 .article .liste-puce li {
     font-size: var(--dim3);
-    line-height: 1.4;
     padding-bottom: var(--dim2);
     color: var(--text);
     max-width: 720px;
+}
+
+.article .liste-puce li ul {
+    padding-top: var(--dim2);
 }
 
 .article .first-letter::first-letter {
@@ -2604,6 +2620,14 @@ input[name="panel"]:checked ~ .accordion-content {
     object-fit: cover;
 }
 
+.container-intro .intro {
+    font-size: var(--dim4);
+    font-weight: 600;
+    line-height: 1.2;
+    padding-top: var(--dim4);
+    padding-bottom: var(--dim6);
+}
+
 .expertises-listing {
     width: 100%;
 }
@@ -2671,8 +2695,9 @@ input[name="panel"]:checked ~ .accordion-content {
 .expertises-listing .expertise-link .image-block {
     order: 2;
     margin: 0 var(--dim1);
+    border: 2px solid var(--second3);
+    border-radius: var(--dim1);
 }
-
 
 .accordeon .article h3::before {
     display: none;
