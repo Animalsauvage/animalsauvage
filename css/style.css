@@ -2695,7 +2695,7 @@ input[name="panel"]:checked ~ .accordion-content {
 .expertises-listing .expertise-link .image-block {
     order: 2;
     margin: 0 var(--dim1);
-    border: 2px solid var(--second3);
+    border: 2px solid var(--color10);
     border-radius: var(--dim1);
 }
 
