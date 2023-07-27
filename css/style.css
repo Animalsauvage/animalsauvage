@@ -582,7 +582,7 @@ ne sert donc pas à grand chose si peu de contenu */
     position: relative;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-around;
     padding: var(--dim6) var(--dim2);
     color: var(--color1);
@@ -772,6 +772,7 @@ ne sert donc pas à grand chose si peu de contenu */
 
 .accueil .welcome .illustration-main {
     position: relative;
+    display: block;
     background-color: var(--color4);
     border-radius: var(--dim1);
     box-shadow:
@@ -940,6 +941,10 @@ ne sert donc pas à grand chose si peu de contenu */
         max-width: 100%;
         font-size: var(--dim3);
         padding-bottom: var(--dim4);
+    }
+
+    .accueil .welcome .illustration-main {
+        top: 100px; /* Ajustement par rapport à l'illustration */
     }
 
     .welcome .cta-block {
