@@ -357,35 +357,6 @@ ne sert donc pas à grand chose si peu de contenu */
 
 
 
-/* Layout de la page d'accueil
-****************************************/
-/*
-
-.accueil {
-    display: flex;
-    flex-direction: column;
-}
-
-.accueil .hero {
-    order: 1;
-}
-
-.accueil .header {
-    order: 2;
-}
-
-.accueil .main {
-    order: 3;
-}
-
-.accueil .footer {
-    order: 4;
-}
-
-*/
-
-
-
 /* Général
 ****************************************/
 .link {
@@ -482,7 +453,6 @@ ne sert donc pas à grand chose si peu de contenu */
 
 @media screen and (max-width: 39.9375em) {
     .btn {
-        font-size: var(--regular);
         width: 100%;
     }
 }
@@ -542,15 +512,15 @@ strong {
 
 .header {
     position: relative;
-    padding: var(--dim6) var(--dim3);
+    padding: var(--dim6) var(--dim3) var(--dim4);
 }
 
 .logo {
     position: absolute;
     box-sizing: content-box;
     top: calc(var(--dim5)* -1);
-    border-right: var(--dim7) solid var(--color2);
-    border-bottom: var(--dim3) solid var(--color2);
+    border-right: var(--dim7) solid transparent;
+    border-bottom: var(--dim3) solid transparent;
     left: 0;
 }
 
@@ -579,13 +549,6 @@ strong {
 .menu .link.actif-n1 {
     text-decoration: underline;
 }
-
-@media screen and (max-width: 39.9375em) {
-    .header {
-        padding: var(--dim4) var(--dim2) var(--dim6);
-    }
-}
-
 
 
 
@@ -668,121 +631,13 @@ strong {
 
 
 
-/* Section de bienvenue
-****************************************/
-/*
-.hero {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    padding: var(--dim9) var(--dim2) var(--dim9);
-    background-color: var(--color3);
-    background-image:
-        url(../images/loup.png),
-        radial-gradient(at 24% 34%, hsla(131, 64%, 78%, 1) 0px, transparent 50%),
-        radial-gradient(at 93% 11%, hsla(148, 91%, 74%, 1) 0px, transparent 50%),
-        radial-gradient(at 80% 10%, hsla(291, 95%, 67%, 1) 0px, transparent 50%),
-        radial-gradient(at 0% 5%, hsla(35, 73%, 65%, 1) 0px, transparent 50%),
-        radial-gradient(at 80% 74%, hsla(354, 68%, 79%, 1) 0px, transparent 50%),
-        radial-gradient(at 98% 95%, hsla(97, 69%, 72%, 1) 0px, transparent 50%),
-        radial-gradient(at 48% 70%, hsla(122, 70%, 73%, 1) 0px, transparent 50%);
-    background-position: center center;
-    background-size: cover;
-    background-blend-mode: darken;
-    border-bottom-left-radius: 55em 1em;
-    border-bottom-right-radius: 55em 1em;
-    box-shadow: 0 1px 1px hsl(215deg 60% 31% / 0.075),
-        0 2px 2px hsl(215deg 60% 31% / 0.075),
-        0 4px 4px hsl(215deg 60% 31% / 0.075),
-        0 8px 8px hsl(215deg 60% 31% / 0.075),
-        0 16px 16px hsl(215deg 60% 31% / 0.075);
-    animation: hero-anim 1000ms cubic-bezier(0.5, 1, 0.89, 1);
-}
-
-@keyframes hero-anim {
-    from {
-        top: calc(var(--dim2) * -1);
-        opacity: 0;
-        filter: blur(8px);
-    }
-
-    to {
-        top: 0;
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-.hero-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--dim4);
-    transform: scale(0.94);
-    animation: hero-title-anim 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-}
-
-@keyframes hero-title-anim {
-    100% {
-        transform: scale(1);
-    }
-}
-
-.hero-title span {
-    display: block;
-    opacity: 0;
-    filter: blur(4px);
-    width: clamp(250px, 30vw, 558px);
-}
-
-.hero-title .animal {
-    width: calc(clamp(250px, 30vw, 558px) * .8);
-}
-
-.hero-title span:nth-child(1) {
-    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-.hero-title span:nth-child(2) {
-    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-@keyframes fade-in {
-    100% {
-        opacity: 1;
-        filter: blur(0);
-    }
-}
-
-@media screen and (max-width: 39.9375em) {
-    .hero {
-        background-size: auto;
-        padding: var(--dim9) var(--dim2) var(--dim6);
-    }
-
-    .hero-title {
-        flex-direction: column;
-        gap: 0;
-    }
-}
-
-*/
-
-
-
 /* Section welcome
 ****************************************/
 
 .accueil .welcome {
     position: relative;
     overflow: hidden;
-    padding-bottom: var(--dim8);
+    padding: var(--dim6) var(--dim3) var(--dim8);
 }
 
 .accueil .welcome .illustration-main {
@@ -797,15 +652,17 @@ strong {
         0 8.9px 12.4px rgba(0, 0, 0, .06),
         0 16.7px 27.2px rgba(0, 0, 0, .072),
         0 40px 80px rgba(0, 0, 0, .1);
-    transform: translateX(20%);
-    transform: translateY(30%);
-    filter: grayscale(.65) blur(3px);
+    /*    transform: translate(20%, 0);*/
+    /*    filter: grayscale(.65) blur(3px);*/
     z-index: -1;
+    filter: blur(calc(var(--scrollY) * 0.01));
+    transform: translate(20%, calc(-1 * var(--scrollY) * 0.2));
+    /*        filter: blur(calc(var(--scrollY) * 0.01));*/
 }
 
 .tp-block {
-    margin-bottom: -20%;
-    /* Permet de combler un peu le vide due à l'anaimation de l'image qui remonte */
+    margin-bottom: -8%;
+    /* Permet de gérer l'aspect esthétique de l'espacement créée par l'anaimation de l'image qui remonte */
 }
 
 .titre-principal {
@@ -815,7 +672,6 @@ strong {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    max-width: 70%;
     font-size: clamp(1.6rem, 5vw, 5.5625rem);
     font-weight: 700;
     color: var(--text);
@@ -906,6 +762,29 @@ strong {
     color: var(--color10);
 }
 
+.welcome .presentation-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: var(--dim4);
+    grid-template-areas:
+        "grid-1 grid-1 grid-3"
+        "grid-2 grid-2 grid-3";
+    padding-bottom: var(--dim5);
+}
+
+.presentation-block .grid-1 {
+    grid-area: grid-1;
+}
+
+.presentation-block .grid-2 {
+    grid-area: grid-2;
+}
+
+.presentation-block .grid-3 {
+    grid-area: grid-3;
+}
+
 .welcome .presentation {
     position: relative;
     display: block;
@@ -914,17 +793,35 @@ strong {
     font-weight: 400;
     line-height: 1.6;
     color: var(--text);
-    padding-bottom: var(--dim5);
 }
 
-.welcome .presentation span {
-    display: inline-block;
+.welcome .capsule-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--dim2);
+
+}
+
+.welcome .capsule-block .capsule {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--dim2);
     font-size: var(--dim3);
     font-weight: 600;
-    padding: 1ex 1em;
+    padding: var(--dim1) var(--dim4) var(--dim1) var(--dim2);
     border-radius: var(--dim5);
     background-color: var(--color2);
-    margin: .2em;
+}
+
+.welcome .capsule-block .capsule svg {
+    color: var(--color2);
+    background: var(--color6);
+    padding: var(--dim1);
+    border-radius: 30px;
 }
 
 .welcome .cta-block {
@@ -934,16 +831,13 @@ strong {
     justify-content: flex-start;
     width: 100%;
     font-size: var(--dim3);
-}
-
-.welcome .btn {
-    margin-right: var(--dim5);
+    gap: var(--dim5);
 }
 
 @media screen and (max-width: 39.9375em) {
 
     .accueil .welcome {
-        padding-bottom: var(--dim6);
+        padding: var(--dim4) var(--dim3) var(--dim6);
     }
 
     .titre-principal {
@@ -967,25 +861,45 @@ strong {
     .welcome .presentation {
         max-width: 100%;
         font-size: var(--dim3);
-        padding-bottom: var(--dim4);
     }
 
-    .accueil .welcome .illustration-main {
-        top: 100px;
-        /* Ajustement par rapport à l'illustration */
+    .welcome .presentation span {
+        font-size: var(--dim2);
     }
 
     .welcome .cta-block {
         flex-direction: column-reverse;
     }
 
-    .welcome .btn {
-        margin-right: 0;
-    }
-
     .welcome .contact {
         font-size: var(--dim3);
         margin-bottom: var(--dim4);
+    }
+
+    .tp-block {
+        margin-bottom: -30%;
+    }
+}
+
+@media screen and (max-width: 48em) {
+
+    .welcome .presentation-block {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: var(--dim4);
+        grid-template-areas:
+            "grid-1"
+            "grid-3"
+            "grid-2";
+        padding-bottom: var(--dim5);
+    }
+
+    .welcome .cta-block {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--dim4);
     }
 }
 
@@ -1006,7 +920,6 @@ strong {
 
 /* Section carrousel
 ****************************************/
-
 .carrousel {
     background-color: var(--color3);
     background-image:
@@ -1110,6 +1023,7 @@ strong {
 @media screen and (max-width: 39.9375em) {
     .slide {
         margin: 0;
+        padding: var(--dim4) var(--dim2);
     }
 
     .slide-text {
@@ -1123,7 +1037,7 @@ strong {
 /* Section expertises
 ****************************************/
 .accueil .expertises {
-    background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
+    background: linear-gradient(0deg, var(--color8) 0%, var(--color2) 60%);
 }
 
 .expertises .container-grid {
@@ -1174,7 +1088,6 @@ strong {
 .expertises .grid-9 {
     grid-area: grid-9;
 }
-
 
 .expertises .title-n2 {
     font-size: clamp(2rem, 3vw, 5.5625rem);
@@ -1320,7 +1233,6 @@ strong {
 
 /* Section idées
 ****************************************/
-
 .idees {
     padding: var(--dim7) var(--dim5);
     margin-bottom: var(--dim7);
@@ -1338,11 +1250,11 @@ strong {
 .idees .container-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr 1.5fr;
+    grid-template-rows: auto 2fr 2fr;
     gap: calc(var(--dim2) * 2);
     grid-template-areas:
         "grid-1 grid-1 grid-1 grid-1"
-        "grid-2 grid-2 grid-2 grid-2"
+        "grid-2 grid-2 grid-2 .     "
         "grid-3 grid-3 grid-4 grid-4";
 }
 
@@ -1466,13 +1378,14 @@ strong {
     padding: 0 var(--dim2);
 }
 
-.idees .title-block .title-n2 {
+.idees .title-block .title-n2,
+.idees .title-block .link {
     color: var(--color1);
 }
 
 .idees .grid-item {
     width: 100%;
-    min-height: 50vh;
+    min-height: var(--dim10);
     background-position: center center;
     background-size: cover;
 }
@@ -1483,17 +1396,20 @@ strong {
 }
 
 .idees .grid-item:nth-child(2) {
-    background-image: url(../images/lionnes.png),
-        radial-gradient(at 85% 21%, hsl(227.36deg 76% 53%) 0px, transparent 50%),
-        radial-gradient(at 82% 56%, hsl(324.91deg 61.68% 39.43%) 0px, transparent 50%),
-        radial-gradient(at 44% 83%, hsl(109.52deg 70.2% 40.61%) 0px, transparent 50%),
-        radial-gradient(at 66% 68%, hsl(141.34deg 48.49% 51.98%) 0px, transparent 50%),
-        radial-gradient(at 44% 44%, hsl(118.52deg 69.84% 45.61%) 0px, transparent 50%),
-        radial-gradient(at 22% 82%, hsl(341deg 61.8% 49.64%) 0px, transparent 50%),
-        radial-gradient(at 89% 28%, hsl(135deg 72.79% 48.08%) 0px, transparent 50%);
-    background-blend-mode: hard-light;
+    background-image:
+        url(../images/loup.png),
+        radial-gradient(at 24% 34%, hsla(131, 64%, 78%, 1) 0px, transparent 50%),
+        radial-gradient(at 93% 11%, hsla(148, 91%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 10%, hsla(291, 95%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 5%, hsla(35, 73%, 65%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 74%, hsla(354, 68%, 79%, 1) 0px, transparent 50%),
+        radial-gradient(at 98% 95%, hsla(97, 69%, 72%, 1) 0px, transparent 50%),
+        radial-gradient(at 48% 70%, hsla(122, 70%, 73%, 1) 0px, transparent 50%);
     background-position: center center;
+    background-size: cover;
+    background-blend-mode: darken;
 }
+
 
 .idees .grid-item:nth-child(2)::after {
     background-color: #cd3062;
@@ -1512,6 +1428,22 @@ strong {
         radial-gradient(at 89% 28%, hsl(237.65deg 48.05% 24.95%) 0px, transparent 50%);
     background-blend-mode: hard-light;
 }
+
+
+/*
+.idees .grid-item:nth-child(2) {
+    background-image: url(../images/lionnes.png),
+        radial-gradient(at 85% 21%, hsl(227.36deg 76% 53%) 0px, transparent 50%),
+        radial-gradient(at 82% 56%, hsl(324.91deg 61.68% 39.43%) 0px, transparent 50%),
+        radial-gradient(at 44% 83%, hsl(109.52deg 70.2% 40.61%) 0px, transparent 50%),
+        radial-gradient(at 66% 68%, hsl(141.34deg 48.49% 51.98%) 0px, transparent 50%),
+        radial-gradient(at 44% 44%, hsl(118.52deg 69.84% 45.61%) 0px, transparent 50%),
+        radial-gradient(at 22% 82%, hsl(341deg 61.8% 49.64%) 0px, transparent 50%),
+        radial-gradient(at 89% 28%, hsl(135deg 72.79% 48.08%) 0px, transparent 50%);
+    background-blend-mode: hard-light;
+    background-position: center center;
+}
+*/
 
 .idees .grid-item:nth-child(3)::after {
     background-color: #62c886;
@@ -1865,10 +1797,6 @@ strong {
 .template .header,
 .template .welcome {
     background-color: var(--color2);
-}
-
-.template .header {
-    padding: var(--dim6) var(--dim3) var(--dim4);
 }
 
 .template .section {
