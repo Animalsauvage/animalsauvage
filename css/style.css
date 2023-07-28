@@ -87,6 +87,7 @@ font-variation-settings: "wght" 375, "MONO" 0.28;
 
     --base: #657558;
     --text: #11150E;
+    --scrollY: 0;
 
     /* Violet */
     --second1: #A55493;
@@ -652,17 +653,14 @@ strong {
         0 8.9px 12.4px rgba(0, 0, 0, .06),
         0 16.7px 27.2px rgba(0, 0, 0, .072),
         0 40px 80px rgba(0, 0, 0, .1);
-    /*    transform: translate(20%, 0);*/
-    /*    filter: grayscale(.65) blur(3px);*/
-    z-index: -1;
-    filter: blur(calc(var(--scrollY) * 0.01));
+    filter: grayscale(.65) blur(calc(var(--scrollY) * 0.01));
     transform: translate(20%, calc(-1 * var(--scrollY) * 0.2));
-    /*        filter: blur(calc(var(--scrollY) * 0.01));*/
+    z-index: -1;
 }
 
 .tp-block {
-    margin-bottom: -8%;
     /* Permet de gérer l'aspect esthétique de l'espacement créée par l'anaimation de l'image qui remonte */
+    margin-bottom: -8%;
 }
 
 .titre-principal {
@@ -1037,7 +1035,7 @@ strong {
 /* Section expertises
 ****************************************/
 .accueil .expertises {
-    background: linear-gradient(0deg, var(--color8) 0%, var(--color2) 60%);
+    background: linear-gradient(0deg, var(--color3) 0%, var(--color1) 60%);
 }
 
 .expertises .container-grid {
