@@ -79,12 +79,8 @@
             </div>
 
             <div class="container">
-                <p class="presentation">J'interviens auprès d'agences de développement et de communication qui ont des besoins ponctuels en expérience utilisateur. <br><br> #recherche #idée #conception</p>
-                
-                <div class="process-block">
-                    
-                </div>
-
+                <p class="presentation">J'interviens auprès d'agences de développement et de communication qui ont des besoins ponctuels en expérience utilisateur. <span>#recherche</span><span>#idée</span><span>#conception</span></p>
+        
                 <div class="cta-block">
                     <a href="mailto:hugo[at]animalsauvage.fr?subject=Demande de contact&body=Bonjour, remplacez [at] par @ dans l'adresse mail pour éviter les spams et les robots." class="btn">Contact email</a>
                     <span class="contact">hugo[at]animalsauvage.fr</span>
@@ -121,7 +117,7 @@
                 <div class="container-grid">
 
                     <div class="title-block grid-1">
-                        <h2 class="title-n2">Découvrez comment je vous aide à obtenir la meilleure expérience utilisateur possible.</h2>
+                        <h2 class="title-n2">Tout mettre en œuvre pour obtenir la meilleure expérience utilisateur possible.</h2>
                     </div>
 
                     <div class="content-item grid-2">
@@ -137,10 +133,10 @@
                             <h3 class="title-n3">Travail en équipe</h3>
                             <span class="intro">Travail collaboratif avec&nbsp;:</span>
                             <ul class="liste">
-                                <li>les products owner</li>
-                                <li>les chefs de projets</li>
+                                <li>les chefs de projets, PO</li>
                                 <li>les graphistes</li>
                                 <li>les développeurs</li>
+                                <li>etc</li>
                             </ul>
                             <p>Et possibilité d'intégrer le flux de production comme un collaborateur original.</p>
                         </div>
@@ -158,8 +154,8 @@
                         <div class="content">
                             <h3 class="title-n3">Tous types d'agences</h3>
                             <ul class="liste">
-                                <li>en communication digitale</li>
-                                <li>en développement d'application web &&nbsp;mobile</li>
+                                <li>de communication digitale</li>
+                                <li>de développement d'application web &&nbsp;mobile</li>
                                 <li>de growth hacking & de référencement naturel</li>
                             </ul>
                         </div>
@@ -337,6 +333,7 @@
         <a href="mentions-legales.html" class="link item-5">Mentions légales</a>
     </footer>
 
+<!--
     <div id="hero-anim" class="hero">
         <span class="hero-title">
             <span class="animal">
@@ -353,6 +350,7 @@
             </span>
         </span>
     </div>
+-->
 
     <script>
         // Facteur multiplicatif pour régler la puissance de la translation
@@ -364,11 +362,11 @@
         // Fonction pour gérer l'événement de défilement
         function handleScroll() {
             // Gérer l'animation d'opacité pour la div
-            var div = document.getElementById('hero-anim');
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var opacity = 1 - (scrollTop / window.innerHeight);
-            opacity = Math.max(0, Math.min(1, opacity));
-            div.style.opacity = opacity.toString();
+//            var div = document.getElementById('hero-anim');
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//            var opacity = 1 - (scrollTop / window.innerHeight);
+//            opacity = Math.max(0, Math.min(1, opacity));
+//            div.style.opacity = opacity.toString();
 
             // Gérer la translation verticale de l'image
             const translateY = -scrollTop * scrollFactor;
