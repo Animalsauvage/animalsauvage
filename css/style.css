@@ -1910,8 +1910,11 @@ strong {
 
 .template .container-block.intro {
     width: 100%;
-    max-width: 60%;
+    max-width: 720px;
     font-size: var(--dim3);
+}
+.template .container-block.intro p {
+    padding-bottom: var(--dim2);
 }
 
 @media screen and (max-width: 39.9375em) {
