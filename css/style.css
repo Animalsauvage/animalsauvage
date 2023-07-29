@@ -880,7 +880,6 @@ strong {
 }
 
 @media screen and (max-width: 48em) {
-
     .welcome .presentation-block {
         display: grid;
         grid-template-columns: 1fr;
@@ -893,8 +892,22 @@ strong {
         padding-bottom: var(--dim5);
     }
 
+    .welcome .capsule-block {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     .welcome .cta-block {
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--dim4);
+    }
+}
+
+@media screen and (min-width: 48.0625em) and (max-width: 56.25em) {
+    .welcome .cta-block {
+        flex-direction: column-reverse;
         align-items: flex-start;
         justify-content: flex-start;
         gap: var(--dim4);
@@ -1414,8 +1427,6 @@ strong {
 }
 
 .idees .grid-item:nth-child(3) {
-    align-items: flex-end;
-    justify-content: flex-end;
     background-image: url(../images/tigre.png),
         radial-gradient(at 85% 21%, hsl(104.04deg 52.67% 50.96%) 0px, transparent 50%),
         radial-gradient(at 82% 56%, hsl(42.08deg 75.57% 47.59%) 0px, transparent 50%),
@@ -1540,6 +1551,17 @@ strong {
 }
 
 @media screen and (min-width: 48.0625em) and (max-width: 64em) {
+
+    .idees .container-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr 1fr;
+        grid-template-areas:
+            "grid-1"
+            "grid-2"
+            "grid-3"
+            "grid-4";
+    }
 
     .idees .grid-3 .content-block,
     .idees .grid-4 .content-block {
@@ -2495,7 +2517,7 @@ input[name="panel"]:checked ~ .accordion-content {
     display: block;
     width: 100%;
     color: var(--second1);
-    font-size: clamp(2rem, 6vw, var(--dim6));
+    font-size: clamp(2rem, 5vw, var(--dim6));
     font-weight: 600;
     line-height: 1;
     padding: var(--dim4) 0;
@@ -2591,7 +2613,7 @@ input[name="panel"]:checked ~ .accordion-content {
     justify-content: center;
     width: 100%;
     color: var(--second1);
-    font-size: clamp(2rem, 6vw, var(--dim6));
+    font-size: clamp(2rem, 5vw, var(--dim6));
     font-weight: 600;
     line-height: 1;
     padding: var(--dim3) var(--dim2);
@@ -2603,7 +2625,7 @@ input[name="panel"]:checked ~ .accordion-content {
     position: absolute;
     right: 1vw;
     display: block;
-    font-size: clamp(2rem, 6vw, var(--dim4));
+    font-size: clamp(2rem, 5vw, var(--dim4));
     font-weight: 300;
     transform: rotate(90deg) translateX(0);
 }
@@ -2627,7 +2649,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
 .expertises-listing .expertise-link:hover .image-block {
     filter: blur(0);
-    width: clamp(2rem, 8vw, 8rem);
+    width: clamp(2rem, 7vw, 8rem);
 }
 
 .expertises-listing .expertise-link .first {
@@ -2641,7 +2663,7 @@ input[name="panel"]:checked ~ .accordion-content {
 .expertises-listing .expertise-link .image-block {
     order: 2;
     margin: 0 var(--dim1);
-    border: 2px solid var(--color10);
+    border: 2px solid var(--color3);
     border-radius: var(--dim1);
 }
 
@@ -2763,17 +2785,51 @@ input[name="panel"]:checked ~ .accordeon-content {
 
 
 
+/* section autre lien
+****************************************/
+.section-autre .container-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dim4);
+    background-color: var(--color9);
+    border-radius: var(--dim4);
+    padding: var(--dim6) var(--dim4);
+}
+
+.section-autre .container-block .title {
+    font-size: var(--dim4);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color1);
+    text-wrap: balance;
+    padding-bottom: var(--dim4);
+}
+
+.section-autre .container-block .cta-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--dim4);
+    width: 100%;
+}
 
 
+@media screen and (max-width: 39.9375em) {
 
+    .section-autre .container-block {
+        gap: var(--dim2);
+        padding: var(--dim4) var(--dim3) var(--dim3);
 
+    }
 
-
-
-
-
-
-
+    .section-autre .container-block .cta-block {
+        gap: var(--dim3);
+    }
+}
 
 
 
