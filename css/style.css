@@ -1812,6 +1812,53 @@ strong {
 
 
 
+/* section autre lien
+****************************************/
+.section-autre .container-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dim4);
+    background-color: var(--color9);
+    border-radius: var(--dim4);
+    padding: var(--dim6) var(--dim4);
+}
+
+.section-autre .container-block .title {
+    font-size: var(--dim4);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color1);
+    text-wrap: balance;
+    padding-bottom: var(--dim4);
+}
+
+.section-autre .container-block .cta-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--dim4);
+    width: 100%;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .section-autre .container-block {
+        gap: var(--dim2);
+        padding: var(--dim4) var(--dim3) var(--dim3);
+
+    }
+
+    .section-autre .container-block .cta-block {
+        gap: var(--dim3);
+    }
+}
+
+
+
+
 /* Page template
 ****************************************/
 .template .header,
@@ -2733,6 +2780,10 @@ input[name="panel"]:checked ~ .accordion-content {
     padding: 0 var(--dim3);
 }
 
+.accordeon .accordeon-content .link {
+    font-size: var(--dim3);
+}
+
 input[name="panel"]:checked ~ .accordeon-content {
     visibility: visible;
     overflow: visible;
@@ -2785,51 +2836,20 @@ input[name="panel"]:checked ~ .accordeon-content {
 
 
 
-/* section autre lien
+/* Page FAD
 ****************************************/
-.section-autre .container-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--dim4);
-    background-color: var(--color9);
-    border-radius: var(--dim4);
-    padding: var(--dim6) var(--dim4);
+.template.faq .welcome {
+    margin-bottom: 0;
 }
 
-.section-autre .container-block .title {
-    font-size: var(--dim4);
-    font-weight: 600;
-    line-height: 1.2;
-    color: var(--color1);
-    text-wrap: balance;
-    padding-bottom: var(--dim4);
-}
-
-.section-autre .container-block .cta-block {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--dim4);
+.faq .expertises-listing .expertise-link {
+    align-items: flex-end;
+    justify-content: flex-start;
     width: 100%;
+    font-size: var(--dim4);
+        padding: var(--dim4) var(--dim2);
 }
 
-
-@media screen and (max-width: 39.9375em) {
-
-    .section-autre .container-block {
-        gap: var(--dim2);
-        padding: var(--dim4) var(--dim3) var(--dim3);
-
-    }
-
-    .section-autre .container-block .cta-block {
-        gap: var(--dim3);
-    }
-}
 
 
 
