@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Animal Sauvage - histoires UX Design et création d'interfaces.</title>
-    <meta name="description" content="Pistes de réflexion sur les sujets de l'UX Design et la création d'interface.">
+    <title>Histoires de design - Animal Sauvage</title>
+    <meta name="description" content="Pistes de réflexion sur les sujets du design, de la création d'interface et de l'expérience utilisateur.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#F9FAF9">
     <meta name="theme-color" content="#F9FAF9">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-ok.css">
 </head>
 
 <body class="template">
@@ -23,69 +23,67 @@
     <header class="header">
         <nav class="container">
             <menu class="menu">
-                <li><a href="index.html" class="link"><img class="logo" src="images/as-color.svg" alt="Logo d'animal sauvage" width="34" height="34">animal&nbsp;sauvage</a></li>
-                <li><a href="expertises.html" class="link">expertises</a></li>
-                <li><a href="idees.html" class="link">idées</a></li>
-                <li><a href="histoires.html" class="link actif">histoires</a></li>
+                <li><a href="index.html" class="menu-link link"><img class="logo" src="images-ok/as-color.svg" alt="Logo d'animal sauvage" width="34" height="34">animal&nbsp;sauvage</a></li>
+                <li><a href="expertises.html" class="menu-link link">expertises</a></li>
+                <li><a href="idees.html" class="menu-link link">idées</a></li>
+                <li><a href="histoires.html" class="menu-link link actif">histoires</a></li>
             </menu>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="section welcome">
+    <main class="main" id="top">
+        <section class="section-hero">
             <div class="container">
-                <div class="container-block">
-                    <h1 class="titre-principal">Histoires</h1>
-                    <p class="presentation">Pistes de réflexion sur les sujets du design, de la création d'interface et de l'expérience utilisateur.</p>
+                <div class="hero-container">
+                    <div class="grid-1">
+                        <h1 class="titre-h1">Histoires</h1>
+                    </div>
+                    <div class="grid-2">
+                        <p class="introduction">Pistes de réflexion sur les sujets du design, de la création d'interface et de l'expérience utilisateur.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section histoires">
+        <section class="section section-collection">
             <div class="container">
-                <div class="container-block">
+                <ul class="collection-container">
 
-                    <ul class="list-container">
-                        <li class="article-container">
-                            <a href="histoires/comment-creer-un-logo-en-utilisant-les-mathematiques.html" class="article-link">
-                                <div class="content-block">
-                                    <span class="categorie">Design <span class="date">2020</span></span>
-                                    <span class="title-n3">Comment créer un logo en utilisant les mathématiques&nbsp;; celui d'Animal Sauvage.</span>
-                                </div>
-                            </a>
-                        </li>
+                    <li>
+                        <a href="histoires/comment-creer-un-logo-en-utilisant-les-mathematiques.html" class="collection-link">
+                            <div class="sub-title">Design <time class="date" datetime="2020">2020</time></div>
+                            <div class="title">Comment créer un logo en utilisant les mathématiques&nbsp;; celui d'Animal Sauvage.</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="histoires/regard-sur-le-parcours-d-inscription-de-mailo.html" class="collection-link">
+                            <div class="sub-title">Expérience utilisateur <time class="date" datetime="2020">2020</time></div>
+                            <div class="title">Regard critique sur le parcours d'inscription de Mailo, une messagerie web.</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="histoires/comment-ameliorer-l-experience-utilisateur-des-pages-de-dons.html" class="collection-link">
+                            <div class="sub-title">Expérience utilisateur <time class="date" datetime="2020">2020</time></div>
+                            <div class="title">Comment améliorer l'expérience utilisateur des pages de dons&nbsp;; l'exemple de Greenpeace.</div>
+                        </a>
+                    </li>
 
-                        <li class="article-container">
-                            <a href="histoires/regard-sur-le-parcours-d-inscription-de-mailo.html" class="article-link">
-                                <div class="content-block">
-                                    <span class="categorie">Expérience utilisateur <span class="date">2020</span></span>
-                                    <span class="title-n3">Regard critique sur le parcours d'inscription de Mailo, une messagerie web.</span>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="article-container">
-                            <a href="histoires/comment-ameliorer-l-experience-utilisateur-des-pages-de-dons.html" class="article-link">
-                                <div class="content-block">
-                                    <span class="categorie">Expérience utilisateur <span class="date">2020</span></span>
-                                    <span class="title-n3">Comment améliorer l'expérience utilisateur des pages de dons&nbsp;; l'exemple de Greenpeace.</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                </ul>
             </div>
         </section>
 
-        <section class="section contact">
-            <div class="contact-block">
-                hugo&nbsp;[at]&nbsp;animalsauvage.fr
-            </div>
+
+
+
+
+        <section class="section-contact">
+            <span>hugo&nbsp;[at]&nbsp;animalsauvage.fr</span>
         </section>
+
     </main>
 
     <footer class="footer">
-        <img class="item-1" src="images/as.svg" alt="Logo d'animal sauvage" width="34" height="34">
+        <img class="item-1" src="images-ok/as.svg" alt="Logo d'animal sauvage" width="34" height="34">
         <a href="https://www.linkedin.com/company/animal-sauvage/" class="link item-2" target="_blank">LinkedIn</a>
         <a href="https://www.instagram.com/animal.sauvage/" class="link item-3" target="_blank">Instagram</a>
         <a href="faq.html" class="link item-4">FAQ</a>

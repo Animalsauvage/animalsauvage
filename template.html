@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Animal Sauvage - XXXXXXXXXXXXXXXXXX</title>
-    <meta name="description" content="XXXXXXXXXXXXXXXXXX">
+    <title>Animal Sauvage - UX Designer - Création d’interfaces.</title>
+    <meta name="description" content="UX Designer - Création d’interfaces.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#F9FAF9">
     <meta name="theme-color" content="#F9FAF9">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-ok.css">
 </head>
 
 <body class="template">
@@ -23,54 +23,131 @@
     <header class="header">
         <nav class="container">
             <menu class="menu">
-                <li><a href="index.html" class="link"><img class="logo" src="images/as-color.svg" alt="Logo d'animal sauvage" width="34" height="34">animal&nbsp;sauvage</a></li>
-                <li><a href="expertises.html" class="link">expertises</a></li>
-                <li><a href="idees.html" class="link">idées</a></li>
-                <li><a href="histoires.html" class="link">histoires</a></li>
+                <li><a href="index.html" class="menu-link link actif"><img class="logo" src="images-ok/as-color.svg" alt="Logo d'animal sauvage" width="34" height="34">animal&nbsp;sauvage</a></li>
+                <li><a href="expertises.html" class="menu-link link">expertises</a></li>
+                <li><a href="idees.html" class="menu-link link">idées</a></li>
+                <li><a href="histoires.html" class="menu-link link actif-n1">histoires</a></li>
             </menu>
         </nav>
     </header>
 
     <main class="main" id="top">
-
-        <section class="section welcome">
+        <section class="section-hero">
             <div class="container">
-
-                <div class="container-block">
-                    <h1 class="titre-principal">
-                        Titre
-                    </h1>
-
-                    <p class="presentation">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae totam velit fugiat nobis fugit ! Repudiandae eveniet ex mollitia, id unde qui error ipsa. Iste possimus dolore dolores officia, perferendis atque.</p>
+                <div class="hero-container">
+                    <div class="grid-1">
+                        <div class="sub-title">Design <time class="date" datetime="2020">2020</time></div>
+                        <h1 class="titre-h1">Titre de niveau 1, lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
+                    </div>
+                    <div class="grid-2">
+                        <p class="introduction">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, dolor. Iure fugit rem temporibus, molestiae consequuntur saepe est, repudiandae magni sit modi, accusamus ab aperiam culpa sint assumenda ullam suscipit!</p>
+                    </div>
                 </div>
-
             </div>
         </section>
 
-        <section class="section histoires">
+        <section class="section-video">
+            <video class="video" width="854" autoplay loop poster="images-ok/oeil.png">
+                <source src="video-ok/oeil.mp4" type="video/mp4">
+                <source src="video-ok/oeil.webm" type="video/webm">
+            </video>
+        </section>
+
+        <section class="section section-article">
             <div class="container">
-                <div class="container-block">
-                    Contenu
+                <div class="article-container">
+                    <div class=" grid-1">
+                        <nav class="nav-article">
+                            <div class="title">Sommaire</div>
+                            <ol class="nav-liste-link">
+                                <li><a href="#" class="link nav-article-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit 1</a></li>
+                                <li><a href="#" class="link nav-article-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit 2</a></li>
+                                <li><a href="#" class="link nav-article-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit 3</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <article class="article grid-2">
+
+                        <div class="introduction-block">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque maiores architecto laboriosam fugiat, necessitatibus enim quo blanditiis. Beatae molestias, quidem saepe laudantium dolore, sequi excepturi distinctio, eius quisquam adipisci, dolorum.</p>
+                        </div>
+
+                        <p class="introduction-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, dolore, unde. Sequi aut commodi, labore nobis harum natus animi! Sapiente quasi, enim magni dolores maxime ducimus necessitatibus possimus id accusantium.</p>
+
+                        <hr>
+
+                        <p>Lorem <strong>ipsum dolor</strong> sit amet, consectetur adipisicing elit. Nisi, mollitia rerum, minima odio illo impedit doloribus labore quos, incidunt ipsum fugit reiciendis harum! Tempore saepe explicabo eligendi, facere corrupti quos.</p>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>Lorem <strong>ipsum dolor</strong> sit amet, consectetur adipisicing elit. Nisi, mollitia rerum, minima odio illo impedit doloribus labore quos, incidunt ipsum fugit reiciendis harum! Tempore saepe explicabo eligendi, facere corrupti quos.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        </ul>
+
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, mollitia rerum, minima odio illo impedit doloribus labore quos, incidunt ipsum fugit reiciendis harum! Tempore saepe explicabo eligendi, facere corrupti quos.</p>
+
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, mollitia rerum, minima odio illo impedit doloribus labore quos, incidunt ipsum fugit reiciendis harum! Tempore saepe explicabo eligendi, facere corrupti quos.</p>
+
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, mollitia rerum, minima odio illo impedit doloribus labore quos, incidunt ipsum fugit reiciendis harum! Tempore saepe explicabo eligendi, facere corrupti quos.</p>
+
+
+                        <h2>RESTE PLEINS DE TRUCS A FINIR OK !!!!!!</h2>
+
+
+                    </article>
                 </div>
-
-
             </div>
         </section>
 
-        <div class="top-container">
-            <a href="#top" class="link">Revenir en haut</a>
-        </div>
+        <section class="section section-collection">
+            <div class="container">
+                <ul class="collection-container">
 
-        <section class="section contact">
-            <div class="contact-block">
-                hugo&nbsp;[at]&nbsp;animalsauvage.fr
+                    <li>
+                        <a href="#" class="collection-link">
+                            <div class="sub-title">Design <time class="date" datetime="2020">2020</time></div>
+                            <div class="title">Comment créer un logo en utilisant les mathématiques&nbsp;; celui d'Animal Sauvage.</div>
+                            <img class="illustration" src="images-ok/montagne.png" alt="Wireframe représentant un site web">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="collection-link">
+                            <div class="sub-title">Design <time class="date" datetime="2020">2020</time></div>
+                            <div class="title">Comment créer un logo en utilisant les mathématiques&nbsp;; celui d'Animal Sauvage.</div>
+                            <img class="illustration" src="images-ok/montagne.png" alt="Wireframe représentant un site web">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="collection-link">
+                            <div class="sub-title">Design <time class="date" datetime="2020">2020</time></div>
+                            <div class="title">Comment créer un logo en utilisant les mathématiques&nbsp;; celui d'Animal Sauvage.</div>
+                            <img class="illustration" src="images-ok/montagne.png" alt="Wireframe représentant un site web">
+                        </a>
+                    </li>
+
+                </ul>
             </div>
+        </section>
+
+
+
+
+
+        <section class="section-contact">
+            <span>hugo&nbsp;[at]&nbsp;animalsauvage.fr</span>
         </section>
 
     </main>
 
     <footer class="footer">
-        <img class="item-1" src="images/as.svg" alt="Logo d'animal sauvage" width="34" height="34">
+        <img class="item-1" src="images-ok/as.svg" alt="Logo d'animal sauvage" width="34" height="34">
         <a href="https://www.linkedin.com/company/animal-sauvage/" class="link item-2" target="_blank">LinkedIn</a>
         <a href="https://www.instagram.com/animal.sauvage/" class="link item-3" target="_blank">Instagram</a>
         <a href="faq.html" class="link item-4">FAQ</a>
