@@ -431,7 +431,7 @@ strong {
     text-align: center;
     text-decoration: none;
     padding: var(--dim2) var(--dim3);
-    border-radius: var(--dim3);
+    border-radius: var(--dim4);
     background-color: var(--base);
     z-index: 1;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
