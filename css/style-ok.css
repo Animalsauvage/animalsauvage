@@ -331,11 +331,6 @@ strong {
     font-weight: 700;
 }
 
-@media screen and (max-width: 40em) {
-    .titre-h1 {
-        font-size: var(--dim4);
-    }
-}
 
 
 
@@ -649,6 +644,7 @@ strong {
     width: 100%;
     height: auto;
     max-height: 90vh;
+    background-color: var(--color2);
 }
 
 .section-video .video {
@@ -1128,12 +1124,8 @@ strong {
 
 /* 880px */
 @media screen and (max-width: 55em) {
-    .page-expertises .grid-1 {
+    .page-expertises .grid-1.vide {
         display: none;
-    }
-
-    .page-expertises .section-bg .article-container .grid-1 {
-        display: grid;
     }
 
     .page-expertises .section-bg .container {
@@ -1153,13 +1145,18 @@ strong {
 
 
 
+/* Page Histoires
+****************************************/
+.page-histoires .section-collection {
+    padding-bottom: var(--dim8);
+}
 
-
-
-
-
-
-
+/* 880px */
+@media screen and (max-width: 55em) {
+    .page-histoires .section-collection {
+        padding-bottom: var(--dim7);
+    }
+}
 
 
 
