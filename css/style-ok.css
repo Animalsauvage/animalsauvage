@@ -1128,6 +1128,14 @@ strong {
 
 /* 880px */
 @media screen and (max-width: 55em) {
+    .page-expertises .grid-1 {
+        display: none;
+    }
+
+    .page-expertises .section-bg .article-container .grid-1 {
+        display: grid;
+    }
+
     .page-expertises .section-bg .container {
         padding: var(--dim3);
     }
@@ -1135,6 +1143,11 @@ strong {
     .page-expertises .section-bg .sous-titre {
         padding: 0 var(--dim4) var(--dim4);
     }
+
+    .page-expertises .introduction-block .details p {
+        font-size: var(--regular);
+    }
+
 }
 
 
