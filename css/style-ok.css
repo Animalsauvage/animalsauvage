@@ -637,6 +637,7 @@ strong {
     }
 
     .hero-container .titre-h1 {
+        font-size: var(--dim4);
         padding-bottom: var(--dim4);
     }
 }
