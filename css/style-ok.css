@@ -392,7 +392,7 @@ strong {
     font-weight: 600;
     text-transform: uppercase;
 }
-
+.link.nav-article-link:visited,
 .menu-link.actif,
 .link:hover,
 .link:focus {
@@ -702,7 +702,7 @@ strong {
     position: sticky;
     top: 0;
     left: 0;
-    padding: var(--dim4) var(--dim3) var(--dim4) var(--dim4);
+    padding: var(--dim4);
 }
 
 .nav-article .title {
@@ -747,6 +747,10 @@ strong {
 }
 
 .article h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     font-size: 2.6190476rem;
     line-height: 2.7619048rem;
     font-weight: 600;
@@ -756,6 +760,10 @@ strong {
 }
 
 .article h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     font-size: 1.6190476rem;
     line-height: 2.7619048rem;
     margin-top: 1.3809524rem;
@@ -790,17 +798,29 @@ strong {
     counter-increment: compteur-h2;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
     transition-delay: .2s;
+    font-size: var(--dim4);
+    line-height: 1;
+    color: var(--color9);
+    font-variation-settings: "wght"680, "CASL"0.5;
 }
 
 .article h3::before {
     content: counter(compteur-h2) "."counter(compteur-h3) " ";
     counter-increment: compteur-h3;
     width: 100%;
+    font-size: var(--dim3);
+    line-height: 1;
+    color: var(--color9);
+    font-variation-settings: "wght"680, "CASL"0.5;
 }
 
 .article h4::before {
     content: counter(compteur-h2) "."counter(compteur-h3) "."counter(compteur-h4) " ";
     counter-increment: compteur-h4;
+    font-size: var(--regular);
+    line-height: 1;
+    color: var(--color9);
+    font-variation-settings: "wght"680, "CASL"0.5;
 }
 
 .article h2::after {
@@ -919,6 +939,7 @@ strong {
     border: 1px solid var(--color8);
     border-radius: var(--dim1);
     background-color: var(--color2);
+    font-variation-settings: "wght"680, "CASL"0.5;
 }
 
 .article blockquote {
@@ -1467,6 +1488,14 @@ input[name="panel"]:checked ~ .accordion-content {
         padding: 0;
         border-radius: 0;
         border: 0;
+    }
+
+    .summary {
+        font-size: var(--regular);
+    }
+
+    .page-expertises .btn {
+        font-size: var(--regular);
     }
 }
 
