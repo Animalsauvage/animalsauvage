@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>Regard critique sur le parcours d'inscription d’une messagerie web.</title>
-
     <meta name="description" content="Regard critique sur le parcours d'inscription de la messagerie web Mailo ; de la page d'accueil jusqu'à la création d'un compte.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,56 +15,58 @@
     <meta name="msapplication-TileColor" content="#F9FAF9">
     <meta name="theme-color" content="#F9FAF9">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-ok.css">
 </head>
 
-<body class="template">
+<body class="page-histoires">
 
     <header class="header">
         <nav class="container">
             <menu class="menu">
-                <li><a href="../index.html" class="link"><img class="logo" src="../images/as-color.svg" alt="Logo d'animal sauvage" width="34" height="34">animal&nbsp;sauvage</a></li>
-                <li><a href="../expertises.html" class="link">expertises</a></li>
-                <li><a href="../idees.html" class="link">idées</a></li>
-                <li><a href="../histoires.html" class="link actif-n1">histoires</a></li>
+                <li><a href="../index.html" class="menu-link link"><img class="logo" src="../images-ok/as-color.svg" alt="Logo d'animal sauvage" width="34" height="34">animal&nbsp;sauvage</a></li>
+                <li><a href="../expertises.html" class="menu-link link">expertises</a></li>
+                <li><a href="../idees.html" class="menu-link link">idées</a></li>
+                <li><a href="../histoires.html" class="menu-link link actif-n1">histoires</a></li>
             </menu>
         </nav>
     </header>
 
     <main class="main" id="top">
-
-        <section class="section welcome">
+        <section class="section-hero">
             <div class="container">
-                <div class="container-block">
-                    <span class="categorie">Expérience utilisateur <span class="date">2020</span></span>
-                    <h1 class="titre-principal">Regard critique sur le parcours d'inscription d’une messagerie web&nbsp;; l’examen de Mailo.</h1>
-                    <p class="presentation">Comment améliorer l’expérience utilisateur d'un parcours d'inscription à une messagerie.</p>
+                <div class="hero-container">
+                    <div class="grid-1">
+                        <div class="sub-title">Expérience utilisateur <time class="date" datetime="2020">2020</time></div>
+                        <h1 class="titre-h1">Regard critique sur le parcours d'inscription d’une messagerie web&nbsp;; l’examen de Mailo.</span></h1>
+                    </div>
+                    <div class="grid-2">
+                        <p class="introduction">Comment améliorer l’expérience utilisateur d'un parcours d'inscription à une messagerie.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section section-article">
             <div class="container">
-
-                <div class="main-article-container">
-                    <div class="nav-article-container">
+                <div class="article-container">
+                    <div class=" grid-1">
                         <nav class="nav-article">
-                            <div class="title">Sommaire&nbsp;:</div>
-                            <ol class="list">
-                                <li class="list-item"><a class="link" href="#page-d-accueil">La page d'accueil</a></li>
-                                <li class="list-item"><a class="link" href="#parcours-inscription">Le parcours d’inscription</a></li>
-                                <li class="list-item"><a class="link" href="#creation-compte">La création d'un compte</a></li>
+                            <div class="title">Sommaire</div>
+                            <ol class="nav-liste-link">
+                                <li><a href="#page-d-accueil" class="link nav-article-link">La page d'accueil</a></li>
+                                <li><a href="#parcours-inscription" class="link nav-article-link">Le parcours d’inscription</a></li>
+                                <li><a href="#creation-compte" class="link nav-article-link">La création d'un compte</a></li>
                             </ol>
                         </nav>
                     </div>
 
-                    <article class="article">
+                    <article class="article grid-2">
 
-                        <p class="introduction">Après une courte introduction à l'étude de cas, nous aborderons successivement l'analyse de la page d'accueil, le parcours d'inscription à la messagerie puis la création d'un compte. Pour chacun de ces éléments nous compléterons notre analyse par des propositions d'amélioration.</p>
+                        <p class="introduction-article">Après une courte introduction à l'étude de cas, nous aborderons successivement l'analyse de la page d'accueil, le parcours d'inscription à la messagerie puis la création d'un compte. Pour chacun de ces éléments nous compléterons notre analyse par des propositions d'amélioration.</p>
 
                         <hr>
 
-                        <p>Seriez-vous d’accord pour que la Poste lise les courriers que vous envoyez et ouvre ceux que vous recevez&nbsp;?</p>
+                       <p>Seriez-vous d’accord pour que la Poste lise les courriers que vous envoyez et ouvre ceux que vous recevez&nbsp;?</p>
 
                         <p>Le capitalisme de surveillance a fait émerger de nombreuses messageries électroniques exploitant nos données personnelles alors que la confidentialité de nos correspondances privées reste une préoccupation de premier ordre.</p>
 
@@ -77,21 +78,16 @@
 
                         <p>Prenons l’exemple du parcours d’inscription classique depuis <a href="https://www.mailo.com" class="link" target="_blank">la page d’accueil</a>.</p>
 
-                        <figure class="figure">
+                       
+                           <figure class="figure">
                             <picture class="picture">
-                                <img sizes="
-                                            (min-width: 1100px) 1305px,
-                                            (min-width: 641px) 1280px,
-                                            (max-width: 640px) 750px,
-                                            100vw" srcset="
-                                             ../images/mailo-small.png 750w,
-                                             ../images/mailo-medium.png 1280w,
-                                             ../images/mailo-large.png 1305w" src="../images/greenpeace-large.png" alt="Capture écran de la page de d'accueil de Mailo, une messagerie web qui respecte notre vie privée" loading="lazy">
+                                <source srcset="../images-ok/mailo-small.png" media="(orientation: portrait)">
+                                <img src="../images-ok/mailo-medium.png" alt="Capture écran de la page de d'accueil de Mailo, une messagerie web qui respecte notre vie privée" loading="lazy">
                             </picture>
 
                             <figcaption class="legende">Partie haute de la page d'accueil de Mailo &ndash; 2020.</figcaption>
                         </figure>
-
+                       
                         <br>
 
                         <p class="first-letter">La page d'accueil est composée de plusieurs sections. Chaque section développe un avantage de la solution et utilise des éléments distincts en ce sens : titres bien identifiables, paragraphes courts, illustrations composées de dessins simples et colorés sur le thème du courrier&nbsp;…</p>
@@ -113,7 +109,8 @@
                                 <div class="accordion-content">
 
                                     <figure class="figure">
-                                        <img style="max-width: 370px;" src="../images/mailo-small.png" alt="Capture écran de la page d'accueil de Mailo sur mobile" loading="lazy">
+                                        <img style="max-width: 370px;" src="../images-ok/mailo-small.png" alt="Capture écran de la page d'accueil de Mailo sur mobile" loading="lazy">
+                                        
                                         <figcaption class="legende">Page d'accueil de Mailo sur mobile &ndash; 2020 <br> Le bouton «&nbsp;S’inscrire&nbsp;» est directement accessible.</figcaption>
                                     </figure>
 
@@ -155,7 +152,8 @@
                         <p>L’intitulé «&nbsp;S’inscrire&nbsp;» apparaît également sous forme de lien hypertexte dans le menu, tout en haut du site.</p>
 
                         <figure class="figure">
-                            <img style="max-width: 370px;" src="../images/mailo-menu.png" alt="Zoom sur le menu de Mailo" loading="lazy">
+                            <img style="max-width: 370px;" src="../images-ok/mailo-menu.png" alt="Zoom sur le menu de Mailo" loading="lazy">
+                            
                             <figcaption class="legende">Zoom sur le menu de Mailo avec le lien «&nbsp;S’inscrire&nbsp;».</figcaption>
                         </figure>
 
@@ -176,8 +174,9 @@
                         <p>Voici le rendu de la page d'accueil avec les modifications des boutons en bleu et de l'intitulé du lien du menu. Ces changements doivent être testés pour en mesurer l'efficacité.</p>
 
                         <figure class="figure">
-                            <img src="../images/mailo-redesign-accueil.png" alt="Redesign de la page de la page d'accueil de Mailo" loading="lazy">
-                            <figcaption class="legende">Redesign de la page d'accueil de Mailo avec les propositions d’amélioration. <br><a href="../images/mailo-redesign-accueil.png" class="link" target="_blank" rel="nofollow">Voir cette image dans un nouvel onglet</a></figcaption>
+                            <img src="../images-ok/mailo-redesign-accueil.png" alt="Redesign de la page de la page d'accueil de Mailo" loading="lazy">
+                            
+                            <figcaption class="legende">Redesign de la page d'accueil de Mailo avec les propositions d’amélioration. <br><a href="../images-ok/mailo-redesign-accueil.png" class="link" target="_blank" rel="nofollow">Voir cette image dans un nouvel onglet</a></figcaption>
                         </figure>
 
                         <h2 id="parcours-inscription">Le parcours d’inscription</h2>
@@ -194,10 +193,10 @@
                             <div class="accordion-item">
                                 <input type="checkbox" name="panel" id="panel-2">
                                 <label for="panel-2"><span class="label-title">Page de Création d'un compte Mailo</span></label>
+                                
                                 <div class="accordion-content">
-
                                     <figure class="figure">
-                                        <img src="../images/mailo-creation-compte.png" alt="Capture écran de la page de Création d'un compte Mailo" loading="lazy">
+                                        <img src="../images-ok/mailo-creation-compte.png" alt="Capture écran de la page de Création d'un compte Mailo" loading="lazy">
 
                                         <figcaption class="legende">Page de Création d'un compte Mailo &ndash; 2020</figcaption>
                                     </figure>
@@ -226,7 +225,7 @@
                         <p>Dans tout <strong>processus de persuasion</strong>, les images sont utilisées pour influencer le jugement des visiteurs en faveur de l'objectif final : ici <strong>la conversion</strong>.</p>
 
                         <figure class="figure">
-                            <img src="../images/mailo-redesign-creation-compte-01.png" alt="Proposition graphique de la zone d'accueil de la page de création d'un compte Mailo" loading="lazy">
+                            <img src="../images-ok/mailo-redesign-creation-compte-01.png" alt="Proposition graphique de la zone d'accueil de la page de création d'un compte Mailo" loading="lazy">
 
                             <figcaption class="legende">Redesign de la zone d'accueil avec une image du webmail.</figcaption>
                         </figure>
@@ -250,7 +249,7 @@
                         <p>Dans notre exemple, remplacer l'intitulé initial «&nbsp;Mailo Premium&nbsp;» par «&nbsp;Choisir un pack Mailo Premium&nbsp;» laisse sous-entendre de manière plus explicite qu'un choix sera demandé par la suite et constitue, en le cliquant, la poursuite d'un engagement.</p>
 
                         <figure class="figure">
-                            <img src="../images/mailo-redesign-creation-compte-02.png" alt="Proposition graphique de la zone d'accueil de la page de création d'un compte Mailo" loading="lazy">
+                            <img src="../images-ok/mailo-redesign-creation-compte-02.png" alt="Proposition graphique de la zone d'accueil de la page de création d'un compte Mailo" loading="lazy">
 
                             <figcaption class="legende">Redesign de la zone permettant de choisir entre les deux offres Mailo.</figcaption>
                         </figure>
@@ -263,7 +262,7 @@
 
                         <p>Le remède&nbsp;:</p>
 
-                        <ul class="liste-puce">
+                        <ul>
                             <li><strong>Organiser les informations par catégorie</strong>&nbsp;; c'est-à-dire, classer les éléments en fonction de leur similarité.</li>
                             <li><strong>Utiliser <a href="https://fr.wikipedia.org/wiki/Effet_de_primauté" class="link" target="_blank" title="Lire la définition de l'effet de primauté sur Wikipédia">l’effet de position sérielle</strong></a> (ou de primauté) pour la mémorisation. Classement par ordre d'importance.</li>
                             <li><strong>Réduire le rapport Signal&nbsp;/&nbsp;Bruit</strong>. Enlever tous les éléments graphiques non indispensables comme les traits du tableau.</li>
@@ -275,7 +274,7 @@
                         <p>Devant le nombre important de termes et pour ne pas surcharger la page, on préfèrera un lexique plutôt qu'une bulle d'aide, tooltip et autres&nbsp;…</p>
 
                         <figure class="figure">
-                            <img src="../images/mailo-redesign-creation-compte-03.png" alt="Proposition graphique de la zone d'accueil de la page de création d'un compte Mailo" loading="lazy">
+                            <img src="../images-ok/mailo-redesign-creation-compte-03.png" alt="Proposition graphique de la zone d'accueil de la page de création d'un compte Mailo" loading="lazy">
 
                             <figcaption class="legende">Redesign de la liste des fonctionnalités du webmail</figcaption>
                         </figure>
@@ -293,7 +292,7 @@
                         <p>En général, les FAQ régulièrement mises à jour répondent à la très grande majorité des interrogations et évitent le travail chronophage de devoir répondre manuellement et de manière répétitive aux mêmes questions par mails.</p>
 
                         <figure class="figure">
-                            <img src="../images/mailo-redesign-creation-compte-04.png" alt="Proposition graphique de la zone d'accueil de la page de création d'un compte Mailo" loading="lazy">
+                            <img src="../images-ok/mailo-redesign-creation-compte-04.png" alt="Proposition graphique de la zone d'accueil de la page de création d'un compte Mailo" loading="lazy">
 
                             <figcaption class="legende">Design de la FAQ</figcaption>
                         </figure>
@@ -305,9 +304,9 @@
                         <p>Il reviendra aux spécialistes des messageries d'en valider la pertinence.</p>
 
                         <figure class="figure">
-                            <img src="../images/mailo-redesign-parcours-inscription.png" alt="Proposition graphique de l'interface du parcours d'inscription Mailo" loading="lazy">
+                            <img src="../images-ok/mailo-redesign-parcours-inscription.png" alt="Proposition graphique de l'interface du parcours d'inscription Mailo" loading="lazy">
 
-                            <figcaption class="legende">Redesign de l'interface du parcours d'inscription.<br><a href="../images/mailo-redesign-parcours-inscription.png" class="link" target="_blank" rel="nofollow">Voir cette image en taille réelle</a></figcaption>
+                            <figcaption class="legende">Redesign de l'interface du parcours d'inscription.<br><a href="../images-ok/mailo-redesign-parcours-inscription.png" class="link" target="_blank" rel="nofollow">Voir cette image en taille réelle</a></figcaption>
                         </figure>
 
 
@@ -324,7 +323,7 @@
                                 <div class="accordion-content">
 
                                     <figure class="figure">
-                                        <img src="../images/mailo-interstitielle-creation-compte.png" alt="Capture écran de la page interstitielle avant la création d'un compte Mailo" loading="lazy">
+                                        <img src="../images-ok/mailo-interstitielle-creation-compte.png" alt="Capture écran de la page interstitielle avant la création d'un compte Mailo" loading="lazy">
 
                                         <figcaption class="legende">Page interstitielle avant la création d'un compte &ndash; 2020</figcaption>
                                     </figure>
@@ -363,7 +362,7 @@
                                 <div class="accordion-content">
 
                                     <figure class="figure">
-                                        <img src="../images/mailo-encart-information.png" alt="Capture écran d'un encart d'information" loading="lazy">
+                                        <img src="../images-ok/mailo-encart-information.png" alt="Capture écran d'un encart d'information" loading="lazy">
 
                                         <figcaption class="legende">Encart d'information qui évoque faussement une erreur &ndash; 2020</figcaption>
                                     </figure>
@@ -396,9 +395,9 @@
                         <p>En tenant compte des remarques précédemment émises, voici ce à quoi pourrait être l'interface de création de compte.</p>
 
                         <figure class="figure">
-                            <img src="../images/mailo-redesign-creation-compte.png" alt="Proposition graphique de la page de création d'un compte Mailo" loading="lazy">
+                            <img src="../images-ok/mailo-redesign-creation-compte.png" alt="Proposition graphique de la page de création d'un compte Mailo" loading="lazy">
 
-                            <figcaption class="legende">Redesign de la page de création d'un compte Mailo<br><a href="../images/mailo-redesign-creation-compte.png" class="link" target="_blank" rel="nofollow">Voir cette image en taille réelle</a></figcaption>
+                            <figcaption class="legende">Redesign de la page de création d'un compte Mailo<br><a href="../images-ok/mailo-redesign-creation-compte.png" class="link" target="_blank" rel="nofollow">Voir cette image en taille réelle</a></figcaption>
                         </figure>
 
                         <hr>
@@ -409,42 +408,38 @@
 
                     </article>
                 </div>
-
             </div>
         </section>
 
-        <div class="top-container">
+        <div class="scroll-top-container">
             <a href="#top" class="link">Revenir au début de l'article</a>
         </div>
 
-        <aside class="section histoires">
+        <section class="section section-collection">
             <div class="container">
-                <div class="container-block">
-                    <div class="next">Lecture suivante&nbsp;...</div>
 
-                    <ul class="list-container">
-                        <li class="article-container">
-                            <a href="../histoires/comment-ameliorer-l-experience-utilisateur-des-pages-de-dons.html" class="article-link">
-                                <div class="content-block">
-                                    <span class="categorie">Expérience utilisateur <span class="date">2020</span></span>
-                                    <span class="title-n3">Comment améliorer l'expérience utilisateur des pages de dons&nbsp;; l'exemple de Greenpeace.</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </aside>
-
-        <section class="section contact">
-            <div class="contact-block">
-                hugo&nbsp;[at]&nbsp;animalsauvage.fr
+                <ul class="collection-container">
+                    <li>
+                        <span class="lecture">Lecture suivante&nbsp;...</span>
+                    </li>
+                    <li>
+                        <a href="../histoires-ok/comment-ameliorer-l-experience-utilisateur-des-pages-de-dons.html" class="collection-link">
+                            <div class="sub-title">Expérience utilisateur <time class="date" datetime="2020">2020</time></div>
+                            <div class="title">Comment améliorer l'expérience utilisateur des pages de dons&nbsp;; l'exemple de Greenpeace.</div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
+
+        <section class="section-contact">
+            <span>hugo&nbsp;[at]&nbsp;animalsauvage.fr</span>
+        </section>
+
     </main>
 
     <footer class="footer">
-        <img class="item-1" src="../images/as.svg" alt="Logo d'animal sauvage" width="34" height="34">
+        <img class="item-1" src="../images-ok/as.svg" alt="Logo d'animal sauvage" width="34" height="34">
         <a href="https://www.linkedin.com/company/animal-sauvage/" class="link item-2" target="_blank">LinkedIn</a>
         <a href="https://www.instagram.com/animal.sauvage/" class="link item-3" target="_blank">Instagram</a>
         <a href="../faq.html" class="link item-4">FAQ</a>
