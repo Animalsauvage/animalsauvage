@@ -2021,14 +2021,88 @@ input[name="panel"]:checked ~ .accordion-content {
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
+    gap: var(--dim4);
     width: 60%;
 }
 
 .arguments-link-container .illustration {
+    aspect-ratio: 16/9;
+    /*
     aspect-ratio: 1/1;
     width: calc(100% /3);
     max-width: calc((100% - (var(--dim4) * 2)) / 3);
+*/
     /* équation du 1er degré : pour donner la même largeur que les autres illustrations */
+}
+
+.illu-1 {
+    background-image: url(../images-ok/tigre.png),
+        radial-gradient(at 85% 21%, hsl(104.04deg 52.67% 50.96%) 0px, transparent 50%),
+        radial-gradient(at 82% 56%, hsl(42.08deg 75.57% 47.59%) 0px, transparent 50%),
+        radial-gradient(at 44% 83%, hsl(109.52deg 28.01% 23.93%) 0px, transparent 50%),
+        radial-gradient(at 66% 68%, hsl(141.34deg 47.81% 58.4%) 0px, transparent 50%),
+        radial-gradient(at 44% 44%, hsl(0deg 71.26% 44.33%) 0px, transparent 50%),
+        radial-gradient(at 22% 82%, hsl(214.52deg 64.02% 41.45%) 0px, transparent 50%),
+        radial-gradient(at 89% 28%, hsl(237.65deg 48.05% 24.95%) 0px, transparent 50%);
+    background-blend-mode: hard-light;
+    background-position: center center;
+    background-size: cover;
+}
+
+.illu-2 {
+    background-image: url(../images-ok/fougeres.png),
+        radial-gradient(at 91% 67%, hsl(82deg 61.71% 50.25%) 0px, transparent 50%),
+        radial-gradient(at 78% 21%, hsl(143deg 46.44% 39.17%) 0px, transparent 50%),
+        radial-gradient(at 34% 77%, hsla(345, 92%, 71%, 1) 0px, transparent 50%),
+        radial-gradient(at 1% 90%, hsl(24deg 34.52% 28.44%) 0px, transparent 50%),
+        radial-gradient(at 35% 44%, hsl(324deg 20.6% 47.89%) 0px, transparent 50%),
+        radial-gradient(at 93% 33%, hsl(176deg 24.08% 23.36%) 0px, transparent 50%),
+        radial-gradient(at 52% 45%, hsl(129.58deg 70.01% 41.77%) 0px, transparent 50%);
+    background-blend-mode: hard-light;
+    background-position: center center;
+    background-size: cover;
+}
+
+.illu-3 {
+    background-image: url(../images/lionnes.png),
+        radial-gradient(at 85% 21%, hsl(227.36deg 76% 53%) 0px, transparent 50%),
+        radial-gradient(at 82% 56%, hsl(324.91deg 61.68% 39.43%) 0px, transparent 50%),
+        radial-gradient(at 44% 83%, hsl(109.52deg 70.2% 40.61%) 0px, transparent 50%),
+        radial-gradient(at 66% 68%, hsl(141.34deg 48.49% 51.98%) 0px, transparent 50%),
+        radial-gradient(at 44% 44%, hsl(118.52deg 69.84% 45.61%) 0px, transparent 50%),
+        radial-gradient(at 22% 82%, hsl(341deg 61.8% 49.64%) 0px, transparent 50%),
+        radial-gradient(at 89% 28%, hsl(135deg 72.79% 48.08%) 0px, transparent 50%);
+    background-blend-mode: hard-light;
+    background-position: center center;
+    background-size: cover;
+}
+
+.illu-4 {
+    background-image: url(../images-ok/loup.png),
+        radial-gradient(at 24% 34%, hsla(131, 64%, 78%, 1) 0px, transparent 50%),
+        radial-gradient(at 93% 11%, hsla(148, 91%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 10%, hsla(291, 95%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 5%, hsla(35, 73%, 65%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 74%, hsla(354, 68%, 79%, 1) 0px, transparent 50%),
+        radial-gradient(at 98% 95%, hsla(97, 69%, 72%, 1) 0px, transparent 50%),
+        radial-gradient(at 48% 70%, hsla(122, 70%, 73%, 1) 0px, transparent 50%);
+    background-blend-mode: darken;
+    background-position: center center;
+    background-size: cover;
+}
+
+.illu-5 {
+    background-image: url(../images-ok/leopard.png),
+        radial-gradient(at 34% 45%, hsla(153, 66%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 33% 56%, hsl(0deg 64.09% 61.55%) 0px, transparent 50%),
+        radial-gradient(at 29% 80%, hsl(34.38deg 62.28% 41.27%) 0px, transparent 50%),
+        radial-gradient(at 2% 44%, hsla(336, 89%, 61%, 1) 0px, transparent 50%),
+        radial-gradient(at 62% 42%, hsla(21, 68%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 21% 59%, hsla(256, 69%, 63%, 1) 0px, transparent 50%),
+        radial-gradient(at 81% 78%, hsla(32, 93%, 73%, 1) 0px, transparent 50%);
+    background-blend-mode: darken;
+    background-position: center center;
+    background-size: cover;
 }
 
 .arguments-link-container .liste {
@@ -2040,7 +2114,6 @@ input[name="panel"]:checked ~ .accordion-content {
 .arguments-link-container .liste li::before {
     content: "— ";
 }
-
 
 /* 880px */
 @media screen and (max-width: 55em) {
@@ -2077,6 +2150,10 @@ input[name="panel"]:checked ~ .accordion-content {
 
     .arguments-link-container .liste {
         font-size: var(--regular);
+    }
+
+    .arguments-link-container .illustration {
+        aspect-ratio: 9/16;
     }
 }
 
