@@ -442,7 +442,7 @@ strong {
     overflow: hidden;
     display: inline-block;
     min-width: 200px;
-    font-size: var(--dim3);
+    font-size: var(--regular);
     font-weight: 400;
     color: var(--color1);
     text-align: center;
@@ -1763,9 +1763,9 @@ input[name="panel"]:checked ~ .accordion-content {
     flex-direction: row;
     align-items: center;
     gap: var(--dim2);
-    font-size: var(--dim3);
+    font-size: var(--regular);
     font-weight: 600;
-    padding: var(--dim1) var(--dim3) var(--dim1) var(--dim2);
+    padding: var(--dim1) var(--dim4) var(--dim1) var(--dim2);
     border-radius: var(--dim5);
     background-color: var(--color3);
 }
@@ -1783,7 +1783,7 @@ input[name="panel"]:checked ~ .accordion-content {
     align-items: baseline;
     justify-content: flex-start;
     width: 100%;
-    font-size: var(--dim3);
+    font-size: var(--regular);
     gap: var(--dim4);
     padding: var(--dim4) 0 0;
 }
@@ -1792,6 +1792,10 @@ input[name="panel"]:checked ~ .accordion-content {
     .contact-block {
         flex-direction: column-reverse;
         align-items: flex-start;
+    }
+
+    .capsule {
+        padding: var(--dim1) var(--dim3) var(--dim1) var(--dim2);
     }
 }
 
@@ -1991,6 +1995,10 @@ input[name="panel"]:checked ~ .accordion-content {
     border-radius: var(--dim1);
 }
 
+.argument-block .illustration svg {
+    filter: opacity(0.8);
+}
+
 .argument-block .titre-h2,
 .arguments-link-container .titre-h2 {
     color: var(--text);
@@ -2009,11 +2017,11 @@ input[name="panel"]:checked ~ .accordion-content {
     justify-content: space-between;
     width: 100%;
     padding: var(--dim6) 0;
-    border-top: 1px solid var(--color2);
+    border-top: 1px solid var(--color3);
 }
 
 .arguments-link-container:last-child {
-    border-bottom: 1px solid var(--color2);
+    border-bottom: 1px solid var(--color3);
 }
 
 .arguments-link-container .link-block {
