@@ -1614,6 +1614,11 @@ input[name="panel"]:checked ~ .accordion-content {
     padding-bottom: var(--dim8);
 }
 
+.page-faq .hyphens {
+    hyphens: manual;
+}
+
+
 /* 880px */
 @media screen and (max-width: 55em) {
     .page-faq .section-article {
