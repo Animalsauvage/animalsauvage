@@ -1342,6 +1342,7 @@ input[name="panel"]:checked ~ .accordion-content {
     justify-content: center;
     width: 100%;
     padding: var(--dim9) var(--dim3);
+    background-color: var(--color2);
     background-image: url(../images-ok/montagne.png), linear-gradient(0deg, rgba(51, 59, 44, 1) 0%, rgba(69, 80, 60, 1) 35%, rgb(249 250 249) 100%);
     background-position: center center;
     background-size: cover;
@@ -1490,6 +1491,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
 .page-expertises .section-article:not(.section-bg) {
     padding-bottom: var(--dim8);
+    background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
 }
 
 
@@ -1564,6 +1566,7 @@ input[name="panel"]:checked ~ .accordion-content {
 ****************************************/
 .page-histoires .section-collection {
     padding-bottom: var(--dim8);
+    background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
 }
 
 /* 880px */
@@ -1580,6 +1583,7 @@ input[name="panel"]:checked ~ .accordion-content {
 ****************************************/
 .page-idees .section-collection {
     padding-bottom: var(--dim8);
+    background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
 }
 
 /* 880px */
@@ -1760,7 +1764,7 @@ input[name="panel"]:checked ~ .accordion-content {
     gap: var(--dim2);
     font-size: var(--dim3);
     font-weight: 600;
-    padding: var(--dim1) var(--dim4) var(--dim1) var(--dim2);
+    padding: var(--dim1) var(--dim3) var(--dim1) var(--dim2);
     border-radius: var(--dim5);
     background-color: var(--color3);
 }
@@ -1797,6 +1801,121 @@ input[name="panel"]:checked ~ .accordion-content {
 .page-accueil .section-collection {
     background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
 }
+
+
+/* Section carrousel */
+.section-carrousel {
+    background-color: var(--color3);
+    background-image:
+        url(../images-ok/fougeres.png),
+        radial-gradient(at 91% 67%, hsl(82deg 61.71% 50.25%) 0px, transparent 50%),
+        radial-gradient(at 78% 21%, hsl(143deg 46.44% 39.17%) 0px, transparent 50%),
+        radial-gradient(at 34% 77%, hsla(345, 92%, 71%, 1) 0px, transparent 50%),
+        radial-gradient(at 1% 90%, hsl(24deg 34.52% 28.44%) 0px, transparent 50%),
+        radial-gradient(at 35% 44%, hsl(324deg 20.6% 47.89%) 0px, transparent 50%),
+        radial-gradient(at 93% 33%, hsl(176deg 24.08% 23.36%) 0px, transparent 50%),
+        radial-gradient(at 52% 45%, hsl(129.58deg 70.01% 41.77%) 0px, transparent 50%);
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: hard-light;
+    background-attachment: fixed;
+    padding: 0;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 70vh;
+    text-align: center;
+    background-color: rgb(86 100 75 / 45%);
+    backdrop-filter: blur(6px);
+    padding: var(--dim8) var(--dim6);
+}
+
+@media screen and (max-width: 39.9375em) {
+    .carrousel {
+        background-attachment: scroll;
+    }
+
+    .slider {
+        height: 90vh;
+        padding: var(--dim3);
+    }
+}
+
+.slides {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: var(--dim2);
+}
+
+.slides::-webkit-scrollbar {
+    height: var(--dim2);
+}
+
+.slides::-webkit-scrollbar-track {
+    background: rgba(249, 250, 249, 0.5);
+    border-radius: var(--dim1);
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: rgba(209, 214, 206, 0.8);
+    border-radius: var(--dim1);
+}
+
+.slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: var(--color1);
+    border-radius: var(--dim4);
+    margin: var(--dim3) 0;
+    padding: var(--dim4);
+    scroll-margin-top: 2em;
+    scroll-snap-align: center;
+    transform-origin: center center;
+    transform: scale(1);
+}
+
+.slide-text {
+    display: inline;
+    width: 100%;
+    max-width: 981px;
+    font-size: clamp(1.3rem, 2vw, 2.125rem);
+    font-variation-settings: "wght"580, "CASL"0.8, "slnt"-10;
+    text-align: center;
+    color: var(--color7);
+    padding: var(--dim6) var(--dim4);
+}
+
+.slide-text em {
+    color: var(--text);
+}
+
+@media screen and (max-width: 39.9375em) {
+    .slide {
+        margin: 0;
+        padding: var(--dim4) var(--dim2);
+    }
+
+    .slide-text {
+        padding: var(--dim2);
+    }
+}
+
+
 
 
 /* Section texte animé */
