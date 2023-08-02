@@ -1801,12 +1801,13 @@ input[name="panel"]:checked ~ .accordion-content {
 
 .page-accueil .section-collection {
     background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
-        padding: 0 var(--dim3) var(--dim6);
+    padding: 0 var(--dim3) var(--dim6);
 }
 
 
 /* Section carrousel */
 .section-carrousel {
+    width: 100%;
     background-color: var(--color3);
     background-image:
         url(../images-ok/fougeres.png),
@@ -1835,7 +1836,7 @@ input[name="panel"]:checked ~ .accordion-content {
     padding: var(--dim8) var(--dim6);
 }
 
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 40em) {
     .carrousel {
         background-attachment: scroll;
     }
@@ -1957,7 +1958,7 @@ input[name="panel"]:checked ~ .accordion-content {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: var(--dim6) var(--dim3) var(--dim4);
+    padding: var(--dim6) 0 var(--dim4);
 }
 
 .arguments-container .title-block .titre-h1 {
@@ -2001,7 +2002,6 @@ input[name="panel"]:checked ~ .accordion-content {
     font-size: var(--regular);
 }
 
-
 .arguments-link-container {
     display: flex;
     flex-direction: row;
@@ -2011,6 +2011,7 @@ input[name="panel"]:checked ~ .accordion-content {
     padding: var(--dim6) 0;
     border-top: 1px solid var(--color2);
 }
+
 .arguments-link-container:last-child {
     border-bottom: 1px solid var(--color2);
 }
@@ -2024,12 +2025,11 @@ input[name="panel"]:checked ~ .accordion-content {
 }
 
 .arguments-link-container .illustration {
-    aspect-ratio: 2/1;
+    aspect-ratio: 1/1;
     width: calc(100% /3);
     max-width: calc((100% - (var(--dim4) * 2)) / 3);
     /* équation du 1er degré : pour donner la même largeur que les autres illustrations */
 }
-
 
 .arguments-link-container .liste {
     padding-bottom: var(--dim4);
@@ -2042,6 +2042,43 @@ input[name="panel"]:checked ~ .accordion-content {
 }
 
 
+/* 880px */
+@media screen and (max-width: 55em) {
+
+    .arguments-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr;
+        grid-template-areas:
+            "grid-1"
+            "grid-2"
+            "grid-3"
+            "grid-4";
+        gap: var(--dim6);
+    }
+
+    .arguments-link-container {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--dim4);
+    }
+
+    .arguments-link-container .link-block,
+    .arguments-link-container .illustration {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .arguments-link-container .link-block {
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--dim4);
+    }
+
+    .arguments-link-container .liste {
+        font-size: var(--regular);
+    }
+}
 
 
 
