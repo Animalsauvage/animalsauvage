@@ -429,7 +429,7 @@ strong {
 }
 
 @media screen and (max-width: 40em) {
-    .link {
+    .link:not(.menu-link) {
         font-size: var(--regular);
     }
 }
@@ -1626,6 +1626,26 @@ input[name="panel"]:checked ~ .accordion-content {
 
 /* Page Accueil
 ****************************************/
+.page-accueil .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "grid-1 grid-1 grid-1"
+        "grid-2 grid-2 grid-3";
+}
+
+.page-accueil .hero-container .grid-1 {
+    grid-area: grid-1;
+}
+
+.page-accueil .hero-container .grid-2 {
+    grid-area: grid-2;
+}
+
+.page-accueil .hero-container .grid-3 {
+    grid-area: grid-3;
+}
 
 /* Titre principal */
 .titre-principal {
@@ -1719,12 +1739,12 @@ input[name="panel"]:checked ~ .accordion-content {
 
 .capsule-block {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: var(--dim3);
-    padding: var(--dim4) 0;
+    padding: 0 0 var(--dim5) var(--dim5);
 }
 
 .capsule {
@@ -1754,7 +1774,8 @@ input[name="panel"]:checked ~ .accordion-content {
     justify-content: flex-start;
     width: 100%;
     font-size: var(--dim3);
-    gap: var(--dim3);
+    gap: var(--dim4);
+    padding: var(--dim4) 0 0;
 }
 
 @media screen and (max-width: 40em) {
@@ -1764,12 +1785,9 @@ input[name="panel"]:checked ~ .accordion-content {
     }
 }
 
-
-
-
-
-
-
+.page-accueil .hero-container .introduction {
+    padding-right: var(--dim4);
+}
 
 .page-accueil .section-collection {
     background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
@@ -1849,6 +1867,23 @@ input[name="panel"]:checked ~ .accordion-content {
 
 
 
+/* 880px */
+@media screen and (max-width: 55em) {
+    .page-accueil .hero-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "grid-1"
+            "grid-3"
+            "grid-2";
+    }
+
+    .capsule-block {
+        flex-direction: row;
+        padding: 0 0 var(--dim5);
+    }
+}
 
 
 
