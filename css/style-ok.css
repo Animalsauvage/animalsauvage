@@ -1867,6 +1867,15 @@ input[name="panel"]:checked ~ .accordion-content {
 
 
 
+/* 380 */
+@media screen and (max-width: 23.75em) {
+    .titre-principal {
+        letter-spacing: -.2vw;
+        /* Ajustement esthétique */
+    }
+}
+
+
 /* 880px */
 @media screen and (max-width: 55em) {
     .page-accueil .hero-container {
