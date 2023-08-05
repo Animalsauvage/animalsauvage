@@ -99,33 +99,32 @@
                                 <circle cx="11" cy="11" r="2"></circle>
                             </svg>Conception</span>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <section class="section-galerie">
+        <section id="galerie" class="section-galerie">
             <div class="galerie-container">
-                <div class="tableau tableau-1 grid-1">
+                <div class="tableau anim-tableau-1 grid-1">
                     <img src="images-ok/section.png" alt="Illustration d'un wireframe représentant une section d'un site web" width="1443" height="1086" loading="lazy">
                 </div>
-                <div class="tableau tableau-2 grid-2">
+                <div class="tableau anim-tableau-2 grid-2">
                     <img src="images-ok/produit.png" alt="Illustration d'un wireframe représentant le début d'une page produit" width="1443" height="1086" loading="lazy">
                 </div>
 
-                <div class="tableau tableau-3 grid-3">
+                <div class="tableau anim-tableau-3 grid-3">
                     <img src="images-ok/recettes.png" alt="Illustration d'un wireframe représentant le système de filtre d'un site de recette" width="1443" height="1086" loading="lazy">
                 </div>
 
-                <div class="tableau tableau-4 grid-4">
+                <div class="tableau anim-tableau-4 grid-4">
                     <img src="images-ok/lp.png" alt="Illustration d'un wireframe représentant le début d'une landing page pour télécharger un livre blanc" width="1443" height="1086" loading="lazy">
                 </div>
 
-                <div class="tableau tableau-5 grid-5">
+                <div class="tableau anim-tableau-5 grid-5">
                     <img src="images-ok/paiement.png" alt="Illustration d'un wireframe représentant l'étape de paiement d'un tunnel de commande" width="1443" height="1086" loading="lazy">
                 </div>
 
-                <div class="tableau tableau-6 grid-6">
+                <div class="tableau anim-tableau-6 grid-6">
                     <img src="images-ok/article.png" alt="Illustration d'un wireframe représentant le début d'un article de blog" width="1443" height="1086" loading="lazy">
                 </div>
             </div>
@@ -181,7 +180,7 @@
                             </svg>
                         </div>
                         <h3 class="titre-h2">Je travaille où vous travaillez</h3>
-                        <p>Garder la concentration de l'équipe, échanger plus intelligemment, rester synchronisé&nbsp;; je travaille dans vos locaux ou à distance.</p>
+                        <p>Garder la concentration de l'équipe, échanger plus intelligemment, rester synchronisé&nbsp;— Je travaille dans vos locaux ou à distance.</p>
                     </div>
 
                     <div class="argument-block grid-4">
@@ -199,11 +198,6 @@
 
         <section class="section section-arguments">
             <div class="container">
-
-
-
-
-
                 <div class="arguments-link-container">
                     <a href="expertises.html" class="link-block">
                         <div class="part-1">
@@ -309,6 +303,25 @@
         <a href="faq.html" class="link item-4">FAQ</a>
         <a href="mentions-legales.html" class="link item-5">Mentions légales</a>
     </footer>
+
+    <script>
+        // Code JavaScript pour observer la section et ajouter la classe à body
+        const sectionGalerie = document.getElementById("galerie");
+        const pourcentageEntree = 30; // Pourcentage d'entrée dans le viewport
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.intersectionRatio >= pourcentageEntree / 100) {
+                    document.body.classList.add("actif");
+                }
+            });
+        }, {
+            threshold: [pourcentageEntree / 100], // Définir le seuil d'intersection
+        });
+
+        observer.observe(sectionGalerie);
+
+    </script>
 
 </body>
 

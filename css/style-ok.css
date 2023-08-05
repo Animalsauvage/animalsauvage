@@ -559,6 +559,15 @@ strong {
     .btn {
         width: 100%;
     }
+
+    .sub-title {
+        font-size: var(--dim2);
+        font-weight: 600;
+    }
+
+    .date {
+        font-size: var(--dim1);
+    }
 }
 
 
@@ -1297,7 +1306,7 @@ input[name="panel"]:checked ~ .accordion-content {
 .collection-link .title {
     display: block;
     width: 100%;
-    font-size: clamp(var(--dim4), 3vw, var(--dim5));
+    font-size: clamp(var(--dim3), 2.5vw, var(--dim5));
     font-weight: 600;
     color: var(--second1);
     text-wrap: balance;
@@ -1811,9 +1820,10 @@ input[name="panel"]:checked ~ .accordion-content {
 
 /* Section galerie */
 .section-galerie {
+    overflow: hidden;
     width: 100%;
-    background: linear-gradient(180deg, rgba(236,238,235,1) 0%, rgba(236,238,235,1) 35%, rgba(249,250,249,1) 100%);
-
+    padding-bottom: var(--dim6);
+    background: linear-gradient(180deg, rgba(236, 238, 235, 1) 0%, rgba(236, 238, 235, 1) 35%, rgba(249, 250, 249, 1) 100%);
 }
 
 .galerie-container {
@@ -1825,7 +1835,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
 .section-galerie .grid-1 {
     grid-column: 1 / 7;
-    grid-row: 1 / 5;    
+    grid-row: 1 / 5;
 }
 
 .section-galerie .grid-2 {
@@ -1856,9 +1866,53 @@ input[name="panel"]:checked ~ .accordion-content {
 .tableau {
     display: block;
     width: 100%;
-    min-width: 10px;
     height: 100%;
-    min-height: 10px;
+    opacity: 0;
+    transform: translate3d(50%, 0, 0);
+    transition:
+        opacity 1s,
+        transform 2s;
+}
+
+.actif .tableau {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.anim-tableau-1 {
+    transition-delay: 50ms;
+    transition-timing-function: ease-in-out;
+}
+
+.anim-tableau-2 {
+    transition-delay: 150ms;
+    transition-timing-function: ease-in-out;
+}
+
+.anim-tableau-3 {
+    transition-delay: 100ms;
+    transition-timing-function: ease-in-out;
+}
+
+.anim-tableau-4 {
+    transition-delay: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+.anim-tableau-5 {
+    transition-delay: 220ms;
+    transition-timing-function: ease-in-out;
+}
+
+.anim-tableau-6 {
+    transition-delay: 350ms;
+    transition-timing-function: ease-in-out;
+}
+
+@media screen and (max-width: 40em) {
+    .section-galerie {
+        display: none;
+    }
 }
 
 
@@ -2303,8 +2357,12 @@ input[name="panel"]:checked ~ .accordion-content {
 }
 
 @media screen and (max-width: 40em) {
+    .section-text-animation {
+        padding: var(--dim5) 0;
+    }
+
     .anim-text-block span {
-        font-size: 2rem;
+        font-size: var(--dim3);
     }
 }
 
