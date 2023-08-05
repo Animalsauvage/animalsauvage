@@ -1809,6 +1809,59 @@ input[name="panel"]:checked ~ .accordion-content {
 }
 
 
+/* Section galerie */
+.section-galerie {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(236,238,235,1) 0%, rgba(236,238,235,1) 35%, rgba(249,250,249,1) 100%);
+
+}
+
+.galerie-container {
+    display: grid;
+    grid-template-columns: repeat(22, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    width: 100%;
+}
+
+.section-galerie .grid-1 {
+    grid-column: 1 / 7;
+    grid-row: 1 / 5;    
+}
+
+.section-galerie .grid-2 {
+    grid-column: 7 / 13;
+    grid-row: 1 / 5;
+}
+
+.section-galerie .grid-3 {
+    grid-column: 13 / 19;
+    grid-row: 3 / 7;
+}
+
+.section-galerie .grid-4 {
+    grid-column: 5 / 11;
+    grid-row: 5 / 9;
+}
+
+.section-galerie .grid-5 {
+    grid-column: 11 / 17;
+    grid-row: 7 / 11;
+}
+
+.section-galerie .grid-6 {
+    grid-column: 17 / 23;
+    grid-row: 7 / 11;
+}
+
+.tableau {
+    display: block;
+    width: 100%;
+    min-width: 10px;
+    height: 100%;
+    min-height: 10px;
+}
+
+
 /* Section carrousel */
 .section-carrousel {
     width: 100%;
@@ -1931,7 +1984,6 @@ input[name="panel"]:checked ~ .accordion-content {
 .arguments-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    ;
     grid-template-rows: auto 1fr;
     grid-template-areas:
         "grid-1 grid-1 grid-1"
