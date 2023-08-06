@@ -1385,6 +1385,7 @@ input[name="panel"]:checked ~ .accordion-content {
     background-position: center center;
     background-size: cover;
     background-blend-mode: darken;
+    margin-bottom: -1px; /* Supprime un artéfact d'affichage */
 }
 
 .section-contact span {
