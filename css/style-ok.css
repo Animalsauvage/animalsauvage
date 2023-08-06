@@ -1837,7 +1837,7 @@ input[name="panel"]:checked ~ .accordion-content {
 .section-galerie {
     overflow: hidden;
     width: 100%;
-    padding-bottom: var(--dim6);
+    padding: var(--dim4) 0 var(--dim6);
     background: url(../images-ok/nnnoise.svg), linear-gradient(0deg, rgb(209 215 208) 0%, rgb(209 215 207) 35%, rgb(236 238 235) 100%);
 }
 
@@ -1883,7 +1883,6 @@ input[name="panel"]:checked ~ .accordion-content {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transform: translate3d(50%, 0, 0);
     transition:
         opacity 1s,
         transform 2s;
@@ -1892,34 +1891,41 @@ input[name="panel"]:checked ~ .accordion-content {
 .actif .tableau {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    filter: drop-shadow(2px 4px 20px rgba(0, 0, 0, .33));
 }
 
 .anim-tableau-1 {
-    transition-delay: 50ms;
+    transform: translate3d(-50%, 0, 0);
+    transition-delay: 200ms;
     transition-timing-function: ease-in-out;
 }
 
 .anim-tableau-2 {
-    transition-delay: 150ms;
+    transform: translate3d(-50%, 0, 0);
+    transition-delay: 50ms;
     transition-timing-function: ease-in-out;
 }
 
 .anim-tableau-3 {
+    transform: translate3d(0, -50%, 0);
     transition-delay: 100ms;
     transition-timing-function: ease-in-out;
 }
 
 .anim-tableau-4 {
+    transform: translate3d(0, 50%, 0);
     transition-delay: 200ms;
     transition-timing-function: ease-in-out;
 }
 
 .anim-tableau-5 {
+    transform: translate3d(50%, 0, 0);
     transition-delay: 220ms;
     transition-timing-function: ease-in-out;
 }
 
 .anim-tableau-6 {
+    transform: translate3d(50%, 0, 0);
     transition-delay: 350ms;
     transition-timing-function: ease-in-out;
 }
