@@ -2232,7 +2232,7 @@ input[name="panel"]:checked ~ .accordion-content {
         radial-gradient(at 89% 28%, hsl(135deg 72.79% 48.08%) 0px, transparent 50%);
     background-blend-mode: hard-light;
     background-position: center center;
-    background-size: cover;
+    background-size: 200%;
 }
 
 .illu-4 {
@@ -2278,7 +2278,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
     .arguments-container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
             "grid-1"
             "grid-2"
