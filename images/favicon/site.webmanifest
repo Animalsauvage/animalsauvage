@@ -1,6 +1,6 @@
 {
-    "name": "Animal",
-    "short_name": "Animal",
+    "name": "Animal Sauvage",
+    "short_name": "Animal Sauvage",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#2f3932",
-    "background_color": "#2f3932",
+    "theme_color": "#f9faf9",
+    "background_color": "#f9faf9",
     "display": "standalone"
 }
