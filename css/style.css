@@ -1350,7 +1350,7 @@ input[name="panel"]:checked ~ .accordion-content {
 .collection-link .illustration {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 30%;
     display: block;
     max-width: 800px;
     visibility: hidden;
@@ -1385,7 +1385,8 @@ input[name="panel"]:checked ~ .accordion-content {
     background-position: center center;
     background-size: cover;
     background-blend-mode: darken;
-    margin-bottom: -1px; /* Supprime un artéfact d'affichage */
+    margin-bottom: -1px;
+    /* Supprime un artéfact d'affichage */
 }
 
 .section-contact span {
@@ -1631,16 +1632,99 @@ input[name="panel"]:checked ~ .accordion-content {
 /* Page Idées
 ****************************************/
 .page-idees .section-collection {
-    padding-bottom: var(--dim8);
+    padding: var(--dim8) var(--dim3);
     background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
 }
 
 /* 880px */
 @media screen and (max-width: 55em) {
     .page-idees .section-collection {
+        padding-top: var(--dim7);
         padding-bottom: var(--dim7);
     }
 }
+
+
+
+.metadata-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--dim4) var(--dim5);
+    padding: var(--dim4) var(--dim3);
+}
+
+.metadata-list li {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.metadata-list .sub-title {
+    display: block;
+    font-size: var(--dim2);
+    color: var(--color7);
+    padding-bottom: var(--dim2);
+}
+
+.metadata-list .metadata {
+    display: block;
+    font-size: var(--reg);
+    font-weight: 500;
+    color: var(--text);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1655,6 +1739,11 @@ input[name="panel"]:checked ~ .accordion-content {
 @media screen and (max-width: 55em) {
     .page-mentions .section-collection {
         padding-bottom: var(--dim7);
+    }
+
+    .metadata-list {
+        display: flex;
+        flex-direction: row;
     }
 }
 
