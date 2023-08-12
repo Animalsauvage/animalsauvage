@@ -726,6 +726,25 @@ strong {
 
 
 
+/* Section image
+****************************************/
+.section-image {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    background-color: var(--second2);
+}
+
+.section-image .illustration {
+    width: 100%;
+    opacity: .85;
+    object-fit: cover;
+}
+
+
+
+
 /* Section article
 ****************************************/
 .section-article {
