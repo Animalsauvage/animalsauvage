@@ -107,6 +107,10 @@ font-variation-settings: "wght" 375, "MONO" 0.28;
     --color9: #45503C;
     --color10: #333B2C;
 
+    
+    --reveal-frame-background: transparent;
+    --reveal-placeholder-background : transparent;
+    --reveal-placeholder-color: #11150E;
 
     /* Espacement */
     /* 8 */
@@ -1700,11 +1704,33 @@ input[name="panel"]:checked ~ .accordion-content {
 }
 
 
+/*
 
 .iframe-container {
-    background-color: red;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 100%;
+    max-height: 450px;
     cursor: pointer;
 }
+.iframe-container .iframe {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 10px solid red;
+}
+
+.iframe-container.iframe-figma-website {
+    min-height: 450px;
+    background-image: url(../images/website-wireframe-placeholder.png), radial-gradient(at 85% 21%, hsl(104.04deg 52.67% 50.96%) 0px, transparent 50%), radial-gradient(at 82% 56%, hsl(42.08deg 75.57% 47.59%) 0px, transparent 50%), radial-gradient(at 44% 83%, hsl(109.52deg 28.01% 23.93%) 0px, transparent 50%), radial-gradient(at 66% 68%, hsl(141.34deg 47.81% 58.4%) 0px, transparent 50%), radial-gradient(at 44% 44%, hsl(0deg 71.26% 44.33%) 0px, transparent 50%), radial-gradient(at 22% 82%, hsl(214.52deg 64.02% 41.45%) 0px, transparent 50%), radial-gradient(at 89% 28%, hsl(237.65deg 48.05% 24.95%) 0px, transparent 50%);
+    background-blend-mode: hard-light;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .article .iframe-container .container {
     background-color: transparent;
 }
@@ -1714,15 +1740,25 @@ input[name="panel"]:checked ~ .accordion-content {
     color: var(--color10);
 }
 
+.article .iframe-container p,
 .article .iframe-container .placeholder p {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     color: var(--color10);
     margin: 0;
     padding: 0;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.83);
+    backdrop-filter: blur(6px);
 }
 
 
 
+*/
 
 
 
