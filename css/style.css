@@ -1701,11 +1701,17 @@ input[name="panel"]:checked ~ .accordion-content {
 
 
 
-.page-idees .placeholder {
+.iframe-container .placeholder {
     background-color: var(--color4);
     color: var(--color1);
 }
 
+.iframe-container p {
+    color: var(--color1);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
 
 
