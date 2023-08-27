@@ -1357,13 +1357,17 @@ input[name="panel"]:checked ~ .accordion-content {
     font-weight: 600;
     color: var(--second1);
     text-wrap: balance;
-    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-color: var(--color3);
+    text-underline-offset: 6px;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
 
 .collection-link:hover .title,
 .collection-link:focus .title {
     color: var(--second3);
+    text-decoration-color: var(--second3);
+    text-underline-offset: 4px;
 }
 
 .collection-link .illustration {
@@ -1798,7 +1802,7 @@ input[name="panel"]:checked ~ .accordion-content {
     grid-template-rows: auto auto;
     grid-template-areas:
         "grid-1 grid-1 grid-1"
-        "grid-2 grid-2 grid-3";
+        "grid-2 grid-2 .     ";
 }
 
 .page-accueil .hero-container .grid-1 {
@@ -1809,9 +1813,11 @@ input[name="panel"]:checked ~ .accordion-content {
     grid-area: grid-2;
 }
 
+/*
 .page-accueil .hero-container .grid-3 {
     grid-area: grid-3;
 }
+*/
 
 /* Titre principal */
 .titre-principal {
@@ -1910,12 +1916,13 @@ input[name="panel"]:checked ~ .accordion-content {
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: var(--dim3);
-    padding: 0 0 var(--dim5) var(--dim5);
+    padding: var(--dim6) 0 var(--dim5) var(--dim3);
 }
 
 .capsule {
     position: relative;
     display: inline-flex;
+    min-width: 200px;
     flex-direction: row;
     align-items: center;
     gap: var(--dim2);
