@@ -1640,7 +1640,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
 /* Page Idées
 ****************************************/
-.page-idees .section-collection {
+.page-idees .section-collection.special {
     padding: var(--dim8) var(--dim3);
     background: linear-gradient(0deg, rgba(236, 238, 235, 1) 0%, rgba(249, 250, 249, 1) 60%);
 }
@@ -1651,7 +1651,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
 /* 880px */
 @media screen and (max-width: 55em) {
-    .page-idees .section-collection {
+    .page-idees .section-collection.special {
         padding-top: var(--dim7);
         padding-bottom: var(--dim7);
     }
@@ -1692,6 +1692,7 @@ input[name="panel"]:checked ~ .accordion-content {
 
 .iframe-container {
     position: relative;
+    overflow: hidden;
     cursor: pointer;
     text-align: center;
     border: 1px solid var(--color3);
