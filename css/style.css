@@ -1709,13 +1709,14 @@ input[name="panel"]:checked ~ .accordion-content {
     cursor: pointer;
     text-align: center;
     border: 1px solid var(--color3);
+    margin-bottom: var(--dim4);
 }
 
 .article .iframe-container p {
     font-size: 1rem;
     line-height: 1.3809524rem;
     margin: 0;
-    padding: var(--dim2);
+    padding: var(--dim2) var(--dim4);
     max-width: 100%;
 }
 
