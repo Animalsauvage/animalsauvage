@@ -322,7 +322,7 @@ a {
 .titre-h1 {
     font-size: var(--dim5);
     font-weight: 700;
-    color: var(--text);
+    color: var(--base);
     text-wrap: balance;
 }
 
@@ -400,11 +400,13 @@ strong {
     text-decoration: none;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
     box-shadow: inset 0 -2px transparent;
+    border-bottom: 1px solid var(--base);
 }
 
 .menu-link {
     font-weight: 600;
     text-transform: uppercase;
+    border-color: transparent;
 }
 
 .menu-link::before {
@@ -425,10 +427,12 @@ strong {
 .link:focus {
     color: var(--color10);
     box-shadow: inset 0 -1.1ex 0 var(--second3);
+    border-bottom: 1px solid var(--second3);
 }
 
 .menu-link.actif-n1 {
     text-decoration: underline;
+    text-underline-offset: 6px;
 }
 
 .link[target=_blank]:after {
@@ -811,8 +815,9 @@ strong {
     position: relative;
     font-size: 4.2380952rem;
     font-weight: 700;
-    margin-top: 1.3809524rem;
-    margin-bottom: 2.7619048rem;
+    line-height: 1.2;
+    margin-bottom: 1.3809524rem;
+    margin-top: 2.7619048rem;
     text-wrap: balance;
 }
 
@@ -826,7 +831,8 @@ strong {
 
 .article h4 {
     font-size: 1.6190476rem;
-    margin-top: 1.3809524rem;    
+    margin-top: 1.3809524rem;
+    margin-bottom: 1rem;
     text-wrap: balance;
 }
 
@@ -906,7 +912,7 @@ strong {
 .article p {
     font-size: 1.125rem;
     margin-top: 1.3809524rem;
-    
+
     max-width: 580px;
 }
 
@@ -1337,7 +1343,7 @@ input[name="panel"]:checked ~ .accordion-content {
     color: var(--second1);
     text-wrap: balance;
     text-decoration-line: underline;
-    text-decoration-color: var(--color3);
+    text-decoration-color: var(--second1);
     text-underline-offset: 6px;
     transition: all .28s cubic-bezier(.87, 0, .13, 1);
 }
@@ -1441,6 +1447,7 @@ input[name="panel"]:checked ~ .accordion-content {
     font-size: 1rem;
     font-weight: 300;
     color: var(--color1);
+    border-color: transparent;
 }
 
 .footer .link[target=_blank]:after {
@@ -1830,6 +1837,7 @@ input[name="panel"]:checked ~ .accordion-content {
 .link-wrapper .link {
     font-size: inherit;
     font-weight: inherit;
+    border-color: transparent;
 }
 
 .img-wrapper {
@@ -1935,6 +1943,10 @@ input[name="panel"]:checked ~ .accordion-content {
     font-size: var(--regular);
     gap: var(--dim4);
     padding: var(--dim4) 0 0;
+}
+
+.contact-block .contact {
+    font-size: 1.125rem;
 }
 
 @media screen and (max-width: 40em) {
@@ -2408,6 +2420,8 @@ input[name="panel"]:checked ~ .accordion-content {
         gap: var(--dim4);
     }
 
+    .argument-block p,
+    .arguments-link-container p,
     .arguments-link-container .liste {
         font-size: var(--regular);
     }
