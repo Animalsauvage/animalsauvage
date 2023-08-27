@@ -107,9 +107,9 @@ font-variation-settings: "wght" 375, "MONO" 0.28;
     --color9: #45503C;
     --color10: #333B2C;
 
-    
+    /* Plug in js */ 
     --reveal-frame-background: transparent;
-    --reveal-placeholder-background : transparent;
+    --reveal-placeholder-background : var(--color4);
     --reveal-placeholder-color: #11150E;
 
     /* Espacement */
