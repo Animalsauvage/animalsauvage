@@ -1712,7 +1712,7 @@ input[name="panel"]:checked ~ .accordion-content {
     justify-content: center;
     min-height: 450px;
     cursor: pointer;
-    border: 1px solid var(--color6);
+    border: 1px solid var(--color3);
 }
 
 .iframe-container.iframe-illu-1 {
