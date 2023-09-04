@@ -1807,12 +1807,6 @@ input[name="panel"]:checked ~ .accordion-content {
     grid-area: grid-2;
 }
 
-/*
-.page-accueil .hero-container .grid-3 {
-    grid-area: grid-3;
-}
-*/
-
 /* Titre principal */
 .titre-principal {
     position: relative;
@@ -2534,13 +2528,37 @@ input[name="panel"]:checked ~ .accordion-content {
 
 
 
+/* Page 404
+****************************************/
+.erreur404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color3);
+    background-image: url(../images/fougeres.png), radial-gradient(at 91% 67%, hsl(82deg 61.71% 50.25%) 0px, transparent 50%), radial-gradient(at 78% 21%, hsl(143deg 46.44% 39.17%) 0px, transparent 50%), radial-gradient(at 34% 77%, hsla(345, 92%, 71%, 1) 0px, transparent 50%), radial-gradient(at 1% 90%, hsl(24deg 34.52% 28.44%) 0px, transparent 50%), radial-gradient(at 35% 44%, hsl(324deg 20.6% 47.89%) 0px, transparent 50%), radial-gradient(at 93% 33%, hsl(176deg 24.08% 23.36%) 0px, transparent 50%), radial-gradient(at 52% 45%, hsl(129.58deg 70.01% 41.77%) 0px, transparent 50%);
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: hard-light;
+}
 
+.erreur-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(86 100 75 / 45%);
+    backdrop-filter: blur(6px);
+    padding: var(--dim8) var(--dim6);
+}
 
+.erreur-container .titre-h1,
+.erreur-container .link {
+    color: var(--color1);
+}
 
-
-
-
-
-
-
-qfds
+.erreur-container .link {
+    border-bottom: 1px solid var(--color1);
+}
