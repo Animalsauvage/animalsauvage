@@ -2220,7 +2220,6 @@ input[name="panel"]:checked ~ .accordion-content {
     grid-area: grid-4;
 }
 
-
 .arguments-container .title-block {
     display: flex;
     flex-direction: column;
@@ -2300,12 +2299,6 @@ input[name="panel"]:checked ~ .accordion-content {
 
 .arguments-link-container .illustration {
     aspect-ratio: 16/9;
-    /*
-    aspect-ratio: 1/1;
-    width: calc(100% /3);
-    max-width: calc((100% - (var(--dim4) * 2)) / 3);
-*/
-    /* équation du 1er degré : pour donner la même largeur que les autres illustrations */
 }
 
 .illu-1 {
@@ -2428,7 +2421,7 @@ input[name="panel"]:checked ~ .accordion-content {
     }
 
     .arguments-link-container .illustration {
-        aspect-ratio: 9/16;
+        aspect-ratio: 1/1;
     }
 }
 
