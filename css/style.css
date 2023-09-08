@@ -532,7 +532,7 @@ strong {
 .date {
     font-size: var(--dim2);
     font-weight: 400;
-    color: var(--color7);
+    color: var(--color8);
     z-index: 2;
 }
 
@@ -1709,43 +1709,6 @@ input[name="panel"]:checked ~ .accordion-content {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Page Mentions légales
 ****************************************/
 .page-mentions .section-collection {
@@ -1858,6 +1821,32 @@ input[name="panel"]:checked ~ .accordion-content {
 .img-wrapper .image svg {
     width: 100%;
 }
+
+.forme-svg-1 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linejoin: round;
+    stroke-miterlimit: 2;
+    fill: #F49082;
+}
+
+.forme-svg-2 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linejoin: round;
+    stroke-miterlimit: 2;
+    fill: #0A97B8;
+}
+
+.forme-svg-3 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linejoin: round;
+    stroke-miterlimit: 2;
+    fill: #A55493;
+}
+
+
 
 /* Afficher la première image */
 .img-wrapper .image:first-child {
@@ -2256,6 +2245,31 @@ input[name="panel"]:checked ~ .accordion-content {
 .argument-block .illustration svg {
     filter: opacity(0.8);
 }
+
+.illu-svg-1 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linejoin: round;
+    stroke-miterlimit: 2;
+    fill: #FFDF88;
+}
+
+.illu-svg-2 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linejoin: round;
+    stroke-miterlimit: 2;
+    fill: #0A97B8;
+}
+
+.illu-svg-3 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linejoin: round;
+    stroke-miterlimit: 2;
+    fill: #F49082;
+}
+
 
 .argument-block .titre-h2,
 .arguments-link-container .titre-h2 {
